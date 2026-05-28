@@ -3,6 +3,10 @@ import { FAQItem, PricingPlan, SubscriptionTier, PeriodPlan } from './types';
 
 export const FAQS: FAQItem[] = [
   {
+    question: "Wat is IPTVTotaal?",
+    answer: "IPTVTotaal is dé #1 IPTV Totaal aanbieder in Nederland. Met één IPTV Totaal abonnement kijk je op al je apparaten: 65.000+ kanalen, 175.000+ films & series in HD en 4K. Geen buffering, instant activering en 24/7 WhatsApp support."
+  },
+  {
     question: "Hoe snel ontvang ik mijn toegang?",
     answer: "Direct na betaling ontvang je binnen 5 minuten je logingegevens via WhatsApp. Setup duurt nog eens 5 minuten. Je kunt binnen 10 minuten al kijken."
   },
