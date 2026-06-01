@@ -14,6 +14,7 @@ import { Privacybeleid } from './components/Privacybeleid';
 import { Channels } from './components/Channels';
 import { ResellerPacks } from './components/ResellerPacks';
 import { AnnouncementBanner } from './components/AnnouncementBanner';
+import { OverOns } from './components/OverOns';
 
 const App: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -34,6 +35,9 @@ const App: React.FC = () => {
         window.scrollTo(0, 0);
       } else if (hash === '#/reseller') {
         setCurrentPage('reseller');
+        window.scrollTo(0, 0);
+      } else if (hash === '#/over-ons') {
+        setCurrentPage('over-ons');
         window.scrollTo(0, 0);
       } else {
         setCurrentPage('home');
@@ -94,6 +98,10 @@ const App: React.FC = () => {
       ) : currentPage === 'reseller' ? (
         <main>
           <ResellerPacks />
+        </main>
+      ) : currentPage === 'over-ons' ? (
+        <main>
+          <OverOns />
         </main>
       ) : (
         <main>

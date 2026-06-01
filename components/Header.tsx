@@ -18,6 +18,7 @@ export const Header: React.FC<HeaderProps> = ({ isScrolled, hasBanner }) => {
     { name: 'Prijzen', href: '#pricing' },
     { name: 'Reseller', href: '#/reseller' },
     { name: 'FAQ', href: '#faq' },
+    { name: 'Over ons', href: '#/over-ons' },
   ];
 
   return (
