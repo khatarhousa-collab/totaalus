@@ -1,12 +1,6 @@
 
 import React from 'react';
 
-const trackWhatsAppConversion = () => {
-  if (typeof (window as any).gtag !== 'undefined') {
-    (window as any).gtag('event', 'conversion', { 'send_to': 'AW-18160214959/4rR-CJSqjLAcEK_Hu9ND' });
-  }
-};
-
 export const Footer: React.FC = () => {
   const whatsappLink = "https://api.whatsapp.com/send/?phone=447449708976&text&type=phone_number&app_absent=0";
 
@@ -39,7 +33,6 @@ export const Footer: React.FC = () => {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={trackWhatsAppConversion}
                 className="w-full py-8 bg-gradient-to-r from-amber-500 to-yellow-600 text-black rounded-[32px] font-black text-2xl hover:scale-[1.02] transition-transform block text-center shadow-lg shadow-amber-500/20"
               >
                 WhatsApp Ons Nu
