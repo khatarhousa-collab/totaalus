@@ -26,7 +26,7 @@ const posts: BlogPost[] = [
     category: 'Sport',
     title: 'Hoe laat speelt Nederland tegen Uzbekistan? Opstelling & uitzending',
     excerpt: 'Nederland speelt maandag 8 juni om 20:45 tegen Uzbekistan in New York. De laatste oefenwedstrijd voor het WK. Alles over de opstelling, uitzending en waar je kijkt.',
-    image: 'https://images.pexels.com/photos/27151428/pexels-photo-27151428.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    image: '/nederland-uzbekistan.png',
     content: (
       <div className="space-y-6 text-white/70 leading-relaxed text-lg">
 
