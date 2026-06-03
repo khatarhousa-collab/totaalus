@@ -13,19 +13,20 @@ export const Header: React.FC<HeaderProps> = ({ isScrolled, hasBanner }) => {
   const closeMenu = () => setIsMenuOpen(false);
 
   const navLinks = [
-    { name: 'Kanalen', href: '#/kanalen' },
-    { name: 'Voordelen', href: '#benefits' },
-    { name: 'Prijzen', href: '#pricing' },
-    { name: 'Reseller', href: '#/reseller' },
-    { name: 'FAQ', href: '#faq' },
-    { name: 'Over ons', href: '#/over-ons' },
+    { name: 'Kanalen', href: '/kanalen' },
+    { name: 'Voordelen', href: '/#benefits' },
+    { name: 'Prijzen', href: '/#pricing' },
+    { name: 'Reseller', href: '/reseller' },
+    { name: 'FAQ', href: '/#faq' },
+    { name: 'Over ons', href: '/over-ons' },
+    { name: 'Blog', href: '/blog' },
   ];
 
   return (
     <>
       <nav className={`fixed left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isMenuOpen ? 'bg-black/90 backdrop-blur-md border-b border-amber-900/30 py-4' : 'bg-transparent py-8'}`} style={{ top: hasBanner ? '40px' : '0px' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-20 flex justify-between items-center">
-          <a href="#" className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer">
+          <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer">
             <div className="w-8 h-8 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-sm flex items-center justify-center">
               <div className="w-4 h-4 bg-black rotate-45"></div>
             </div>
@@ -38,7 +39,7 @@ export const Header: React.FC<HeaderProps> = ({ isScrolled, hasBanner }) => {
               <a key={link.name} href={link.href} className="text-white hover:text-amber-400 transition-colors">{link.name}</a>
             ))}
             <div className="flex items-center gap-4 ml-4">
-              <a href="#pricing" className="px-6 py-2.5 rounded-full bg-gradient-to-r from-amber-500 to-yellow-600 text-black font-bold hover:opacity-90 transition-all block text-center">Bekijk prijzen</a>
+              <a href="/#pricing" className="px-6 py-2.5 rounded-full bg-gradient-to-r from-amber-500 to-yellow-600 text-black font-bold hover:opacity-90 transition-all block text-center">Bekijk prijzen</a>
             </div>
           </div>
           
@@ -78,7 +79,7 @@ export const Header: React.FC<HeaderProps> = ({ isScrolled, hasBanner }) => {
           ))}
           <div className="flex flex-col gap-4 pt-8">
             <a 
-              href="#pricing"
+              href="/#pricing"
               onClick={closeMenu}
               className="w-full py-5 rounded-3xl bg-gradient-to-r from-amber-500 to-yellow-600 text-black text-xl font-bold hover:opacity-90 transition-all shadow-lg block text-center"
             >

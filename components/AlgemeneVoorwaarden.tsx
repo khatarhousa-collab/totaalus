@@ -6,7 +6,7 @@ export const AlgemeneVoorwaarden: React.FC = () => {
     <div className="min-h-screen bg-white pt-32 pb-20 px-6">
       <div className="max-w-4xl mx-auto">
         <a
-          href="#"
+          href="/"
           className="inline-flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-black transition-colors mb-12"
         >
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -133,7 +133,7 @@ export const AlgemeneVoorwaarden: React.FC = () => {
           <section>
             <h2 className="text-2xl font-extrabold text-black tracking-tight mb-4">12. Klachten en Geschillen</h2>
             <ol className="list-decimal pl-6 space-y-2">
-              <li>Klachten kunnen worden ingediend via WhatsApp of e-mail op <a href="mailto:info@pandoriptv.nl" className="text-amber-500 font-bold hover:underline">info@pandoriptv.nl</a>.</li>
+              <li>Klachten kunnen worden ingediend via WhatsApp of e-mail op <a href="mailto:info@iptvtotaal.digital" className="text-amber-500 font-bold hover:underline">info@iptvtotaal.digital</a>.</li>
               <li>IPTVTotaal streeft ernaar klachten binnen 7 werkdagen te behandelen.</li>
               <li>Op deze voorwaarden is Nederlands recht van toepassing.</li>
               <li>Geschillen worden voorgelegd aan de bevoegde rechter in Nederland.</li>
@@ -145,7 +145,7 @@ export const AlgemeneVoorwaarden: React.FC = () => {
             <p>Voor vragen over deze Algemene Voorwaarden kunt u contact met ons opnemen:</p>
             <div className="mt-4 p-6 bg-gray-50 rounded-2xl border border-gray-100 space-y-2">
               <p><strong>IPTVTotaal</strong></p>
-              <p>E-mail: <a href="mailto:info@pandoriptv.nl" className="text-amber-500 font-bold hover:underline">info@pandoriptv.nl</a></p>
+              <p>E-mail: <a href="mailto:info@iptvtotaal.digital" className="text-amber-500 font-bold hover:underline">info@iptvtotaal.digital</a></p>
               <p>Telefoon: <a href="tel:+447449708976" className="text-amber-500 font-bold hover:underline">+44 7449 708976</a></p>
               <p>WhatsApp: <a href="https://api.whatsapp.com/send/?phone=447449708976&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="text-amber-500 font-bold hover:underline">+44 7449 708976</a></p>
             </div>

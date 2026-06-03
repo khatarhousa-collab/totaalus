@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 interface ChannelCategory {
   name: string;
@@ -2343,6 +2344,7 @@ const CHANNEL_CATEGORIES: ChannelCategory[] = [
 ];
 
 export const Channels: React.FC = () => {
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set());
@@ -2410,7 +2412,7 @@ export const Channels: React.FC = () => {
     <div className="min-h-screen pt-32 pb-20 px-6">
       <div className="max-w-6xl mx-auto">
         <a
-          href="#"
+          href="/"
           className="inline-flex items-center gap-2 text-sm font-bold text-white/60 hover:text-white transition-colors mb-12"
         >
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2595,10 +2597,10 @@ export const Channels: React.FC = () => {
             href="#pricing"
             onClick={(e) => {
               e.preventDefault();
-              window.location.hash = '';
+              navigate('/');
               setTimeout(() => {
                 document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
-              }, 100);
+              }, 300);
             }}
             className="inline-flex items-center gap-2 bg-white text-black font-bold px-8 py-4 rounded-full hover:bg-gray-100 transition-colors"
           >

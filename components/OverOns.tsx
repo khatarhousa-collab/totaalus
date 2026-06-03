@@ -45,7 +45,7 @@ export const OverOns: React.FC = () => {
       {/* Back link */}
       <div className="max-w-7xl mx-auto px-6 lg:px-20">
         <a
-          href="#"
+          href="/"
           className="inline-flex items-center gap-2 text-sm font-bold text-white/40 hover:text-amber-400 transition-colors mb-16"
         >
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -198,7 +198,7 @@ export const OverOns: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-center gap-8 text-center">
           <div>
             <div className="text-xs font-bold uppercase tracking-widest text-white/30 mb-2">E-mail</div>
-            <a href="mailto:info@pandoriptv.nl" className="text-amber-400 font-bold hover:underline">info@pandoriptv.nl</a>
+            <a href="mailto:info@iptvtotaal.digital" className="text-amber-400 font-bold hover:underline">info@iptvtotaal.digital</a>
           </div>
           <div className="hidden md:block w-px bg-white/10"></div>
           <div>
