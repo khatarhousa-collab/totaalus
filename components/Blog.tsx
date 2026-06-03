@@ -60,13 +60,8 @@ const posts: BlogPost[] = [
         </div>
 
         <h3 className="text-2xl font-black text-white">Waar kijk je Nederland - Uzbekistan?</h3>
-        <p>Goed nieuws: het is <strong className="text-white">gratis</strong> te kijken.</p>
-        <ul className="list-disc list-inside space-y-2 ml-2">
-          <li><strong className="text-white">NPO 3</strong> — live op televisie, gratis</li>
-          <li><a href="https://nos.nl/sport/voetbal" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline font-bold">NOS.nl</a> — gratis livestream in de browser</li>
-          <li><strong className="text-white">NOS-app</strong> — gratis op je telefoon of tablet</li>
-        </ul>
-        <p>Heb je geen televisie of ben je onderweg? De NOS-app werkt overal. Geen abonnement nodig.</p>
+        <p>De wedstrijd wordt uitgezonden op <strong className="text-white">NPO 3</strong>. Heb je geen tv-abonnement meer, of wil je kijken op je telefoon, tablet of laptop?</p>
+        <p>Via IPTVTotaal kijk je Nederland - Uzbekistan live op elk apparaat. Samsung TV, Android, iPhone, Firestick — het maakt niet uit. Stel je abonnement vandaag in en je bent er klaar voor.</p>
 
         <h3 className="text-2xl font-black text-white">Verwachte opstelling Oranje vanavond.</h3>
         <p>Ronald Koeman kiest waarschijnlijk zijn sterkste elf. Dit is de verwachte basisopstelling voor Nederland - Uzbekistan:</p>
