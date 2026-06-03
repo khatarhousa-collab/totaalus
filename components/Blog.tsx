@@ -20,6 +20,94 @@ interface BlogPost {
 
 const posts: BlogPost[] = [
   {
+    slug: 'nederland-uzbekistan-2026',
+    date: '3 juni 2026',
+    readTime: '3 min',
+    category: 'Sport',
+    title: 'Hoe laat speelt Nederland tegen Uzbekistan? Opstelling & uitzending',
+    excerpt: 'Nederland speelt maandag 8 juni om 20:45 tegen Uzbekistan in New York. De laatste oefenwedstrijd voor het WK. Alles over de opstelling, uitzending en waar je kijkt.',
+    image: 'https://images.pexels.com/photos/27151428/pexels-photo-27151428.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+
+        {/* Keyword cluster */}
+        <div className="flex flex-wrap gap-2 mb-2">
+          {[
+            'hoe laat speelt nederland uzbekistan','opstelling oranje vanavond',
+            'nederland uzbekistan 2026','nederland uzbekistan uitzending',
+            'oranje oefenwedstrijd uzbekistan','nederland uzbekistan tijd',
+          ].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">
+              {kw}
+            </span>
+          ))}
+        </div>
+
+        <p>Maandag 8 juni. Aftrap 20:45 Nederlandse tijd. Nederland speelt zijn laatste oefenwedstrijd voor het WK — tegen Uzbekistan in New York.</p>
+        <p>Dit is de generale repetitie. Koeman zet waarschijnlijk zijn sterkste elf neer.</p>
+
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[
+            { label: 'Datum', value: 'Ma. 8 juni 2026' },
+            { label: 'Aftrap', value: '20:45 NL tijd' },
+            { label: 'Locatie', value: 'Icahn Stadium, New York' },
+          ].map(item => (
+            <div key={item.label} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+              <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-1">{item.label}</div>
+              <div className="text-white font-black">{item.value}</div>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Waar kijk je Nederland - Uzbekistan?</h3>
+        <p>Goed nieuws: het is <strong className="text-white">gratis</strong> te kijken.</p>
+        <ul className="list-disc list-inside space-y-2 ml-2">
+          <li><strong className="text-white">NPO 3</strong> — live op televisie, gratis</li>
+          <li><a href="https://nos.nl/sport/voetbal" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline font-bold">NOS.nl</a> — gratis livestream in de browser</li>
+          <li><strong className="text-white">NOS-app</strong> — gratis op je telefoon of tablet</li>
+        </ul>
+        <p>Heb je geen televisie of ben je onderweg? De NOS-app werkt overal. Geen abonnement nodig.</p>
+
+        <h3 className="text-2xl font-black text-white">Verwachte opstelling Oranje vanavond.</h3>
+        <p>Ronald Koeman kiest waarschijnlijk zijn sterkste elf. Dit is de verwachte basisopstelling voor Nederland - Uzbekistan:</p>
+
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-6 space-y-4">
+          <div>
+            <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-2">Keeper</div>
+            <p className="text-white font-bold">Verbruggen</p>
+          </div>
+          <div>
+            <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-2">Verdediging</div>
+            <p className="text-white font-bold">Dumfries — Timber — Van Dijk — Van de Ven</p>
+          </div>
+          <div>
+            <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-2">Middenveld</div>
+            <p className="text-white font-bold">Frenkie de Jong — Gravenberch — Reijnders</p>
+          </div>
+          <div>
+            <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-2">Aanval</div>
+            <p className="text-white font-bold">Malen — Memphis — Gakpo</p>
+          </div>
+          <div className="text-xs text-white/30 pt-2 border-t border-white/10">Formatie: 4-3-3 · Coach: Ronald Koeman · Bron: <a href="https://www.onsoranje.nl" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline">OnsOranje.nl</a></div>
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Waarom is dit duel belangrijk?</h3>
+        <p>Het WK 2026 begint op 11 juni. Nederland speelt dus 3 dagen na dit duel al zijn eerste groepswedstrijd.</p>
+        <p>Uzbekistan is geen topland, maar dat is ook niet het punt. Koeman wil ritme in de ploeg. Spelers in hun beste vorm richting het toernooi krijgen. En kijken of de opstelling klopt.</p>
+        <p>Volg de officiële selectie en nieuws rond Oranje op <a href="https://www.onsoranje.nl" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline font-bold">OnsOranje.nl</a> en de <a href="https://www.espn.nl/voetbal" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline font-bold">ESPN voetbalpagina</a>.</p>
+
+        <a href="/wereldkampioenschap-voetbal-2026" className="group flex items-center justify-between p-5 bg-amber-500/10 border border-amber-500/20 rounded-2xl hover:border-amber-500/40 transition-colors no-underline">
+          <div>
+            <span className="text-xs font-black text-amber-400 uppercase tracking-widest block mb-1">Na dit duel: het WK</span>
+            <span className="text-white font-bold group-hover:text-amber-400 transition-colors">Alle 104 WK 2026 wedstrijden live kijken via IPTVTotaal →</span>
+          </div>
+        </a>
+
+        <p>Wil je Nederland - Uzbekistan én alle WK-wedstrijden live kijken op je Smart TV, telefoon of tablet? Stuur ons een berichtje via WhatsApp. We hebben je binnen 5 minuten live.</p>
+      </div>
+    ),
+  },
+  {
     slug: 'iptvtotaal-app',
     date: '3 juni 2026',
     readTime: '5 min',
