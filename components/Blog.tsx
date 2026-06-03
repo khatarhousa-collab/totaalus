@@ -43,9 +43,8 @@ const posts: BlogPost[] = [
           ))}
         </div>
 
-        <p>
-          De <strong className="text-white">IPTVTotaal app</strong> is de snelste manier om te beginnen met IPTV kijken op elk apparaat. Of je nu een Android-smartphone, een iPhone, een Samsung Smart TV of een Amazon Firestick hebt — in deze gids leggen we stap voor stap uit hoe je de iptvtotaal app downloadt, installeert en direct live tv kijkt.
-        </p>
+        <p>Je wil IPTV kijken. Maar welke app moet je installeren? En hoe werkt het precies?</p>
+        <p>Geen zorgen. We leggen het gewoon uit.</p>
 
         <img
           src="https://images.pexels.com/photos/35490296/pexels-photo-35490296.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
@@ -55,8 +54,8 @@ const posts: BlogPost[] = [
         />
         <p className="text-xs text-white/25 -mt-4">Foto: Pexels</p>
 
-        <h3 className="text-2xl font-black text-white">Welke apparaten ondersteunen de IPTVTotaal app?</h3>
-        <p>De IPTVTotaal app werkt op vrijwel elk modern apparaat:</p>
+        <h3 className="text-2xl font-black text-white">Op welke apparaten werkt de IPTVTotaal app?</h3>
+        <p>Vrijwel alles wat je al hebt:</p>
         <ul className="list-disc list-inside space-y-1 ml-2">
           <li><strong className="text-white">Android</strong> — telefoon, tablet &amp; Android TV / Google TV</li>
           <li><strong className="text-white">iPhone &amp; iPad</strong> — iOS via App Store</li>
@@ -65,7 +64,7 @@ const posts: BlogPost[] = [
           <li><strong className="text-white">Windows &amp; Mac</strong> — via VLC of IPTV Smarters desktop</li>
         </ul>
 
-        <h3 className="text-2xl font-black text-white">IPTVTotaal app downloaden op Android</h3>
+        <h3 className="text-2xl font-black text-white">Android: zo doe je het.</h3>
         <img
           src="https://images.pexels.com/photos/5117989/pexels-photo-5117989.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
           alt="Persoon met smartphone en IPTV streaming app"
@@ -73,23 +72,21 @@ const posts: BlogPost[] = [
           style={{ maxHeight: 380 }}
         />
         <p className="text-xs text-white/25 -mt-4">Foto: Pexels</p>
-        <p>
-          Voor Android-gebruikers raden wij <strong className="text-white">IPTV Smarters Pro</strong> of <strong className="text-white">TiviMate</strong> aan — beide gratis te downloaden via de Google Play Store. Na installatie voer je de M3U-link of Xtream Codes in die je na activering van je IPTVTotaal abonnement per WhatsApp ontvangt. Herstart de app en je volledige kanalenlijst is direct beschikbaar.
-        </p>
+        <p><strong className="text-white">TiviMate</strong> is de beste keuze voor Android. Overzichtelijk, snel en met automatische EPG. <strong className="text-white">IPTV Smarters Pro</strong> is een goed gratis alternatief.</p>
+        <p>Beide zijn gratis te downloaden via de Google Play Store. Na installatie voer je je M3U-link in — die ontvang je van ons per WhatsApp na activering. Klaar.</p>
         <ol className="list-decimal list-inside space-y-1 ml-2">
-          <li>Open de <strong className="text-white">Google Play Store</strong> op je Android-apparaat</li>
-          <li>Zoek naar <em>IPTV Smarters Pro</em> of <em>TiviMate</em></li>
-          <li>Installeer de app en open hem</li>
-          <li>Kies <em>"Toevoegen via M3U URL"</em> en plak je persoonlijke link</li>
-          <li>Klaar — alle kanalen laden automatisch in</li>
+          <li>Open de <strong className="text-white">Google Play Store</strong></li>
+          <li>Zoek naar <em>TiviMate</em> of <em>IPTV Smarters Pro</em></li>
+          <li>Installeer en open de app</li>
+          <li>Kies <em>"Toevoegen via M3U URL"</em> en plak je link</li>
+          <li>Alle kanalen laden automatisch in</li>
         </ol>
 
-        <h3 className="text-2xl font-black text-white">IPTVTotaal app installeren op iPhone (iOS)</h3>
-        <p>
-          Op de iPhone gebruik je <strong className="text-white">GSE Smart IPTV</strong> of <strong className="text-white">IPTV Smarters Pro</strong>, beide beschikbaar in de App Store. Download de app, ga naar instellingen en voeg je M3U-abonnement of Xtream Codes toe. Binnen twee minuten kijk je live op je iPhone of iPad.
-        </p>
+        <h3 className="text-2xl font-black text-white">iPhone: zo doe je het.</h3>
+        <p>Gebruik <strong className="text-white">GSE Smart IPTV</strong> of <strong className="text-white">IPTV Smarters Pro</strong>. Beide staan gewoon in de App Store.</p>
+        <p>Download de app, voer je M3U-link in en je bent live. Werkt ook op iPad.</p>
 
-        <h3 className="text-2xl font-black text-white">Welke IPTV app voor Samsung TV?</h3>
+        <h3 className="text-2xl font-black text-white">Samsung en LG Smart TV: zo doe je het.</h3>
         <img
           src="https://images.pexels.com/photos/5202957/pexels-photo-5202957.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
           alt="Persoon bedient Smart TV met afstandsbediening"
@@ -97,28 +94,26 @@ const posts: BlogPost[] = [
           style={{ maxHeight: 380 }}
         />
         <p className="text-xs text-white/25 -mt-4">Foto: Pexels</p>
-        <p>
-          Voor Samsung Smart TV's gebruik je <strong className="text-white">Smart IPTV</strong> of <strong className="text-white">IPTV Smarters Pro</strong> via de Samsung Smart Hub. Op LG TV werkt <strong className="text-white">SS IPTV</strong> perfect. Voer na installatie je M3U-link in en je ontvangt direct de volledige kanalenlijst van IPTVTotaal — inclusief EPG (elektronische programmagids).
-        </p>
+        <p>Op Samsung gebruik je <strong className="text-white">Smart IPTV</strong> via de Smart Hub. Op LG werkt <strong className="text-white">SS IPTV</strong> het beste.</p>
+        <p>Installeer de app, voer je M3U-link in en je ontvangt direct de volledige kanalenlijst — inclusief EPG.</p>
         <ol className="list-decimal list-inside space-y-1 ml-2">
           <li>Open de <strong className="text-white">Smart Hub</strong> op je Samsung TV</li>
-          <li>Zoek naar <em>Smart IPTV</em> in de app store</li>
+          <li>Zoek naar <em>Smart IPTV</em></li>
           <li>Installeer en open de app</li>
-          <li>Voer je persoonlijke M3U-link in</li>
-          <li>Herstart de app — alle zenders zijn live beschikbaar</li>
+          <li>Voer je M3U-link in</li>
+          <li>Herstart — alle zenders staan er direct in</li>
         </ol>
 
-        <h3 className="text-2xl font-black text-white">IPTVTotaal app op Amazon Firestick</h3>
-        <p>
-          Op de Firestick gebruik je de <strong className="text-white">Downloader-app</strong> om het APK-bestand van IPTV Smarters te installeren. Zorg dat <em>'Installatie van onbekende bronnen'</em> is ingeschakeld in de instellingen van je Firestick. Daarna werkt het precies hetzelfde als op Android: M3U-link invullen en klaar.
-        </p>
+        <h3 className="text-2xl font-black text-white">Amazon Firestick: zo doe je het.</h3>
+        <p>Installeer IPTV Smarters via de <strong className="text-white">Downloader-app</strong>. Zet 'Installatie van onbekende bronnen' aan in de instellingen.</p>
+        <p>De rest werkt hetzelfde als op Android. M3U-link invoeren, klaar.</p>
 
-        <h3 className="text-2xl font-black text-white">Functies van de IPTVTotaal app</h3>
+        <h3 className="text-2xl font-black text-white">Wat krijg je?</h3>
         <ul className="list-disc list-inside space-y-1 ml-2">
           <li><strong className="text-white">20.000+ live zenders</strong> — Nederland, Marokko, Turkije, sport, nieuws &amp; meer</li>
-          <li><strong className="text-white">EPG (programmagids)</strong> — zie precies wat er op elk kanaal speelt</li>
-          <li><strong className="text-white">VOD-bibliotheek</strong> — duizenden films en series on demand</li>
-          <li><strong className="text-white">4K &amp; HD streams</strong> — automatisch aangepast aan je verbinding</li>
+          <li><strong className="text-white">EPG</strong> — zie precies wat er speelt op elk kanaal</li>
+          <li><strong className="text-white">VOD</strong> — films en series on demand</li>
+          <li><strong className="text-white">4K &amp; HD</strong> — automatisch aangepast aan je verbinding</li>
           <li><strong className="text-white">Multi-screen</strong> — kijk op meerdere apparaten tegelijk</li>
           <li><strong className="text-white">Catch-up TV</strong> — gemiste uitzendingen terugkijken</li>
         </ul>
@@ -131,30 +126,28 @@ const posts: BlogPost[] = [
         />
         <p className="text-xs text-white/25 -mt-4">Foto: Pexels</p>
 
-        <h3 className="text-2xl font-black text-white">Veelgestelde vragen over de IPTVTotaal app</h3>
+        <h3 className="text-2xl font-black text-white">Veelgestelde vragen.</h3>
 
         <div className="space-y-4">
           <div>
-            <p className="font-black text-white">Is de IPTVTotaal app gratis te downloaden?</p>
-            <p>Ja, de app zelf (IPTV Smarters, TiviMate, GSE Smart IPTV) is gratis te downloaden. Je hebt wel een actief IPTVTotaal abonnement nodig om in te loggen en zenders te bekijken.</p>
+            <p className="font-black text-white">Is de app gratis te downloaden?</p>
+            <p>Ja. De app zelf is gratis. Je hebt wel een actief IPTVTotaal abonnement nodig om in te loggen.</p>
           </div>
           <div>
-            <p className="font-black text-white">Werkt de app op meerdere apparaten tegelijk?</p>
-            <p>Ja — afhankelijk van je abonnement kun je op 1, 2 of meer schermen tegelijk kijken. Bekijk onze abonnementsopties voor de exacte details.</p>
+            <p className="font-black text-white">Werkt het op meerdere apparaten tegelijk?</p>
+            <p>Ja — afhankelijk van je abonnement kijk je op 1, 2 of meer schermen tegelijk.</p>
           </div>
           <div>
-            <p className="font-black text-white">Hoe log ik in op de IPTVTotaal app?</p>
-            <p>Na activering ontvang je per WhatsApp een persoonlijke M3U-link of Xtream Codes (gebruikersnaam + wachtwoord + serveradres). Deze voer je eenmalig in de app in.</p>
+            <p className="font-black text-white">Hoe log ik in?</p>
+            <p>Na activering ontvang je per WhatsApp een M3U-link of Xtream Codes. Die voer je eenmalig in de app in.</p>
           </div>
           <div>
-            <p className="font-black text-white">Welke IPTV app werkt het beste op Android?</p>
-            <p>TiviMate is de meest populaire keuze onder Android-gebruikers vanwege de overzichtelijke EPG en stabiele performance. IPTV Smarters Pro is een goed gratis alternatief.</p>
+            <p className="font-black text-white">Welke app werkt het beste op Android?</p>
+            <p>TiviMate. Betere EPG, stabielere performance. IPTV Smarters Pro is een goed gratis alternatief.</p>
           </div>
         </div>
 
-        <p>
-          Heb je hulp nodig bij het instellen van de IPTVTotaal app? Neem contact op via WhatsApp — ons team helpt je binnen 5 minuten op weg, gratis en zonder gedoe.
-        </p>
+        <p>Vragen over de installatie? Stuur ons een berichtje via WhatsApp. We helpen je binnen 5 minuten verder.</p>
       </div>
     ),
   },
@@ -168,16 +161,20 @@ const posts: BlogPost[] = [
     image: 'https://images.pexels.com/photos/28549934/pexels-photo-28549934.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     content: (
       <div className="space-y-6 text-white/70 leading-relaxed text-lg">
-        <p>IPTV installeren hoeft helemaal niet ingewikkeld te zijn. Of je nu een Samsung Smart TV, een LG TV, een Android TV of een Amazon Firestick hebt — in dit artikel leggen we stap voor stap uit hoe je IPTVTotaal instelt.</p>
-        <h3 className="text-2xl font-black text-white">Samsung &amp; LG Smart TV</h3>
-        <p>Op Samsung en LG Smart TV's gebruik je de ingebouwde Smart IPTV-app of IPTV Smarters Pro (via de app store). Na het downloaden voer je de M3U-link in die je van ons ontvangt na activering van je abonnement. Herstart de app en je kanalenlijst is direct beschikbaar.</p>
-        <h3 className="text-2xl font-black text-white">Android TV &amp; Google TV</h3>
-        <p>Android TV-gebruikers kunnen IPTV Smarters Pro of TiviMate downloaden vanuit de Google Play Store. Voer je persoonlijke inloggegevens of M3U-link in en je bent klaar. TiviMate biedt daarbij een overzichtelijke EPG (elektronische programmagids).</p>
-        <h3 className="text-2xl font-black text-white">Amazon Firestick</h3>
-        <p>Op de Firestick installeer je via de Downloader-app het APK-bestand van IPTV Smarters of gebruik je de directe installatie via de Amazon App Store. Zorg dat 'Installatie van onbekende bronnen' is ingeschakeld in de instellingen.</p>
-        <h3 className="text-2xl font-black text-white">Telefoon of tablet</h3>
-        <p>Download IPTV Smarters Pro of GSE Smart IPTV in de App Store of Google Play. Voeg je abonnement toe via de M3U-URL of Xtream Codes die je na aankoop per WhatsApp ontvangt.</p>
-        <p>Heb je hulp nodig bij de installatie? Neem dan gerust contact op via WhatsApp — ons supportteam helpt je binnen minuten op weg.</p>
+        <p>Je hebt een abonnement. Nu moet de app er nog op. Dat is makkelijker dan je denkt.</p>
+        <h3 className="text-2xl font-black text-white">Samsung &amp; LG Smart TV.</h3>
+        <p>Op Samsung gebruik je <strong className="text-white">Smart IPTV</strong> via de Smart Hub. Op LG werkt <strong className="text-white">SS IPTV</strong> het beste.</p>
+        <p>Download de app, voer je M3U-link in en herstart. Je kanalenlijst staat er direct in. Geen gedoe.</p>
+        <h3 className="text-2xl font-black text-white">Android TV &amp; Google TV.</h3>
+        <p><strong className="text-white">TiviMate</strong> is hier de beste keuze. Te downloaden via de Google Play Store. Voer je M3U-link of Xtream Codes in.</p>
+        <p>TiviMate laadt ook automatisch de EPG — zodat je precies ziet wat er op elk kanaal speelt.</p>
+        <h3 className="text-2xl font-black text-white">Amazon Firestick.</h3>
+        <p>Via de <strong className="text-white">Downloader-app</strong> installeer je IPTV Smarters als APK. Zorg dat 'Installatie van onbekende bronnen' aanstaat in de instellingen.</p>
+        <p>Daarna werkt het precies hetzelfde als op Android. M3U-link invoeren, klaar.</p>
+        <h3 className="text-2xl font-black text-white">Telefoon of tablet.</h3>
+        <p>Android: zoek <strong className="text-white">IPTV Smarters Pro</strong> of <strong className="text-white">TiviMate</strong> in de Google Play Store.</p>
+        <p>iPhone: zoek <strong className="text-white">GSE Smart IPTV</strong> of <strong className="text-white">IPTV Smarters Pro</strong> in de App Store. M3U-link invoeren, klaar.</p>
+        <p>Kom je er niet uit? Stuur ons een berichtje via WhatsApp. We helpen je stap voor stap, gratis.</p>
       </div>
     ),
   },
@@ -191,17 +188,22 @@ const posts: BlogPost[] = [
     image: 'https://images.pexels.com/photos/4406686/pexels-photo-4406686.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     content: (
       <div className="space-y-6 text-white/70 leading-relaxed text-lg">
-        <p>Netflix is immens populair, maar steeds meer Nederlanders kiezen ook voor IPTV. Wat zijn de belangrijkste verschillen en welke optie past het beste bij jouw situatie?</p>
-        <h3 className="text-2xl font-black text-white">Prijs</h3>
-        <p>Netflix kost vanaf €7,99 per maand (met advertenties) tot €22,99 voor het Premium-pakket. IPTVTotaal biedt toegang tot meer dan 20.000 zenders — inclusief live sport, nieuws en films — al vanaf €12 per maand. Bij een jaarabonnement betaal je zelfs nog minder.</p>
-        <h3 className="text-2xl font-black text-white">Content</h3>
-        <p>Netflix heeft een groot eigen aanbod aan series en films, maar geen live tv. Met IPTV kijk je live naar de Eredivisie, Formule 1, Champions League, BBC, CNN, en duizenden andere internationale zenders. Ook series en films zijn beschikbaar via een VOD-bibliotheek.</p>
-        <h3 className="text-2xl font-black text-white">Live sport</h3>
-        <p>Dit is waar IPTV écht schittert. Netflix biedt geen live sport. IPTV Totaal geeft je toegang tot Ziggo Sport, ESPN, beIN Sports en tientallen andere sportzenders — live en zonder extra kosten.</p>
-        <h3 className="text-2xl font-black text-white">Gebruiksgemak</h3>
-        <p>Netflix is ontworpen voor gebruiksgemak en werkt op bijna elk apparaat out-of-the-box. IPTV vereist een eenmalige installatie, maar daarna is het even eenvoudig in gebruik. Ons supportteam helpt je gratis bij de setup.</p>
-        <h3 className="text-2xl font-black text-white">Conclusie</h3>
-        <p>Wil je alleen films en series? Dan is Netflix een prima keuze. Wil je ook live tv, sport en een enorme kanalenlijst voor een scherpe prijs? Dan is IPTVTotaal de slimmere keuze — of gebruik beide naast elkaar.</p>
+        <p>Netflix of IPTV? Je betaalt voor allebei. Maar je krijgt niet hetzelfde.</p>
+        <h3 className="text-2xl font-black text-white">Prijs.</h3>
+        <p>Netflix begint bij €7,99 per maand. Voor het Premium-pakket betaal je €22,99.</p>
+        <p>IPTVTotaal kost vanaf €12 per maand. Daarvoor krijg je 20.000+ zenders — inclusief live sport, nieuws en films.</p>
+        <h3 className="text-2xl font-black text-white">Wat je krijgt.</h3>
+        <p>Netflix heeft sterke eigen series en films. Maar geen live tv.</p>
+        <p>Met IPTVTotaal kijk je live naar de Eredivisie, Formule 1, Champions League, BBC en CNN. De VOD-bibliotheek met films en series is er ook gewoon bij.</p>
+        <h3 className="text-2xl font-black text-white">Live sport — dit is waar Netflix het niet haalt.</h3>
+        <p>Netflix heeft geen sportzenders. Geen live uitzendingen. Geen Eredivisie, geen Grand Prix.</p>
+        <p>IPTVTotaal geeft je Ziggo Sport, ESPN, beIN Sports en 50+ andere sportzenders. Live, zonder extra abonnement.</p>
+        <h3 className="text-2xl font-black text-white">Gebruiksgemak.</h3>
+        <p>Netflix werkt overal meteen. Geen installatie nodig.</p>
+        <p>IPTV vraagt een eenmalige setup van 5 minuten. Daarna werkt het net zo makkelijk — en wij helpen je gratis bij de installatie.</p>
+        <h3 className="text-2xl font-black text-white">Wat moet je kiezen?</h3>
+        <p>Alleen films en series? Netflix is prima.</p>
+        <p>Wil je ook live tv, sport en 20.000+ zenders? Dan is IPTVTotaal de slimmere keuze. Veel van onze klanten gebruiken gewoon allebei naast elkaar.</p>
       </div>
     ),
   },
@@ -215,17 +217,23 @@ const posts: BlogPost[] = [
     image: 'https://images.pexels.com/photos/5202953/pexels-photo-5202953.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     content: (
       <div className="space-y-6 text-white/70 leading-relaxed text-lg">
-        <p>De markt voor IPTV-aanbieders in Nederland is groot. Er zijn tientallen aanbieders, maar de kwaliteit verschilt enorm. In dit artikel leer je precies waar je op moet letten bij het kiezen van een betrouwbare IPTV-dienst.</p>
-        <h3 className="text-2xl font-black text-white">1. Uptime en stabiliteit</h3>
-        <p>De belangrijkste factor is uptime. Niets is frustrerender dan een IPTV-dienst die regelmatig uitvalt — zeker tijdens live sport. IPTVTotaal garandeert 99,9% uptime, gedragen door redundante servers in meerdere datacenters.</p>
-        <h3 className="text-2xl font-black text-white">2. Kanalenlijst</h3>
-        <p>Let op het aantal én de kwaliteit van de kanalen. Veel aanbieders beloven duizenden zenders, maar een groot deel is dood of van slechte kwaliteit. IPTVTotaal biedt 20.000+ actieve zenders, inclusief alle Nederlandse publieke en commerciële kanalen, sport, nieuws en internationale content.</p>
-        <h3 className="text-2xl font-black text-white">3. Klantenservice</h3>
-        <p>Een goede IPTV-aanbieder biedt 24/7 ondersteuning. Bij technische problemen wil je snel geholpen worden. IPTVTotaal is bereikbaar via WhatsApp, dag en nacht, met een gemiddelde reactietijd van minder dan 5 minuten.</p>
-        <h3 className="text-2xl font-black text-white">4. Geld-terug garantie</h3>
-        <p>Serieuze aanbieders staan achter hun product. IPTVTotaal biedt een 15 dagen geld-terug garantie — zonder vragen. Zo kun je de service risicoloos uitproberen.</p>
-        <h3 className="text-2xl font-black text-white">5. Prijs vs kwaliteit</h3>
-        <p>De goedkoopste optie is zelden de beste. Kies voor een aanbieder die transparante prijzen hanteert zonder verborgen kosten of verplichte contracten. IPTVTotaal biedt flexibele maand- en jaarabonnementen vanaf €12/maand.</p>
+        <p>Er zijn tientallen IPTV-aanbieders in Nederland. De meeste zijn het niet waard. Hier is waar je op let.</p>
+        <h3 className="text-2xl font-black text-white">1. Uptime.</h3>
+        <p>Niets is irritanter dan een zender die wegvalt tijdens de wedstrijd. Kies een aanbieder die 99,9% uptime garandeert.</p>
+        <p>IPTVTotaal doet dat — met redundante servers in meerdere datacenters. Als ergens iets misgaat, schakel je automatisch over.</p>
+        <h3 className="text-2xl font-black text-white">2. Een kanalenlijst die werkt.</h3>
+        <p>Veel aanbieders beloven duizenden zenders. Een groot deel daarvan werkt niet, of is van slechte kwaliteit.</p>
+        <p>IPTVTotaal biedt 20.000+ actieve zenders — alle Nederlandse publieke en commerciële kanalen, sport, nieuws en internationale content.</p>
+        <h3 className="text-2xl font-black text-white">3. Support die er echt is.</h3>
+        <p>Als er iets misgaat, wil je snel geholpen worden. Niet morgen. Nu.</p>
+        <p>IPTVTotaal is 24/7 bereikbaar via WhatsApp. Gemiddelde reactietijd: minder dan 5 minuten.</p>
+        <h3 className="text-2xl font-black text-white">4. Geld-terug garantie.</h3>
+        <p>Een aanbieder die achter zijn product staat, geeft je de tijd om het te proberen.</p>
+        <p>IPTVTotaal biedt 15 dagen geld-terug. Geen vragen. Geen gedoe.</p>
+        <h3 className="text-2xl font-black text-white">5. Eerlijke prijs.</h3>
+        <p>De goedkoopste optie is zelden de beste. Kijk naar wat je krijgt voor je geld.</p>
+        <p>IPTVTotaal biedt maand- en jaarabonnementen vanaf €12 per maand. Geen verborgen kosten, geen verplicht contract.</p>
+        <p>Eerlijk gezegd: als je bovenstaande punten afvinkt, kom je snel bij IPTVTotaal uit. Maar probeer het gewoon — je hebt 15 dagen de tijd om te beslissen.</p>
       </div>
     ),
   },
@@ -239,16 +247,20 @@ const posts: BlogPost[] = [
     image: 'https://images.pexels.com/photos/17071576/pexels-photo-17071576.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     content: (
       <div className="space-y-6 text-white/70 leading-relaxed text-lg">
-        <p>Voor sportliefhebbers is IPTV een absolute game-changer. Waar je vroeger dure losse sport-abonnementen nodig had, geeft IPTVTotaal je toegang tot alle grote sportzenders in één pakket.</p>
-        <h3 className="text-2xl font-black text-white">Eredivisie &amp; Dutch football</h3>
-        <p>Volg elke speelronde van de Eredivisie live via ESPN en Ziggo Sport. Van Ajax tot Feyenoord — mis nooit meer een goal. Ook de KNVB Beker en Europa League-duels van Nederlandse clubs zijn te volgen.</p>
-        <h3 className="text-2xl font-black text-white">Formule 1</h3>
-        <p>Alle Grand Prix-races live, inclusief kwalificaties en vrije trainingen. Volg Max Verstappen op Circuit Zandvoort en alle andere circuits wereldwijd via Ziggo Sport en F1 TV.</p>
-        <h3 className="text-2xl font-black text-white">Champions League &amp; Premier League</h3>
-        <p>Europees topvoetbal is beschikbaar via beIN Sports, CBS Sports en andere internationale sportzenders. Ook de Premier League, La Liga en Serie A zijn volledig gedekt.</p>
-        <h3 className="text-2xl font-black text-white">Tennis, basketbal &amp; meer</h3>
-        <p>Van Wimbledon tot Roland Garros, van NBA tot Olympische Spelen — IPTVTotaal dekt vrijwel alle grote sportevenementen ter wereld. Met meer dan 50 sportzenders in het pakket mis je niets.</p>
-        <p>Wil je meer weten over het sportaanbod? Neem contact op via WhatsApp en we vertellen je precies welke zenders beschikbaar zijn in jouw regio.</p>
+        <p>Je wil de wedstrijd zien. Live. Niet tien minuten later via een samenvatting.</p>
+        <h3 className="text-2xl font-black text-white">Eredivisie.</h3>
+        <p>Elke speelronde live via ESPN en Ziggo Sport. Ajax, Feyenoord, PSV — geen wedstrijd hoef je te missen.</p>
+        <p>Ook de KNVB Beker en Europa League-duels van Nederlandse clubs zijn gewoon te volgen.</p>
+        <h3 className="text-2xl font-black text-white">Formule 1.</h3>
+        <p>Alle Grand Prix-races live. Kwalificaties en vrije trainingen inbegrepen.</p>
+        <p>Max Verstappen op Zandvoort, Monaco of Suzuka — je kijkt het live, zonder extra abonnement.</p>
+        <h3 className="text-2xl font-black text-white">Champions League &amp; Premier League.</h3>
+        <p>Europees topvoetbal via beIN Sports en CBS Sports. Premier League, La Liga, Serie A — allemaal inbegrepen.</p>
+        <p>Geen losse abonnementen nodig. Het zit gewoon in het pakket.</p>
+        <h3 className="text-2xl font-black text-white">Tennis, basketbal &amp; meer.</h3>
+        <p>Wimbledon. Roland Garros. NBA. Olympische Spelen.</p>
+        <p>IPTVTotaal dekt vrijwel elk groot sportevenement ter wereld — met 50+ sportzenders in het pakket.</p>
+        <p>Wil je weten welke zenders precies beschikbaar zijn in jouw regio? Stuur ons een berichtje via WhatsApp.</p>
       </div>
     ),
   },
@@ -262,16 +274,20 @@ const posts: BlogPost[] = [
     image: 'https://images.pexels.com/photos/35898730/pexels-photo-35898730.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     content: (
       <div className="space-y-6 text-white/70 leading-relaxed text-lg">
-        <p>4K IPTV levert een indrukwekkend scherp beeld — maar alleen als je setup klopt. In dit artikel lees je wat je nodig hebt voor de beste kijkervaring.</p>
-        <h3 className="text-2xl font-black text-white">Internetsnelheid</h3>
-        <p>Voor SD-streams volstaat 5 Mbps, voor Full HD (1080p) heb je minimaal 15 Mbps nodig, en voor 4K UHD raden we minimaal 25-30 Mbps aan. Bij meerdere gelijktijdige streams vermenigvuldig je dit. De meeste Nederlandse internet-abonnementen voldoen ruimschoots aan deze eisen.</p>
-        <h3 className="text-2xl font-black text-white">Bekabeld vs. wifi</h3>
-        <p>Voor de meest stabiele verbinding gebruik je een ethernetkabel in plaats van wifi. Dit elimineert interferentie en vermindert buffering aanzienlijk — zeker bij live sport in 4K.</p>
-        <h3 className="text-2xl font-black text-white">Router en DNS</h3>
-        <p>Gebruik een moderne router (WiFi 5 of WiFi 6) en overweeg een snellere DNS-server zoals 1.1.1.1 (Cloudflare) of 8.8.8.8 (Google) in te stellen. Dit kan de laadtijd van streams merkbaar verbeteren.</p>
-        <h3 className="text-2xl font-black text-white">Apparaat-instellingen</h3>
-        <p>Zet in je IPTV-app de streamingkwaliteit op 'Auto' of 'Hoog' en zorg dat hardwareversnelling is ingeschakeld. Dit verlaagt de CPU-belasting en zorgt voor vloeiendere weergave op oudere apparaten.</p>
-        <p>IPTVTotaal biedt streams in SD, HD, Full HD en 4K — automatisch aangepast aan jouw verbinding. Heb je last van buffering? Ons supportteam helpt je gratis je setup te optimaliseren.</p>
+        <p>Je 4K-tv staat. Het beeld is scherp. Maar je stream buffert. Dat hoeft niet.</p>
+        <h3 className="text-2xl font-black text-white">Welke internetsnelheid heb je nodig?</h3>
+        <p>Voor SD volstaat 5 Mbps. Voor Full HD heb je 15 Mbps nodig. Voor 4K UHD reken je op minimaal 25 Mbps.</p>
+        <p>De meeste Nederlandse internetabonnementen halen dat ruimschoots. Check het even via fast.com.</p>
+        <h3 className="text-2xl font-black text-white">Wifi of kabel?</h3>
+        <p>Wifi is handig. Maar voor 4K streaming is een ethernetkabel betrouwbaarder.</p>
+        <p>Geen interferentie, geen snelheidsverlies. Zeker tijdens live sport wil je die zekerheid.</p>
+        <h3 className="text-2xl font-black text-white">Router en DNS.</h3>
+        <p>Gebruik een moderne router — WiFi 5 of WiFi 6. Overweeg DNS-server 1.1.1.1 (Cloudflare) of 8.8.8.8 (Google) in te stellen.</p>
+        <p>Dit verlaagt de laadtijd van streams merkbaar. Kost niks, duurt 2 minuten.</p>
+        <h3 className="text-2xl font-black text-white">Instellingen in je IPTV-app.</h3>
+        <p>Zet streamingkwaliteit op 'Auto' of 'Hoog'. Zet hardwareversnelling aan.</p>
+        <p>Je apparaat doet dan minder moeite. Het beeld wordt vloeiender — ook op oudere apparaten.</p>
+        <p>Heb je nog last van buffering? Stuur ons een berichtje via WhatsApp. We kijken gratis met je mee.</p>
       </div>
     ),
   },
