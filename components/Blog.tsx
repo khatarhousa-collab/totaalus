@@ -195,7 +195,7 @@ const posts: BlogPost[] = [
 
         <h3 className="text-2xl font-black text-white">Wat krijg je?</h3>
         <ul className="list-disc list-inside space-y-1 ml-2">
-          <li><strong className="text-white">20.000+ live zenders</strong> — Nederland, Marokko, Turkije, sport, nieuws &amp; meer</li>
+          <li><strong className="text-white">80.000+ live zenders</strong> — Nederland, Marokko, Turkije, sport, nieuws &amp; meer</li>
           <li><strong className="text-white">EPG</strong> — zie precies wat er speelt op elk kanaal</li>
           <li><strong className="text-white">VOD</strong> — films en series on demand</li>
           <li><strong className="text-white">4K &amp; HD</strong> — automatisch aangepast aan je verbinding</li>
@@ -276,7 +276,7 @@ const posts: BlogPost[] = [
         <p>Netflix of IPTV? Je betaalt voor allebei. Maar je krijgt niet hetzelfde.</p>
         <h3 className="text-2xl font-black text-white">Prijs.</h3>
         <p>Netflix begint bij €7,99 per maand. Voor het Premium-pakket betaal je €22,99.</p>
-        <p>IPTVTotaal kost vanaf €12 per maand. Daarvoor krijg je 20.000+ zenders — inclusief live sport, nieuws en films.</p>
+        <p>IPTVTotaal kost vanaf €4,60 per maand. Daarvoor krijg je 80.000+ zenders — inclusief live sport, nieuws en films.</p>
         <h3 className="text-2xl font-black text-white">Wat je krijgt.</h3>
         <p>Netflix heeft sterke eigen series en films. Maar geen live tv.</p>
         <p>Met IPTVTotaal kijk je live naar de Eredivisie, Formule 1, Champions League, BBC en CNN. De VOD-bibliotheek met films en series is er ook gewoon bij.</p>
@@ -294,7 +294,7 @@ const posts: BlogPost[] = [
         <p>IPTV vraagt een eenmalige setup van 5 minuten. Daarna werkt het net zo makkelijk — en wij helpen je gratis bij de installatie.</p>
         <h3 className="text-2xl font-black text-white">Wat moet je kiezen?</h3>
         <p>Alleen films en series? Netflix is prima.</p>
-        <p>Wil je ook live tv, sport en 20.000+ zenders? Dan is IPTVTotaal de slimmere keuze. Veel van onze klanten gebruiken gewoon allebei naast elkaar.</p>
+        <p>Wil je ook live tv, sport en 80.000+ zenders? Dan is IPTVTotaal de slimmere keuze. Veel van onze klanten gebruiken gewoon allebei naast elkaar.</p>
       </div>
     ),
   },
@@ -314,7 +314,7 @@ const posts: BlogPost[] = [
         <p>IPTVTotaal doet dat — met redundante servers in meerdere datacenters. Als ergens iets misgaat, schakel je automatisch over.</p>
         <h3 className="text-2xl font-black text-white">2. Een kanalenlijst die werkt.</h3>
         <p>Veel aanbieders beloven duizenden zenders. Een groot deel daarvan werkt niet, of is van slechte kwaliteit.</p>
-        <p>IPTVTotaal biedt 20.000+ actieve zenders — alle Nederlandse publieke en commerciële kanalen, sport, nieuws en internationale content.</p>
+        <p>IPTVTotaal biedt 80.000+ actieve zenders — alle Nederlandse publieke en commerciële kanalen, sport, nieuws en internationale content.</p>
         <a href="/wereldkampioenschap-voetbal-2026" className="group flex items-center justify-between p-5 bg-amber-500/10 border border-amber-500/20 rounded-2xl hover:border-amber-500/40 transition-colors no-underline">
           <div>
             <span className="text-xs font-black text-amber-400 uppercase tracking-widest block mb-1">Sport</span>
@@ -329,7 +329,7 @@ const posts: BlogPost[] = [
         <p>IPTVTotaal biedt 15 dagen geld-terug. Geen vragen. Geen gedoe.</p>
         <h3 className="text-2xl font-black text-white">5. Eerlijke prijs.</h3>
         <p>De goedkoopste optie is zelden de beste. Kijk naar wat je krijgt voor je geld.</p>
-        <p>IPTVTotaal biedt maand- en jaarabonnementen vanaf €12 per maand. Geen verborgen kosten, geen verplicht contract.</p>
+        <p>IPTVTotaal biedt maand- en jaarabonnementen vanaf €4,60 per maand. Geen verborgen kosten, geen verplicht contract.</p>
         <p>Eerlijk gezegd: als je bovenstaande punten afvinkt, kom je snel bij IPTVTotaal uit. Maar probeer het gewoon — je hebt 15 dagen de tijd om te beslissen.</p>
       </div>
     ),

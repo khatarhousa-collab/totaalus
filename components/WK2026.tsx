@@ -30,7 +30,7 @@ export const WK2026: React.FC = () => {
   useEffect(() => {
     document.title = 'Wereldkampioenschap Voetbal 2026 Live Kijken | IPTVTotaal';
     const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.setAttribute('content', 'Kijk alle 104 WK 2026 wedstrijden live via IPTVTotaal. Oranje, halve finales, de finale — mis geen minuut. Vanaf €12 per maand, 15 dagen geld-terug.');
+    if (metaDesc) metaDesc.setAttribute('content', 'Kijk alle 104 WK 2026 wedstrijden live via IPTVTotaal. Oranje, halve finales, de finale — mis geen minuut. Vanaf €4,60 per maand, 15 dagen geld-terug.');
     return () => {
       document.title = 'IPTVTotaal';
       if (metaDesc) metaDesc.setAttribute('content', '');
@@ -223,8 +223,8 @@ export const WK2026: React.FC = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { title: '99,9% uptime', desc: 'Geen uitval tijdens de wedstrijd. Redundante servers houden je stream stabiel.' },
-              { title: '20.000+ zenders', desc: 'Alle WK-zenders inbegrepen. Plus sport, nieuws en entertainment.' },
-              { title: 'Vanaf €12/maand', desc: 'Geen losse dagpassen per wedstrijd. Één abonnement voor het hele toernooi.' },
+              { title: '80.000+ zenders', desc: 'Alle WK-zenders inbegrepen. Plus sport, nieuws en entertainment.' },
+              { title: 'Vanaf €4,60/maand', desc: 'Geen losse dagpassen per wedstrijd. Één abonnement voor het hele toernooi.' },
               { title: '15 dagen geld-terug', desc: 'Bevalt het niet? Geen vragen, geld terug. Zo simpel is het.' },
             ].map(item => (
               <div key={item.title} className="p-7 bg-neutral-900 border border-amber-900/20 rounded-3xl hover:border-amber-500/30 transition-colors">

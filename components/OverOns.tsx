@@ -77,7 +77,7 @@ export const OverOns: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-20 mt-20">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           <StatCard number="10.000+" label="Tevreden klanten" />
-          <StatCard number="20.000+" label="Zenders & kanalen" />
+          <StatCard number="80.000+" label="Zenders & kanalen" />
           <StatCard number="99,9%" label="Uptime garantie" />
           <StatCard number="24/7" label="Klantenservice" />
         </div>
@@ -109,7 +109,7 @@ export const OverOns: React.FC = () => {
                 { year: '2021', text: 'Eerste 1.000 klanten bereikt' },
                 { year: '2022', text: 'Lancering van 24/7 WhatsApp support' },
                 { year: '2024', text: 'Meer dan 5.000 actieve abonnees' },
-                { year: '2025', text: 'Uitbreiding naar 20.000+ zenders' },
+                { year: '2025', text: 'Uitbreiding naar 80.000+ zenders' },
               ].map((item) => (
                 <div key={item.year} className="flex items-start gap-6">
                   <div className="w-16 h-8 bg-amber-500/10 border border-amber-500/30 rounded-full flex items-center justify-center flex-shrink-0">

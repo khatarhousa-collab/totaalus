@@ -22,7 +22,7 @@ The number (140 landen) proves coverage. The price (€ 2,50) proves affordabili
 **Specific beats vague every time:**
 - "99,9% uptime" beats "bijna altijd online"
 - "binnen 5 minuten" beats "snel"
-- "20.000+ zenders" beats "duizenden zenders"
+- "80.000+ zenders" beats "duizenden zenders"
 - "15 dagen geld-terug" beats "ruime garantie"
 
 ---
@@ -31,11 +31,11 @@ The number (140 landen) proves coverage. The price (€ 2,50) proves affordabili
 
 | Stat | Used in |
 |---|---|
-| 20.000+ live zenders | iptvtotaal-app, beste-iptv-nederland-2025, iptv-vs-netflix |
+| 80.000+ live zenders | iptvtotaal-app, beste-iptv-nederland-2025, iptv-vs-netflix |
 | 99,9% uptime | beste-iptv-nederland-2025 |
 | Reactietijd < 5 minuten | beste-iptv-nederland-2025 |
 | 15 dagen geld-terug garantie | beste-iptv-nederland-2025 |
-| Vanaf €12/maand | beste-iptv-nederland-2025, iptv-vs-netflix |
+| Vanaf €4,60/maand | beste-iptv-nederland-2025, iptv-vs-netflix |
 | 50+ sportzenders | iptv-live-sport-kijken |
 | SD = 5 Mbps, HD = 15 Mbps, 4K = 25–30 Mbps | iptv-4k-kwaliteit |
 | Binnen 2 minuten live | iptvtotaal-app |
@@ -45,10 +45,10 @@ The number (140 landen) proves coverage. The price (€ 2,50) proves affordabili
 ## How to use stats in a sentence
 
 **Pattern:** [Stat] + [what it means for the reader]
-> "IPTVTotaal biedt 20.000+ actieve zenders — inclusief alle Nederlandse publieke en commerciële kanalen."
+> "IPTVTotaal biedt 80.000+ actieve zenders — inclusief alle Nederlandse publieke en commerciële kanalen."
 
 **Pattern:** [Comparison] + [stat proves the winner]
-> "Netflix kost tot €22,99 per maand. IPTVTotaal al vanaf €12."
+> "Netflix kost tot €22,99 per maand. IPTVTotaal al vanaf €4,60."
 
 **Pattern:** [Requirement] + [stat reassures]
 > "Voor 4K heb je minimaal 25 Mbps nodig. De meeste Nederlandse internetabonnementen halen dat ruimschoots."
