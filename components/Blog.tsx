@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const trackWhatsAppConversion = () => {
   if (typeof (window as any).gtag !== 'undefined') {
@@ -404,11 +405,8 @@ const CategoryTag: React.FC<{ label: string }> = ({ label }) => (
   </span>
 );
 
-const BlogCard: React.FC<{ post: BlogPost; onClick: () => void }> = ({ post, onClick }) => (
-  <article
-    onClick={onClick}
-    className="group cursor-pointer"
-  >
+const BlogCard: React.FC<{ post: BlogPost }> = ({ post }) => (
+  <a href={`/blog/${post.slug}`} className="group cursor-pointer block">
     <div className={`overflow-hidden rounded-2xl mb-4 bg-neutral-900 ${post.imageAspect === 'square' ? 'aspect-square' : 'aspect-video'}`}>
       <img
         src={post.image}
@@ -424,20 +422,17 @@ const BlogCard: React.FC<{ post: BlogPost; onClick: () => void }> = ({ post, onC
     <h2 className="text-lg font-black tracking-tight text-white group-hover:text-amber-400 transition-colors leading-snug">
       {post.title}
     </h2>
-  </article>
+  </a>
 );
 
-const BlogDetail: React.FC<{ post: BlogPost; onBack: () => void }> = ({ post, onBack }) => {
+const BlogDetail: React.FC<{ post: BlogPost }> = ({ post }) => {
+  const navigate = useNavigate();
   const whatsappLink = "https://api.whatsapp.com/send/?phone=447449708976&text&type=phone_number&app_absent=0";
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <div className="max-w-3xl mx-auto px-6 lg:px-0">
       <button
-        onClick={onBack}
+        onClick={() => navigate('/blog')}
         className="inline-flex items-center gap-2 text-sm font-bold text-white/40 hover:text-amber-400 transition-colors mb-10"
       >
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -487,8 +482,10 @@ const BlogDetail: React.FC<{ post: BlogPost; onBack: () => void }> = ({ post, on
 };
 
 export const Blog: React.FC = () => {
-  const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
+  const { slug } = useParams<{ slug?: string }>();
   const [activeCategory, setActiveCategory] = useState('Alles');
+
+  const selectedPost = slug ? (posts.find(p => p.slug === slug) ?? null) : null;
 
   const filtered = activeCategory === 'Alles'
     ? posts
@@ -501,12 +498,14 @@ export const Blog: React.FC = () => {
   useEffect(() => {
     const prevTitle = document.title;
     const prevDesc = document.querySelector('meta[name="description"]')?.getAttribute('content') ?? '';
-    if (!selectedPost) {
+    if (selectedPost) {
+      document.title = `${selectedPost.title} | IPTVTotaal Blog`;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', selectedPost.excerpt);
+    } else {
       document.title = 'IPTV Blog | Tips, handleidingen & nieuws — IPTVTotaal';
       const metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc) metaDesc.setAttribute('content', 'Lees onze IPTV handleidingen, vergelijkingen en tips. Alles wat je moet weten over IPTV in Nederland: installatie, sport, kwaliteit en meer.');
-    } else {
-      document.title = `${selectedPost.title} | IPTVTotaal Blog`;
     }
     return () => {
       document.title = prevTitle;
@@ -519,7 +518,7 @@ export const Blog: React.FC = () => {
     return (
       <div className="min-h-screen bg-black text-white pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-20">
-          <BlogDetail post={selectedPost} onBack={() => setSelectedPost(null)} />
+          <BlogDetail post={selectedPost} />
         </div>
       </div>
     );
@@ -565,9 +564,9 @@ export const Blog: React.FC = () => {
             <div>
               {/* Featured post */}
               {featured && (
-                <article
-                  onClick={() => setSelectedPost(featured)}
-                  className="group cursor-pointer mb-14"
+                <a
+                  href={`/blog/${featured.slug}`}
+                  className="group cursor-pointer mb-14 block"
                 >
                   <div className="overflow-hidden rounded-3xl mb-6 aspect-[16/7] bg-neutral-900">
                     <img
@@ -585,7 +584,7 @@ export const Blog: React.FC = () => {
                     {featured.title}
                   </h2>
                   <p className="text-white/50 mt-3 leading-relaxed max-w-2xl">{featured.excerpt}</p>
-                </article>
+                </a>
               )}
 
               {/* Grid of remaining posts */}
@@ -596,7 +595,7 @@ export const Blog: React.FC = () => {
                   </div>
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {rest.map(post => (
-                      <BlogCard key={post.slug} post={post} onClick={() => setSelectedPost(post)} />
+                      <BlogCard key={post.slug} post={post} />
                     ))}
                   </div>
                 </>
@@ -610,9 +609,9 @@ export const Blog: React.FC = () => {
                 <ol className="space-y-6">
                   {popular.map((post, i) => (
                     <li key={post.slug}>
-                      <button
-                        onClick={() => setSelectedPost(post)}
-                        className="text-left group w-full"
+                      <a
+                        href={`/blog/${post.slug}`}
+                        className="text-left group w-full block"
                       >
                         <span className="text-2xl font-black text-white/10 group-hover:text-amber-500/40 transition-colors leading-none block mb-1">
                           {String(i + 1).padStart(2, '0')}
@@ -620,7 +619,7 @@ export const Blog: React.FC = () => {
                         <span className="text-sm font-bold text-white/70 group-hover:text-white transition-colors leading-snug">
                           {post.title}
                         </span>
-                      </button>
+                      </a>
                     </li>
                   ))}
                 </ol>
