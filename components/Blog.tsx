@@ -15,6 +15,7 @@ interface BlogPost {
   title: string;
   excerpt: string;
   image: string;
+  imageAspect?: 'video' | 'square';
   content: React.ReactNode;
 }
 
@@ -27,6 +28,7 @@ const posts: BlogPost[] = [
     title: 'Hoe laat speelt Nederland tegen Uzbekistan? Opstelling & uitzending',
     excerpt: 'Nederland speelt maandag 8 juni om 20:45 tegen Uzbekistan in New York. De laatste oefenwedstrijd voor het WK. Alles over de opstelling, uitzending en waar je kijkt.',
     image: '/nederland-uzbekistan.png',
+    imageAspect: 'square',
     content: (
       <div className="space-y-6 text-white/70 leading-relaxed text-lg">
 
@@ -407,7 +409,7 @@ const BlogCard: React.FC<{ post: BlogPost; onClick: () => void }> = ({ post, onC
     onClick={onClick}
     className="group cursor-pointer"
   >
-    <div className="overflow-hidden rounded-2xl mb-4 aspect-video bg-neutral-900">
+    <div className={`overflow-hidden rounded-2xl mb-4 bg-neutral-900 ${post.imageAspect === 'square' ? 'aspect-square' : 'aspect-video'}`}>
       <img
         src={post.image}
         alt={post.title}
@@ -454,12 +456,14 @@ const BlogDetail: React.FC<{ post: BlogPost; onBack: () => void }> = ({ post, on
         {post.title}
       </h1>
 
-      <img
-        src={post.image}
-        alt={post.title}
-        className="w-full rounded-2xl object-cover mb-10"
-        style={{ maxHeight: 460 }}
-      />
+      <div className={`overflow-hidden rounded-2xl mb-10 ${post.imageAspect === 'square' ? 'aspect-square' : ''}`}>
+        <img
+          src={post.image}
+          alt={post.title}
+          className="w-full object-cover"
+          style={post.imageAspect !== 'square' ? { maxHeight: 460 } : undefined}
+        />
+      </div>
 
       <div className="border-t border-white/10 pt-10">
         {post.content}
