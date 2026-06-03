@@ -198,6 +198,12 @@ const posts: BlogPost[] = [
         <h3 className="text-2xl font-black text-white">Live sport — dit is waar Netflix het niet haalt.</h3>
         <p>Netflix heeft geen sportzenders. Geen live uitzendingen. Geen Eredivisie, geen Grand Prix.</p>
         <p>IPTVTotaal geeft je Ziggo Sport, ESPN, beIN Sports en 50+ andere sportzenders. Live, zonder extra abonnement.</p>
+        <a href="/wereldkampioenschap-voetbal-2026" className="group flex items-center justify-between p-5 bg-amber-500/10 border border-amber-500/20 rounded-2xl hover:border-amber-500/40 transition-colors no-underline">
+          <div>
+            <span className="text-xs font-black text-amber-400 uppercase tracking-widest block mb-1">Tip</span>
+            <span className="text-white font-bold group-hover:text-amber-400 transition-colors">WK 2026 kijken? Alle 104 wedstrijden live via IPTVTotaal →</span>
+          </div>
+        </a>
         <h3 className="text-2xl font-black text-white">Gebruiksgemak.</h3>
         <p>Netflix werkt overal meteen. Geen installatie nodig.</p>
         <p>IPTV vraagt een eenmalige setup van 5 minuten. Daarna werkt het net zo makkelijk — en wij helpen je gratis bij de installatie.</p>
@@ -224,6 +230,12 @@ const posts: BlogPost[] = [
         <h3 className="text-2xl font-black text-white">2. Een kanalenlijst die werkt.</h3>
         <p>Veel aanbieders beloven duizenden zenders. Een groot deel daarvan werkt niet, of is van slechte kwaliteit.</p>
         <p>IPTVTotaal biedt 20.000+ actieve zenders — alle Nederlandse publieke en commerciële kanalen, sport, nieuws en internationale content.</p>
+        <a href="/wereldkampioenschap-voetbal-2026" className="group flex items-center justify-between p-5 bg-amber-500/10 border border-amber-500/20 rounded-2xl hover:border-amber-500/40 transition-colors no-underline">
+          <div>
+            <span className="text-xs font-black text-amber-400 uppercase tracking-widest block mb-1">Sport</span>
+            <span className="text-white font-bold group-hover:text-amber-400 transition-colors">Wereldkampioenschap voetbal 2026 live kijken via IPTV →</span>
+          </div>
+        </a>
         <h3 className="text-2xl font-black text-white">3. Support die er echt is.</h3>
         <p>Als er iets misgaat, wil je snel geholpen worden. Niet morgen. Nu.</p>
         <p>IPTVTotaal is 24/7 bereikbaar via WhatsApp. Gemiddelde reactietijd: minder dan 5 minuten.</p>
@@ -257,6 +269,12 @@ const posts: BlogPost[] = [
         <h3 className="text-2xl font-black text-white">Champions League &amp; Premier League.</h3>
         <p>Europees topvoetbal via beIN Sports en CBS Sports. Premier League, La Liga, Serie A — allemaal inbegrepen.</p>
         <p>Geen losse abonnementen nodig. Het zit gewoon in het pakket.</p>
+        <a href="/wereldkampioenschap-voetbal-2026" className="group flex items-center justify-between p-5 bg-amber-500/10 border border-amber-500/20 rounded-2xl hover:border-amber-500/40 transition-colors no-underline">
+          <div>
+            <span className="text-xs font-black text-amber-400 uppercase tracking-widest block mb-1">Wereldkampioenschap 2026</span>
+            <span className="text-white font-bold group-hover:text-amber-400 transition-colors">Alle 104 WK-wedstrijden live kijken via IPTVTotaal →</span>
+          </div>
+        </a>
         <h3 className="text-2xl font-black text-white">Tennis, basketbal &amp; meer.</h3>
         <p>Wimbledon. Roland Garros. NBA. Olympische Spelen.</p>
         <p>IPTVTotaal dekt vrijwel elk groot sportevenement ter wereld — met 50+ sportzenders in het pakket.</p>
