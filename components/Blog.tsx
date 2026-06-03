@@ -28,7 +28,7 @@ const posts: BlogPost[] = [
     category: 'Sport',
     title: 'Hoe laat speelt Nederland tegen Uzbekistan? Opstelling & uitzending',
     excerpt: 'Nederland speelt maandag 8 juni om 20:45 tegen Uzbekistan in New York. De laatste oefenwedstrijd voor het WK. Alles over de opstelling, uitzending en waar je kijkt.',
-    image: '/nederland-uzbekistan.png',
+    image: '/nederland-uzbekistan-2026.png',
     imageAspect: 'square',
     content: (
       <div className="space-y-6 text-white/70 leading-relaxed text-lg">
@@ -112,7 +112,7 @@ const posts: BlogPost[] = [
     category: 'Handleiding',
     title: 'IPTVTotaal App: Download & Installeer op Elk Apparaat (2026 Gids)',
     excerpt: 'De IPTVTotaal app is beschikbaar op Android, iPhone, Samsung Smart TV en Firestick. Ontdek hoe je de app downloadt, installeert en direct live tv kijkt.',
-    image: 'https://images.pexels.com/photos/35490296/pexels-photo-35490296.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    image: '/iptvtotaal-app.jpg',
     content: (
       <div className="space-y-6 text-white/70 leading-relaxed text-lg">
 
@@ -133,7 +133,7 @@ const posts: BlogPost[] = [
         <p>Geen zorgen. We leggen het gewoon uit.</p>
 
         <img
-          src="https://images.pexels.com/photos/35490296/pexels-photo-35490296.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+          src="/iptvtotaal-app.jpg"
           alt="Smart TV met streaming app en smartphone naast elkaar"
           className="w-full rounded-2xl object-cover"
           style={{ maxHeight: 420 }}
@@ -152,7 +152,7 @@ const posts: BlogPost[] = [
 
         <h3 className="text-2xl font-black text-white">Android: zo doe je het.</h3>
         <img
-          src="https://images.pexels.com/photos/5117989/pexels-photo-5117989.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+          src="/iptvtotaal-app-android.jpg"
           alt="Persoon met smartphone en IPTV streaming app"
           className="w-full rounded-2xl object-cover"
           style={{ maxHeight: 380 }}
@@ -174,7 +174,7 @@ const posts: BlogPost[] = [
 
         <h3 className="text-2xl font-black text-white">Samsung en LG Smart TV: zo doe je het.</h3>
         <img
-          src="https://images.pexels.com/photos/5202957/pexels-photo-5202957.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+          src="/iptvtotaal-app-samsung.jpg"
           alt="Persoon bedient Smart TV met afstandsbediening"
           className="w-full rounded-2xl object-cover"
           style={{ maxHeight: 380 }}
@@ -205,7 +205,7 @@ const posts: BlogPost[] = [
         </ul>
 
         <img
-          src="https://images.pexels.com/photos/8054847/pexels-photo-8054847.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+          src="/iptvtotaal-app-watch.jpg"
           alt="Stel geniet samen van IPTV op de bank in de woonkamer"
           className="w-full rounded-2xl object-cover"
           style={{ maxHeight: 400 }}
@@ -244,7 +244,7 @@ const posts: BlogPost[] = [
     category: 'Handleiding',
     title: 'IPTV installeren op je Smart TV: stap voor stap uitgelegd',
     excerpt: 'Met IPTVTotaal kijk je binnen 5 minuten op je Smart TV. In dit artikel leggen we precies uit hoe je IPTV installeert op Samsung, LG, Android TV en Amazon Firestick.',
-    image: 'https://images.pexels.com/photos/28549934/pexels-photo-28549934.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    image: '/iptv-installeren-smart-tv.jpg',
     content: (
       <div className="space-y-6 text-white/70 leading-relaxed text-lg">
         <p>Je hebt een abonnement. Nu moet de app er nog op. Dat is makkelijker dan je denkt.</p>
@@ -271,7 +271,7 @@ const posts: BlogPost[] = [
     category: 'Vergelijking',
     title: 'IPTV vs Netflix: wat is de beste keuze voor jou?',
     excerpt: 'Zowel IPTV als Netflix bieden entertainment via het internet, maar ze zijn fundamenteel anders. We vergelijken prijs, content en gebruiksgemak — zodat jij de beste keuze maakt.',
-    image: 'https://images.pexels.com/photos/4406686/pexels-photo-4406686.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    image: '/iptv-vs-netflix.jpg',
     content: (
       <div className="space-y-6 text-white/70 leading-relaxed text-lg">
         <p>Netflix of IPTV? Je betaalt voor allebei. Maar je krijgt niet hetzelfde.</p>
@@ -306,7 +306,7 @@ const posts: BlogPost[] = [
     category: 'Advies',
     title: 'Beste IPTV aanbieder Nederland 2025: alles wat je moet weten',
     excerpt: 'Op zoek naar de beste IPTV aanbieder in Nederland? We leggen uit waar je op moet letten, welke valkuilen je vermijdt en waarom IPTVTotaal de meest betrouwbare keuze is.',
-    image: 'https://images.pexels.com/photos/5202953/pexels-photo-5202953.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    image: '/beste-iptv-nederland-2025.jpg',
     content: (
       <div className="space-y-6 text-white/70 leading-relaxed text-lg">
         <p>Er zijn tientallen IPTV-aanbieders in Nederland. De meeste zijn het niet waard. Hier is waar je op let.</p>
@@ -342,7 +342,7 @@ const posts: BlogPost[] = [
     category: 'Sport',
     title: 'Live sport kijken via IPTV: Eredivisie, Formule 1 en meer',
     excerpt: 'Een van de grootste voordelen van IPTV is het live sport-aanbod. Ontdek welke sportzenders beschikbaar zijn en hoe je nooit meer een wedstrijd hoeft te missen.',
-    image: 'https://images.pexels.com/photos/17071576/pexels-photo-17071576.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    image: '/iptv-live-sport-kijken.jpg',
     content: (
       <div className="space-y-6 text-white/70 leading-relaxed text-lg">
         <p>Je wil de wedstrijd zien. Live. Niet tien minuten later via een samenvatting.</p>
@@ -375,7 +375,7 @@ const posts: BlogPost[] = [
     category: 'Techniek',
     title: 'IPTV in 4K: hoe haal je de beste beeldkwaliteit?',
     excerpt: 'Wil je het maximale uit je IPTV-ervaring halen? We leggen uit welke internetsnelheid je nodig hebt voor 4K streaming en hoe je buffering voorkomt.',
-    image: 'https://images.pexels.com/photos/35898730/pexels-photo-35898730.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    image: '/iptv-4k-kwaliteit.jpg',
     content: (
       <div className="space-y-6 text-white/70 leading-relaxed text-lg">
         <p>Je 4K-tv staat. Het beeld is scherp. Maar je stream buffert. Dat hoeft niet.</p>
