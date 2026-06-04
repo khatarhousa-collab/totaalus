@@ -4,6 +4,78 @@ Track every keyword (primary + cluster) already targeted in published blog posts
 
 ---
 
+## Post -3 — IPTV Dark: wat is het en hoe installeer je het? (2026)
+**Slug:** `iptv-dark` | **Scheduled:** 5 juni 2026 | **Category:** Handleiding
+
+| Keyword | Source | Notes |
+|---|---|---|
+| iptv dark | Primary target (XLSX — 1.600/mo) | Informational/transactional |
+| iptv dark app | Cluster | App variant |
+| iptv dark download | Cluster | Download intent |
+| iptv dark android | Cluster | Platform variant |
+| iptv dark apk | Cluster | APK install intent |
+| iptv dark installeren | Cluster | Install intent |
+
+---
+
+## Post -2 — KPN IPTV vs IPTVTotaal: wat is het verschil? (2026)
+**Slug:** `kpn-iptv` | **Scheduled:** 5 juni 2026 | **Category:** Vergelijking
+
+| Keyword | Source | Notes |
+|---|---|---|
+| kpn iptv | Primary target (XLSX — 880/mo) | Navigational/transactional |
+| kpn tv pakket | Cluster | KPN TV variant |
+| kpn iptv vergelijken | Cluster | Comparison intent |
+| kpn interactieve tv | Cluster | KPN product term |
+| kpn televisie abonnement | Cluster | Subscription intent |
+| iptv vs kpn | Cluster | Comparison variant |
+
+---
+
+## Post -1 — Stand WK 2026: groepen, speelschema & resultaten live volgen
+**Slug:** `stand-wk-2026` | **Scheduled:** 6 juni 2026 | **Category:** Sport
+
+| Keyword | Source | Notes |
+|---|---|---|
+| stand wereldkampioenschap voetbal 2026 | Primary target (XLSX — 880/mo) | Informational |
+| stand wk 2026 | Cluster | Short variant |
+| wk 2026 groepen | Cluster | Group stage intent |
+| wereldkampioenschap voetbal 2026 speelschema | Cluster (XLSX — 390/mo) | Schedule intent — covers 2nd keyword |
+| wk 2026 speelschema | Cluster | Schedule short variant |
+| wk 2026 uitslagen | Cluster | Results intent |
+| wk 2026 nederland stand | Cluster | Netherlands-specific |
+
+---
+
+## Post 0a — Eredivisie Kijken Zonder Duur Abonnement: zo doe je het (2026)
+**Slug:** `eredivisie-kijken` | **Scheduled:** 6 juni 2026 | **Category:** Sport
+
+| Keyword | Source | Notes |
+|---|---|---|
+| eredivisie kijken gratis | Primary target (XLSX — 480/mo) | Informational |
+| eredivisie kijken zonder tv abonnement | Cluster (XLSX — 110/mo) | Covers 2nd keyword |
+| eredivisie live kijken | Cluster | Live intent |
+| eredivisie kijken online | Cluster | Online intent |
+| eredivisie stream | Cluster | Stream intent |
+
+---
+
+## Post 0 — IPTV Kopen in Nederland: dit moet je weten voor je bestelt (2026)
+**Slug:** `iptv-kopen` | **Published:** 4 juni 2026 | **Category:** Advies
+
+| Keyword | Source | Notes |
+|---|---|---|
+| iptv kopen | Primary target (XLSX — 2.900/mo) | Transactional intent |
+| iptv abonnement kopen | Cluster | Variant |
+| iptv kopen nederland | Cluster | Geo variant |
+| iptv pakket kopen | Cluster | Variant |
+| iptv kopen goedkoop | Cluster | Price-conscious variant |
+| beste iptv kopen | Cluster | Buying-guide variant |
+| iptv aanbieder nederland | Cluster | Covered in content |
+| iptv abonnement nederland | Cluster | Covered in content |
+
+---
+
 ## Post 1 — IPTVTotaal App: Download & Installeer op Elk Apparaat (2026 Gids)
 **Slug:** `iptvtotaal-app` | **Published:** 3 juni 2026 | **Category:** Handleiding
 
@@ -110,6 +182,11 @@ Track every keyword (primary + cluster) already targeted in published blog posts
 
 | Keyword | Post slug |
 |---|---|
+| eredivisie kijken gratis | eredivisie-kijken (live 6 jun) |
+| stand wereldkampioenschap voetbal 2026 | stand-wk-2026 (live 6 jun) |
+| iptv dark | iptv-dark (live 5 jun) |
+| kpn iptv | kpn-iptv (live 5 jun) |
+| iptv kopen | iptv-kopen |
 | iptvtotaal app | iptvtotaal-app |
 | iptv installeren smart tv | iptv-installeren-smart-tv |
 | iptv vs netflix | iptv-vs-netflix |

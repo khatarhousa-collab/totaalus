@@ -10,6 +10,7 @@ const trackWhatsAppConversion = () => {
 
 interface BlogPost {
   slug: string;
+  publishDate?: string; // ISO date — post is hidden until this date
   date: string;
   readTime: string;
   category: string;
@@ -21,6 +22,467 @@ interface BlogPost {
 }
 
 const posts: BlogPost[] = [
+  {
+    slug: 'eredivisie-kijken',
+    publishDate: '2026-06-06',
+    date: '6 juni 2026',
+    readTime: '4 min',
+    category: 'Sport',
+    title: 'Eredivisie Kijken Zonder Duur Abonnement: zo doe je het (2026)',
+    excerpt: 'Eredivisie kijken hoeft niet duur te zijn. Geen losse ESPN-abonnement nodig. We leggen uit hoe je alle wedstrijden live volgt via IPTV — op elk apparaat.',
+    image: '/eredivisie-kijken.jpg',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+
+        <div className="flex flex-wrap gap-2 mb-2">
+          {[
+            'eredivisie kijken','eredivisie kijken gratis','eredivisie live kijken',
+            'eredivisie kijken zonder tv abonnement','eredivisie stream','eredivisie kijken online',
+          ].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">
+              {kw}
+            </span>
+          ))}
+        </div>
+
+        <p>Vroeger zette je de tv aan en keek je gewoon. Nu moet je uitzoeken of de wedstrijd op ESPN staat of Ziggo Sport. En dan nog betalen ook.</p>
+        <p>Het hoeft niet zo ingewikkeld te zijn.</p>
+
+        <h3 className="text-2xl font-black text-white">Het probleem: te veel losse abonnementen.</h3>
+        <p>ESPN heeft de meeste Eredivisie-wedstrijden. Ziggo Sport heeft de rest. Samen kost dat al snel €20+ per maand — bovenop je normale tv-abonnement.</p>
+        <p>Tel daar een streamingdienst bij op en je betaalt voor drie dingen die je apart moest afsluiten.</p>
+
+        <h3 className="text-2xl font-black text-white">De slimmere oplossing: één pakket voor alles.</h3>
+        <p>Via IPTVTotaal krijg je ESPN, Ziggo Sport en 50+ andere sportzenders in één abonnement. Vanaf €4,60 per maand.</p>
+        <p>Geen losse abonnementen. Geen contract. Geen gedoe.</p>
+
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[
+            { label: 'Prijs', value: 'v.a. €4,60/mnd' },
+            { label: 'Sportzenders', value: '50+' },
+            { label: 'Apparaten', value: 'TV, telefoon, tablet' },
+          ].map(item => (
+            <div key={item.label} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+              <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-1">{item.label}</div>
+              <div className="text-white font-black">{item.value}</div>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Welke Eredivisie-zenders zitten erin?</h3>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">ESPN 1/2/3/4</strong> — alle speelronden live</li>
+          <li><strong className="text-white">Ziggo Sport</strong> — exclusieve duels en KNVB Beker</li>
+          <li><strong className="text-white">Ziggo Sport Select</strong> — Champions League voor Nederlandse clubs</li>
+        </ul>
+        <p>Alle wedstrijden. Geen wegvallende streams. 99,9% uptime gegarandeerd.</p>
+
+        <h3 className="text-2xl font-black text-white">Op welke apparaten kijk je?</h3>
+        <p>Elk apparaat dat je al hebt: Samsung of LG Smart TV, Android, iPhone, laptop, Firestick.</p>
+        <p>Je kijkt thuis op de grote tv — en onderweg op je telefoon. Tegelijk, als je wil.</p>
+
+        <a href="/blog/iptv-live-sport-kijken" className="group flex items-center justify-between p-5 bg-amber-500/10 border border-amber-500/20 rounded-2xl hover:border-amber-500/40 transition-colors no-underline">
+          <div>
+            <span className="text-xs font-black text-amber-400 uppercase tracking-widest block mb-1">Meer sport</span>
+            <span className="text-white font-bold group-hover:text-amber-400 transition-colors">Formule 1, Champions League en meer via IPTVTotaal →</span>
+          </div>
+        </a>
+
+        <h3 className="text-2xl font-black text-white">Veelgestelde vragen.</h3>
+        <div className="space-y-4">
+          <div>
+            <p className="font-black text-white">Kan ik de Eredivisie live kijken zonder tv-abonnement?</p>
+            <p>Ja. IPTVTotaal werkt via internet — geen tv-abonnement of kabel nodig. Alleen een actieve internetverbinding.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Werkt het ook op mijn Smart TV?</p>
+            <p>Ja. Samsung, LG, Android TV — allemaal ondersteund. We helpen je gratis met de installatie.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Zitten alle speelronden erin?</p>
+            <p>Ja. Alle Eredivisie-wedstrijden die op ESPN en Ziggo Sport worden uitgezonden, zijn beschikbaar.</p>
+          </div>
+        </div>
+
+        <p>Wil je de Eredivisie kijken zonder duur abonnement? Stuur ons een berichtje via WhatsApp. Je bent binnen 5 minuten live.</p>
+      </div>
+    ),
+  },
+  {
+    slug: 'stand-wk-2026',
+    publishDate: '2026-06-06',
+    date: '6 juni 2026',
+    readTime: '4 min',
+    category: 'Sport',
+    title: 'Stand WK 2026: groepen, speelschema & resultaten live volgen',
+    excerpt: 'Het WK 2026 begint op 11 juni. Volg de stand van alle 12 groepen, het volledige speelschema en kijk elke wedstrijd live via IPTVTotaal.',
+    image: '/stand-wk-2026.jpg',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+
+        <div className="flex flex-wrap gap-2 mb-2">
+          {[
+            'stand wk 2026','stand wereldkampioenschap voetbal 2026',
+            'wk 2026 groepen','wk 2026 speelschema','wereldkampioenschap voetbal 2026 speelschema',
+            'wk 2026 uitslagen','wk 2026 nederland stand',
+          ].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">
+              {kw}
+            </span>
+          ))}
+        </div>
+
+        <p>Het WK is begonnen. Je wil weten hoe Nederland er voor staat. Wanneer is de volgende wedstrijd — en wie moeten we verslaan om door te gaan?</p>
+        <p>Alles wat je moet weten, op één plek.</p>
+
+        <h3 className="text-2xl font-black text-white">WK 2026 in het kort.</h3>
+
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[
+            { label: 'Start', value: '11 juni 2026' },
+            { label: 'Wedstrijden', value: '104 in totaal' },
+            { label: 'Landen', value: 'VS, Canada, Mexico' },
+          ].map(item => (
+            <div key={item.label} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+              <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-1">{item.label}</div>
+              <div className="text-white font-black">{item.value}</div>
+            </div>
+          ))}
+        </div>
+
+        <p>48 landen. 12 groepen. De grootste editie in de geschiedenis van het WK voetbal.</p>
+        <p>Nederland zit in Groep G en opent het toernooi op 12 juni.</p>
+
+        <h3 className="text-2xl font-black text-white">Het speelschema: wat moet je weten?</h3>
+        <p>De groepsfase loopt van 11 juni tot 2 juli. Elke groep speelt drie rondes — daarna gaan de beste twee teams door.</p>
+        <p>De achtste finales beginnen op 5 juli. De finale is op 19 juli in New York.</p>
+        <p>Het volledige WK 2026 speelschema vind je op de officiële FIFA-website: <a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline font-bold">fifa.com</a>.</p>
+
+        <h3 className="text-2xl font-black text-white">Waar volg je de stand live?</h3>
+        <p>Voor live standen, uitslagen en statistieken kun je terecht op:</p>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline">FIFA.com</a> — officiële standen en uitslagen</li>
+          <li><a href="https://www.espn.nl/voetbal" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline">ESPN.nl</a> — live scores en statistieken</li>
+          <li><a href="https://www.onsoranje.nl" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline">OnsOranje.nl</a> — alles over het Nederlands elftal</li>
+        </ul>
+
+        <h3 className="text-2xl font-black text-white">Alle 104 WK-wedstrijden live kijken.</h3>
+        <p>Via IPTVTotaal kijk je elk WK-duel live — van de openingswedstrijd tot de finale.</p>
+        <p>Geen losse abonnementen voor sport. Alle sportzenders zitten in één pakket. Vanaf €4,60 per maand.</p>
+
+        <a href="/wereldkampioenschap-voetbal-2026" className="group flex items-center justify-between p-5 bg-amber-500/10 border border-amber-500/20 rounded-2xl hover:border-amber-500/40 transition-colors no-underline">
+          <div>
+            <span className="text-xs font-black text-amber-400 uppercase tracking-widest block mb-1">WK 2026</span>
+            <span className="text-white font-bold group-hover:text-amber-400 transition-colors">Alles over WK 2026 kijken via IPTVTotaal →</span>
+          </div>
+        </a>
+
+        <p>Vragen over het WK kijken? Stuur ons een berichtje via WhatsApp. We helpen je binnen 5 minuten verder.</p>
+      </div>
+    ),
+  },
+  {
+    slug: 'iptv-dark',
+    publishDate: '2026-06-05',
+    date: '5 juni 2026',
+    readTime: '4 min',
+    category: 'Handleiding',
+    title: 'IPTV Dark: wat is het en hoe installeer je het? (2026)',
+    excerpt: 'IPTV Dark is een populaire IPTV-app voor Android. We leggen uit wat het doet, hoe je het installeert en hoe je het combineert met een IPTVTotaal abonnement.',
+    image: '/iptv-dark.jpg',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+
+        <div className="flex flex-wrap gap-2 mb-2">
+          {[
+            'iptv dark','iptv dark app','iptv dark download',
+            'iptv dark android','iptv dark apk','iptv dark installeren',
+          ].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">
+              {kw}
+            </span>
+          ))}
+        </div>
+
+        <p>Je zoekt een IPTV-app. Overal duikt de naam IPTV Dark op. Maar wat is het precies — een app, een dienst, of iets anders?</p>
+        <p>Korte uitleg. Dan meteen hoe je ermee aan de slag gaat.</p>
+
+        <h3 className="text-2xl font-black text-white">Wat is IPTV Dark?</h3>
+        <p>IPTV Dark is een mediaspeler-app voor Android. Je gebruikt hem om live tv-zenders te streamen via een M3U-link of Xtream Codes.</p>
+        <p>De app zelf heeft geen eigen zenders. Je hebt een IPTV-abonnement nodig — zoals IPTVTotaal — om inhoud te laden. De app is gewoon de speler.</p>
+
+        <h3 className="text-2xl font-black text-white">Hoe installeer je IPTV Dark?</h3>
+        <p>IPTV Dark is beschikbaar als APK voor Android. Zo installeer je het:</p>
+        <ol className="list-decimal list-inside space-y-2 ml-2">
+          <li>Ga naar de instellingen van je Android-apparaat</li>
+          <li>Zet <strong className="text-white">"Installatie van onbekende bronnen"</strong> aan</li>
+          <li>Download de IPTV Dark APK via de officiële website of betrouwbare bron</li>
+          <li>Open het gedownloade bestand en installeer de app</li>
+          <li>Start de app en voer je M3U-link of Xtream Codes in</li>
+        </ol>
+        <p>Op een Firestick werkt het op dezelfde manier via de Downloader-app.</p>
+
+        <h3 className="text-2xl font-black text-white">Hoe verbind je IPTV Dark met IPTVTotaal?</h3>
+        <p>Na activering ontvang je van IPTVTotaal je M3U-link of Xtream Codes per WhatsApp. Die voer je eenmalig in de app in.</p>
+        <ol className="list-decimal list-inside space-y-2 ml-2">
+          <li>Open IPTV Dark</li>
+          <li>Kies <em>"Afspeellijst toevoegen"</em> of <em>"M3U URL"</em></li>
+          <li>Plak je M3U-link</li>
+          <li>Alle 80.000+ zenders laden automatisch in</li>
+        </ol>
+        <p>Klaar. Je bent live.</p>
+
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[
+            { label: 'Zenders', value: '80.000+' },
+            { label: 'Kwaliteit', value: 'HD & 4K' },
+            { label: 'Setup', value: '< 5 minuten' },
+          ].map(item => (
+            <div key={item.label} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+              <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-1">{item.label}</div>
+              <div className="text-white font-black">{item.value}</div>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Is IPTV Dark veilig?</h3>
+        <p>De app zelf is veilig als je hem downloadt van een betrouwbare bron. Wees voorzichtig met willekeurige APK-sites — download alleen van de officiële bron of vertrouwde app-stores.</p>
+        <p>Twijfel je? Gebruik dan een alternatief dat wél in de Play Store staat — zoals <strong className="text-white">TiviMate</strong> of <strong className="text-white">IPTV Smarters Pro</strong>. Beide werken perfect met IPTVTotaal.</p>
+
+        <a href="/blog/iptvtotaal-app" className="group flex items-center justify-between p-5 bg-amber-500/10 border border-amber-500/20 rounded-2xl hover:border-amber-500/40 transition-colors no-underline">
+          <div>
+            <span className="text-xs font-black text-amber-400 uppercase tracking-widest block mb-1">Alle apps</span>
+            <span className="text-white font-bold group-hover:text-amber-400 transition-colors">Welke IPTV-app werkt het beste op jouw apparaat? →</span>
+          </div>
+        </a>
+
+        <p>Hulp nodig bij de installatie? Stuur ons een berichtje via WhatsApp. We helpen je gratis en stap voor stap.</p>
+      </div>
+    ),
+  },
+  {
+    slug: 'kpn-iptv',
+    publishDate: '2026-06-05',
+    date: '5 juni 2026',
+    readTime: '5 min',
+    category: 'Vergelijking',
+    title: 'KPN IPTV vs IPTVTotaal: wat is het verschil? (2026)',
+    excerpt: 'Heb je KPN en overweeg je hun tv-pakket? We vergelijken KPN IPTV met IPTVTotaal op prijs, zenderaanbod en flexibiliteit — zodat jij de slimste keuze maakt.',
+    image: '/kpn-iptv.jpg',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+
+        <div className="flex flex-wrap gap-2 mb-2">
+          {[
+            'kpn iptv','kpn tv pakket','kpn iptv vergelijken',
+            'kpn interactieve tv','kpn televisie abonnement','iptv vs kpn',
+          ].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">
+              {kw}
+            </span>
+          ))}
+        </div>
+
+        <p>Je hebt KPN internet. Je wil ook tv. KPN biedt een tv-pakket aan — maar het is niet je enige optie.</p>
+        <p>We leggen het verschil uit. Zodat je zelf kunt beslissen.</p>
+
+        <h3 className="text-2xl font-black text-white">Wat biedt KPN?</h3>
+        <p>KPN TV is een IPTV-dienst die via je KPN-internetverbinding werkt. Je krijgt een decoder of gebruikt de KPN iTV-app op je Smart TV.</p>
+        <p>Basispakket: rond de 30–50 Nederlandse en internationale zenders. Sportzenders zijn een apart betaald pakket. Je zit vast aan een contract.</p>
+
+        <h3 className="text-2xl font-black text-white">Wat biedt IPTVTotaal?</h3>
+        <p>IPTVTotaal werkt via elk internet — KPN, Ziggo, T-Mobile, het maakt niet uit. Geen decoder nodig.</p>
+        <p>80.000+ live zenders. ESPN, Ziggo Sport, beIN Sports, internationale kanalen — allemaal inbegrepen. Vanaf €4,60 per maand, zonder contract.</p>
+
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="border-b border-white/10">
+                <th className="text-left py-3 pr-6 text-white/30 font-bold uppercase tracking-widest text-xs">Onderdeel</th>
+                <th className="text-left py-3 pr-6 text-white font-black">KPN TV</th>
+                <th className="text-left py-3 text-amber-400 font-black">IPTVTotaal</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-white/5">
+              {[
+                ['Prijs', '€10–25/mnd extra', 'v.a. €4,60/mnd'],
+                ['Zenders', '30–50', '80.000+'],
+                ['Sportzenders', 'Apart betaald', 'Inbegrepen'],
+                ['Contract', 'Ja', 'Nee'],
+                ['Apparaten', 'Decoder / KPN app', 'Elk apparaat'],
+                ['Geld-terug', 'Nee', '15 dagen'],
+              ].map(([label, kpn, iptv]) => (
+                <tr key={label}>
+                  <td className="py-3 pr-6 text-white/40">{label}</td>
+                  <td className="py-3 pr-6 text-white/70">{kpn}</td>
+                  <td className="py-3 text-white font-bold">{iptv}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Wat moet je kiezen?</h3>
+        <p>Als je alleen de standaard Nederlandse zenders wil en al een KPN-bundel hebt, kan KPN TV handig zijn. Alles op één factuur.</p>
+        <p>Maar als je ook live sport wil — Eredivisie, Formule 1, Champions League — of internationale zenders, dan win je meer met IPTVTotaal. Meer zenders, lagere prijs, geen contract.</p>
+        <p>Eerlijk gezegd: de meeste mensen die ons vinden, komen van een duur tv-pakket dat niet bood wat ze zochten.</p>
+
+        <a href="/blog/iptv-vs-netflix" className="group flex items-center justify-between p-5 bg-amber-500/10 border border-amber-500/20 rounded-2xl hover:border-amber-500/40 transition-colors no-underline">
+          <div>
+            <span className="text-xs font-black text-amber-400 uppercase tracking-widest block mb-1">Meer vergelijken</span>
+            <span className="text-white font-bold group-hover:text-amber-400 transition-colors">IPTV vs Netflix: wat past het beste bij jou? →</span>
+          </div>
+        </a>
+
+        <h3 className="text-2xl font-black text-white">Veelgestelde vragen.</h3>
+        <div className="space-y-4">
+          <div>
+            <p className="font-black text-white">Werkt IPTVTotaal op mijn KPN-internetverbinding?</p>
+            <p>Ja. IPTVTotaal werkt via elk internetabonnement — KPN, Ziggo, T-Mobile of een andere provider. Geen verschil.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Heb ik een speciale decoder nodig?</p>
+            <p>Nee. Je gebruikt de IPTV-app op je bestaande Smart TV, telefoon of tablet. Geen extra apparatuur nodig.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Kan ik IPTVTotaal uitproberen voor ik opzeg?</p>
+            <p>Ja. Vraag een proefperiode aan via WhatsApp. Je hebt daarna 15 dagen geld-terug garantie.</p>
+          </div>
+        </div>
+
+        <p>Wil je overstappen of wil je het eerst proberen? Stuur ons een berichtje via WhatsApp. We helpen je binnen 5 minuten verder.</p>
+      </div>
+    ),
+  },
+  {
+    slug: 'iptv-kopen',
+    date: '4 juni 2026',
+    readTime: '5 min',
+    category: 'Advies',
+    title: 'IPTV Kopen in Nederland: dit moet je weten voor je bestelt (2026)',
+    excerpt: 'Wil je IPTV kopen maar weet je niet waar je op moet letten? We leggen uit wat IPTV kost, hoe je een betrouwbare aanbieder herkent en hoe je binnen 5 minuten live bent.',
+    image: '/iptv-kopen.png',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+
+        <div className="flex flex-wrap gap-2 mb-2">
+          {[
+            'iptv kopen','iptv abonnement kopen','iptv kopen nederland',
+            'iptv pakket kopen','iptv kopen goedkoop','beste iptv kopen',
+            'iptv aanbieder nederland','iptv abonnement nederland',
+          ].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">
+              {kw}
+            </span>
+          ))}
+        </div>
+
+        <p>Je wil stoppen met duur betalen voor tv die je toch niet kijkt. IPTV lijkt de logische volgende stap. Maar dan zoek je op — en je stoot op tientallen aanbieders die allemaal hetzelfde beweren.</p>
+        <p>Dit artikel legt het uit. Wat het kost, waar je op let, en hoe je binnen 5 minuten live bent.</p>
+
+        <h3 className="text-2xl font-black text-white">Wat kost een IPTV-abonnement in Nederland?</h3>
+        <p>Abonnementen beginnen bij €3 per maand. Goedkoop klinkt aantrekkelijk — totdat je zenders wegvallen in de 89e minuut.</p>
+        <p>IPTVTotaal kost <strong className="text-white">vanaf €4,60 per maand</strong> — inclusief 80.000+ zenders, EPG, VOD en 24/7 support via WhatsApp. Geen verborgen kosten.</p>
+
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[
+            { label: 'Vanaf', value: '€4,60 / maand' },
+            { label: 'Zenders', value: '80.000+' },
+            { label: 'Garantie', value: '15 dagen terug' },
+          ].map(item => (
+            <div key={item.label} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+              <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-1">{item.label}</div>
+              <div className="text-white font-black">{item.value}</div>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Waaraan herken je een betrouwbare aanbieder?</h3>
+        <p>Er zijn honderden aanbieders. De meeste zijn het niet waard. Dit zijn de vier dingen die er echt toe doen.</p>
+
+        <div className="space-y-4">
+          <div className="flex gap-4 p-4 bg-white/5 border border-white/10 rounded-2xl">
+            <span className="text-amber-400 font-black text-xl leading-none mt-0.5">1</span>
+            <div>
+              <p className="font-black text-white">Uptime-garantie.</p>
+              <p className="text-sm">Een serieuze aanbieder garandeert minimaal 99% uptime. IPTVTotaal garandeert 99,9% — met redundante servers op meerdere locaties.</p>
+            </div>
+          </div>
+          <div className="flex gap-4 p-4 bg-white/5 border border-white/10 rounded-2xl">
+            <span className="text-amber-400 font-black text-xl leading-none mt-0.5">2</span>
+            <div>
+              <p className="font-black text-white">Geld-terug garantie.</p>
+              <p className="text-sm">Een aanbieder die achter zijn product staat, geeft je de tijd om het te proberen. Geen geld-terug? Niet doen. IPTVTotaal biedt 15 dagen bedenktijd.</p>
+            </div>
+          </div>
+          <div className="flex gap-4 p-4 bg-white/5 border border-white/10 rounded-2xl">
+            <span className="text-amber-400 font-black text-xl leading-none mt-0.5">3</span>
+            <div>
+              <p className="font-black text-white">Echte klantenservice.</p>
+              <p className="text-sm">Kan je ze bereiken als er iets misgaat? IPTVTotaal is 24/7 bereikbaar via WhatsApp. Gemiddelde reactietijd: minder dan 5 minuten.</p>
+            </div>
+          </div>
+          <div className="flex gap-4 p-4 bg-white/5 border border-white/10 rounded-2xl">
+            <span className="text-amber-400 font-black text-xl leading-none mt-0.5">4</span>
+            <div>
+              <p className="font-black text-white">Een kanalenlijst die ook echt werkt.</p>
+              <p className="text-sm">Veel aanbieders adverteren met "duizenden zenders" — maar een groot deel werkt niet of laadt traag. Vraag altijd naar een proefperiode voor je koopt.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Welke zenders krijg je?</h3>
+        <p>80.000+ live zenders. Dat klinkt als veel. Het ís ook veel.</p>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Nederland:</strong> NPO 1/2/3, RTL 4/5/7, SBS6, Veronica en meer</li>
+          <li><strong className="text-white">Sport:</strong> ESPN, Ziggo Sport, beIN Sports, DAZN — 50+ sportzenders</li>
+          <li><strong className="text-white">Internationaal:</strong> Marokkaanse, Turkse, Arabische en Engelstalige zenders</li>
+          <li><strong className="text-white">Nieuws:</strong> CNN, BBC, Al Jazeera, Sky News</li>
+          <li><strong className="text-white">VOD:</strong> films en series on demand inbegrepen</li>
+        </ul>
+
+        <a href="/wereldkampioenschap-voetbal-2026" className="group flex items-center justify-between p-5 bg-amber-500/10 border border-amber-500/20 rounded-2xl hover:border-amber-500/40 transition-colors no-underline">
+          <div>
+            <span className="text-xs font-black text-amber-400 uppercase tracking-widest block mb-1">WK 2026</span>
+            <span className="text-white font-bold group-hover:text-amber-400 transition-colors">Alle 104 WK-wedstrijden live kijken via IPTVTotaal →</span>
+          </div>
+        </a>
+
+        <h3 className="text-2xl font-black text-white">Zo koop je IPTV bij IPTVTotaal.</h3>
+        <p>Geen bestelformulieren. Geen wachttijden.</p>
+        <ol className="list-decimal list-inside space-y-2 ml-2">
+          <li>Stuur een berichtje via WhatsApp</li>
+          <li>Kies je pakket — maand of jaar</li>
+          <li>Betaal via iDEAL, creditcard of crypto</li>
+          <li>Ontvang je M3U-link of Xtream Codes direct per WhatsApp</li>
+          <li>Voer de gegevens in je IPTV-app in</li>
+        </ol>
+        <p>Gemiddeld ben je binnen 5 minuten live. Kom je er niet uit? We helpen je gratis bij de installatie.</p>
+
+        <h3 className="text-2xl font-black text-white">Veelgestelde vragen.</h3>
+        <div className="space-y-4">
+          <div>
+            <p className="font-black text-white">Kan ik het eerst proberen voor ik koop?</p>
+            <p>Ja. IPTVTotaal biedt een proefperiode. Stuur een berichtje via WhatsApp en vraag ernaar.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Op hoeveel apparaten kan ik kijken?</p>
+            <p>Afhankelijk van je pakket kijk je op 1 of meerdere schermen tegelijk. Smart TV, telefoon, tablet, laptop — het maakt niet uit.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Wat als ik niet tevreden ben?</p>
+            <p>Dan krijg je je geld terug. Geen vragen. Dat is de 15-dagen garantie.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Welke internetsnelheid heb ik nodig?</p>
+            <p>Voor HD is 15 Mbps voldoende. Voor 4K reken je op 25 Mbps. De meeste Nederlandse internetabonnementen halen dat ruimschoots.</p>
+          </div>
+        </div>
+
+        <p>Vragen over het kopen? Stuur ons een berichtje via WhatsApp. We helpen je binnen 5 minuten verder.</p>
+      </div>
+    ),
+  },
   {
     slug: 'nederland-uzbekistan-2026',
     date: '3 juni 2026',
@@ -485,15 +947,19 @@ export const Blog: React.FC = () => {
   const { slug } = useParams<{ slug?: string }>();
   const [activeCategory, setActiveCategory] = useState('Alles');
 
-  const selectedPost = slug ? (posts.find(p => p.slug === slug) ?? null) : null;
+  const today = new Date();
+  today.setHours(23, 59, 59, 999);
+  const visiblePosts = posts.filter(p => !p.publishDate || new Date(p.publishDate) <= today);
+
+  const selectedPost = slug ? (visiblePosts.find(p => p.slug === slug) ?? null) : null;
 
   const filtered = activeCategory === 'Alles'
-    ? posts
-    : posts.filter(p => p.category === activeCategory);
+    ? visiblePosts
+    : visiblePosts.filter(p => p.category === activeCategory);
 
   const featured = filtered[0];
   const rest = filtered.slice(1);
-  const popular = [...posts].slice(0, 5);
+  const popular = [...visiblePosts].slice(0, 5);
 
   useEffect(() => {
     const prevTitle = document.title;
