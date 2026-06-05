@@ -86,7 +86,7 @@ export const EredivisieLiveKijken: React.FC = () => {
       <div className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            src="https://images.pexels.com/photos/2068975/pexels-photo-2068975.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             alt="Eredivisie live kijken via IPTV zonder tv-abonnement"
             className="w-full h-full object-cover opacity-20"
           />
@@ -143,6 +143,15 @@ export const EredivisieLiveKijken: React.FC = () => {
         </div>
       </div>
 
+      {/* Eredivisie photo */}
+      <div className="max-w-7xl mx-auto px-6 lg:px-20 py-10">
+        <img
+          src="/eredivisie-2026.png"
+          alt="Eredivisie 2026 live kijken via IPTV"
+          className="w-full rounded-3xl object-cover"
+        />
+      </div>
+
       {/* Main section */}
       <div className="max-w-7xl mx-auto px-6 lg:px-20 py-20">
         <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
@@ -179,8 +188,8 @@ export const EredivisieLiveKijken: React.FC = () => {
           </div>
           <div className="mt-12 lg:mt-0">
             <img
-              src="https://images.pexels.com/photos/3621104/pexels-photo-3621104.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              alt="Eredivisie fans voetbal live kijken via IPTV"
+              src="https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              alt="Eredivisie speler scoort doelpunt live via IPTV"
               className="w-full rounded-3xl object-cover"
               style={{ maxHeight: 480 }}
             />
@@ -249,7 +258,7 @@ export const EredivisieLiveKijken: React.FC = () => {
       {/* How to watch */}
       <div className="border-t border-white/10 bg-white/[0.02]">
         <div className="max-w-7xl mx-auto px-6 lg:px-20 py-20">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+          <div className="max-w-2xl">
             <div>
               <h2 className="text-4xl lg:text-5xl font-black tracking-tighter text-white mb-4">
                 Zo kijk je de Eredivisie via IPTV.
@@ -280,15 +289,6 @@ export const EredivisieLiveKijken: React.FC = () => {
                 <WhatsAppIcon />
                 Direct starten via WhatsApp
               </a>
-            </div>
-            <div className="mt-12 lg:mt-0">
-              <img
-                src="https://images.pexels.com/photos/159594/soccer-football-player-sport-159594.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="Eredivisie kijken via IPTV op Smart TV of telefoon"
-                className="w-full rounded-3xl object-cover"
-                style={{ maxHeight: 500 }}
-              />
-              <p className="text-xs text-white/20 mt-2">Foto: Pexels</p>
             </div>
           </div>
         </div>
