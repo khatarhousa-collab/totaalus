@@ -102,9 +102,8 @@ export const NederlandOezbekistanLive: React.FC = () => {
           </div>
 
           <h1 className="text-5xl lg:text-8xl font-black tracking-tighter leading-none mb-6 max-w-4xl">
-            Nederland –<br />
-            <span className="text-amber-400">Oezbekistan</span><br />
-            Live Kijken.
+            Nederland – Oezbekistan<br />
+            <span className="text-amber-400">Live Kijken via IPTV.</span>
           </h1>
 
           <p className="text-xl text-white/60 max-w-xl mb-4">
