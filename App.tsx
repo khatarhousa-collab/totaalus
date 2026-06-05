@@ -18,6 +18,7 @@ import { AnnouncementBanner } from './components/AnnouncementBanner';
 import { OverOns } from './components/OverOns';
 import { Blog } from './components/Blog';
 import { WK2026 } from './components/WK2026';
+import { NederlandOezbekistanLive } from './components/NederlandOezbekistanLive';
 
 const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
@@ -85,6 +86,7 @@ const App: React.FC = () => {
         <Route path="/algemene-voorwaarden" element={<main><AlgemeneVoorwaarden /></main>} />
         <Route path="/privacybeleid" element={<main><Privacybeleid /></main>} />
         <Route path="/wereldkampioenschap-voetbal-2026" element={<main><WK2026 /></main>} />
+        <Route path="/nederland-oezbekistan-live" element={<main><NederlandOezbekistanLive /></main>} />
       </Routes>
 
       <Footer />
