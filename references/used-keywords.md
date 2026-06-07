@@ -4,6 +4,62 @@ Track every keyword (primary + cluster) already targeted in published blog posts
 
 ---
 
+## Post A — Internet Protocol TV providers: welke is het beste? (2026)
+**Slug:** `internet-protocol-tv-providers` | **Scheduled:** 7 juni 2026 | **Category:** Vergelijking
+
+| Keyword | Source | Notes |
+|---|---|---|
+| internet protocol tv providers | Primary target (CSV — 590/mo) | Informational/Transactional |
+| iptv providers nederland | Cluster | Geo variant |
+| iptv aanbieder nederland | Cluster | Provider intent |
+| beste iptv provider | Cluster | Commercial intent |
+| iptv vergelijken | Cluster | Comparison intent |
+| iptv abonnement nederland | Cluster | Subscription intent |
+
+---
+
+## Post B — Wat is IPTV? Uitleg in gewone taal (2026)
+**Slug:** `wat-is-iptv` | **Scheduled:** 7 juni 2026 | **Category:** Advies
+
+| Keyword | Source | Notes |
+|---|---|---|
+| wat is iptv | Primary target (CSV — 480/mo) | Informational |
+| wat is iptv en hoe werkt het | Cluster (CSV — 40/mo) | Covers 2nd keyword |
+| iptv uitleg | Cluster | Explanation intent |
+| iptv betekenis | Cluster | Definition intent |
+| internet protocol television | Cluster | Full term variant |
+
+---
+
+## Post C — SS IPTV: wat is het en hoe installeer je het? (2026)
+**Slug:** `ss-iptv` | **Scheduled:** 8 juni 2026 | **Category:** Handleiding
+
+| Keyword | Source | Notes |
+|---|---|---|
+| ss iptv | Primary target (XLSX — 480/mo) | Informational |
+| iptv ss | Co-primary (XLSX — 480/mo) | Same intent, same post |
+| ss iptv app | Cluster | App intent |
+| ss iptv lg | Cluster | Device variant |
+| ss iptv samsung | Cluster | Device variant |
+| ss iptv installeren | Cluster | Install intent |
+| ss iptv m3u | Cluster | Technical intent |
+
+---
+
+## Post D — Hoe werkt IPTV? De technologie uitgelegd (2026)
+**Slug:** `hoe-werkt-iptv` | **Scheduled:** 8 juni 2026 | **Category:** Techniek
+
+| Keyword | Source | Notes |
+|---|---|---|
+| hoe werkt iptv | Primary target (CSV — 320/mo) | Informational |
+| iptv technologie | Cluster | Tech explanation intent |
+| m3u link uitleg | Cluster | Technical intent |
+| xtream codes uitleg | Cluster | Technical intent |
+| iptv streaming | Cluster | General streaming intent |
+| iptv protocol | Cluster | Protocol explanation |
+
+---
+
 ## Post -3 — IPTV Dark: wat is het en hoe installeer je het? (2026)
 **Slug:** `iptv-dark` | **Scheduled:** 5 juni 2026 | **Category:** Handleiding
 
@@ -182,6 +238,10 @@ Track every keyword (primary + cluster) already targeted in published blog posts
 
 | Keyword | Post slug |
 |---|---|
+| internet protocol tv providers | internet-protocol-tv-providers (live 7 jun) |
+| wat is iptv | wat-is-iptv (live 7 jun) |
+| ss iptv / iptv ss | ss-iptv (live 8 jun) |
+| hoe werkt iptv | hoe-werkt-iptv (live 8 jun) |
 | eredivisie kijken gratis | eredivisie-kijken (live 6 jun) |
 | stand wereldkampioenschap voetbal 2026 | stand-wk-2026 (live 6 jun) |
 | iptv dark | iptv-dark (live 5 jun) |
