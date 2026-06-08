@@ -1920,16 +1920,18 @@ const BlogDetail: React.FC<{ post: BlogPost }> = ({ post }) => {
         {post.title}
       </h1>
 
-      {post.headerCard && <div className="mb-10">{post.headerCard}</div>}
-
-      <div className={`overflow-hidden rounded-2xl mb-10 ${post.imageAspect === 'square' ? 'aspect-square' : ''}`}>
-        <img
-          src={post.image}
-          alt={post.title}
-          className="w-full object-cover"
-          style={post.imageAspect !== 'square' ? { maxHeight: 460 } : undefined}
-        />
-      </div>
+      {post.headerCard ? (
+        <div className="mb-10">{post.headerCard}</div>
+      ) : (
+        <div className={`overflow-hidden rounded-2xl mb-10 ${post.imageAspect === 'square' ? 'aspect-square' : ''}`}>
+          <img
+            src={post.image}
+            alt={post.title}
+            className="w-full object-cover"
+            style={post.imageAspect !== 'square' ? { maxHeight: 460 } : undefined}
+          />
+        </div>
+      )}
 
       <div className="border-t border-white/10 pt-10">
         {post.content}
