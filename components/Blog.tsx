@@ -1371,7 +1371,9 @@ export const Blog: React.FC = () => {
 
   const today = new Date();
   today.setHours(23, 59, 59, 999);
-  const visiblePosts = posts.filter(p => !p.publishDate || new Date(p.publishDate) <= today);
+  const visiblePosts = posts
+    .filter(p => !p.publishDate || new Date(p.publishDate) <= today)
+    .sort((a, b) => new Date(b.publishDate ?? b.date).getTime() - new Date(a.publishDate ?? a.date).getTime());
 
   const selectedPost = slug ? (visiblePosts.find(p => p.slug === slug) ?? null) : null;
 
