@@ -135,7 +135,7 @@ const WkMatchHeroCard: React.FC<{
             { src: '/assets/channels/ziggo-sport.png', alt: 'Ziggo Sport' },
             { src: '/assets/channels/eurosport.png', alt: 'Eurosport' },
           ].map(ch => (
-            <div key={ch.alt} className="bg-white/60 rounded-xl px-3 py-2 flex items-center justify-center h-10 min-w-[64px]">
+            <div key={ch.alt} className="bg-gradient-to-r from-amber-400 to-yellow-500 rounded-xl px-3 py-2 flex items-center justify-center h-10 min-w-[64px]">
               <img src={ch.src} alt={ch.alt} className="max-h-6 max-w-[72px] object-contain" />
             </div>
           ))}
