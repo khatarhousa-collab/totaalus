@@ -99,20 +99,20 @@ const WkMatchHeroCard: React.FC<{
         </div>
 
         {/* Timer */}
-        <div className="mt-5">
+        <div className="mt-4 flex justify-center">
           {t.started ? (
-            <div className="flex items-center justify-center gap-2 bg-black rounded-xl py-3">
-              <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse"/>
-              <span className="text-amber-400 font-black text-sm uppercase tracking-widest">Live nu bezig</span>
+            <div className="inline-flex items-center gap-2 bg-black rounded-lg px-4 py-2">
+              <span className="w-1.5 h-1.5 bg-amber-400 rounded-full animate-pulse"/>
+              <span className="text-amber-400 font-black text-xs uppercase tracking-widest">Live nu bezig</span>
             </div>
           ) : (
-            <div className="bg-black/80 rounded-xl px-4 py-3 flex items-center justify-center gap-1">
+            <div className="bg-black/80 rounded-lg px-3 py-2 inline-flex items-center justify-center gap-0.5 mx-auto">
               {[{v:t.d,l:'d'},{v:t.h,l:'u'},{v:t.m,l:'m'},{v:t.s,l:'s'}].map(({v,l}, i) => (
                 <React.Fragment key={l}>
-                  {i > 0 && <span className="text-amber-400/60 font-black text-xl leading-none mb-3">:</span>}
-                  <div className="flex flex-col items-center w-12">
-                    <span className="text-amber-400 font-black text-2xl tabular-nums leading-none">{String(v).padStart(2,'0')}</span>
-                    <span className="text-white/30 text-[10px] font-bold uppercase tracking-widest mt-0.5">{l === 'd' ? 'dagen' : l === 'u' ? 'uren' : l === 'm' ? 'min' : 'sec'}</span>
+                  {i > 0 && <span className="text-amber-400/50 font-black text-sm leading-none pb-3 px-0.5">:</span>}
+                  <div className="flex flex-col items-center w-9">
+                    <span className="text-amber-400 font-black text-lg tabular-nums leading-none">{String(v).padStart(2,'0')}</span>
+                    <span className="text-white/30 text-[9px] font-bold uppercase tracking-wide mt-0.5">{l === 'd' ? 'dag' : l === 'u' ? 'uur' : l === 'm' ? 'min' : 'sec'}</span>
                   </div>
                 </React.Fragment>
               ))}
