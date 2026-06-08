@@ -31,9 +31,17 @@ export const WK2026: React.FC = () => {
     document.title = 'Wereldkampioenschap Voetbal 2026 Live Kijken | IPTVTotaal';
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) metaDesc.setAttribute('content', 'Kijk alle 104 WK 2026 wedstrijden live via IPTVTotaal. Oranje, halve finales, de finale — mis geen minuut. Vanaf €4,60 per maand, 15 dagen geld-terug.');
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', 'https://www.iptvtotaal.digital/wereldkampioenschap-voetbal-2026');
     return () => {
       document.title = 'IPTVTotaal';
       if (metaDesc) metaDesc.setAttribute('content', '');
+      canonical.remove();
     };
   }, []);
 
