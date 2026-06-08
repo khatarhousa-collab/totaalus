@@ -38,8 +38,8 @@ const FLAG_SVGS: Record<string, React.ReactNode> = {
 };
 
 const CountryFlag: React.FC<{ code: string }> = ({ code }) => (
-  <div className="w-20 h-14 rounded-lg overflow-hidden shadow-xl ring-2 ring-white/20">
-    {FLAG_SVGS[code] ?? <div className="w-full h-full bg-white/20"/>}
+  <div className="w-28 h-[72px] rounded-xl overflow-hidden shadow-2xl ring-2 ring-black/30">
+    {FLAG_SVGS[code] ?? <div className="w-full h-full bg-black/20"/>}
   </div>
 );
 
@@ -61,87 +61,86 @@ const WkMatchHeroCard: React.FC<{
   }, [matchDateISO]);
 
   return (
-    <div className="rounded-3xl overflow-hidden shadow-2xl shadow-amber-500/20 not-prose">
-      {/* Header bar */}
-      <div className="flex items-center justify-between px-6 py-3 bg-neutral-950 border-b border-amber-500/20">
-        <div className="flex items-center gap-2">
-          <svg className="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          <span className="text-xs font-black text-amber-400 uppercase tracking-widest">WK 2026 · {group}</span>
-        </div>
-        <div className="flex items-center gap-1.5 bg-amber-400 text-black text-xs font-black px-3 py-1 rounded-full uppercase tracking-widest">
-          <span className="w-1.5 h-1.5 bg-black rounded-full animate-pulse inline-block"/>
-          Live op IPTVTotaal
+    <div className="rounded-2xl overflow-hidden shadow-2xl shadow-amber-500/25 not-prose border border-amber-500/10">
+
+      {/* Top bar */}
+      <div className="flex items-center justify-between px-5 py-2.5 bg-neutral-950">
+        <span className="text-[11px] font-black text-amber-400 uppercase tracking-[0.15em]">⚽ FIFA WK 2026 · {group}</span>
+        <div className="flex items-center gap-1.5 text-[11px] font-black text-black bg-amber-400 px-2.5 py-1 rounded-full uppercase tracking-widest">
+          <span className="w-1.5 h-1.5 bg-black rounded-full animate-pulse"/>LIVE · IPTVTOTAAL
         </div>
       </div>
 
-      {/* Main card — amber gradient */}
-      <div className="bg-gradient-to-br from-amber-500 via-yellow-400 to-amber-600 px-6 py-10">
-        <div className="grid grid-cols-3 items-center gap-4">
+      {/* Main — amber gradient */}
+      <div className="bg-gradient-to-br from-amber-400 via-yellow-400 to-amber-500 px-5 pt-6 pb-5">
+
+        {/* Teams row */}
+        <div className="flex items-center justify-between gap-3">
           {/* Team 1 */}
-          <div className="flex flex-col items-center gap-3">
+          <div className="flex flex-col items-center gap-2 flex-1">
             <CountryFlag code={code1} />
-            <span className="text-black font-black text-xl lg:text-2xl text-center leading-tight drop-shadow">{team1}</span>
+            <span className="text-black font-black text-base lg:text-lg text-center leading-tight">{team1}</span>
           </div>
-          {/* VS */}
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-black/30 text-5xl font-black tracking-tighter leading-none">VS</span>
-            <div className="bg-black/20 rounded-2xl px-4 py-2 text-center">
-              <div className="text-black font-black text-sm">{kickoff}</div>
-              <div className="text-black/60 text-xs font-bold uppercase tracking-widest mt-0.5">Aftrap</div>
+
+          {/* Centre */}
+          <div className="flex flex-col items-center gap-1 px-2">
+            <span className="text-black/20 text-4xl font-black tracking-tighter leading-none select-none">VS</span>
+            <div className="bg-black/15 rounded-lg px-3 py-1.5 text-center">
+              <div className="text-black font-black text-sm leading-none">{kickoff}</div>
+              <div className="text-black/50 text-[10px] font-bold uppercase tracking-widest mt-0.5">aftrap</div>
             </div>
           </div>
+
           {/* Team 2 */}
-          <div className="flex flex-col items-center gap-3">
+          <div className="flex flex-col items-center gap-2 flex-1">
             <CountryFlag code={code2} />
-            <span className="text-black font-black text-xl lg:text-2xl text-center leading-tight drop-shadow">{team2}</span>
+            <span className="text-black font-black text-base lg:text-lg text-center leading-tight">{team2}</span>
           </div>
         </div>
 
-        {/* Countdown */}
-        <div className="mt-8">
-          {!t.started ? (
-            <>
-              <p className="text-black/50 text-xs font-black uppercase tracking-widest text-center mb-3">Aftrap over</p>
-              <div className="grid grid-cols-4 gap-2">
-                {[{v:t.d,l:'Dagen'},{v:t.h,l:'Uren'},{v:t.m,l:'Min'},{v:t.s,l:'Sec'}].map(({v,l}) => (
-                  <div key={l} className="bg-black/20 rounded-2xl py-3 text-center backdrop-blur-sm">
-                    <div className="text-3xl font-black text-black tabular-nums leading-none">{String(v).padStart(2,'0')}</div>
-                    <div className="text-black/50 text-xs font-black uppercase tracking-widest mt-1">{l}</div>
-                  </div>
-                ))}
-              </div>
-            </>
+        {/* Timer */}
+        <div className="mt-5">
+          {t.started ? (
+            <div className="flex items-center justify-center gap-2 bg-black rounded-xl py-3">
+              <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse"/>
+              <span className="text-amber-400 font-black text-sm uppercase tracking-widest">Live nu bezig</span>
+            </div>
           ) : (
-            <div className="text-center">
-              <span className="inline-flex items-center gap-2 bg-black text-amber-400 font-black text-sm px-5 py-2.5 rounded-full uppercase tracking-widest shadow-lg">
-                <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse inline-block"/>LIVE NU BEZIG
-              </span>
+            <div className="bg-black/80 rounded-xl px-4 py-3 flex items-center justify-center gap-1">
+              {[{v:t.d,l:'d'},{v:t.h,l:'u'},{v:t.m,l:'m'},{v:t.s,l:'s'}].map(({v,l}, i) => (
+                <React.Fragment key={l}>
+                  {i > 0 && <span className="text-amber-400/60 font-black text-xl leading-none mb-3">:</span>}
+                  <div className="flex flex-col items-center w-12">
+                    <span className="text-amber-400 font-black text-2xl tabular-nums leading-none">{String(v).padStart(2,'0')}</span>
+                    <span className="text-white/30 text-[10px] font-bold uppercase tracking-widest mt-0.5">{l === 'd' ? 'dagen' : l === 'u' ? 'uren' : l === 'm' ? 'min' : 'sec'}</span>
+                  </div>
+                </React.Fragment>
+              ))}
             </div>
           )}
         </div>
       </div>
 
       {/* Footer */}
-      <div className="bg-neutral-950 px-6 py-5 border-t border-amber-500/20">
-        <div className="flex items-center gap-2 text-white/30 text-xs font-medium mb-4">
-          <svg className="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-          {venue}
+      <div className="bg-neutral-950 px-5 py-3 flex items-center justify-between gap-4 flex-wrap">
+        <div className="flex items-center gap-1.5 text-white/30 text-[11px] font-medium min-w-0">
+          <svg className="w-3 h-3 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <span className="truncate">{venue}</span>
         </div>
-        <div className="flex flex-wrap items-center gap-3">
-          <span className="text-white/30 text-xs font-bold uppercase tracking-widest">Live op:</span>
+        <div className="flex items-center gap-2 shrink-0">
           {[
             { src: '/assets/channels/espn.png', alt: 'ESPN' },
             { src: '/assets/channels/viaplay.png', alt: 'Viaplay' },
             { src: '/assets/channels/ziggo-sport.png', alt: 'Ziggo Sport' },
             { src: '/assets/channels/eurosport.png', alt: 'Eurosport' },
           ].map(ch => (
-            <div key={ch.alt} className="bg-gradient-to-r from-amber-400 to-yellow-500 rounded-xl px-3 py-2 flex items-center justify-center h-10 min-w-[64px]">
-              <img src={ch.src} alt={ch.alt} className="max-h-6 max-w-[72px] object-contain" />
+            <div key={ch.alt} className="bg-gradient-to-r from-amber-400 to-yellow-500 rounded-lg px-2 py-1.5 flex items-center justify-center h-8 min-w-[48px]">
+              <img src={ch.src} alt={ch.alt} className="max-h-4 max-w-[56px] object-contain" />
             </div>
           ))}
-          <div className="flex items-center gap-2 bg-gradient-to-r from-amber-400 to-yellow-500 text-black text-xs font-black px-3 py-2 rounded-xl h-10">
-            <div className="w-5 h-5 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-sm flex items-center justify-center shrink-0 ring-1 ring-black/20">
-              <div className="w-2.5 h-2.5 bg-black rotate-45"/>
+          <div className="flex items-center gap-1.5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black text-[11px] font-black px-2 py-1.5 rounded-lg h-8">
+            <div className="w-4 h-4 bg-gradient-to-br from-amber-500 to-yellow-600 rounded-sm flex items-center justify-center shrink-0 ring-1 ring-black/20">
+              <div className="w-2 h-2 bg-black rotate-45"/>
             </div>
             IPTVTotaal
           </div>
