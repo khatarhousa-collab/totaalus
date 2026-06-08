@@ -10,7 +10,7 @@ const trackWhatsAppConversion = () => {
 
 interface BlogPost {
   slug: string;
-  publishDate?: string; // ISO date — post is hidden until this date
+  publishDate?: string;
   date: string;
   readTime: string;
   category: string;
@@ -18,26 +18,42 @@ interface BlogPost {
   excerpt: string;
   image: string;
   imageAspect?: 'video' | 'square';
+  headerCard?: React.ReactNode;
   content: React.ReactNode;
 }
 
+const FLAG_SVGS: Record<string, React.ReactNode> = {
+  NL: <svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg"><rect width="900" height="200" fill="#AE1C28"/><rect y="200" width="900" height="200" fill="#fff"/><rect y="400" width="900" height="200" fill="#21468B"/></svg>,
+  JP: <svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg"><rect width="900" height="600" fill="#fff"/><circle cx="450" cy="300" r="180" fill="#BC002D"/></svg>,
+  SE: <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="500" fill="#006AA7"/><rect x="200" width="100" height="500" fill="#FECC02"/><rect y="200" width="800" height="100" fill="#FECC02"/></svg>,
+  TN: <svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg"><rect width="900" height="600" fill="#E70013"/><circle cx="450" cy="300" r="150" fill="#fff"/><circle cx="460" cy="300" r="100" fill="#E70013"/><circle cx="500" cy="300" r="100" fill="#fff"/><polygon points="430,240 445,285 490,285 455,310 468,355 430,330 392,355 405,310 370,285 415,285" fill="#E70013"/></svg>,
+  MX: <svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="600" fill="#006847"/><rect x="300" width="300" height="600" fill="#fff"/><rect x="600" width="300" height="600" fill="#CE1126"/><circle cx="450" cy="300" r="60" fill="#8B6914" opacity="0.3"/></svg>,
+  ZA: <svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg"><rect width="900" height="600" fill="#007A4D"/><rect y="200" width="900" height="200" fill="#fff"/><rect y="233" width="900" height="134" fill="#DE3831"/><polygon points="0,0 0,600 350,300" fill="#000"/><polygon points="0,30 0,570 310,300" fill="#FFB612"/><polygon points="0,200 0,400 175,300" fill="#fff"/><polygon points="0,233 0,367 155,300" fill="#002395"/></svg>,
+  US: <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg"><rect width="760" height="400" fill="#fff"/>{[0,1,2,3,4,5,6,7,8,9,10,11,12].map(i=><rect key={i} y={i*30.77} width="760" height="15.38" fill={i%2===0?"#B22234":"#fff"}/>)}<rect width="305" height="215" fill="#3C3B6E"/>{Array.from({length:50},(_,i)=><circle key={i} cx={18+(i%10)*28} cy={18+Math.floor(i/10)*38+(i%2===0?0:14)} r="5" fill="#fff"/>)}</svg>,
+  PY: <svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg"><rect width="900" height="200" fill="#D52B1E"/><rect y="200" width="900" height="200" fill="#fff"/><rect y="400" width="900" height="200" fill="#0038A8"/><circle cx="450" cy="300" r="70" fill="#fff" stroke="#D52B1E" strokeWidth="4"/></svg>,
+  BR: <svg viewBox="0 0 900 630" xmlns="http://www.w3.org/2000/svg"><rect width="900" height="630" fill="#009C3B"/><polygon points="450,60 840,315 450,570 60,315" fill="#FFDF00"/><circle cx="450" cy="315" r="130" fill="#002776"/><path d="M330,280 Q450,340 570,280" stroke="#fff" strokeWidth="8" fill="none"/></svg>,
+  MA: <svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg"><rect width="900" height="600" fill="#C1272D"/><polygon points="450,210 463,250 505,250 472,274 484,315 450,291 416,315 428,274 395,250 437,250" fill="none" stroke="#006233" strokeWidth="8"/></svg>,
+  SA: <svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg"><rect width="900" height="600" fill="#006C35"/><rect y="520" width="900" height="80" fill="#fff"/><text x="450" y="295" textAnchor="middle" fill="#fff" fontSize="80" fontFamily="serif">لا إله إلا الله</text><path d="M300,360 L350,320 L400,360 L380,360 L380,400 L320,400 L320,360 Z" fill="#fff" opacity="0.8"/></svg>,
+  UY: <svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">{[0,1,2,3,4,5,6,7,8].map(i=><rect key={i} y={i*66.7} width="900" height="33.3" fill={i%2===0?"#fff":"#0038A8"}/>)}<rect width="360" height="300" fill="#fff"/><circle cx="180" cy="150" r="60" fill="#FFD700"/>{Array.from({length:16},(_,i)=><line key={i} x1="180" y1="150" x2={180+75*Math.cos(i*Math.PI/8)} y2={150+75*Math.sin(i*Math.PI/8)} stroke="#FFD700" strokeWidth="5"/>)}</svg>,
+};
+
+const CountryFlag: React.FC<{ code: string }> = ({ code }) => (
+  <div className="w-20 h-14 rounded-lg overflow-hidden shadow-xl ring-2 ring-white/20">
+    {FLAG_SVGS[code] ?? <div className="w-full h-full bg-white/20"/>}
+  </div>
+);
+
 const WkMatchHeroCard: React.FC<{
-  team1: string; team2: string; flag1: string; flag2: string;
+  team1: string; team2: string; code1: string; code2: string;
   matchDateISO: string; kickoff: string; venue: string; group: string;
-}> = ({ team1, team2, flag1, flag2, matchDateISO, kickoff, venue, group }) => {
+}> = ({ team1, team2, code1, code2, matchDateISO, kickoff, venue, group }) => {
   const [t, setT] = React.useState({ d: 0, h: 0, m: 0, s: 0, started: false });
   React.useEffect(() => {
     const target = new Date(matchDateISO).getTime();
     const tick = () => {
       const diff = target - Date.now();
       if (diff <= 0) { setT({ d: 0, h: 0, m: 0, s: 0, started: true }); return; }
-      setT({
-        d: Math.floor(diff / 86400000),
-        h: Math.floor((diff % 86400000) / 3600000),
-        m: Math.floor((diff % 3600000) / 60000),
-        s: Math.floor((diff % 60000) / 1000),
-        started: false,
-      });
+      setT({ d: Math.floor(diff/86400000), h: Math.floor((diff%86400000)/3600000), m: Math.floor((diff%3600000)/60000), s: Math.floor((diff%60000)/1000), started: false });
     };
     tick();
     const id = setInterval(tick, 1000);
@@ -45,54 +61,76 @@ const WkMatchHeroCard: React.FC<{
   }, [matchDateISO]);
 
   return (
-    <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-neutral-900 via-neutral-950 to-black border border-white/10 mb-8 not-prose">
-      {/* Top bar */}
-      <div className="flex items-center justify-between px-6 py-3 bg-gradient-to-r from-amber-500/20 to-yellow-500/10 border-b border-white/10">
-        <span className="text-xs font-black text-amber-400 uppercase tracking-widest">{group}</span>
-        <span className="inline-flex items-center gap-1.5 text-xs font-black text-black bg-gradient-to-r from-amber-400 to-yellow-500 px-3 py-1 rounded-full">
-          <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
-          LIVE OP IPTVTOTAAL
-        </span>
-      </div>
-      {/* Teams */}
-      <div className="grid grid-cols-3 items-center gap-4 px-6 py-8">
-        <div className="text-center">
-          <div className="text-5xl mb-2">{flag1}</div>
-          <div className="text-white font-black text-lg leading-tight">{team1}</div>
+    <div className="rounded-3xl overflow-hidden shadow-2xl shadow-amber-500/20 not-prose">
+      {/* Header bar */}
+      <div className="flex items-center justify-between px-6 py-3 bg-neutral-950 border-b border-amber-500/20">
+        <div className="flex items-center gap-2">
+          <svg className="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <span className="text-xs font-black text-amber-400 uppercase tracking-widest">WK 2026 · {group}</span>
         </div>
-        <div className="text-center">
-          <div className="text-3xl font-black text-white/20 mb-1">VS</div>
-          <div className="text-xs text-white/40 font-medium">{kickoff}</div>
-        </div>
-        <div className="text-center">
-          <div className="text-5xl mb-2">{flag2}</div>
-          <div className="text-white font-black text-lg leading-tight">{team2}</div>
+        <div className="flex items-center gap-1.5 bg-amber-400 text-black text-xs font-black px-3 py-1 rounded-full uppercase tracking-widest">
+          <span className="w-1.5 h-1.5 bg-black rounded-full animate-pulse inline-block"/>
+          Live op IPTVTotaal
         </div>
       </div>
-      {/* Countdown */}
-      {!t.started ? (
-        <div className="px-6 pb-6">
-          <p className="text-xs text-white/30 uppercase tracking-widest font-bold text-center mb-3">Aftrap over</p>
-          <div className="grid grid-cols-4 gap-3">
-            {[{v:t.d,l:'Dagen'},{v:t.h,l:'Uren'},{v:t.m,l:'Min'},{v:t.s,l:'Sec'}].map(({v,l}) => (
-              <div key={l} className="bg-white/5 border border-white/10 rounded-2xl p-3 text-center">
-                <div className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-b from-amber-400 to-yellow-500 tabular-nums">{String(v).padStart(2,'0')}</div>
-                <div className="text-xs text-white/30 font-bold uppercase tracking-widest mt-1">{l}</div>
-              </div>
-            ))}
+
+      {/* Main card — amber gradient */}
+      <div className="bg-gradient-to-br from-amber-500 via-yellow-400 to-amber-600 px-6 py-10">
+        <div className="grid grid-cols-3 items-center gap-4">
+          {/* Team 1 */}
+          <div className="flex flex-col items-center gap-3">
+            <CountryFlag code={code1} />
+            <span className="text-black font-black text-xl lg:text-2xl text-center leading-tight drop-shadow">{team1}</span>
+          </div>
+          {/* VS */}
+          <div className="flex flex-col items-center gap-2">
+            <span className="text-black/30 text-5xl font-black tracking-tighter leading-none">VS</span>
+            <div className="bg-black/20 rounded-2xl px-4 py-2 text-center">
+              <div className="text-black font-black text-sm">{kickoff}</div>
+              <div className="text-black/60 text-xs font-bold uppercase tracking-widest mt-0.5">Aftrap</div>
+            </div>
+          </div>
+          {/* Team 2 */}
+          <div className="flex flex-col items-center gap-3">
+            <CountryFlag code={code2} />
+            <span className="text-black font-black text-xl lg:text-2xl text-center leading-tight drop-shadow">{team2}</span>
           </div>
         </div>
-      ) : (
-        <div className="px-6 pb-6 text-center">
-          <span className="inline-flex items-center gap-2 text-sm font-black text-amber-400 bg-amber-500/10 border border-amber-500/20 px-4 py-2 rounded-full">
-            <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse inline-block"/>LIVE NU BEZIG
-          </span>
+
+        {/* Countdown */}
+        <div className="mt-8">
+          {!t.started ? (
+            <>
+              <p className="text-black/50 text-xs font-black uppercase tracking-widest text-center mb-3">Aftrap over</p>
+              <div className="grid grid-cols-4 gap-2">
+                {[{v:t.d,l:'Dagen'},{v:t.h,l:'Uren'},{v:t.m,l:'Min'},{v:t.s,l:'Sec'}].map(({v,l}) => (
+                  <div key={l} className="bg-black/20 rounded-2xl py-3 text-center backdrop-blur-sm">
+                    <div className="text-3xl font-black text-black tabular-nums leading-none">{String(v).padStart(2,'0')}</div>
+                    <div className="text-black/50 text-xs font-black uppercase tracking-widest mt-1">{l}</div>
+                  </div>
+                ))}
+              </div>
+            </>
+          ) : (
+            <div className="text-center">
+              <span className="inline-flex items-center gap-2 bg-black text-amber-400 font-black text-sm px-5 py-2.5 rounded-full uppercase tracking-widest shadow-lg">
+                <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse inline-block"/>LIVE NU BEZIG
+              </span>
+            </div>
+          )}
         </div>
-      )}
+      </div>
+
       {/* Footer */}
-      <div className="px-6 pb-5 flex flex-wrap items-center justify-between gap-2 text-xs text-white/30 border-t border-white/10 pt-4">
-        <span>📍 {venue}</span>
-        <span>📺 RTL · NPO · ESPN · IPTVTotaal</span>
+      <div className="bg-neutral-950 px-6 py-4 flex flex-wrap items-center justify-between gap-3 border-t border-amber-500/20">
+        <div className="flex items-center gap-2 text-white/40 text-xs font-medium">
+          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          {venue}
+        </div>
+        <div className="flex items-center gap-2 text-white/40 text-xs font-medium">
+          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 3l-4 4-4-4"/></svg>
+          RTL · NPO · ESPN · <span className="text-amber-400 font-black">IPTVTotaal</span>
+        </div>
       </div>
     </div>
   );
@@ -140,9 +178,9 @@ const posts: BlogPost[] = [
     title: 'Nederland vs Japan WK 2026: speeltijd, analyse & live kijken',
     excerpt: 'Zondag 14 juni treft Oranje Japan in Dallas. Alles over de tactiek, sterspelers en hoe je de wedstrijd live streamt — inclusief het beste WK-pakket van €78.',
     image: '/nederland-japan-wk-2026.jpg',
+    headerCard: <WkMatchHeroCard team1="Nederland" team2="Japan" code1="NL" code2="JP" matchDateISO="2026-06-14T19:00:00Z" kickoff="21:00 NL-tijd" venue="Dallas Stadium, Texas" group="Groep F" />,
     content: (
       <div className="space-y-6 text-white/70 leading-relaxed text-lg">
-        <WkMatchHeroCard team1="Nederland" team2="Japan" flag1="🇳🇱" flag2="🇯🇵" matchDateISO="2026-06-14T19:00:00Z" kickoff="21:00 NL-tijd" venue="Dallas Stadium, Texas" group="Groep F" />
         <div className="flex flex-wrap gap-2 mb-2">
           {['nederland japan wk 2026','oranje wk 2026','nederland japan live','nederland japan uitslagen','wk 2026 live kijken','nederland wk 2026 groep F','japan wk 2026'].map(kw => (
             <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
@@ -204,9 +242,9 @@ const posts: BlogPost[] = [
     title: 'Nederland vs Zweden WK 2026: alles over Groep F duel in Houston',
     excerpt: 'Zaterdag 20 juni duelleren Nederland en Zweden om de koppositie in Groep F. Tactische analyse, sterspelers en hoe je de wedstrijd live volgt vanaf €78.',
     image: '/nederland-zweden-wk-2026.jpg',
+    headerCard: <WkMatchHeroCard team1="Nederland" team2="Zweden" code1="NL" code2="SE" matchDateISO="2026-06-20T16:00:00Z" kickoff="18:00 NL-tijd" venue="Houston Stadium, Texas" group="Groep F" />,
     content: (
       <div className="space-y-6 text-white/70 leading-relaxed text-lg">
-        <WkMatchHeroCard team1="Nederland" team2="Zweden" flag1="🇳🇱" flag2="🇸🇪" matchDateISO="2026-06-20T16:00:00Z" kickoff="18:00 NL-tijd" venue="Houston Stadium, Texas" group="Groep F" />
         <div className="flex flex-wrap gap-2 mb-2">
           {['nederland zweden wk 2026','oranje wk 2026','nederland zweden live','nederland zweden groep F','wk 2026 live kijken','zweden wk 2026','oranje wk livestream'].map(kw => (
             <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
@@ -267,9 +305,9 @@ const posts: BlogPost[] = [
     title: 'Tunesië vs Nederland WK 2026: Oranje sluit groepsfase af in Kansas City',
     excerpt: 'Op vrijdag 26 juni sluit Oranje de groepsfase af tegen Tunesië in Kansas City. Analyse, opstelling en hoe je de wedstrijd live streamt via IPTVTotaal.',
     image: '/tunesie-nederland-wk-2026.jpg',
+    headerCard: <WkMatchHeroCard team1="Tunesië" team2="Nederland" code1="TN" code2="NL" matchDateISO="2026-06-25T22:00:00Z" kickoff="00:00 NL-tijd" venue="Kansas City Stadium, Missouri" group="Groep F" />,
     content: (
       <div className="space-y-6 text-white/70 leading-relaxed text-lg">
-        <WkMatchHeroCard team1="Tunesië" team2="Nederland" flag1="🇹🇳" flag2="🇳🇱" matchDateISO="2026-06-25T22:00:00Z" kickoff="00:00 NL-tijd" venue="Kansas City Stadium, Missouri" group="Groep F" />
         <div className="flex flex-wrap gap-2 mb-2">
           {['tunesie nederland wk 2026','oranje wk 2026 groep F','nederland wk kwalificatie','tunesie wk 2026','nederland wk 2026 live','wk 2026 groepsfase','oranje wk livestream'].map(kw => (
             <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
@@ -328,9 +366,9 @@ const posts: BlogPost[] = [
     title: 'Mexico vs Zuid-Afrika WK 2026: openingswedstrijd in eigen land',
     excerpt: 'Het WK 2026 begint op donderdag 11 juni met Mexico vs Zuid-Afrika in Mexico-Stad. Analyse van de openingswedstrijd en hoe je hem live kijkt via IPTVTotaal.',
     image: '/mexico-zuid-afrika-wk-2026.jpg',
+    headerCard: <WkMatchHeroCard team1="Mexico" team2="Zuid-Afrika" code1="MX" code2="ZA" matchDateISO="2026-06-11T18:00:00Z" kickoff="20:00 NL-tijd" venue="Mexico-Stad Stadion" group="Groep A" />,
     content: (
       <div className="space-y-6 text-white/70 leading-relaxed text-lg">
-        <WkMatchHeroCard team1="Mexico" team2="Zuid-Afrika" flag1="🇲🇽" flag2="🇿🇦" matchDateISO="2026-06-11T18:00:00Z" kickoff="20:00 NL-tijd" venue="Mexico-Stad Stadion" group="Groep A" />
         <div className="flex flex-wrap gap-2 mb-2">
           {['mexico wk 2026','wk 2026 openingswedstrijd','mexico south africa wk 2026','mexico vs zuidafrika','wk 2026 live stream','wk 2026 groep A','mexico wk opener'].map(kw => (
             <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
@@ -390,9 +428,9 @@ const posts: BlogPost[] = [
     title: 'USA vs Paraguay WK 2026: USMNT debuut onder enorme thuisdruk',
     excerpt: 'Op vrijdag 12 juni maakt de VS zijn WK-debuut tegen Paraguay in Los Angeles. Analyse, sterspelers en hoe je dit duel live streamt met IPTVTotaal.',
     image: '/usa-paraguay-wk-2026.jpg',
+    headerCard: <WkMatchHeroCard team1="USA" team2="Paraguay" code1="US" code2="PY" matchDateISO="2026-06-12T00:00:00Z" kickoff="02:00 NL-tijd" venue="Los Angeles Stadium, California" group="Groep D" />,
     content: (
       <div className="space-y-6 text-white/70 leading-relaxed text-lg">
-        <WkMatchHeroCard team1="USA" team2="Paraguay" flag1="🇺🇸" flag2="🇵🇾" matchDateISO="2026-06-12T00:00:00Z" kickoff="02:00 NL-tijd" venue="Los Angeles Stadium, California" group="Groep D" />
         <div className="flex flex-wrap gap-2 mb-2">
           {['usa paraguay wk 2026','usmnt wk 2026','usa wk 2026 live','usa paraguay live stream','wk 2026 groep D','paraguay wk 2026','wk 2026 live kijken'].map(kw => (
             <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
@@ -452,9 +490,9 @@ const posts: BlogPost[] = [
     title: 'Brazilië vs Marokko WK 2026: de eerste grote kraker van het toernooi',
     excerpt: 'Zaterdag 13 juni botsen twee absolute topploegen in New York: Brazilië vs Marokko. Analyse, tactiek, sterspelers en live kijken via IPTVTotaal.',
     image: '/brazilie-marokko-wk-2026.jpg',
+    headerCard: <WkMatchHeroCard team1="Brazilië" team2="Marokko" code1="BR" code2="MA" matchDateISO="2026-06-13T21:00:00Z" kickoff="23:00 NL-tijd" venue="New York/NJ Stadion" group="Groep C" />,
     content: (
       <div className="space-y-6 text-white/70 leading-relaxed text-lg">
-        <WkMatchHeroCard team1="Brazilië" team2="Marokko" flag1="🇧🇷" flag2="🇲🇦" matchDateISO="2026-06-13T21:00:00Z" kickoff="23:00 NL-tijd" venue="New York/New Jersey Stadion" group="Groep C" />
         <div className="flex flex-wrap gap-2 mb-2">
           {['brazilie marokko wk 2026','brazilié wk 2026','marokko wk 2026','brazilie wk live','marokko wk live','wk 2026 groep C','wk 2026 kraker live kijken'].map(kw => (
             <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
@@ -516,9 +554,9 @@ const posts: BlogPost[] = [
     title: 'Saudi-Arabië vs Uruguay WK 2026: tactisch duel in Miami',
     excerpt: 'Maandag 15 juni staat Saudi-Arabië vs Uruguay op het programma in Groep H. Analyse van dit strategische duel en live kijken via IPTVTotaal vanaf €78.',
     image: '/saudi-arabie-uruguay-wk-2026.jpg',
+    headerCard: <WkMatchHeroCard team1="Saudi-Arabië" team2="Uruguay" code1="SA" code2="UY" matchDateISO="2026-06-15T21:00:00Z" kickoff="23:00 NL-tijd" venue="Miami Stadion, Florida" group="Groep H" />,
     content: (
       <div className="space-y-6 text-white/70 leading-relaxed text-lg">
-        <WkMatchHeroCard team1="Saudi-Arabië" team2="Uruguay" flag1="🇸🇦" flag2="🇺🇾" matchDateISO="2026-06-15T21:00:00Z" kickoff="23:00 NL-tijd" venue="Miami Stadion, Florida" group="Groep H" />
         <div className="flex flex-wrap gap-2 mb-2">
           {['saudi arabie uruguay wk 2026','uruguay wk 2026','saudi arabie wk 2026','uruguay live wk','wk 2026 groep H','wk 2026 live stream','uruguay wk livestream'].map(kw => (
             <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
@@ -1881,6 +1919,8 @@ const BlogDetail: React.FC<{ post: BlogPost }> = ({ post }) => {
       <h1 className="text-4xl lg:text-6xl font-black tracking-tighter leading-tight text-white mb-8">
         {post.title}
       </h1>
+
+      {post.headerCard && <div className="mb-10">{post.headerCard}</div>}
 
       <div className={`overflow-hidden rounded-2xl mb-10 ${post.imageAspect === 'square' ? 'aspect-square' : ''}`}>
         <img
