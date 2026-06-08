@@ -21,7 +21,554 @@ interface BlogPost {
   content: React.ReactNode;
 }
 
+const WkMatchHeroCard: React.FC<{
+  team1: string; team2: string; flag1: string; flag2: string;
+  matchDateISO: string; kickoff: string; venue: string; group: string;
+}> = ({ team1, team2, flag1, flag2, matchDateISO, kickoff, venue, group }) => {
+  const [t, setT] = React.useState({ d: 0, h: 0, m: 0, s: 0, started: false });
+  React.useEffect(() => {
+    const target = new Date(matchDateISO).getTime();
+    const tick = () => {
+      const diff = target - Date.now();
+      if (diff <= 0) { setT({ d: 0, h: 0, m: 0, s: 0, started: true }); return; }
+      setT({
+        d: Math.floor(diff / 86400000),
+        h: Math.floor((diff % 86400000) / 3600000),
+        m: Math.floor((diff % 3600000) / 60000),
+        s: Math.floor((diff % 60000) / 1000),
+        started: false,
+      });
+    };
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, [matchDateISO]);
+
+  return (
+    <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-neutral-900 via-neutral-950 to-black border border-white/10 mb-8 not-prose">
+      {/* Top bar */}
+      <div className="flex items-center justify-between px-6 py-3 bg-gradient-to-r from-amber-500/20 to-yellow-500/10 border-b border-white/10">
+        <span className="text-xs font-black text-amber-400 uppercase tracking-widest">{group}</span>
+        <span className="inline-flex items-center gap-1.5 text-xs font-black text-black bg-gradient-to-r from-amber-400 to-yellow-500 px-3 py-1 rounded-full">
+          <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
+          LIVE OP IPTVTOTAAL
+        </span>
+      </div>
+      {/* Teams */}
+      <div className="grid grid-cols-3 items-center gap-4 px-6 py-8">
+        <div className="text-center">
+          <div className="text-5xl mb-2">{flag1}</div>
+          <div className="text-white font-black text-lg leading-tight">{team1}</div>
+        </div>
+        <div className="text-center">
+          <div className="text-3xl font-black text-white/20 mb-1">VS</div>
+          <div className="text-xs text-white/40 font-medium">{kickoff}</div>
+        </div>
+        <div className="text-center">
+          <div className="text-5xl mb-2">{flag2}</div>
+          <div className="text-white font-black text-lg leading-tight">{team2}</div>
+        </div>
+      </div>
+      {/* Countdown */}
+      {!t.started ? (
+        <div className="px-6 pb-6">
+          <p className="text-xs text-white/30 uppercase tracking-widest font-bold text-center mb-3">Aftrap over</p>
+          <div className="grid grid-cols-4 gap-3">
+            {[{v:t.d,l:'Dagen'},{v:t.h,l:'Uren'},{v:t.m,l:'Min'},{v:t.s,l:'Sec'}].map(({v,l}) => (
+              <div key={l} className="bg-white/5 border border-white/10 rounded-2xl p-3 text-center">
+                <div className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-b from-amber-400 to-yellow-500 tabular-nums">{String(v).padStart(2,'0')}</div>
+                <div className="text-xs text-white/30 font-bold uppercase tracking-widest mt-1">{l}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div className="px-6 pb-6 text-center">
+          <span className="inline-flex items-center gap-2 text-sm font-black text-amber-400 bg-amber-500/10 border border-amber-500/20 px-4 py-2 rounded-full">
+            <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse inline-block"/>LIVE NU BEZIG
+          </span>
+        </div>
+      )}
+      {/* Footer */}
+      <div className="px-6 pb-5 flex flex-wrap items-center justify-between gap-2 text-xs text-white/30 border-t border-white/10 pt-4">
+        <span>📍 {venue}</span>
+        <span>📺 RTL · NPO · ESPN · IPTVTotaal</span>
+      </div>
+    </div>
+  );
+};
+
+const WkCtaBlock: React.FC<{ match: string }> = ({ match }) => (
+  <div className="mt-10 rounded-[32px] p-px bg-gradient-to-br from-amber-400 via-yellow-500 to-amber-600 shadow-2xl shadow-amber-500/20">
+    <div className="rounded-[31px] bg-neutral-950 p-8 lg:p-10">
+      <div className="flex items-center gap-2 mb-4">
+        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-amber-400 to-yellow-500 text-black text-xs font-black uppercase tracking-widest">★ Premium VIP</span>
+        <span className="text-xs font-bold text-amber-400/60 uppercase tracking-widest">12 + 3 Maanden Gratis</span>
+      </div>
+      <h3 className="text-2xl lg:text-3xl font-black text-white mb-2">Kijk {match} live via IPTVTotaal</h3>
+      <p className="text-white/50 mb-6">Alle 104 WK 2026 wedstrijden — inclusief Oranje, halve finales en de finale — live en in HD. Geen buffering, geen gedoe.</p>
+      <div className="flex items-end gap-2 mb-6">
+        <span className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500">€78,00</span>
+        <span className="text-white/40 font-bold mb-1.5">eenmalig · 15 maanden</span>
+      </div>
+      <div className="grid sm:grid-cols-2 gap-2 mb-8 text-sm">
+        {['+80.000 Kanalen + Netflix','Alle Sport PPV Events','SD / HD / 4K / 8K / HDR','RTL · NPO · ESPN · Viaplay','VPN Inbegrepen','Enterprise Anti-Freeze PRO','Persoonlijke VIP Manager','15 Dagen Geld-Terug'].map(f => (
+          <div key={f} className="flex items-center gap-2 text-white/70">
+            <svg className="w-4 h-4 text-amber-400 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>
+            {f}
+          </div>
+        ))}
+      </div>
+      <a href="https://api.whatsapp.com/send/?phone=447449708976&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer"
+        className="flex items-center justify-center gap-3 w-full py-4 rounded-2xl bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-amber-500/30 no-underline">
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.128.558 4.122 1.532 5.85L.057 23.292a.75.75 0 00.908.98l5.65-1.48A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.704 9.704 0 01-4.95-1.354l-.354-.21-3.655.957.975-3.562-.23-.368A9.713 9.713 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+        Bestel via WhatsApp — €78,00
+      </a>
+      <p className="text-center text-white/30 text-xs mt-3">15 dagen geld-terug garantie · Geen verborgen kosten</p>
+    </div>
+  </div>
+);
+
 const posts: BlogPost[] = [
+  // ── WK 2026: Nederland vs Japan ──────────────────────────────────────────
+  {
+    slug: 'nederland-japan-wk-2026',
+    publishDate: '2026-06-08',
+    date: '8 juni 2026',
+    readTime: '6 min',
+    category: 'WK 2026',
+    title: 'Nederland vs Japan WK 2026: speeltijd, analyse & live kijken',
+    excerpt: 'Zondag 14 juni treft Oranje Japan in Dallas. Alles over de tactiek, sterspelers en hoe je de wedstrijd live streamt — inclusief het beste WK-pakket van €78.',
+    image: '/nederland-japan-wk-2026.jpg',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+        <WkMatchHeroCard team1="Nederland" team2="Japan" flag1="🇳🇱" flag2="🇯🇵" matchDateISO="2026-06-14T19:00:00Z" kickoff="21:00 NL-tijd" venue="Dallas Stadium, Texas" group="Groep F" />
+        <div className="flex flex-wrap gap-2 mb-2">
+          {['nederland japan wk 2026','oranje wk 2026','nederland japan live','nederland japan uitslagen','wk 2026 live kijken','nederland wk 2026 groep F','japan wk 2026'].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
+          ))}
+        </div>
+
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[{label:'Datum',value:'Zondag 14 juni 2026'},{label:'Aftrap',value:'21:00 (NL-tijd)'},{label:'Stadion',value:'Dallas Stadium, Texas'}].map(i => (
+            <div key={i.label} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+              <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-1">{i.label}</div>
+              <div className="text-white font-black text-sm">{i.value}</div>
+            </div>
+          ))}
+        </div>
+
+        <p>Het WK 2026 is nog maar net begonnen of Oranje staat al voor zijn eerste grote test. Op zondag 14 juni neemt Nederland het op tegen Japan — een elftal dat bekendstaat om zijn ijzerharde discipline, technische verfijning en onvoorspelbare pressing. Dit wordt geen gemakkelijke avond in Dallas.</p>
+
+        <h3 className="text-2xl font-black text-white">Speelstijl en opstelling Nederland</h3>
+        <p>Bondscoach Ronald Koeman hanteert doorgaans een <strong className="text-white">4-3-3</strong> met hoog bezit en brede aanvallers die naar binnen trekken. Oranje combineert fysieke kracht met technische kwaliteit — gevaarlijk bij standaardsituaties en gevaarlijk in de omschakeling.</p>
+        <p><strong className="text-white">Sterspelers om op te letten:</strong></p>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Cody Gakpo</strong> — snelheid, diepgang en scorend vermogen vanuit de linkerkant</li>
+          <li><strong className="text-white">Virgil van Dijk</strong> — het fundament achterin; sterk in de lucht en dominant in 1-op-1 duels</li>
+          <li><strong className="text-white">Frenkie de Jong</strong> — de dirigent op het middenveld, schakelt snel van verdedigen naar aanvallen</li>
+          <li><strong className="text-white">Xavi Simons</strong> — creatief, explosief en gevaarlijk tussen de linies</li>
+        </ul>
+        <p><strong className="text-white">Voordelen Nederland:</strong> Fysieke dominantie, internationale ervaring, gevaarlijkste aanval van Groep F, sterke verdediging op set-pieces.</p>
+
+        <h3 className="text-2xl font-black text-white">Speelstijl en opstelling Japan</h3>
+        <p>Japan speelt compact en georganiseerd, meestal in een <strong className="text-white">4-2-3-1</strong> of 4-3-3. Ze kennen weinig fouten toe, zetten vroeg druk en zijn dodelijk bij de omschakeling. Op het laatste WK versloegen ze Duitsland en Spanje — een prestatie die iedereen nog weet.</p>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Kaoru Mitoma</strong> — linksbuiten die dribbelend moeilijk te stoppen is</li>
+          <li><strong className="text-white">Takefusa Kubo</strong> — technisch hoogstaand, speelmaker en gevaarlijk in en om de zestien</li>
+          <li><strong className="text-white">Wataru Endo</strong> — defensieve middenvelder, motor van het team</li>
+        </ul>
+        <p><strong className="text-white">Voordelen Japan:</strong> Teamdiscipline, verrassingseffect, hoog pressingvermogen, rotsvaste verdedigingsorganisatie.</p>
+
+        <h3 className="text-2xl font-black text-white">Voorspelling & inzet</h3>
+        <p>Nederland is de favoriet, maar Japan is absoluut geen makkelijke tegenstander. Als Oranje de ruimte laat die Japan gewend is te benutten bij omschakelingen, kan dit spannend worden. Verwacht een gesloten eerste helft met Nederland dat de wedstrijd naar de hand probeert te zetten na rust.</p>
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
+          <p className="text-white font-black mb-1">Onze verwachting: Nederland 2 – 1 Japan</p>
+          <p className="text-sm">Oranje wint, maar Japan laat zien waarom ze gevaarlijk zijn op elk WK.</p>
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Hoe kijk je Nederland vs Japan live?</h3>
+        <p>Alle 104 WK 2026 wedstrijden worden live uitgezonden via <strong className="text-white">IPTVTotaal</strong> — inclusief Nederland vs Japan op 14 juni. In HD, zonder buffering, op elk apparaat. Eén pakket voor het complete toernooi.</p>
+
+        <WkCtaBlock match="Nederland vs Japan" />
+      </div>
+    ),
+  },
+  // ── WK 2026: Nederland vs Zweden ─────────────────────────────────────────
+  {
+    slug: 'nederland-zweden-wk-2026',
+    publishDate: '2026-06-08',
+    date: '8 juni 2026',
+    readTime: '6 min',
+    category: 'WK 2026',
+    title: 'Nederland vs Zweden WK 2026: alles over Groep F duel in Houston',
+    excerpt: 'Zaterdag 20 juni duelleren Nederland en Zweden om de koppositie in Groep F. Tactische analyse, sterspelers en hoe je de wedstrijd live volgt vanaf €78.',
+    image: '/nederland-zweden-wk-2026.jpg',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+        <WkMatchHeroCard team1="Nederland" team2="Zweden" flag1="🇳🇱" flag2="🇸🇪" matchDateISO="2026-06-20T16:00:00Z" kickoff="18:00 NL-tijd" venue="Houston Stadium, Texas" group="Groep F" />
+        <div className="flex flex-wrap gap-2 mb-2">
+          {['nederland zweden wk 2026','oranje wk 2026','nederland zweden live','nederland zweden groep F','wk 2026 live kijken','zweden wk 2026','oranje wk livestream'].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
+          ))}
+        </div>
+
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[{label:'Datum',value:'Zaterdag 20 juni 2026'},{label:'Aftrap',value:'18:00 (NL-tijd)'},{label:'Stadion',value:'Houston Stadium, Texas'}].map(i => (
+            <div key={i.label} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+              <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-1">{i.label}</div>
+              <div className="text-white font-black text-sm">{i.value}</div>
+            </div>
+          ))}
+        </div>
+
+        <p>Na de openingswedstrijd staat er op zaterdag 20 juni al een cruciaal Europees duel op het programma: Nederland vs Zweden in Houston. De winnaar van dit duel neemt een enorme stap richting de achtste finales. Beide teams kennen elkaar goed — en precies dat maakt dit duel zo boeiend.</p>
+
+        <h3 className="text-2xl font-black text-white">Speelstijl en opstelling Nederland</h3>
+        <p>Oranje voetbalt vanuit een <strong className="text-white">4-3-3</strong> met hoog balbezit. Na de Japan-wedstrijd zal Koeman vermoedelijk weinig wijzigen, tenzij blessures roet in het eten gooien. Nederland is het meest gevaarlijk via de vleugels en bij snelle combinaties op het middenveld.</p>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Cody Gakpo</strong> — directe diepgang, gevaarlijk bij omschakelingen</li>
+          <li><strong className="text-white">Xavi Simons</strong> — vrijheid tussen de linies, creatief en snel</li>
+          <li><strong className="text-white">Tijjani Reijnders</strong> — box-to-box kwaliteiten, sterk in de duels</li>
+          <li><strong className="text-white">Virgil van Dijk</strong> — leider achterin, stabiel en dominant</li>
+        </ul>
+        <p><strong className="text-white">Voordelen Nederland:</strong> Betere individuele kwaliteit, gevaarlijker aanvalsspel, meer ervaring in grote toernooien.</p>
+
+        <h3 className="text-2xl font-black text-white">Speelstijl en opstelling Zweden</h3>
+        <p>Zweden is een fysiek, georganiseerd team dat sterk is bij set-pieces en terugvalt op een compact <strong className="text-white">4-4-2</strong> of 4-2-3-1. Ze zijn gevaarlijk via de lange bal en profiteren van fouten van de tegenstander.</p>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Alexander Isak</strong> — Newcastle-spits, razendsnel en dodelijk voor goal</li>
+          <li><strong className="text-white">Dejan Kulusevski</strong> — Tottenham-middenvelder, technisch sterk en energiek</li>
+          <li><strong className="text-white">Victor Lindelöf</strong> — ervaren verdediger, sterk in de lucht</li>
+        </ul>
+        <p><strong className="text-white">Voordelen Zweden:</strong> Fysieke kracht, gevaarlijk via de counter, sterk bij stilstaande situaties, hoge teamcohesie.</p>
+
+        <h3 className="text-2xl font-black text-white">Voorspelling</h3>
+        <p>Dit wordt een gevecht. Zweden zal diep staan en rekenen op Isak voor de omschakeling. Nederland zal geduld moeten tonen. In de tweede helft breekt Oranje waarschijnlijk de ban.</p>
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
+          <p className="text-white font-black mb-1">Onze verwachting: Nederland 1 – 0 Zweden</p>
+          <p className="text-sm">Een moeizame zege voor Oranje, met een beslissend moment na rust.</p>
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Nederland vs Zweden live kijken</h3>
+        <p>Via <strong className="text-white">IPTVTotaal</strong> kijk je dit duel live en in HD. Geen verborgen kosten, geen buffering — gewoon voetbal zoals het hoort.</p>
+
+        <WkCtaBlock match="Nederland vs Zweden" />
+      </div>
+    ),
+  },
+  // ── WK 2026: Tunesië vs Nederland ────────────────────────────────────────
+  {
+    slug: 'tunesie-nederland-wk-2026',
+    publishDate: '2026-06-08',
+    date: '8 juni 2026',
+    readTime: '5 min',
+    category: 'WK 2026',
+    title: 'Tunesië vs Nederland WK 2026: Oranje sluit groepsfase af in Kansas City',
+    excerpt: 'Op vrijdag 26 juni sluit Oranje de groepsfase af tegen Tunesië in Kansas City. Analyse, opstelling en hoe je de wedstrijd live streamt via IPTVTotaal.',
+    image: '/tunesie-nederland-wk-2026.jpg',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+        <WkMatchHeroCard team1="Tunesië" team2="Nederland" flag1="🇹🇳" flag2="🇳🇱" matchDateISO="2026-06-25T22:00:00Z" kickoff="00:00 NL-tijd" venue="Kansas City Stadium, Missouri" group="Groep F" />
+        <div className="flex flex-wrap gap-2 mb-2">
+          {['tunesie nederland wk 2026','oranje wk 2026 groep F','nederland wk kwalificatie','tunesie wk 2026','nederland wk 2026 live','wk 2026 groepsfase','oranje wk livestream'].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
+          ))}
+        </div>
+
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[{label:'Datum',value:'Vrijdag 26 juni 2026'},{label:'Aftrap',value:'00:00 (NL-tijd)'},{label:'Stadion',value:'Kansas City Stadium, Missouri'}].map(i => (
+            <div key={i.label} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+              <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-1">{i.label}</div>
+              <div className="text-white font-black text-sm">{i.value}</div>
+            </div>
+          ))}
+        </div>
+
+        <p>De laatste groepswedstrijd voor Oranje: Tunesië vs Nederland in Kansas City. Afhankelijk van de eerdere resultaten kan dit een alles-of-niets wedstrijd zijn of juist een wedstrijd met weinig druk. Hoe dan ook — dit duel bepaalt de eindpositie in Groep F en dus de tegenstander in de achtste finale.</p>
+
+        <h3 className="text-2xl font-black text-white">Analyse Tunesië</h3>
+        <p>Tunesië is Afrika's meest georganiseerde defensieve ploeg. Ze spelen in een compact <strong className="text-white">4-4-2</strong> of 5-3-2, zijn moeilijk te bespelen en gevaarlijk bij counters via snelle aanvallers.</p>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Youssef Msakni</strong> — ervaren aanvaller, gevaarlijk in ruimte achter de verdediging</li>
+          <li><strong className="text-white">Wahbi Khazri</strong> — creatief, technisch sterk, gevaarlijk bij vrije trappen</li>
+          <li><strong className="text-white">Montassar Talbi</strong> — solide verdediger, sterk in de lucht</li>
+        </ul>
+        <p><strong className="text-white">Voordelen Tunesië:</strong> Verdedigingsdiscipline, snel omschakelen, sterk als underdog in beslissende wedstrijden.</p>
+
+        <h3 className="text-2xl font-black text-white">Analyse Nederland</h3>
+        <p>Oranje is de absolute topfavoriet voor de groepszege. Met betere individuele kwaliteit op alle linies heeft Nederland alle troeven in handen. Als Koeman zijn basiself fit houdt richting de knock-outfase, wil hij deze wedstrijd zonder onnodige risico's winnen.</p>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Memphis Depay</strong> — kan ingevallen inbreng leveren, ervaren en gevaarlijk</li>
+          <li><strong className="text-white">Gakpo, Simons, Reijnders</strong> — de kern van Oranje's aanvalsspel</li>
+          <li><strong className="text-white">Van Dijk</strong> — defensieve zekerheid, onmisbaar achterin</li>
+        </ul>
+        <p><strong className="text-white">Voordelen Nederland:</strong> Superieure aanvallende kwaliteit, WK-ervaring, diepte in de selectie.</p>
+
+        <h3 className="text-2xl font-black text-white">Voorspelling</h3>
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
+          <p className="text-white font-black mb-1">Onze verwachting: Tunesië 0 – 2 Nederland</p>
+          <p className="text-sm">Oranje wint overtuigend en plaatst zich als groepswinnaar voor de achtste finales.</p>
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Tunesië vs Nederland live kijken</h3>
+        <p>Volg Oranje's laatste groepswedstrijd live via <strong className="text-white">IPTVTotaal</strong> — alle 104 WK 2026 duels, HD-kwaliteit, op elk apparaat.</p>
+
+        <WkCtaBlock match="Tunesië vs Nederland" />
+      </div>
+    ),
+  },
+  // ── WK 2026: Mexico vs Zuid-Afrika ───────────────────────────────────────
+  {
+    slug: 'mexico-zuid-afrika-wk-2026',
+    publishDate: '2026-06-08',
+    date: '8 juni 2026',
+    readTime: '6 min',
+    category: 'WK 2026',
+    title: 'Mexico vs Zuid-Afrika WK 2026: openingswedstrijd in eigen land',
+    excerpt: 'Het WK 2026 begint op donderdag 11 juni met Mexico vs Zuid-Afrika in Mexico-Stad. Analyse van de openingswedstrijd en hoe je hem live kijkt via IPTVTotaal.',
+    image: '/mexico-zuid-afrika-wk-2026.jpg',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+        <WkMatchHeroCard team1="Mexico" team2="Zuid-Afrika" flag1="🇲🇽" flag2="🇿🇦" matchDateISO="2026-06-11T18:00:00Z" kickoff="20:00 NL-tijd" venue="Mexico-Stad Stadion" group="Groep A" />
+        <div className="flex flex-wrap gap-2 mb-2">
+          {['mexico wk 2026','wk 2026 openingswedstrijd','mexico south africa wk 2026','mexico vs zuidafrika','wk 2026 live stream','wk 2026 groep A','mexico wk opener'].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
+          ))}
+        </div>
+
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[{label:'Datum',value:'Donderdag 11 juni 2026'},{label:'Aftrap',value:'20:00 (NL-tijd)'},{label:'Stadion',value:'Mexico-Stad Stadion, Mexico'}].map(i => (
+            <div key={i.label} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+              <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-1">{i.label}</div>
+              <div className="text-white font-black text-sm">{i.value}</div>
+            </div>
+          ))}
+        </div>
+
+        <p>Het Wereldkampioenschap Voetbal 2026 trapt officieel af op <strong className="text-white">donderdag 11 juni</strong> met de openingswedstrijd: gastland Mexico ontvangt Zuid-Afrika in een bruisend Mexico-Stad. De druk op de Mexicanen is enorm — ze spelen thuis, voor hun eigen volk, bij het grootse voetbalfeest ter wereld.</p>
+
+        <h3 className="text-2xl font-black text-white">Speelstijl en analyse Mexico</h3>
+        <p>Mexico voetbalt als gastland met een passionele 4-3-3 of 4-2-3-1 en rekent op het thuisvoordeel van een van de luidste stadions ter wereld. El Tri is fysiek sterk, heeft snelheid op de flanken en is gevaarlijk bij standaardsituaties.</p>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Hirving "Chucky" Lozano</strong> — explosief linksbuiten, een van de gevaarlijkste spelers in CONCACAF</li>
+          <li><strong className="text-white">Edson Álvarez</strong> — defensieve middenvelder van Ajax-roem, motor van het team</li>
+          <li><strong className="text-white">Henry Martín</strong> — spits met veel WK-ervaring, sterk in de lucht</li>
+        </ul>
+        <p><strong className="text-white">Voordelen Mexico:</strong> Thuisvoordeel, passioneel publiek, WK-ervaring, snelheid op de vleugels, sterk bij set-pieces.</p>
+
+        <h3 className="text-2xl font-black text-white">Speelstijl en analyse Zuid-Afrika</h3>
+        <p>Zuid-Afrika kwalificeerde zich verrassend voor het WK en speelt een direct, fysiek spel met hoge pressing. Bafana Bafana is gevaarlijk als underdog — ze verliezen niet makkelijk en zijn snel in de omschakeling.</p>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Percy Tau</strong> — aanvoerder en meest creatieve speler, eerder bij Brighton</li>
+          <li><strong className="text-white">Bongani Zungu</strong> — box-to-box middenvelder, sterk in duels</li>
+          <li><strong className="text-white">Ronwen Williams</strong> — een van de beste keepers van het Afrikaanse continent</li>
+        </ul>
+        <p><strong className="text-white">Voordelen Zuid-Afrika:</strong> Niets te verliezen, compact verdedigend blok, gevaarlijk bij counter-aanvallen, sterke keeper.</p>
+
+        <h3 className="text-2xl font-black text-white">Voorspelling</h3>
+        <p>Mexico begint als topfavoriet, maar Zuid-Afrika is goed genoeg om te verrassen als de Mexicanen niet alert zijn. Toch wint Mexico vermoedelijk — gedragen door een ongelofelijke thuissfeer.</p>
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
+          <p className="text-white font-black mb-1">Onze verwachting: Mexico 2 – 0 Zuid-Afrika</p>
+          <p className="text-sm">Gastland opent het WK met een thuisoverwinning, tot grote vreugde van het Mexicaanse publiek.</p>
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Mexico vs Zuid-Afrika live kijken</h3>
+        <p>Mis de openingswedstrijd van het WK niet. Via <strong className="text-white">IPTVTotaal</strong> kijk je alle 104 WK 2026 duels live — inclusief de opener op 11 juni.</p>
+
+        <WkCtaBlock match="Mexico vs Zuid-Afrika" />
+      </div>
+    ),
+  },
+  // ── WK 2026: USA vs Paraguay ─────────────────────────────────────────────
+  {
+    slug: 'usa-paraguay-wk-2026',
+    publishDate: '2026-06-08',
+    date: '8 juni 2026',
+    readTime: '5 min',
+    category: 'WK 2026',
+    title: 'USA vs Paraguay WK 2026: USMNT debuut onder enorme thuisdruk',
+    excerpt: 'Op vrijdag 12 juni maakt de VS zijn WK-debuut tegen Paraguay in Los Angeles. Analyse, sterspelers en hoe je dit duel live streamt met IPTVTotaal.',
+    image: '/usa-paraguay-wk-2026.jpg',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+        <WkMatchHeroCard team1="USA" team2="Paraguay" flag1="🇺🇸" flag2="🇵🇾" matchDateISO="2026-06-12T00:00:00Z" kickoff="02:00 NL-tijd" venue="Los Angeles Stadium, California" group="Groep D" />
+        <div className="flex flex-wrap gap-2 mb-2">
+          {['usa paraguay wk 2026','usmnt wk 2026','usa wk 2026 live','usa paraguay live stream','wk 2026 groep D','paraguay wk 2026','wk 2026 live kijken'].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
+          ))}
+        </div>
+
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[{label:'Datum',value:'Vrijdag 12 juni 2026'},{label:'Aftrap',value:'02:00 (NL-tijd)'},{label:'Stadion',value:'Los Angeles Stadium, California'}].map(i => (
+            <div key={i.label} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+              <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-1">{i.label}</div>
+              <div className="text-white font-black text-sm">{i.value}</div>
+            </div>
+          ))}
+        </div>
+
+        <p>De Verenigde Staten spelen hun eerste WK-wedstrijd op eigen bodem — en de druk is enorm. Als mede-gastland verwacht het Amerikaanse publiek succes. In Los Angeles neemt de USMNT het op tegen Paraguay in Groep D. Dit is het moment waarop de VS moet laten zien dat ze bij de wereldtop horen.</p>
+
+        <h3 className="text-2xl font-black text-white">Analyse USA</h3>
+        <p>De nieuwe generatie Amerikanen is de beste ooit. Trainer Gregg Berhalter (of zijn opvolger) beschikt over een groep spelers die bij de beste clubs van Europa speelt. De VS voetbalt intensief, hoog pressing, en is fysiek indrukwekkend.</p>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Christian Pulisic</strong> — aanvoerder en toppresteerder bij AC Milan, technisch en direct</li>
+          <li><strong className="text-white">Gio Reyna</strong> — creatieve spelmaker, sterk tussen de linies</li>
+          <li><strong className="text-white">Weston McKennie</strong> — box-to-box kwaliteiten, bijt zich vast in duels</li>
+          <li><strong className="text-white">Tyler Adams</strong> — defensieve middenvelder, motor en leider</li>
+        </ul>
+        <p><strong className="text-white">Voordelen USA:</strong> Thuisvoordeel, jonge topspelers bij Europese clubs, hoge intensiteit, sterk in pressing.</p>
+
+        <h3 className="text-2xl font-black text-white">Analyse Paraguay</h3>
+        <p>Paraguay is een hardvechtend team uit CONMEBOL — de sterkste kwalificatiegroep ter wereld. Ze zijn tactisch sterk, gevaarlijk bij stilstaande situaties en verliezen zelden makkelijk.</p>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Ramón Sosa</strong> — snelle buitenspeler, gevaarlijk in de omschakeling</li>
+          <li><strong className="text-white">Miguel Almirón</strong> — energiek, doelgericht, Newcastle-vedette</li>
+          <li><strong className="text-white">Gustavo Gómez</strong> — aanvoerder en robuuste verdediger</li>
+        </ul>
+        <p><strong className="text-white">Voordelen Paraguay:</strong> CONMEBOL-hardheid, tactische discipline, gevaarlijk bij counters, niets te verliezen.</p>
+
+        <h3 className="text-2xl font-black text-white">Voorspelling</h3>
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
+          <p className="text-white font-black mb-1">Onze verwachting: USA 2 – 1 Paraguay</p>
+          <p className="text-sm">De VS wint met moeite, gedragen door het thuispubliek en de kwaliteit van Pulisic.</p>
+        </div>
+
+        <h3 className="text-2xl font-black text-white">USA vs Paraguay live kijken</h3>
+        <p>Nachtelijk voetbal? Geen probleem. Via <strong className="text-white">IPTVTotaal</strong> kijk je dit duel live op elk apparaat — ook om 02:00 's nachts.</p>
+
+        <WkCtaBlock match="USA vs Paraguay" />
+      </div>
+    ),
+  },
+  // ── WK 2026: Brazilië vs Marokko ─────────────────────────────────────────
+  {
+    slug: 'brazilie-marokko-wk-2026',
+    publishDate: '2026-06-08',
+    date: '8 juni 2026',
+    readTime: '6 min',
+    category: 'WK 2026',
+    title: 'Brazilië vs Marokko WK 2026: de eerste grote kraker van het toernooi',
+    excerpt: 'Zaterdag 13 juni botsen twee absolute topploegen in New York: Brazilië vs Marokko. Analyse, tactiek, sterspelers en live kijken via IPTVTotaal.',
+    image: '/brazilie-marokko-wk-2026.jpg',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+        <WkMatchHeroCard team1="Brazilië" team2="Marokko" flag1="🇧🇷" flag2="🇲🇦" matchDateISO="2026-06-13T21:00:00Z" kickoff="23:00 NL-tijd" venue="New York/New Jersey Stadion" group="Groep C" />
+        <div className="flex flex-wrap gap-2 mb-2">
+          {['brazilie marokko wk 2026','brazilié wk 2026','marokko wk 2026','brazilie wk live','marokko wk live','wk 2026 groep C','wk 2026 kraker live kijken'].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
+          ))}
+        </div>
+
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[{label:'Datum',value:'Zaterdag 13 juni 2026'},{label:'Aftrap',value:'23:00 (NL-tijd)'},{label:'Stadion',value:'New York/New Jersey Stadion'}].map(i => (
+            <div key={i.label} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+              <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-1">{i.label}</div>
+              <div className="text-white font-black text-sm">{i.value}</div>
+            </div>
+          ))}
+        </div>
+
+        <p>De eerste echte topper van het WK 2026: <strong className="text-white">Brazilië vs Marokko</strong> in New York. Vijf keer wereldkampioen tegen de beste Afrikaanse ploeg ter wereld. Dit duel trekt de aandacht van miljarden voetbalfans wereldwijd — en terecht.</p>
+
+        <h3 className="text-2xl font-black text-white">Analyse Brazilië</h3>
+        <p>La Seleção speelt aanvallend, creatief en met een ongelofelijk talent op alle posities. Brazilië gebruikt doorgaans een <strong className="text-white">4-2-3-1</strong> of 4-3-3 en heeft de meest gevreesde aanvalslinie van het toernooi.</p>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Vinícius Jr.</strong> — Real Madrid-ster, snelste man op het veld, dodelijk voor goal</li>
+          <li><strong className="text-white">Rodrygo</strong> — direct, technisch en gevaarlijk vanuit elke positie</li>
+          <li><strong className="text-white">Raphinha</strong> — sterk op de rechterflank, Barcelona's vaste keuze</li>
+          <li><strong className="text-white">Casemiro / Guimarães</strong> — defensief middenveld van wereldklasse</li>
+        </ul>
+        <p><strong className="text-white">Voordelen Brazilië:</strong> Superieure individuele kwaliteit, samba-voetbal dat elke verdediging kan kraken, diepe selectie, WK-winnaarstraditie.</p>
+
+        <h3 className="text-2xl font-black text-white">Analyse Marokko</h3>
+        <p>Marokko verraste iedereen op het WK 2022 door de halve finale te bereiken. Ze spelen een extreem georganiseerde <strong className="text-white">4-1-4-1 of 5-4-1</strong>, zijn vrijwel onmogelijk te bespelen en hebben razendsnelle backs.</p>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Achraf Hakimi</strong> — PSG-back, een van de beste rechtsbacks ter wereld</li>
+          <li><strong className="text-white">Hakim Ziyech</strong> — creatief genie, gevaarlijk bij stilstaande situaties</li>
+          <li><strong className="text-white">Sofyan Amrabat</strong> — de beschermer voor de defensie, onvermoeibaar</li>
+          <li><strong className="text-white">Yassine Bounou</strong> — keeper van wereldklasse</li>
+        </ul>
+        <p><strong className="text-white">Voordelen Marokko:</strong> De beste defensie van Afrika, collectieve kracht, WK-ervaring uit 2022, Hakimi als gevaar op de rechterflank.</p>
+
+        <h3 className="text-2xl font-black text-white">Voorspelling</h3>
+        <p>Dit is de match van de eerste week. Marokko gaat er alles aan doen om de aanvalslinie van Brazilië te stoppen. Maar de kwaliteit van Vinícius en Rodrygo is uiteindelijk te veel.</p>
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
+          <p className="text-white font-black mb-1">Onze verwachting: Brazilië 2 – 0 Marokko</p>
+          <p className="text-sm">Brazilië wint, maar Marokko laat zien dat ze bij de absolute top horen.</p>
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Brazilië vs Marokko live kijken</h3>
+        <p>Dit is een van de meest verwachte duels van het WK. Mis het niet — kijk live via <strong className="text-white">IPTVTotaal</strong> in HD op elk apparaat.</p>
+
+        <WkCtaBlock match="Brazilië vs Marokko" />
+      </div>
+    ),
+  },
+  // ── WK 2026: Saudi-Arabië vs Uruguay ─────────────────────────────────────
+  {
+    slug: 'saudi-arabie-uruguay-wk-2026',
+    publishDate: '2026-06-08',
+    date: '8 juni 2026',
+    readTime: '5 min',
+    category: 'WK 2026',
+    title: 'Saudi-Arabië vs Uruguay WK 2026: tactisch duel in Miami',
+    excerpt: 'Maandag 15 juni staat Saudi-Arabië vs Uruguay op het programma in Groep H. Analyse van dit strategische duel en live kijken via IPTVTotaal vanaf €78.',
+    image: '/saudi-arabie-uruguay-wk-2026.jpg',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+        <WkMatchHeroCard team1="Saudi-Arabië" team2="Uruguay" flag1="🇸🇦" flag2="🇺🇾" matchDateISO="2026-06-15T21:00:00Z" kickoff="23:00 NL-tijd" venue="Miami Stadion, Florida" group="Groep H" />
+        <div className="flex flex-wrap gap-2 mb-2">
+          {['saudi arabie uruguay wk 2026','uruguay wk 2026','saudi arabie wk 2026','uruguay live wk','wk 2026 groep H','wk 2026 live stream','uruguay wk livestream'].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
+          ))}
+        </div>
+
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[{label:'Datum',value:'Maandag 15 juni 2026'},{label:'Aftrap',value:'23:00 (NL-tijd)'},{label:'Stadion',value:'Miami Stadion, Florida'}].map(i => (
+            <div key={i.label} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+              <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-1">{i.label}</div>
+              <div className="text-white font-black text-sm">{i.value}</div>
+            </div>
+          ))}
+        </div>
+
+        <p>Een van de meest intrigerende duels van de eerste week: <strong className="text-white">Saudi-Arabië vs Uruguay</strong> in Miami. Saudi-Arabië versloeg in 2022 Argentinië in een van de grootste WK-verrassingen ooit. Uruguay is een van de meest gevreesde pressing-teams ter wereld. Dit tactische gevecht wordt spannender dan het lijkt.</p>
+
+        <h3 className="text-2xl font-black text-white">Analyse Saudi-Arabië</h3>
+        <p>Saudi-Arabië speelt fysiek en georganiseerd, met een hoog pressing en snel omschakelen. Ze staan tactisch goed en zijn gevaarlijk bij set-pieces. De Saoedische Pro League heeft de selectie versterkt met meer Europese ervaring.</p>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Salem Al-Dawsari</strong> — technisch vedette, schoot Argentinië het WK uit in 2022</li>
+          <li><strong className="text-white">Mohammed Al-Owais</strong> — internationale keeper met sterke reflexen</li>
+          <li><strong className="text-white">Saleh Al-Shehri</strong> — spits, snel en gevaarlijk in de diepte</li>
+        </ul>
+        <p><strong className="text-white">Voordelen Saudi-Arabië:</strong> WK-verrassing reputatie, goed georganiseerd, gevaarlijk bij set-pieces, sterke teamspirit.</p>
+
+        <h3 className="text-2xl font-black text-white">Analyse Uruguay</h3>
+        <p>Uruguay is ondanks zijn kleine omvang altijd een van de gevaarlijkste landen op een WK. Ze voetballen hard, tactisch intelligent en met een ongelofelijke mentaliteit. Hoog pressing, snel en dominant middenveld.</p>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Federico Valverde</strong> — Real Madrid-dynamo, een van de beste middenvelders ter wereld</li>
+          <li><strong className="text-white">Darwin Núñez</strong> — Liverpool-spits, explosief en ongrijpbaar voor verdedigers</li>
+          <li><strong className="text-white">Rodrigo Bentancur</strong> — slim, snel en gevaarlijk op het middenveld</li>
+          <li><strong className="text-white">José María Giménez</strong> — sterk in de lucht, leider achterin</li>
+        </ul>
+        <p><strong className="text-white">Voordelen Uruguay:</strong> Pressing van wereldklasse, Valverde als absolute topper, mentaliteit, WK-ervaring.</p>
+
+        <h3 className="text-2xl font-black text-white">Voorspelling</h3>
+        <p>Uruguay is de favoriet maar Saudi-Arabië heeft aangetoond verrassingen te kunnen realiseren. Valverde en Núñez zullen echter het verschil maken.</p>
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
+          <p className="text-white font-black mb-1">Onze verwachting: Saudi-Arabië 0 – 2 Uruguay</p>
+          <p className="text-sm">Uruguay wint via hun pressing en de kwaliteit van Valverde en Núñez.</p>
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Saudi-Arabië vs Uruguay live kijken</h3>
+        <p>Volg dit tactische WK-duel live via <strong className="text-white">IPTVTotaal</strong> — alle 104 WK 2026 wedstrijden in HD, zonder buffering.</p>
+
+        <WkCtaBlock match="Saudi-Arabië vs Uruguay" />
+      </div>
+    ),
+  },
   // ── Post A — internet protocol tv providers ──────────────────────────────
   {
     slug: 'internet-protocol-tv-providers',
