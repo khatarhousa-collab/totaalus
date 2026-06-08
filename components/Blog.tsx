@@ -122,14 +122,20 @@ const WkMatchHeroCard: React.FC<{
       </div>
 
       {/* Footer */}
-      <div className="bg-neutral-950 px-6 py-4 flex flex-wrap items-center justify-between gap-3 border-t border-amber-500/20">
-        <div className="flex items-center gap-2 text-white/40 text-xs font-medium">
-          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+      <div className="bg-neutral-950 px-6 py-5 border-t border-amber-500/20">
+        <div className="flex items-center gap-2 text-white/30 text-xs font-medium mb-4">
+          <svg className="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           {venue}
         </div>
-        <div className="flex items-center gap-2 text-white/40 text-xs font-medium">
-          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 3l-4 4-4-4"/></svg>
-          RTL · NPO · ESPN · <span className="text-amber-400 font-black">IPTVTotaal</span>
+        <div className="flex items-center gap-2">
+          <span className="text-white/30 text-xs font-bold uppercase tracking-widest mr-1">Live op:</span>
+          <img src="/logo-rtl.svg" alt="RTL" className="h-7 rounded" />
+          <img src="/logo-npo.svg" alt="NPO" className="h-7 rounded" />
+          <img src="/logo-espn.svg" alt="ESPN" className="h-5" />
+          <div className="flex items-center gap-1.5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black text-xs font-black px-2.5 py-1.5 rounded">
+            <img src="/social-logo.svg" alt="" className="w-4 h-4" />
+            IPTVTotaal
+          </div>
         </div>
       </div>
     </div>
