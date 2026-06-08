@@ -139,8 +139,10 @@ const WkMatchHeroCard: React.FC<{
               <img src={ch.src} alt={ch.alt} className="max-h-6 max-w-[72px] object-contain" />
             </div>
           ))}
-          <div className="flex items-center gap-1.5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black text-xs font-black px-3 py-2 rounded-xl h-10">
-            <img src="/social-logo.svg" alt="" className="w-5 h-5" />
+          <div className="flex items-center gap-2 bg-gradient-to-r from-amber-400 to-yellow-500 text-black text-xs font-black px-3 py-2 rounded-xl h-10">
+            <div className="w-5 h-5 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-sm flex items-center justify-center shrink-0 ring-1 ring-black/20">
+              <div className="w-2.5 h-2.5 bg-black rotate-45"/>
+            </div>
             IPTVTotaal
           </div>
         </div>
