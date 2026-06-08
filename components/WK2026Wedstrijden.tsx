@@ -27,7 +27,7 @@ export const FLAG_SVGS: Record<string, React.ReactNode> = {
 };
 
 export const Flag: React.FC<{ code: string }> = ({ code }) => (
-  <div className="w-28 h-[72px] rounded-xl overflow-hidden shadow-2xl ring-2 ring-black/30 flex-shrink-0">
+  <div className="w-20 sm:w-28 h-[52px] sm:h-[72px] rounded-xl overflow-hidden shadow-2xl ring-2 ring-black/30 flex-shrink-0">
     {FLAG_SVGS[code] ?? <div className="w-full h-full bg-black/20"/>}
   </div>
 );
@@ -58,22 +58,22 @@ export const MatchCard: React.FC<{
           <span className="w-1.5 h-1.5 bg-black rounded-full animate-pulse"/>LIVE · IPTVTOTAAL
         </div>
       </div>
-      <div className="bg-gradient-to-br from-amber-400 via-yellow-400 to-amber-500 px-5 pt-6 pb-5">
-        <div className="flex items-center justify-between gap-3">
-          <div className="flex flex-col items-center gap-2 flex-1">
+      <div className="bg-gradient-to-br from-amber-400 via-yellow-400 to-amber-500 px-3 sm:px-5 pt-4 sm:pt-6 pb-3 sm:pb-5">
+        <div className="flex items-center justify-between gap-2 sm:gap-3">
+          <div className="flex flex-col items-center gap-1.5 sm:gap-2 flex-1 min-w-0">
             <Flag code={code1} />
-            <span className="text-black font-black text-base text-center leading-tight">{team1}</span>
+            <span className="text-black font-black text-xs sm:text-base text-center leading-tight truncate w-full px-1">{team1}</span>
           </div>
-          <div className="flex flex-col items-center gap-1 px-2">
-            <span className="text-black/20 text-4xl font-black tracking-tighter leading-none select-none">VS</span>
-            <div className="bg-black/15 rounded-lg px-3 py-1.5 text-center">
-              <div className="text-black font-black text-sm leading-none">{kickoff}</div>
-              <div className="text-black/50 text-[10px] font-bold uppercase tracking-widest mt-0.5">aftrap</div>
+          <div className="flex flex-col items-center gap-1 px-1 sm:px-2 shrink-0">
+            <span className="text-black/20 text-2xl sm:text-4xl font-black tracking-tighter leading-none select-none">VS</span>
+            <div className="bg-black/15 rounded-lg px-2 sm:px-3 py-1 sm:py-1.5 text-center">
+              <div className="text-black font-black text-[11px] sm:text-sm leading-none whitespace-nowrap">{kickoff}</div>
+              <div className="text-black/50 text-[9px] sm:text-[10px] font-bold uppercase tracking-widest mt-0.5">aftrap</div>
             </div>
           </div>
-          <div className="flex flex-col items-center gap-2 flex-1">
+          <div className="flex flex-col items-center gap-1.5 sm:gap-2 flex-1 min-w-0">
             <Flag code={code2} />
-            <span className="text-black font-black text-base text-center leading-tight">{team2}</span>
+            <span className="text-black font-black text-xs sm:text-base text-center leading-tight truncate w-full px-1">{team2}</span>
           </div>
         </div>
         <div className="mt-4 flex justify-center">
@@ -86,10 +86,10 @@ export const MatchCard: React.FC<{
             <div className="bg-black/80 rounded-lg px-3 py-2 inline-flex items-center gap-0.5">
               {[{v:t.d,l:'dag'},{v:t.h,l:'uur'},{v:t.m,l:'min'},{v:t.s,l:'sec'}].map(({v,l},i) => (
                 <React.Fragment key={l}>
-                  {i > 0 && <span className="text-amber-400/50 font-black text-sm pb-3 px-0.5">:</span>}
-                  <div className="flex flex-col items-center w-9">
-                    <span className="text-amber-400 font-black text-lg tabular-nums leading-none">{String(v).padStart(2,'0')}</span>
-                    <span className="text-white/30 text-[9px] font-bold uppercase tracking-wide mt-0.5">{l}</span>
+                  {i > 0 && <span className="text-amber-400/50 font-black text-xs sm:text-sm pb-3 px-0.5">:</span>}
+                  <div className="flex flex-col items-center w-7 sm:w-9">
+                    <span className="text-amber-400 font-black text-base sm:text-lg tabular-nums leading-none">{String(v).padStart(2,'0')}</span>
+                    <span className="text-white/30 text-[8px] sm:text-[9px] font-bold uppercase tracking-wide mt-0.5">{l}</span>
                   </div>
                 </React.Fragment>
               ))}
@@ -97,22 +97,22 @@ export const MatchCard: React.FC<{
           )}
         </div>
       </div>
-      <div className="bg-neutral-950 px-5 py-3 flex items-center justify-between gap-4 flex-wrap">
-        <div className="flex items-center gap-1.5 text-white/30 text-[11px] font-medium min-w-0">
+      <div className="bg-neutral-950 px-3 sm:px-5 py-2.5 sm:py-3 flex items-center justify-between gap-2 sm:gap-4 flex-wrap">
+        <div className="flex items-center gap-1.5 text-white/30 text-[10px] sm:text-[11px] font-medium min-w-0">
           <svg className="w-3 h-3 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           <span className="truncate">{venue}</span>
         </div>
-        <div className="flex items-center gap-2 shrink-0">
-          {[{src:'/assets/channels/espn.png',alt:'ESPN'},{src:'/assets/channels/viaplay.png',alt:'Viaplay'},{src:'/assets/channels/ziggo-sport.png',alt:'Ziggo Sport'},{src:'/assets/channels/eurosport.png',alt:'Eurosport'}].map(ch => (
-            <div key={ch.alt} className="bg-gradient-to-r from-amber-400 to-yellow-500 rounded-lg px-2 py-1.5 flex items-center justify-center h-8 min-w-[48px]">
-              <img src={ch.src} alt={ch.alt} className="max-h-4 max-w-[56px] object-contain"/>
+        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+          {[{src:'/assets/channels/espn.png',alt:'ESPN',mobileHide:false},{src:'/assets/channels/viaplay.png',alt:'Viaplay',mobileHide:false},{src:'/assets/channels/ziggo-sport.png',alt:'Ziggo Sport',mobileHide:true},{src:'/assets/channels/eurosport.png',alt:'Eurosport',mobileHide:true}].map(ch => (
+            <div key={ch.alt} className={`${ch.mobileHide ? 'hidden sm:flex' : 'flex'} bg-gradient-to-r from-amber-400 to-yellow-500 rounded-lg px-1.5 sm:px-2 py-1 sm:py-1.5 items-center justify-center h-7 sm:h-8 min-w-[40px] sm:min-w-[48px]`}>
+              <img src={ch.src} alt={ch.alt} className="max-h-3.5 sm:max-h-4 max-w-[48px] sm:max-w-[56px] object-contain"/>
             </div>
           ))}
-          <div className="flex items-center gap-1.5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black text-[11px] font-black px-2 py-1.5 rounded-lg h-8">
-            <div className="w-4 h-4 bg-gradient-to-br from-amber-500 to-yellow-600 rounded-sm flex items-center justify-center shrink-0 ring-1 ring-black/20">
-              <div className="w-2 h-2 bg-black rotate-45"/>
+          <div className="flex items-center gap-1 sm:gap-1.5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black text-[10px] sm:text-[11px] font-black px-1.5 sm:px-2 py-1 sm:py-1.5 rounded-lg h-7 sm:h-8">
+            <div className="w-3.5 sm:w-4 h-3.5 sm:h-4 bg-gradient-to-br from-amber-500 to-yellow-600 rounded-sm flex items-center justify-center shrink-0 ring-1 ring-black/20">
+              <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-black rotate-45"/>
             </div>
-            IPTVTotaal
+            <span className="hidden xs:inline sm:inline">IPTVTotaal</span>
           </div>
         </div>
       </div>
@@ -301,25 +301,25 @@ export const WK2026Wedstrijden: React.FC = () => {
             <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse"/>
             WK 2026 · Live Uitzendingen
           </div>
-          <h1 className="text-5xl lg:text-7xl font-black tracking-tighter text-white leading-none mb-5">
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black tracking-tighter text-white leading-none mb-5">
             WK 2026 Live Kijken
           </h1>
-          <p className="text-white/50 text-lg lg:text-xl max-w-2xl mx-auto mb-3">
+          <p className="text-white/50 text-base sm:text-lg lg:text-xl max-w-2xl mx-auto mb-3">
             Alle 104 WK 2026 wedstrijden live — inclusief Oranje, halve finales en de finale.
             HD kwaliteit op elk apparaat. Eén pakket voor het complete toernooi.
           </p>
-          <p className="text-white/30 text-sm mb-10">
+          <p className="text-white/30 text-sm mb-8 sm:mb-10">
             Waar kijk je het WK 2026? · WK livestream · WK 2026 uitzending Nederland
           </p>
           <a href={WA} target="_blank" rel="noopener noreferrer" onClick={trackWhatsAppConversion}
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black text-lg rounded-full hover:scale-[1.02] transition-transform shadow-xl shadow-amber-500/30">
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black text-base sm:text-lg rounded-full hover:scale-[1.02] transition-transform shadow-xl shadow-amber-500/30">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.128.558 4.122 1.532 5.85L.057 23.292a.75.75 0 00.908.98l5.65-1.48A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.704 9.704 0 01-4.95-1.354l-.354-.21-3.655.957.975-3.562-.23-.368A9.713 9.713 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
             Kijk het WK 2026 via WhatsApp — €78
           </a>
         </div>
 
         {/* Matches */}
-        <div className="space-y-20">
+        <div className="space-y-12 lg:space-y-20">
           {MATCHES.map((m, idx) => (
             <div key={m.slug} className="lg:grid lg:grid-cols-2 lg:gap-12 items-start">
 
@@ -339,12 +339,12 @@ export const WK2026Wedstrijden: React.FC = () => {
               </div>
 
               {/* Content */}
-              <div className={`mt-8 lg:mt-0 ${idx % 2 === 1 ? 'lg:order-1' : ''}`}>
+              <div className={`mt-6 lg:mt-0 ${idx % 2 === 1 ? 'lg:order-1' : ''}`}>
                 <div className="text-xs font-black text-amber-400 uppercase tracking-widest mb-2">{m.date}</div>
-                <h2 className="text-3xl lg:text-4xl font-black tracking-tighter text-white leading-tight mb-4">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tighter text-white leading-tight mb-3 sm:mb-4">
                   Waar kijk je {m.team1} vs {m.team2} live?
                 </h2>
-                <p className="text-white/60 text-lg leading-relaxed mb-6">{m.watchText}</p>
+                <p className="text-white/60 text-base sm:text-lg leading-relaxed mb-5 sm:mb-6">{m.watchText}</p>
 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {m.keywords.map(kw => (
@@ -367,14 +367,14 @@ export const WK2026Wedstrijden: React.FC = () => {
                   ))}
                 </ul>
 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-col sm:flex-row gap-3">
                   <a href={WA} target="_blank" rel="noopener noreferrer" onClick={trackWhatsAppConversion}
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black rounded-full hover:scale-[1.02] transition-transform shadow-lg shadow-amber-500/20 text-sm no-underline">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.128.558 4.122 1.532 5.85L.057 23.292a.75.75 0 00.908.98l5.65-1.48A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.704 9.704 0 01-4.95-1.354l-.354-.21-3.655.957.975-3.562-.23-.368A9.713 9.713 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:py-3 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black rounded-full hover:scale-[1.02] transition-transform shadow-lg shadow-amber-500/20 text-sm no-underline">
+                    <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.128.558 4.122 1.532 5.85L.057 23.292a.75.75 0 00.908.98l5.65-1.48A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.704 9.704 0 01-4.95-1.354l-.354-.21-3.655.957.975-3.562-.23-.368A9.713 9.713 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
                     Nu Activeren — €78
                   </a>
                   <Link to={`/wk-2026-live-kijken/${m.pageSlug}`}
-                    className="inline-flex items-center gap-2 px-6 py-3 border border-white/20 text-white/70 font-bold rounded-full hover:border-amber-400/50 hover:text-white transition-colors text-sm no-underline">
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:py-3 border border-white/20 text-white/70 font-bold rounded-full hover:border-amber-400/50 hover:text-white transition-colors text-sm no-underline">
                     Volledige analyse →
                   </Link>
                 </div>
@@ -386,7 +386,7 @@ export const WK2026Wedstrijden: React.FC = () => {
         {/* Bottom CTA */}
         <div className="mt-24 max-w-xl mx-auto">
           <div className="text-center mb-8">
-            <h2 className="text-4xl lg:text-5xl font-black tracking-tighter text-white mb-3">Kijk alle 104 WK-duels live</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tighter text-white mb-3">Kijk alle 104 WK-duels live</h2>
             <p className="text-white/40">Één pakket. Elk apparaat. Geen verborgen kosten.</p>
           </div>
           <PackCta />

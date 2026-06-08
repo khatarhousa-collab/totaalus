@@ -40,12 +40,12 @@ export const WK2026MatchDetail: React.FC = () => {
       <div className="max-w-5xl mx-auto px-6 lg:px-12">
 
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 text-xs text-white/30 mb-8 font-medium">
-          <Link to="/" className="hover:text-white/60 transition-colors">Home</Link>
-          <span>/</span>
-          <Link to="/wk-2026-live-kijken" className="hover:text-white/60 transition-colors">WK 2026 Live</Link>
-          <span>/</span>
-          <span className="text-white/60">{m.team1} vs {m.team2}</span>
+        <nav className="flex items-center gap-2 text-xs text-white/30 mb-6 sm:mb-8 font-medium overflow-hidden">
+          <Link to="/" className="hover:text-white/60 transition-colors shrink-0">Home</Link>
+          <span className="shrink-0">/</span>
+          <Link to="/wk-2026-live-kijken" className="hover:text-white/60 transition-colors shrink-0">WK 2026 Live</Link>
+          <span className="shrink-0">/</span>
+          <span className="text-white/60 truncate min-w-0">{m.team1} vs {m.team2}</span>
         </nav>
 
         {/* Badge + date */}
@@ -58,12 +58,12 @@ export const WK2026MatchDetail: React.FC = () => {
         </div>
 
         {/* H1 */}
-        <h1 className="text-4xl lg:text-6xl font-black tracking-tighter text-white leading-none mb-6">
+        <h1 className="text-3xl sm:text-4xl lg:text-6xl font-black tracking-tighter text-white leading-none mb-5 sm:mb-6">
           {m.team1} vs {m.team2}<br/>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500">Live Kijken</span>
         </h1>
 
-        <p className="text-white/50 text-lg lg:text-xl leading-relaxed mb-10 max-w-2xl">
+        <p className="text-white/50 text-base sm:text-lg lg:text-xl leading-relaxed mb-8 sm:mb-10 max-w-2xl">
           {m.intro}
         </p>
 
@@ -76,20 +76,20 @@ export const WK2026MatchDetail: React.FC = () => {
         </div>
 
         {/* Quick CTA */}
-        <div className="flex flex-wrap gap-4 mb-14">
+        <div className="flex flex-col sm:flex-row gap-3 mb-8 sm:mb-14">
           <a href={WA} target="_blank" rel="noopener noreferrer" onClick={trackWhatsAppConversion}
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black text-lg rounded-full hover:scale-[1.02] transition-transform shadow-xl shadow-amber-500/30">
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.128.558 4.122 1.532 5.85L.057 23.292a.75.75 0 00.908.98l5.65-1.48A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.704 9.704 0 01-4.95-1.354l-.354-.21-3.655.957.975-3.562-.23-.368A9.713 9.713 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black text-base sm:text-lg rounded-full hover:scale-[1.02] transition-transform shadow-xl shadow-amber-500/30">
+            <svg className="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.128.558 4.122 1.532 5.85L.057 23.292a.75.75 0 00.908.98l5.65-1.48A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.704 9.704 0 01-4.95-1.354l-.354-.21-3.655.957.975-3.562-.23-.368A9.713 9.713 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
             Kijk Live via WhatsApp — €78
           </a>
           <Link to={`/blog/${m.slug}`}
-            className="inline-flex items-center gap-2 px-6 py-4 border border-white/20 text-white/60 font-bold rounded-full hover:border-amber-400/50 hover:text-white transition-colors text-base no-underline">
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 border border-white/20 text-white/60 font-bold rounded-full hover:border-amber-400/50 hover:text-white transition-colors text-base no-underline">
             Uitgebreide matchanalyse →
           </Link>
         </div>
 
         {/* Team analysis */}
-        <div className="grid md:grid-cols-2 gap-6 mb-14">
+        <div className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-14">
           {/* Team 1 */}
           <div className="rounded-2xl bg-white/[0.03] border border-white/10 p-6">
             <div className="flex items-center gap-3 mb-5">
@@ -123,7 +123,7 @@ export const WK2026MatchDetail: React.FC = () => {
         </div>
 
         {/* Analysis */}
-        <div className="rounded-2xl bg-white/[0.03] border border-white/10 p-6 lg:p-8 mb-14">
+        <div className="rounded-2xl bg-white/[0.03] border border-white/10 p-5 sm:p-6 lg:p-8 mb-8 sm:mb-14">
           <h2 className="text-xl font-black text-white mb-4 flex items-center gap-2">
             <svg className="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
             Matchanalyse
@@ -132,7 +132,7 @@ export const WK2026MatchDetail: React.FC = () => {
         </div>
 
         {/* Why watch */}
-        <div className="rounded-2xl p-px bg-gradient-to-br from-amber-400/40 via-yellow-500/20 to-amber-600/10 mb-14">
+        <div className="rounded-2xl p-px bg-gradient-to-br from-amber-400/40 via-yellow-500/20 to-amber-600/10 mb-8 sm:mb-14">
           <div className="rounded-[15px] bg-neutral-950 p-6 lg:p-8">
             <div className="flex items-start gap-4">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-yellow-500 flex items-center justify-center shrink-0 mt-0.5">
@@ -147,7 +147,7 @@ export const WK2026MatchDetail: React.FC = () => {
         </div>
 
         {/* Keywords */}
-        <div className="mb-14">
+        <div className="mb-8 sm:mb-14">
           <div className="text-xs font-black text-white/20 uppercase tracking-widest mb-3">Zoekopdrachten</div>
           <div className="flex flex-wrap gap-2">
             {m.keywords.map(kw => (
@@ -157,8 +157,8 @@ export const WK2026MatchDetail: React.FC = () => {
         </div>
 
         {/* How to watch section */}
-        <div className="mb-14">
-          <h2 className="text-3xl lg:text-4xl font-black tracking-tighter text-white mb-6">
+        <div className="mb-8 sm:mb-14">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tighter text-white mb-5 sm:mb-6">
             Hoe kijk je {m.team1} vs {m.team2} live?
           </h2>
           <div className="grid sm:grid-cols-3 gap-4 mb-8">
@@ -177,9 +177,9 @@ export const WK2026MatchDetail: React.FC = () => {
         </div>
 
         {/* CTA Pack */}
-        <div className="max-w-xl mx-auto mb-14">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl lg:text-4xl font-black tracking-tighter text-white mb-2">Activeer nu voor €78</h2>
+        <div className="max-w-xl mx-auto mb-8 sm:mb-14">
+          <div className="text-center mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tighter text-white mb-2">Activeer nu voor €78</h2>
             <p className="text-white/40">15 maanden toegang · Alle 104 WK-duels · Geen verborgen kosten</p>
           </div>
           <PackCta />
@@ -188,7 +188,7 @@ export const WK2026MatchDetail: React.FC = () => {
         {/* Other matches */}
         <div>
           <h2 className="text-2xl font-black tracking-tighter text-white mb-6">Andere WK 2026 wedstrijden</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
             {MATCHES.filter(x => x.pageSlug !== m.pageSlug).map(other => (
               <Link key={other.pageSlug} to={`/wk-2026-live-kijken/${other.pageSlug}`}
                 className="group rounded-2xl bg-white/[0.03] border border-white/10 hover:border-amber-500/30 p-4 transition-colors no-underline">
