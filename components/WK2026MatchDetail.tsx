@@ -14,7 +14,7 @@ export const WK2026MatchDetail: React.FC = () => {
     if (metaDesc) metaDesc.setAttribute('content', m.metaDesc);
     let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     if (!canonical) { canonical = document.createElement('link'); canonical.setAttribute('rel','canonical'); document.head.appendChild(canonical); }
-    canonical.setAttribute('href', `https://www.iptvtotaal.digital/wk-2026/${m.pageSlug}`);
+    canonical.setAttribute('href', `https://www.iptvtotaal.digital/wk-2026-live-kijken/${m.pageSlug}`);
     return () => {
       document.title = 'IPTVTotaal';
       if (metaDesc) metaDesc.setAttribute('content','');
@@ -190,7 +190,7 @@ export const WK2026MatchDetail: React.FC = () => {
           <h2 className="text-2xl font-black tracking-tighter text-white mb-6">Andere WK 2026 wedstrijden</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {MATCHES.filter(x => x.pageSlug !== m.pageSlug).map(other => (
-              <Link key={other.pageSlug} to={`/wk-2026/${other.pageSlug}`}
+              <Link key={other.pageSlug} to={`/wk-2026-live-kijken/${other.pageSlug}`}
                 className="group rounded-2xl bg-white/[0.03] border border-white/10 hover:border-amber-500/30 p-4 transition-colors no-underline">
                 <div className="text-xs font-black text-amber-400/60 uppercase tracking-widest mb-1">{other.group}</div>
                 <div className="font-black text-white group-hover:text-amber-400 transition-colors">{other.team1} vs {other.team2}</div>

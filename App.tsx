@@ -92,7 +92,7 @@ const App: React.FC = () => {
         <Route path="/nederland-oezbekistan-live" element={<main><NederlandOezbekistanLive /></main>} />
         <Route path="/eredivisie-live-kijken" element={<main><EredivisieLiveKijken /></main>} />
         <Route path="/wk-2026-live-kijken" element={<main><WK2026Wedstrijden /></main>} />
-        <Route path="/wk-2026/:matchSlug" element={<main><WK2026MatchDetail /></main>} />
+        <Route path="/wk-2026-live-kijken/:matchSlug" element={<main><WK2026MatchDetail /></main>} />
       </Routes>
 
       <Footer />
