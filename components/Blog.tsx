@@ -1889,12 +1889,16 @@ const CategoryTag: React.FC<{ label: string }> = ({ label }) => (
 
 const BlogCard: React.FC<{ post: BlogPost }> = ({ post }) => (
   <a href={`/blog/${post.slug}`} className="group cursor-pointer block">
-    <div className={`overflow-hidden rounded-2xl mb-4 bg-neutral-900 ${post.imageAspect === 'square' ? 'aspect-square' : 'aspect-video'}`}>
-      <img
-        src={post.image}
-        alt={post.title}
-        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-      />
+    <div className={`overflow-hidden rounded-2xl mb-4 bg-neutral-900 ${!post.headerCard ? (post.imageAspect === 'square' ? 'aspect-square' : 'aspect-video') : ''}`}>
+      {post.headerCard ? (
+        <div className="pointer-events-none">{post.headerCard}</div>
+      ) : (
+        <img
+          src={post.image}
+          alt={post.title}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+      )}
     </div>
     <div className="flex items-center gap-3 mb-2">
       <CategoryTag label={post.category} />
@@ -2060,12 +2064,16 @@ export const Blog: React.FC = () => {
                   href={`/blog/${featured.slug}`}
                   className="group cursor-pointer mb-14 block"
                 >
-                  <div className="overflow-hidden rounded-3xl mb-6 aspect-[16/7] bg-neutral-900">
-                    <img
-                      src={featured.image}
-                      alt={featured.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
+                  <div className={`overflow-hidden rounded-3xl mb-6 bg-neutral-900 ${!featured.headerCard ? 'aspect-[16/7]' : ''}`}>
+                    {featured.headerCard ? (
+                      <div className="pointer-events-none">{featured.headerCard}</div>
+                    ) : (
+                      <img
+                        src={featured.image}
+                        alt={featured.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    )}
                   </div>
                   <div className="flex items-center gap-3 mb-3">
                     <CategoryTag label={featured.category} />
