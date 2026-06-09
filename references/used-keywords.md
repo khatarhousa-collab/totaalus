@@ -234,6 +234,90 @@ Track every keyword (primary + cluster) already targeted in published blog posts
 
 ---
 
+## Post E — DiamondIPTV: wat is het en is het de moeite waard? (2026)
+**Slug:** `diamondiptv` | **Published:** 10 juni 2026 | **Category:** Vergelijking
+
+| Keyword | Source | Notes |
+|---|---|---|
+| diamondiptv | Primary target (CSV — 390/mo) | Navigational |
+| diamond iptv | Cluster | Variant |
+| diamondiptv review | Cluster | Review intent |
+| iptv aanbieder nederland | Cluster | Provider intent |
+| iptv vergelijken | Cluster | Comparison intent |
+| beste iptv provider | Cluster | Commercial intent |
+
+---
+
+## Post F — GoedIPTV: wat is het en wat zijn de alternatieven? (2026)
+**Slug:** `goediptv` | **Published:** 10 juni 2026 | **Category:** Vergelijking
+
+| Keyword | Source | Notes |
+|---|---|---|
+| goediptv | Primary target (CSV — 320/mo) | Navigational |
+| goed iptv | Cluster | Variant |
+| goediptv nederland | Cluster | Geo variant |
+| goedkope iptv | Cluster | Price intent |
+| iptv vergelijken nederland | Cluster | Comparison intent |
+| iptv abonnement goedkoop | Cluster | Price intent |
+
+---
+
+## Post G — Welke IPTV is het beste in Nederland? (2026 vergelijking)
+**Slug:** `welke-iptv-is-het-beste` | **Scheduled:** 11 juni 2026 | **Category:** Advies
+
+| Keyword | Source | Notes |
+|---|---|---|
+| welke iptv is het beste | Primary target (CSV — 140/mo) | Informational/Commercial |
+| beste iptv nederland | Cluster | Top-level variant |
+| iptv vergelijken | Cluster | Comparison intent |
+| welke iptv aanbieder | Cluster | Provider intent |
+| iptv 2026 nederland | Cluster | Year variant |
+| beste iptv abonnement | Cluster | Commercial intent |
+
+---
+
+## Post H — What is IPTV? Everything You Need to Know (2026)
+**Slug:** `what-is-iptv` | **Scheduled:** 11 juni 2026 | **Category:** Advies
+
+| Keyword | Source | Notes |
+|---|---|---|
+| what is iptv | Primary target (CSV — 210/mo) | Informational (English) |
+| what is iptv service | Cluster | Service explanation |
+| iptv meaning | Cluster | Definition intent |
+| iptv explained | Cluster | Explanation intent |
+| iptv netherlands | Cluster | Geo intent |
+| how does iptv work | Cluster | Technical intent |
+
+---
+
+## Post I — De beste IPTV van 2026: eerlijk advies zonder hype
+**Slug:** `de-beste-iptv` | **Scheduled:** 12 juni 2026 | **Category:** Advies
+
+| Keyword | Source | Notes |
+|---|---|---|
+| de beste iptv | Primary target (CSV — 70/mo) | Informational |
+| beste iptv 2026 | Cluster | Year variant |
+| beste iptv nederland | Cluster | Geo variant |
+| iptv top aanbieder | Cluster | Top intent |
+| iptv kwaliteit | Cluster | Quality intent |
+| beste iptv abonnement | Cluster | Commercial intent |
+
+---
+
+## Post J — Wat kost IPTV in Nederland? Prijzen vergeleken (2026)
+**Slug:** `wat-kost-iptv` | **Scheduled:** 12 juni 2026 | **Category:** Advies
+
+| Keyword | Source | Notes |
+|---|---|---|
+| wat kost iptv | Primary target (CSV — 50/mo) | Informational |
+| iptv prijs nederland | Cluster | Price geo intent |
+| iptv abonnement kosten | Cluster | Cost intent |
+| iptv goedkoop | Cluster | Price intent |
+| iptv prijzen vergelijken | Cluster | Comparison intent |
+| iptv kosten 2026 | Cluster | Year variant |
+
+---
+
 ## Quick Reference — All Primary Keywords Used
 
 | Keyword | Post slug |

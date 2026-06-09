@@ -1878,6 +1878,577 @@ const posts: BlogPost[] = [
       </div>
     ),
   },
+  // ── DiamondIPTV ─────────────────────────────────────────────────────────────
+  {
+    slug: 'diamondiptv',
+    publishDate: '2026-06-10',
+    date: '10 juni 2026',
+    readTime: '4 min',
+    category: 'Vergelijking',
+    title: 'DiamondIPTV: wat is het en is het de moeite waard? (2026)',
+    excerpt: 'DiamondIPTV duikt veel op in zoekresultaten. Maar wat biedt het precies — en hoe verhoudt het zich tot de alternatieven? We leggen het eerlijk uit.',
+    image: '/diamondiptv.webp',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+        <div className="flex flex-wrap gap-2 mb-2">
+          {['diamondiptv','diamond iptv','diamondiptv review','iptv aanbieder nederland','iptv vergelijken','beste iptv provider'].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
+          ))}
+        </div>
+
+        <p>Je zoekt IPTV. Je stuit op DiamondIPTV. De naam klinkt goed, maar wat zit er achter?</p>
+        <p>We leggen het uit — inclusief wat je moet weten voor je betaalt.</p>
+
+        <h3 className="text-2xl font-black text-white">Wat is DiamondIPTV?</h3>
+        <p>DiamondIPTV is een IPTV-aanbieder die live tv-zenders levert via het internet. Net als andere aanbieders biedt het toegang tot een zenderlijst via een M3U-link of Xtream Codes.</p>
+        <p>Je gebruikt het in een app als TiviMate, IPTV Smarters Pro of SS IPTV — op je Smart TV, telefoon of Firestick.</p>
+
+        <h3 className="text-2xl font-black text-white">Waar let je op bij DiamondIPTV?</h3>
+        <p>Elke IPTV-aanbieder belooft veel. De vier dingen die er echt toe doen zijn altijd hetzelfde.</p>
+        <div className="space-y-4">
+          {[
+            ['Uptime', 'Een stream die halverwege wegvalt is geen stream. Controleer of de aanbieder een uptime-garantie heeft.'],
+            ['Actieve zenderlijst', 'Vraag altijd om een proefperiode. Een long lijst met niet-werkende zenders heeft geen waarde.'],
+            ['Support', 'Kun je iemand bereiken als er iets misgaat? Via WhatsApp of een ander direct kanaal — niet alleen een formulier.'],
+            ['Geld-terug garantie', 'Een aanbieder die achter zijn product staat, biedt bedenktijd. Geen garantie? Dan weet je genoeg.'],
+          ].map(([title, desc]) => (
+            <div key={title} className="flex gap-4 p-4 bg-white/5 border border-white/10 rounded-2xl">
+              <span className="text-amber-400 font-black text-xl leading-none mt-0.5">→</span>
+              <div><p className="font-black text-white">{title}.</p><p className="text-sm">{desc}</p></div>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-2xl font-black text-white">IPTVTotaal als alternatief.</h3>
+        <p>Als je vergelijkt, is IPTVTotaal een solide keuze. 80.000+ actieve zenders, 99,9% uptime en 24/7 support via WhatsApp met een gemiddelde reactietijd van minder dan 5 minuten.</p>
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[{ label: 'Zenders', value: '80.000+' }, { label: 'Uptime', value: '99,9%' }, { label: 'Garantie', value: '15 dagen terug' }].map(item => (
+            <div key={item.label} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+              <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-1">{item.label}</div>
+              <div className="text-white font-black">{item.value}</div>
+            </div>
+          ))}
+        </div>
+        <p>Vanaf €4,60 per maand. Geen contract. 15 dagen geld-terug als het tegenvalt.</p>
+
+        <a href="/blog/internet-protocol-tv-providers" className="group flex items-center justify-between p-5 bg-amber-500/10 border border-amber-500/20 rounded-2xl hover:border-amber-500/40 transition-colors no-underline">
+          <div>
+            <span className="text-xs font-black text-amber-400 uppercase tracking-widest block mb-1">Vergelijken</span>
+            <span className="text-white font-bold group-hover:text-amber-400 transition-colors">Alle IPTV-providers in Nederland vergeleken →</span>
+          </div>
+        </a>
+
+        <h3 className="text-2xl font-black text-white">Veelgestelde vragen.</h3>
+        <div className="space-y-4">
+          <div>
+            <p className="font-black text-white">Is DiamondIPTV legaal?</p>
+            <p>IPTV als technologie is legaal. Het hangt af van de licenties die een aanbieder heeft voor de aangeboden inhoud. Kies altijd een aanbieder die transparant is over zijn aanbod.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Wat is een goed alternatief voor DiamondIPTV?</p>
+            <p>IPTVTotaal is een Nederlandse aanbieder met 80.000+ zenders, 99,9% uptime en directe WhatsApp-support. Je kunt het gratis uitproberen voor je betaalt.</p>
+          </div>
+        </div>
+
+        <p>Wil je vergelijken of heb je vragen? Stuur ons een berichtje via WhatsApp. We helpen je binnen 5 minuten verder.</p>
+      </div>
+    ),
+  },
+  // ── GoedIPTV ─────────────────────────────────────────────────────────────────
+  {
+    slug: 'goediptv',
+    publishDate: '2026-06-10',
+    date: '10 juni 2026',
+    readTime: '4 min',
+    category: 'Vergelijking',
+    title: 'GoedIPTV: wat is het en wat zijn de alternatieven? (2026)',
+    excerpt: 'GoedIPTV is een bekende naam in de Nederlandse IPTV-markt. We leggen uit wat je mag verwachten — en wat je zeker moet weten voor je een abonnement afsluit.',
+    image: '/goediptv.jpg',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+        <div className="flex flex-wrap gap-2 mb-2">
+          {['goediptv','goed iptv','goediptv nederland','goedkope iptv','iptv vergelijken nederland','iptv abonnement goedkoop'].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
+          ))}
+        </div>
+
+        <p>Je wil goed IPTV voor een eerlijke prijs. Zonder verrassingen. Zonder streams die halverwege een wedstrijd wegvallen.</p>
+        <p>GoedIPTV verschijnt vaak in zoekresultaten. Maar goedkoop en goed zijn niet altijd hetzelfde.</p>
+
+        <h3 className="text-2xl font-black text-white">Wat is GoedIPTV?</h3>
+        <p>GoedIPTV is een IPTV-dienst die zich richt op een lage prijs. De aanbieder levert toegang tot een zenderlijst via M3U of Xtream Codes — net als andere aanbieders in de markt.</p>
+        <p>De app heb je zelf niet. Je gebruikt een speler als TiviMate of IPTV Smarters Pro op je eigen apparaat.</p>
+
+        <h3 className="text-2xl font-black text-white">Goedkoop IPTV: wat zijn de valkuilen?</h3>
+        <p>Een laag prijskaartje is aantrekkelijk. Maar de echte kosten liggen ergens anders.</p>
+        <div className="space-y-3">
+          {[
+            'Instabiele servers — streams die wegvallen juist als het spannend wordt',
+            'Een zenderlijst vol dode kanalen die al maanden niet werken',
+            'Support die nooit antwoordt — of alleen via een ticketsysteem',
+            'Geen geld-terug garantie — als het tegenvalt, ben je het kwijt',
+          ].map(item => (
+            <div key={item} className="flex gap-3 items-start p-3 bg-white/5 border border-white/5 rounded-xl">
+              <span className="text-white/30 font-black mt-0.5">—</span>
+              <p className="text-sm">{item}</p>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Wat kost goed IPTV dan wel?</h3>
+        <p>IPTVTotaal kost vanaf <strong className="text-white">€4,60 per maand</strong>. Dat is minder dan een kopje koffie per week — voor 80.000+ zenders, inclusief sport, films en internationale kanalen.</p>
+
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="border-b border-white/10">
+                <th className="text-left py-3 pr-6 text-white/30 font-bold uppercase tracking-widest text-xs">Onderdeel</th>
+                <th className="text-left py-3 pr-6 text-white font-black">Goedkope IPTV</th>
+                <th className="text-left py-3 text-amber-400 font-black">IPTVTotaal</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-white/5">
+              {[
+                ['Prijs', 'Laag', 'v.a. €4,60/mnd'],
+                ['Uptime', 'Onbekend', '99,9%'],
+                ['Support', 'Traag / geen', '24/7 WhatsApp'],
+                ['Garantie', 'Nee', '15 dagen terug'],
+                ['Zenderlijst', 'Wisselend', '80.000+ actief'],
+              ].map(([label, cheap, totaal]) => (
+                <tr key={label}>
+                  <td className="py-3 pr-6 text-white/40">{label}</td>
+                  <td className="py-3 pr-6 text-white/70">{cheap}</td>
+                  <td className="py-3 text-white font-bold">{totaal}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <p>Het verschil in prijs is minimaal. Het verschil in kwaliteit niet.</p>
+
+        <a href="/blog/iptv-kopen" className="group flex items-center justify-between p-5 bg-amber-500/10 border border-amber-500/20 rounded-2xl hover:border-amber-500/40 transition-colors no-underline">
+          <div>
+            <span className="text-xs font-black text-amber-400 uppercase tracking-widest block mb-1">Gids</span>
+            <span className="text-white font-bold group-hover:text-amber-400 transition-colors">IPTV kopen: waar let je op voor je betaalt? →</span>
+          </div>
+        </a>
+
+        <h3 className="text-2xl font-black text-white">Veelgestelde vragen.</h3>
+        <div className="space-y-4">
+          <div>
+            <p className="font-black text-white">Is goedkope IPTV betrouwbaar?</p>
+            <p>Niet altijd. De prijs zegt weinig over de kwaliteit. Kijk naar uptime, support en of er een geld-terug garantie is.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Kan ik IPTVTotaal proberen voor ik betaal?</p>
+            <p>Ja. Vraag een proefperiode aan via WhatsApp. Je hebt daarna 15 dagen bedenktijd.</p>
+          </div>
+        </div>
+
+        <p>Klaar voor goed IPTV zonder gedoe? Stuur ons een berichtje. We helpen je binnen 5 minuten verder.</p>
+      </div>
+    ),
+  },
+  // ── Welke IPTV is het beste ──────────────────────────────────────────────────
+  {
+    slug: 'welke-iptv-is-het-beste',
+    publishDate: '2026-06-11',
+    date: '11 juni 2026',
+    readTime: '5 min',
+    category: 'Advies',
+    title: 'Welke IPTV is het beste in Nederland? (2026 vergelijking)',
+    excerpt: 'Er zijn tientallen IPTV-aanbieders in Nederland. De meeste beloven hetzelfde. We leggen uit wat echt telt — en welke provider de toets der kritiek doorstaat.',
+    image: '/welke-iptv-is-het-beste.jpg',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+        <div className="flex flex-wrap gap-2 mb-2">
+          {['welke iptv is het beste','beste iptv nederland','iptv vergelijken','welke iptv aanbieder','iptv 2026 nederland','beste iptv aanbieder'].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
+          ))}
+        </div>
+
+        <p>Je wil IPTV. Je vindt er twintig. Ze beloven allemaal hetzelfde — 80.000 zenders, geen buffering, goedkoop.</p>
+        <p>Hier lees je hoe je onderscheid maakt.</p>
+
+        <h3 className="text-2xl font-black text-white">De vier dingen die tellen.</h3>
+        <div className="space-y-4">
+          {[
+            { num: '01', title: 'Uptime', desc: '99,9% uptime betekent minder dan 9 uur downtime per jaar. Alles eronder is onaanvaardbaar als je live sport kijkt.' },
+            { num: '02', title: 'Actieve zenders', desc: 'Een lijst van 80.000 zenders waarvan 40% niet werkt, is waardeloos. Vraag altijd om een proefperiode.' },
+            { num: '03', title: 'Bereikbare support', desc: 'Als je stream wegvalt wil je direct geholpen worden. WhatsApp — binnen 5 minuten — is de norm.' },
+            { num: '04', title: 'Geld-terug garantie', desc: '15 dagen. Geen vragen. Een aanbieder die dat biedt, staat achter zijn product.' },
+          ].map(item => (
+            <div key={item.num} className="flex gap-4 p-5 bg-white/5 border border-white/10 rounded-2xl">
+              <span className="text-amber-400 font-black text-lg font-mono leading-none mt-0.5 shrink-0">{item.num}</span>
+              <div><p className="font-black text-white mb-1">{item.title}.</p><p className="text-sm">{item.desc}</p></div>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Wat biedt IPTVTotaal?</h3>
+        <p>IPTVTotaal scoort op alle vier punten. 80.000+ actieve zenders. 99,9% uptime. 24/7 WhatsApp-support. 15 dagen geld-terug.</p>
+
+        <div className="grid sm:grid-cols-4 gap-3">
+          {[
+            { label: 'Zenders', value: '80.000+' },
+            { label: 'Uptime', value: '99,9%' },
+            { label: 'Support', value: '< 5 min' },
+            { label: 'Prijs', value: 'v.a. €4,60' },
+          ].map(item => (
+            <div key={item.label} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+              <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-1">{item.label}</div>
+              <div className="text-white font-black">{item.value}</div>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Welke zenders zitten erin?</h3>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Nederland:</strong> NPO 1/2/3, RTL 4/5/7, SBS6, Veronica</li>
+          <li><strong className="text-white">Sport:</strong> ESPN, Ziggo Sport, beIN Sports, DAZN — 50+ sportzenders</li>
+          <li><strong className="text-white">Internationaal:</strong> Marokkaans, Turks, Arabisch, Engels</li>
+          <li><strong className="text-white">Nieuws:</strong> BBC, CNN, Al Jazeera, Sky News</li>
+          <li><strong className="text-white">VOD:</strong> films en series on demand</li>
+        </ul>
+
+        <h3 className="text-2xl font-black text-white">Hoe kies je de beste IPTV-aanbieder voor jou?</h3>
+        <p>Als je alleen de Nederlandse basiszenders wil, volstaat een goedkoop abonnement. Maar als je ook live sport, internationale kanalen of VOD wil — dan win je meer met een complete provider.</p>
+        <p>Eerlijk gezegd: de meeste mensen die ons vinden, zijn overgestapt van een aanbieder die net niet bood wat ze zochten.</p>
+
+        <a href="/blog/internet-protocol-tv-providers" className="group flex items-center justify-between p-5 bg-amber-500/10 border border-amber-500/20 rounded-2xl hover:border-amber-500/40 transition-colors no-underline">
+          <div>
+            <span className="text-xs font-black text-amber-400 uppercase tracking-widest block mb-1">Vergelijken</span>
+            <span className="text-white font-bold group-hover:text-amber-400 transition-colors">Alle internet protocol TV providers vergeleken →</span>
+          </div>
+        </a>
+
+        <h3 className="text-2xl font-black text-white">Veelgestelde vragen.</h3>
+        <div className="space-y-4">
+          <div>
+            <p className="font-black text-white">Welke IPTV-aanbieder is het meest betrouwbaar?</p>
+            <p>IPTVTotaal scoort hoog op uptime (99,9%), zenderaanbod en support. Je kunt het gratis uitproberen met een proefperiode.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Wat kost de beste IPTV?</p>
+            <p>Bij IPTVTotaal begin je vanaf €4,60 per maand. Geen contract, geen verborgen kosten.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Werkt IPTV op mijn Smart TV?</p>
+            <p>Ja. Samsung, LG, Android TV, Firestick, iPhone, Android — allemaal ondersteund.</p>
+          </div>
+        </div>
+
+        <p>Wil je de beste keuze maken? Stuur ons een berichtje via WhatsApp. We helpen je binnen 5 minuten.</p>
+      </div>
+    ),
+  },
+  // ── What is IPTV (English) ───────────────────────────────────────────────────
+  {
+    slug: 'what-is-iptv',
+    publishDate: '2026-06-11',
+    date: '11 juni 2026',
+    readTime: '4 min',
+    category: 'Advies',
+    title: 'What is IPTV? Everything You Need to Know (2026)',
+    excerpt: 'IPTV stands for Internet Protocol Television. But what does that actually mean — and why are so many people in the Netherlands switching to it? Plain English explanation.',
+    image: '/what-is-iptv.jpg',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+        <div className="flex flex-wrap gap-2 mb-2">
+          {['what is iptv','what is iptv service','iptv meaning','iptv explained','iptv netherlands','how does iptv work'].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
+          ))}
+        </div>
+
+        <p>Your neighbour has 80,000 channels. You're paying €50 a month for 60 through a cable subscription.</p>
+        <p>He's probably using IPTV.</p>
+
+        <h3 className="text-2xl font-black text-white">IPTV in one sentence.</h3>
+        <p>IPTV — Internet Protocol Television — delivers live TV channels through your internet connection instead of a cable or satellite dish.</p>
+        <p>Same channels. Same quality. No physical cable running to your house.</p>
+
+        <h3 className="text-2xl font-black text-white">How does it actually work?</h3>
+        <p>With regular cable TV, your provider sends a continuous signal through a physical cable. You receive every channel at once, whether you're watching them or not.</p>
+        <p>With IPTV, you request a channel. The server sends only that stream to your device — through the internet. More efficient, more flexible, cheaper to run.</p>
+
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="border-b border-white/10">
+                <th className="text-left py-3 pr-6 text-white/30 font-bold uppercase tracking-widest text-xs">Feature</th>
+                <th className="text-left py-3 pr-6 text-white font-black">Cable / Satellite</th>
+                <th className="text-left py-3 text-amber-400 font-black">IPTV</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-white/5">
+              {[
+                ['Connection', 'Coax cable / dish', 'Your internet'],
+                ['Set-top box', 'Required', 'Not needed'],
+                ['Devices', 'TV only', 'TV, phone, tablet, laptop'],
+                ['Channels', '30–100', '80,000+'],
+                ['Price', '€20–50/month', 'From €4.60/month'],
+                ['Contract', 'Yes', 'No'],
+              ].map(([label, cable, iptv]) => (
+                <tr key={label}>
+                  <td className="py-3 pr-6 text-white/40">{label}</td>
+                  <td className="py-3 pr-6 text-white/70">{cable}</td>
+                  <td className="py-3 text-white font-bold">{iptv}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h3 className="text-2xl font-black text-white">What can you watch?</h3>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Live TV</strong> — all Dutch and international channels</li>
+          <li><strong className="text-white">Live sport</strong> — Eredivisie, Formula 1, Champions League, World Cup</li>
+          <li><strong className="text-white">International</strong> — Arabic, Turkish, Moroccan and English channels</li>
+          <li><strong className="text-white">News</strong> — BBC, CNN, Al Jazeera</li>
+          <li><strong className="text-white">VOD</strong> — films and series on demand</li>
+        </ul>
+        <p>IPTVTotaal offers 80,000+ live channels. That means you'll never search for a channel that isn't there.</p>
+
+        <h3 className="text-2xl font-black text-white">What do you need to get started?</h3>
+        <ol className="list-decimal list-inside space-y-2 ml-2">
+          <li>An <strong className="text-white">internet connection</strong> — at least 15 Mbps for HD</li>
+          <li>A <strong className="text-white">device</strong> — Smart TV, phone, tablet or laptop</li>
+          <li>An <strong className="text-white">IPTV subscription</strong> — from €4.60/month at IPTVTotaal</li>
+        </ol>
+        <p>No decoder. No technician visit. No contract.</p>
+
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[{ label: 'Channels', value: '80,000+' }, { label: 'From', value: '€4.60/mo' }, { label: 'Setup time', value: '< 5 min' }].map(item => (
+            <div key={item.label} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+              <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-1">{item.label}</div>
+              <div className="text-white font-black">{item.value}</div>
+            </div>
+          ))}
+        </div>
+
+        <a href="/blog/wat-is-iptv" className="group flex items-center justify-between p-5 bg-amber-500/10 border border-amber-500/20 rounded-2xl hover:border-amber-500/40 transition-colors no-underline">
+          <div>
+            <span className="text-xs font-black text-amber-400 uppercase tracking-widest block mb-1">Nederlands</span>
+            <span className="text-white font-bold group-hover:text-amber-400 transition-colors">Wat is IPTV? Uitleg in gewone taal →</span>
+          </div>
+        </a>
+
+        <h3 className="text-2xl font-black text-white">Frequently asked questions.</h3>
+        <div className="space-y-4">
+          <div>
+            <p className="font-black text-white">Is IPTV legal in the Netherlands?</p>
+            <p>The technology itself is legal. Whether the content is licensed depends on the provider. IPTVTotaal is a legal service.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Does IPTV work on my Smart TV?</p>
+            <p>Yes. Samsung, LG, Android TV, Firestick — all supported. Also works on phone, tablet and laptop.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">How good is the picture quality?</p>
+            <p>With a good connection you watch in HD or 4K. You need 15 Mbps for HD, 25 Mbps for 4K.</p>
+          </div>
+        </div>
+
+        <p>Want to get started? Send us a message on WhatsApp. You'll be watching within 5 minutes.</p>
+      </div>
+    ),
+  },
+  // ── De beste IPTV ────────────────────────────────────────────────────────────
+  {
+    slug: 'de-beste-iptv',
+    publishDate: '2026-06-12',
+    date: '12 juni 2026',
+    readTime: '4 min',
+    category: 'Advies',
+    title: 'De beste IPTV van 2026: eerlijk advies zonder hype',
+    excerpt: 'Wat maakt een IPTV-aanbieder écht goed? Niet de slogans, maar de feiten. We leggen uit waar je op let en waarom goede IPTV minder kost dan je denkt.',
+    image: '/de-beste-iptv.jpg',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+        <div className="flex flex-wrap gap-2 mb-2">
+          {['de beste iptv','beste iptv 2026','beste iptv nederland','iptv top aanbieder','iptv kwaliteit','beste iptv abonnement'].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
+          ))}
+        </div>
+
+        <p>Elke IPTV-aanbieder claimt de beste te zijn. Het staat letterlijk op elke homepage.</p>
+        <p>We leggen uit wat "de beste" in de praktijk betekent — en hoe je het zelf controleert.</p>
+
+        <h3 className="text-2xl font-black text-white">Wat maakt IPTV écht goed?</h3>
+        <p>Niet het aantal zenders op de website. Niet de verkooppraatjes. Dit zijn de dingen die tellen wanneer je live zit te kijken.</p>
+
+        <div className="space-y-4">
+          {[
+            { label: 'Uptime die klopt', desc: 'IPTVTotaal garandeert 99,9% uptime. Dat is minder dan 9 uur downtime per jaar — inclusief onderhoud.' },
+            { label: 'Zenders die écht werken', desc: '80.000+ actieve kanalen. Niet een lijst vol dode streams. Alle grote sportzenders, nieuwskanalen en internationale zenders zijn live.' },
+            { label: 'Support die antwoordt', desc: '24/7 via WhatsApp. Gemiddelde reactietijd: minder dan 5 minuten. Geen ticketsysteem.' },
+            { label: 'Een eerlijke prijs', desc: 'Vanaf €4,60 per maand. Geen verborgen kosten. Geen contract. 15 dagen geld-terug als het tegenvalt.' },
+          ].map(item => (
+            <div key={item.label} className="flex gap-4 p-5 bg-white/5 border border-white/10 rounded-2xl">
+              <svg className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <div><p className="font-black text-white mb-1">{item.label}.</p><p className="text-sm">{item.desc}</p></div>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Wat zit er in het pakket?</h3>
+        <p>IPTVTotaal biedt 80.000+ live kanalen. Dat klinkt als veel. Dat is ook veel.</p>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Alle Nederlandse zenders</strong> — NPO, RTL, SBS, Veronica</li>
+          <li><strong className="text-white">Alle sportzenders</strong> — ESPN, Ziggo Sport, beIN Sports, 50+ kanalen totaal</li>
+          <li><strong className="text-white">Internationale kanalen</strong> — Marokkaans, Turks, Arabisch, Frans, Duits</li>
+          <li><strong className="text-white">Films &amp; series</strong> — VOD inbegrepen, geen extra abonnement</li>
+        </ul>
+
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[{ label: 'Zenders', value: '80.000+' }, { label: 'Uptime', value: '99,9%' }, { label: 'Prijs', value: 'v.a. €4,60/mnd' }].map(item => (
+            <div key={item.label} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+              <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-1">{item.label}</div>
+              <div className="text-white font-black">{item.value}</div>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Op welke apparaten werkt het?</h3>
+        <p>Samsung Smart TV, LG Smart TV, Android TV, Firestick, iPhone, Android-telefoon, tablet, laptop.</p>
+        <p>Alles wat verbinding maakt met internet. Geen speciale decoder nodig.</p>
+
+        <a href="/blog/welke-iptv-is-het-beste" className="group flex items-center justify-between p-5 bg-amber-500/10 border border-amber-500/20 rounded-2xl hover:border-amber-500/40 transition-colors no-underline">
+          <div>
+            <span className="text-xs font-black text-amber-400 uppercase tracking-widest block mb-1">Vergelijken</span>
+            <span className="text-white font-bold group-hover:text-amber-400 transition-colors">Welke IPTV is het beste? Alle opties vergeleken →</span>
+          </div>
+        </a>
+
+        <h3 className="text-2xl font-black text-white">Veelgestelde vragen.</h3>
+        <div className="space-y-4">
+          <div>
+            <p className="font-black text-white">Kan ik de beste IPTV proberen voor ik betaal?</p>
+            <p>Ja. Vraag een gratis proefperiode aan via WhatsApp. Je hebt daarna 15 dagen bedenktijd.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Hoe snel is IPTVTotaal actief na bestelling?</p>
+            <p>Gemiddeld binnen 5 minuten na betaling ontvang je je inloggegevens via WhatsApp. Setup duurt nog eens 5 minuten.</p>
+          </div>
+        </div>
+
+        <p>Geen hype. Gewoon goed IPTV. Stuur ons een berichtje via WhatsApp — we helpen je binnen 5 minuten verder.</p>
+      </div>
+    ),
+  },
+  // ── Wat kost IPTV ────────────────────────────────────────────────────────────
+  {
+    slug: 'wat-kost-iptv',
+    publishDate: '2026-06-12',
+    date: '12 juni 2026',
+    readTime: '4 min',
+    category: 'Advies',
+    title: 'Wat kost IPTV in Nederland? Prijzen vergeleken (2026)',
+    excerpt: 'Wat betaal je voor een IPTV-abonnement in Nederland? En wat zit er precies in? We leggen de prijzen uit — zodat je weet wat je krijgt voor je geld.',
+    image: '/wat-kost-iptv.jpg',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+        <div className="flex flex-wrap gap-2 mb-2">
+          {['wat kost iptv','iptv prijs nederland','iptv abonnement kosten','iptv goedkoop','iptv prijzen vergelijken','iptv kosten 2026'].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
+          ))}
+        </div>
+
+        <p>IPTV kan €2 per maand kosten. Of €30. Het verschil zit niet alleen in de prijs — het zit in wat je krijgt.</p>
+        <p>We leggen het uit.</p>
+
+        <h3 className="text-2xl font-black text-white">Hoeveel kost IPTV gemiddeld?</h3>
+        <p>In Nederland variëren IPTV-abonnementen van <strong className="text-white">€2 tot €20 per maand</strong>, afhankelijk van de aanbieder en het pakket.</p>
+        <p>Een maandabonnement kost meer per maand dan een jaarabonnement. De meeste aanbieders bieden kortingen bij langere looptijden.</p>
+
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="border-b border-white/10">
+                <th className="text-left py-3 pr-4 text-white/30 font-bold uppercase tracking-widest text-xs">Pakket</th>
+                <th className="text-left py-3 pr-4 text-white font-black">Looptijd</th>
+                <th className="text-left py-3 text-amber-400 font-black">Prijs/mnd</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-white/5">
+              {[
+                ['Starter', '1 maand', '€13,50'],
+                ['Standaard', '3 maanden', '€8,90'],
+                ['Popular', '6 maanden', '€6,50'],
+                ['Jaarabonnement', '12 maanden', '€4,60'],
+                ['VIP 15 maanden', '15 maanden (+3 gratis)', '€4,40'],
+              ].map(([pkg, dur, price]) => (
+                <tr key={pkg}>
+                  <td className="py-3 pr-4 text-white/70 font-bold">{pkg}</td>
+                  <td className="py-3 pr-4 text-white/50">{dur}</td>
+                  <td className="py-3 text-amber-400 font-black">{price}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Wat zit er in de prijs?</h3>
+        <p>Bij IPTVTotaal is alles inbegrepen — geen losse sportpakketten, geen verborgen kosten.</p>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">80.000+ live zenders</strong> — inclusief sport, nieuws en internationaal</li>
+          <li><strong className="text-white">EPG programmagids</strong> — automatisch inbegrepen</li>
+          <li><strong className="text-white">VOD</strong> — films en series on demand</li>
+          <li><strong className="text-white">Meerdere apparaten</strong> — afhankelijk van pakket</li>
+          <li><strong className="text-white">24/7 WhatsApp-support</strong></li>
+        </ul>
+
+        <h3 className="text-2xl font-black text-white">Is goedkoop IPTV de moeite waard?</h3>
+        <p>Aanbieders die €2 per maand vragen, bezuinigen ergens. Dat is bijna altijd op servers, zenderlijst of support.</p>
+        <p>Een abonnement van €4,60 per maand met 99,9% uptime is voordeliger dan één van €2 die om de week uitvalt.</p>
+
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
+          <p className="text-white font-black mb-2">Ter vergelijking.</p>
+          <div className="space-y-2 text-sm">
+            {[
+              ['Netflix (1 scherm)', '€9,99/mnd'],
+              ['ESPN losse app', '€8,99/mnd'],
+              ['Ziggo Sport', '€9,99/mnd extra'],
+              ['IPTVTotaal (alles in één)', 'v.a. €4,60/mnd'],
+            ].map(([service, price]) => (
+              <div key={service} className="flex justify-between">
+                <span className="text-white/50">{service}</span>
+                <span className={service.includes('IPTVTotaal') ? 'text-amber-400 font-black' : 'text-white/70'}>{price}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <p>Één abonnement. Alles erin. Geen losse pakketten.</p>
+
+        <a href="/blog/iptv-kopen" className="group flex items-center justify-between p-5 bg-amber-500/10 border border-amber-500/20 rounded-2xl hover:border-amber-500/40 transition-colors no-underline">
+          <div>
+            <span className="text-xs font-black text-amber-400 uppercase tracking-widest block mb-1">Bestellen</span>
+            <span className="text-white font-bold group-hover:text-amber-400 transition-colors">IPTV kopen: zo werkt het →</span>
+          </div>
+        </a>
+
+        <h3 className="text-2xl font-black text-white">Veelgestelde vragen.</h3>
+        <div className="space-y-4">
+          <div>
+            <p className="font-black text-white">Wat is de goedkoopste betrouwbare IPTV in Nederland?</p>
+            <p>IPTVTotaal biedt het jaarabonnement voor €4,60 per maand — met 99,9% uptime en 24/7 support. Dat is de ondergrens voor kwaliteits-IPTV.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Zijn er verborgen kosten?</p>
+            <p>Nee. Wat je ziet is wat je betaalt. Geen activatiekosten, geen installatiekosten, geen contract.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Wat als ik niet tevreden ben?</p>
+            <p>15 dagen geld-terug garantie. Geen vragen gesteld.</p>
+          </div>
+        </div>
+
+        <p>Wil je weten welk pakket het beste bij jou past? Stuur ons een berichtje via WhatsApp. We helpen je binnen 5 minuten verder.</p>
+      </div>
+    ),
+  },
 ];
 
 const CATEGORIES = ['Alles', 'Handleiding', 'Vergelijking', 'Advies', 'Sport', 'Techniek'];
