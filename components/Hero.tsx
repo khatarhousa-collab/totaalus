@@ -41,12 +41,12 @@ export const Hero: React.FC = () => {
           </div>
 
           <h1 className="text-[clamp(3rem,13vw,6rem)] lg:text-8xl font-extrabold leading-[1.1] tracking-tighter text-white drop-shadow-sm text-center sm:text-left w-full">
-            <span className="sm:hidden">IPTV Totaal<br />voor <span className="text-italics">iedereen</span></span>
-            <span className="hidden sm:inline">IPTV Totaal voor <span className="text-italics">iedereen</span></span>
+            <span className="sm:hidden">Premium IPTV<br />voor <span className="text-italics">iedereen</span></span>
+            <span className="hidden sm:inline">Premium IPTV voor <span className="text-italics">iedereen</span></span>
           </h1>
 
           <p className="text-[clamp(1rem,3.5vw,1.25rem)] text-white/80 font-medium leading-relaxed text-center sm:text-left w-full">
-            IPTVTotaal: TV kijken zoals het hoort.<br className="sm:hidden" /> Pauzeer of annuleer op elk moment.
+            TV kijken zoals het hoort.<br className="sm:hidden" /> Pauzeer of annuleer op elk moment.
           </p>
 
           <div className="flex flex-col gap-4 w-full sm:flex-row sm:w-auto sm:justify-start">

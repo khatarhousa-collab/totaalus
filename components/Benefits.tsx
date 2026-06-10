@@ -75,7 +75,7 @@ export const Benefits: React.FC = () => {
             Het is <span className="text-italics underline decoration-white/20 decoration-2 underline-offset-[12px]">"je gaat nooit meer terug"</span> beter
           </h2>
           <p className="text-xl text-white/80 font-medium">
-            IPTV Totaal vervangt dure Ziggo-pakketten en meerdere streamingdiensten voor één vaste prijs. Waarom duizenden Nederlanders kiezen voor IPTVTotaal.
+            IPTVTotaal vervangt dure Ziggo-pakketten en meerdere streamingdiensten voor één vaste prijs.
           </p>
         </div>
 
