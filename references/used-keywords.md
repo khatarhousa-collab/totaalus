@@ -318,6 +318,51 @@ Track every keyword (primary + cluster) already targeted in published blog posts
 
 ---
 
+## Post K — Nederland vs Japan Live Kijken WK 2026
+**Slug:** `nederland-japan-wk-2026` | **Updated:** 14 juni 2026 | **Category:** WK 2026 / Sport
+
+| Keyword | Source | Notes |
+|---|---|---|
+| nederland vs japan live kijken | Primary target | Today intent (14 jun) |
+| nederland japan wk 2026 | Cluster | Match intent |
+| oranje japan livestream | Cluster | Stream intent |
+| nederland japan uitzending | Cluster | Broadcast intent |
+| hoe kijk ik nederland japan | Cluster | How-to intent |
+| nederland wk 2026 live | Cluster | Tournament intent |
+| waar kijk je nederland japan | Cluster | Where-to-watch intent |
+| nederland japan wk kijken | Cluster | Watch intent |
+
+---
+
+## Post L — Nederland vs Zweden Live Kijken WK 2026
+**Slug:** `nederland-zweden-wk-2026` | **Updated:** 14 juni 2026 | **Category:** WK 2026 / Sport
+
+| Keyword | Source | Notes |
+|---|---|---|
+| nederland vs zweden live kijken | Primary target | Watch intent |
+| nederland zweden wk 2026 | Cluster | Match intent |
+| nederland zweden livestream | Cluster | Stream intent |
+| oranje zweden kijken | Cluster | Fan intent |
+| nederland zweden uitzending | Cluster | Broadcast intent |
+| alexander isak nederland | Cluster | Player search intent |
+| oranje tweede wedstrijd wk | Cluster | Schedule intent |
+
+---
+
+## Post M — Tunesië vs Nederland Live Kijken WK 2026
+**Slug:** `tunesie-nederland-wk-2026` | **Updated:** 14 juni 2026 | **Category:** WK 2026 / Sport
+
+| Keyword | Source | Notes |
+|---|---|---|
+| nederland tunesie live kijken | Primary target | Watch intent |
+| tunesie nederland wk 2026 | Cluster | Match intent |
+| oranje tunesie livestream | Cluster | Stream intent |
+| nederland wk groepsfase afsluiter | Cluster | Schedule intent |
+| nederland wk derde wedstrijd | Cluster | Schedule intent |
+| tunesie nederland uitzending | Cluster | Broadcast intent |
+
+---
+
 ## Quick Reference — All Primary Keywords Used
 
 | Keyword | Post slug |
@@ -337,3 +382,6 @@ Track every keyword (primary + cluster) already targeted in published blog posts
 | beste iptv aanbieder nederland | beste-iptv-nederland-2025 |
 | live sport kijken via iptv | iptv-live-sport-kijken |
 | iptv 4k | iptv-4k-kwaliteit |
+| nederland vs japan live kijken | nederland-japan-wk-2026 (live 14 jun) |
+| nederland vs zweden live kijken | nederland-zweden-wk-2026 (live 14 jun) |
+| nederland tunesie live kijken | tunesie-nederland-wk-2026 (live 14 jun) |

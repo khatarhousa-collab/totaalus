@@ -185,24 +185,24 @@ const posts: BlogPost[] = [
   // ── WK 2026: Nederland vs Japan ──────────────────────────────────────────
   {
     slug: 'nederland-japan-wk-2026',
-    publishDate: '2026-06-08',
-    date: '8 juni 2026',
-    readTime: '6 min',
+    publishDate: '2026-06-14',
+    date: '14 juni 2026',
+    readTime: '9 min',
     category: 'WK 2026',
-    title: 'Nederland vs Japan WK 2026: speeltijd, analyse & live kijken',
-    excerpt: 'Zondag 14 juni treft Oranje Japan in Dallas. Alles over de tactiek, sterspelers en hoe je de wedstrijd live streamt — inclusief het beste WK-pakket van €78.',
+    title: 'Nederland vs Japan Live Kijken WK 2026 — Oranje Debuut in Dallas',
+    excerpt: 'Vandaag! Zondag 14 juni speelt Oranje zijn eerste WK 2026-wedstrijd tegen Japan in Dallas om 21:00. Hoe kijk je het live? Alles wat je moet weten, inclusief stream-opties en tactische analyse.',
     image: '/nederland-japan-wk-2026.jpg',
     headerCard: <WkMatchHeroCard team1="Nederland" team2="Japan" code1="NL" code2="JP" matchDateISO="2026-06-14T19:00:00Z" kickoff="21:00 NL-tijd" venue="Dallas Stadium, Texas" group="Groep F" />,
     content: (
       <div className="space-y-6 text-white/70 leading-relaxed text-lg">
         <div className="flex flex-wrap gap-2 mb-2">
-          {['nederland japan wk 2026','oranje wk 2026','nederland japan live','nederland japan uitslagen','wk 2026 live kijken','nederland wk 2026 groep F','japan wk 2026'].map(kw => (
+          {['nederland vs japan live kijken','nederland japan wk 2026','oranje japan livestream','nederland japan stream','nederland japan uitzending','hoe kijk ik nederland japan','nederland wk 2026 live','waar kijk je nederland japan','oranje wk debuut 2026','nederland japan wk kijken gratis','wk 2026 groep F nederland'].map(kw => (
             <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
           ))}
         </div>
 
         <div className="grid sm:grid-cols-3 gap-4">
-          {[{label:'Datum',value:'Zondag 14 juni 2026'},{label:'Aftrap',value:'21:00 (NL-tijd)'},{label:'Stadion',value:'Dallas Stadium, Texas'}].map(i => (
+          {[{label:'Datum',value:'Zondag 14 juni 2026'},{label:'Aftrap',value:'21:00 NL-tijd'},{label:'Stadion',value:'Dallas Stadium, Texas'}].map(i => (
             <div key={i.label} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
               <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-1">{i.label}</div>
               <div className="text-white font-black text-sm">{i.value}</div>
@@ -210,37 +210,56 @@ const posts: BlogPost[] = [
           ))}
         </div>
 
-        <p>Het WK 2026 is nog maar net begonnen of Oranje staat al voor zijn eerste grote test. Op zondag 14 juni neemt Nederland het op tegen Japan — een elftal dat bekendstaat om zijn ijzerharde discipline, technische verfijning en onvoorspelbare pressing. Dit wordt geen gemakkelijke avond in Dallas.</p>
+        <p>Vanavond is het zover. Oranje maakt zijn WK 2026-debuut in Dallas, Texas. Tegenover Nederland staat Japan — een elftal dat in 2022 zowel Duitsland als Spanje versloeg. Dit is dé Nederlandse sportgebeurtenis van het jaar.</p>
 
-        <h3 className="text-2xl font-black text-white">Speelstijl en opstelling Nederland</h3>
-        <p>Bondscoach Ronald Koeman hanteert doorgaans een <strong className="text-white">4-3-3</strong> met hoog bezit en brede aanvallers die naar binnen trekken. Oranje combineert fysieke kracht met technische kwaliteit — gevaarlijk bij standaardsituaties en gevaarlijk in de omschakeling.</p>
-        <p><strong className="text-white">Sterspelers om op te letten:</strong></p>
-        <ul className="list-disc list-inside space-y-1 ml-2">
-          <li><strong className="text-white">Cody Gakpo</strong> — snelheid, diepgang en scorend vermogen vanuit de linkerkant</li>
-          <li><strong className="text-white">Virgil van Dijk</strong> — het fundament achterin; sterk in de lucht en dominant in 1-op-1 duels</li>
-          <li><strong className="text-white">Frenkie de Jong</strong> — de dirigent op het middenveld, schakelt snel van verdedigen naar aanvallen</li>
-          <li><strong className="text-white">Xavi Simons</strong> — creatief, explosief en gevaarlijk tussen de linies</li>
-        </ul>
-        <p><strong className="text-white">Voordelen Nederland:</strong> Fysieke dominantie, internationale ervaring, gevaarlijkste aanval van Groep F, sterke verdediging op set-pieces.</p>
-
-        <h3 className="text-2xl font-black text-white">Speelstijl en opstelling Japan</h3>
-        <p>Japan speelt compact en georganiseerd, meestal in een <strong className="text-white">4-2-3-1</strong> of 4-3-3. Ze kennen weinig fouten toe, zetten vroeg druk en zijn dodelijk bij de omschakeling. Op het laatste WK versloegen ze Duitsland en Spanje — een prestatie die iedereen nog weet.</p>
-        <ul className="list-disc list-inside space-y-1 ml-2">
-          <li><strong className="text-white">Kaoru Mitoma</strong> — linksbuiten die dribbelend moeilijk te stoppen is</li>
-          <li><strong className="text-white">Takefusa Kubo</strong> — technisch hoogstaand, speelmaker en gevaarlijk in en om de zestien</li>
-          <li><strong className="text-white">Wataru Endo</strong> — defensieve middenvelder, motor van het team</li>
-        </ul>
-        <p><strong className="text-white">Voordelen Japan:</strong> Teamdiscipline, verrassingseffect, hoog pressingvermogen, rotsvaste verdedigingsorganisatie.</p>
-
-        <h3 className="text-2xl font-black text-white">Voorspelling & inzet</h3>
-        <p>Nederland is de favoriet, maar Japan is absoluut geen makkelijke tegenstander. Als Oranje de ruimte laat die Japan gewend is te benutten bij omschakelingen, kan dit spannend worden. Verwacht een gesloten eerste helft met Nederland dat de wedstrijd naar de hand probeert te zetten na rust.</p>
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
-          <p className="text-white font-black mb-1">Onze verwachting: Nederland 2 – 1 Japan</p>
-          <p className="text-sm">Oranje wint, maar Japan laat zien waarom ze gevaarlijk zijn op elk WK.</p>
+        <h3 className="text-2xl font-black text-white">Waar kijk je Nederland vs Japan live?</h3>
+        <p>Je kijkt Nederland – Japan live via <strong className="text-white">IPTVTotaal</strong>. Alle 104 WK 2026-wedstrijden in HD, zonder buffering, op elk apparaat. TV, telefoon, tablet — het maakt niet uit. Je bent binnen 5 minuten klaar.</p>
+        <p>Uitzending via ESPN en NOS met Nederlandstalig commentaar. Via IPTVTotaal heb je ze allebei.</p>
+        <div className="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-5">
+          <p className="text-white font-black mb-1">Aftrap: Zondag 14 juni · 21:00 NL-tijd</p>
+          <p className="text-sm text-white/60">IPTVTotaal streamt live in HD — ESPN · NOS · Viaplay · 80.000+ zenders inbegrepen.</p>
         </div>
 
-        <h3 className="text-2xl font-black text-white">Hoe kijk je Nederland vs Japan live?</h3>
-        <p>Alle 104 WK 2026 wedstrijden worden live uitgezonden via <strong className="text-white">IPTVTotaal</strong> — inclusief Nederland vs Japan op 14 juni. In HD, zonder buffering, op elk apparaat. Eén pakket voor het complete toernooi.</p>
+        <h3 className="text-2xl font-black text-white">Waarom Japan een serieuze tegenstander is.</h3>
+        <p>Op WK 2022 versloeg Japan zowel Duitsland als Spanje. Groepsfavoriten. Beiden. Dit is geen toeval — Japan is een tactisch gepolijst elftal dat bijna geen fouten maakt.</p>
+        <p>Ze spelen compact in een <strong className="text-white">4-2-3-1</strong>, zetten hoog druk en slaan toe op de omschakeling. Als Oranje slordig is in de opbouw, betaal je de prijs.</p>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Kaoru Mitoma</strong> (Brighton) — linksbuiten, dribbelkoning, bijna onhoudbaar in 1-op-1</li>
+          <li><strong className="text-white">Takefusa Kubo</strong> (Real Sociedad) — speelmaker en gevaarlijk tussen de linies</li>
+          <li><strong className="text-white">Takumi Minamino</strong> — doelgericht, snel, gevaarlijk in de zestien</li>
+          <li><strong className="text-white">Wataru Endo</strong> (Liverpool) — defensieve motor die het team bij elkaar houdt</li>
+        </ul>
+        <p>Japan laat Duitsland en Spanje allebei verliezen op één WK. Niemand onderschat hen meer.</p>
+
+        <h3 className="text-2xl font-black text-white">Oranje's wapens vanavond.</h3>
+        <p>Ronald Koeman beschikt over een goed gevulde selectie. Gakpo is in topvorm na een sterk seizoen bij Liverpool. Van Dijk is de stabiele rots achterin. En Xavi Simons brengt de onvoorspelbaarheid die Japan niet kan plannen.</p>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Cody Gakpo</strong> — snelheid, diepgang, scorend vermogen vanuit links</li>
+          <li><strong className="text-white">Virgil van Dijk</strong> — leider en fundament; dominant in de lucht en in 1-op-1</li>
+          <li><strong className="text-white">Xavi Simons</strong> (Leipzig) — creatief, explosief, gevaarlijk tussen de linies</li>
+          <li><strong className="text-white">Frenkie de Jong</strong> — dirigent op het middenveld, schakelt snel van verdedigen naar aanvallen</li>
+          <li><strong className="text-white">Memphis Depay</strong> — gevaarlijk invaller, ervaring in grote wedstrijden</li>
+        </ul>
+        <p>Nederland voetbalt vanuit een <strong className="text-white">4-3-3</strong> met hoog bezit. De kracht zit op de vleugels en bij stilstaande situaties.</p>
+
+        <h3 className="text-2xl font-black text-white">Het sleutelduel: Gakpo vs Japan's defensielijn.</h3>
+        <p>Als Gakpo zijn normale tempo haalt, heeft Japan een probleem. Japan verdedigt compact en hoog, maar Gakpo scoort over midden als het raakvlak van de ruimte is.</p>
+        <p>Andersom: als Mitoma zijn dag heeft op links, wordt het een lange avond voor de Nederlandse rechtsback. Dit duel bepaalt het tempo van de hele wedstrijd.</p>
+
+        <h3 className="text-2xl font-black text-white">Wat staat er op het spel in Groep F?</h3>
+        <p>Groep F bestaat uit: Nederland, Japan, Zweden en Tunesië. De top twee gaat door naar de achtste finales. Nederland is de topfavoriet voor de groepszege — maar alleen als ze vanavond de goede toon zetten.</p>
+        <p>Een verlies of een gelijkspel zou Groep F direct compliceren. De druk ligt op Oranje. Japan heeft niets te verliezen.</p>
+
+        <h3 className="text-2xl font-black text-white">Onze voorspelling.</h3>
+        <p>Japan maakt het moeilijk in de eerste helft. Na rust vindt Oranje de ruimte — en Gakpo maakt het verschil.</p>
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
+          <p className="text-white font-black mb-1">Onze verwachting: Nederland 2 – 1 Japan</p>
+          <p className="text-sm">Oranje wint, maar Japan laat zien waarom niemand hen meer onderschat. Spannend tot het einde.</p>
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Hoe kijk je vanavond Nederland vs Japan live?</h3>
+        <p>Via <strong className="text-white">IPTVTotaal</strong> kijk je de wedstrijd live in HD op elk apparaat. Eén abonnement. Alle 104 WK-duels. Geen extra kosten per wedstrijd. Vanaf €4,60 per maand — of het complete toernooi voor €78 eenmalig.</p>
+        <p>Je bent binnen 5 minuten actief. Stuur een WhatsApp en wij regelen de rest.</p>
 
         <WkCtaBlock match="Nederland vs Japan" />
       </div>
@@ -249,24 +268,24 @@ const posts: BlogPost[] = [
   // ── WK 2026: Nederland vs Zweden ─────────────────────────────────────────
   {
     slug: 'nederland-zweden-wk-2026',
-    publishDate: '2026-06-08',
-    date: '8 juni 2026',
-    readTime: '6 min',
+    publishDate: '2026-06-14',
+    date: '14 juni 2026',
+    readTime: '8 min',
     category: 'WK 2026',
-    title: 'Nederland vs Zweden WK 2026: alles over Groep F duel in Houston',
-    excerpt: 'Zaterdag 20 juni duelleren Nederland en Zweden om de koppositie in Groep F. Tactische analyse, sterspelers en hoe je de wedstrijd live volgt vanaf €78.',
+    title: 'Nederland vs Zweden Live Kijken WK 2026 — Het Cruciale Europese Duel',
+    excerpt: 'Zaterdag 20 juni duelleren Nederland en Zweden om de koppositie in Groep F. De winnaar heeft zo goed als zeker de achtste finales bereikt. Alles over hoe je dit live kijkt en wat je kunt verwachten.',
     image: '/nederland-zweden-wk-2026.jpg',
     headerCard: <WkMatchHeroCard team1="Nederland" team2="Zweden" code1="NL" code2="SE" matchDateISO="2026-06-20T16:00:00Z" kickoff="18:00 NL-tijd" venue="Houston Stadium, Texas" group="Groep F" />,
     content: (
       <div className="space-y-6 text-white/70 leading-relaxed text-lg">
         <div className="flex flex-wrap gap-2 mb-2">
-          {['nederland zweden wk 2026','oranje wk 2026','nederland zweden live','nederland zweden groep F','wk 2026 live kijken','zweden wk 2026','oranje wk livestream'].map(kw => (
+          {['nederland vs zweden live kijken','nederland zweden wk 2026','nederland zweden livestream','oranje zweden kijken','nederland zweden wk kijken','nederland zweden uitzending','oranje tweede wedstrijd wk','nederland wk 2026 groep F','alexander isak nederland','nederland zweden stream','wk 2026 nederland kijken'].map(kw => (
             <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
           ))}
         </div>
 
         <div className="grid sm:grid-cols-3 gap-4">
-          {[{label:'Datum',value:'Zaterdag 20 juni 2026'},{label:'Aftrap',value:'18:00 (NL-tijd)'},{label:'Stadion',value:'Houston Stadium, Texas'}].map(i => (
+          {[{label:'Datum',value:'Zaterdag 20 juni 2026'},{label:'Aftrap',value:'18:00 NL-tijd'},{label:'Stadion',value:'Houston Stadium, Texas'}].map(i => (
             <div key={i.label} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
               <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-1">{i.label}</div>
               <div className="text-white font-black text-sm">{i.value}</div>
@@ -274,36 +293,55 @@ const posts: BlogPost[] = [
           ))}
         </div>
 
-        <p>Na de openingswedstrijd staat er op zaterdag 20 juni al een cruciaal Europees duel op het programma: Nederland vs Zweden in Houston. De winnaar van dit duel neemt een enorme stap richting de achtste finales. Beide teams kennen elkaar goed — en precies dat maakt dit duel zo boeiend.</p>
+        <p>Na de opener tegen Japan wacht Oranje het meest cruciale duel van de groepsfase. Op zaterdag 20 juni neemt Nederland het in Houston op tegen Zweden. Europees voetbal op een WK — en de inzet is enorm. De winnaar staat zo goed als in de achtste finales.</p>
 
-        <h3 className="text-2xl font-black text-white">Speelstijl en opstelling Nederland</h3>
-        <p>Oranje voetbalt vanuit een <strong className="text-white">4-3-3</strong> met hoog balbezit. Na de Japan-wedstrijd zal Koeman vermoedelijk weinig wijzigen, tenzij blessures roet in het eten gooien. Nederland is het meest gevaarlijk via de vleugels en bij snelle combinaties op het middenveld.</p>
-        <ul className="list-disc list-inside space-y-1 ml-2">
-          <li><strong className="text-white">Cody Gakpo</strong> — directe diepgang, gevaarlijk bij omschakelingen</li>
-          <li><strong className="text-white">Xavi Simons</strong> — vrijheid tussen de linies, creatief en snel</li>
-          <li><strong className="text-white">Tijjani Reijnders</strong> — box-to-box kwaliteiten, sterk in de duels</li>
-          <li><strong className="text-white">Virgil van Dijk</strong> — leider achterin, stabiel en dominant</li>
-        </ul>
-        <p><strong className="text-white">Voordelen Nederland:</strong> Betere individuele kwaliteit, gevaarlijker aanvalsspel, meer ervaring in grote toernooien.</p>
-
-        <h3 className="text-2xl font-black text-white">Speelstijl en opstelling Zweden</h3>
-        <p>Zweden is een fysiek, georganiseerd team dat sterk is bij set-pieces en terugvalt op een compact <strong className="text-white">4-4-2</strong> of 4-2-3-1. Ze zijn gevaarlijk via de lange bal en profiteren van fouten van de tegenstander.</p>
-        <ul className="list-disc list-inside space-y-1 ml-2">
-          <li><strong className="text-white">Alexander Isak</strong> — Newcastle-spits, razendsnel en dodelijk voor goal</li>
-          <li><strong className="text-white">Dejan Kulusevski</strong> — Tottenham-middenvelder, technisch sterk en energiek</li>
-          <li><strong className="text-white">Victor Lindelöf</strong> — ervaren verdediger, sterk in de lucht</li>
-        </ul>
-        <p><strong className="text-white">Voordelen Zweden:</strong> Fysieke kracht, gevaarlijk via de counter, sterk bij stilstaande situaties, hoge teamcohesie.</p>
-
-        <h3 className="text-2xl font-black text-white">Voorspelling</h3>
-        <p>Dit wordt een gevecht. Zweden zal diep staan en rekenen op Isak voor de omschakeling. Nederland zal geduld moeten tonen. In de tweede helft breekt Oranje waarschijnlijk de ban.</p>
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
-          <p className="text-white font-black mb-1">Onze verwachting: Nederland 1 – 0 Zweden</p>
-          <p className="text-sm">Een moeizame zege voor Oranje, met een beslissend moment na rust.</p>
+        <h3 className="text-2xl font-black text-white">Waar kijk je Nederland vs Zweden live?</h3>
+        <p>Je kijkt dit duel live via <strong className="text-white">IPTVTotaal</strong>. HD-kwaliteit, zonder buffering, op elk apparaat. Aftrap is om 18:00 NL-tijd — gewoon thuis op de bank, of onderweg op je telefoon.</p>
+        <p>Uitgezonden via ESPN en NOS. Beide inbegrepen in één abonnement.</p>
+        <div className="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-5">
+          <p className="text-white font-black mb-1">Aftrap: Zaterdag 20 juni · 18:00 NL-tijd</p>
+          <p className="text-sm text-white/60">Live via IPTVTotaal — ESPN · NOS · Viaplay · 80.000+ zenders. Eén pakket voor het hele toernooi.</p>
         </div>
 
-        <h3 className="text-2xl font-black text-white">Nederland vs Zweden live kijken</h3>
-        <p>Via <strong className="text-white">IPTVTotaal</strong> kijk je dit duel live en in HD. Geen verborgen kosten, geen buffering — gewoon voetbal zoals het hoort.</p>
+        <h3 className="text-2xl font-black text-white">Waarom dit duel zo belangrijk is.</h3>
+        <p>Groep F bestaat uit Nederland, Japan, Zweden en Tunesië. De top twee gaat door. De winnaar van dit puur Europese duel heeft de achtste finales praktisch op zak. De verliezer staat met de rug tegen de muur richting de derde wedstrijd tegen Tunesië.</p>
+        <p>Er is meer. De groepswinnaar krijgt een gunstiger pad in de knock-outfase. Een slechter loting betekent eerder een topland treffen. Dit duel bepaalt dus meer dan alleen de doorgang — het bepaalt de route naar de finale.</p>
+
+        <h3 className="text-2xl font-black text-white">Nederland: wat kun je verwachten?</h3>
+        <p>Koeman zal na de Japan-wedstrijd nauwelijks roteren. De basis staat. Oranje speelt vanuit een <strong className="text-white">4-3-3</strong> met hoog balbezit en druk op de vleugels.</p>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Cody Gakpo</strong> — directe diepgang en scorend vermogen</li>
+          <li><strong className="text-white">Xavi Simons</strong> — onvoorspelbaar tussen de linies, sleutelspeler in het aanvalsspel</li>
+          <li><strong className="text-white">Tijjani Reijnders</strong> — box-to-box, sterk in duels en gevaarlijk met de eindpass</li>
+          <li><strong className="text-white">Virgil van Dijk</strong> — defensieve anker, domineert de luchtduels</li>
+          <li><strong className="text-white">Matthijs de Ligt</strong> — ervaren naast Van Dijk, sterk in directe confrontaties</li>
+        </ul>
+        <p>Nederland is op papier beter. Maar Zweden maakt het elk internationaal team moeilijk. Dat is precies wat je weet als je hen hebt gevolgd.</p>
+
+        <h3 className="text-2xl font-black text-white">Zweden: de dreiging van Alexander Isak.</h3>
+        <p>Zweden draait op één man in de spits: <strong className="text-white">Alexander Isak</strong>. De Newcastle-spits was een van de topscorers van de Premier League. Hij is razendsnel, technisch verfijnd en gevaarlijk met beide voeten. Als hij zijn niveau haalt, is iedere verdediging in problemen.</p>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Alexander Isak</strong> (Newcastle) — de gevaarlijkste Scandinavische spits ter wereld op dit moment</li>
+          <li><strong className="text-white">Dejan Kulusevski</strong> (Tottenham) — creatief, snel en gevaarlijk op de rechterflank</li>
+          <li><strong className="text-white">Emil Forsberg</strong> — slimme spelmaker, gevaarlijk bij vrije trappen</li>
+          <li><strong className="text-white">Victor Lindelöf</strong> (Manchester United) — solide verdediger, sterk in de lucht</li>
+        </ul>
+        <p>Zweden speelt compact in een <strong className="text-white">4-4-2</strong>. Ze staan laag, verdedigen goed en wachten op de counter. Als Isak op dreef raakt, worden ze gevaarlijk.</p>
+
+        <h3 className="text-2xl font-black text-white">Het sleutelduel: Van Dijk vs Alexander Isak.</h3>
+        <p>Dit is het duel in het duel. Van Dijk is de beste verdediger van zijn generatie. Isak is een van de meest gevreesde spitsen van Europa. Wie dit duel wint, wint waarschijnlijk de wedstrijd.</p>
+        <p>Als Van Dijk Isak keer op keer neerlegt, verliest Zweden hun wapen. Als Isak één keer ontsnapt en scoort, verandert het spel volledig. Hou dit duo in de gaten.</p>
+
+        <h3 className="text-2xl font-black text-white">Onze voorspelling.</h3>
+        <p>Zweden maakt het moeilijk in de eerste helft. Oranje heeft geduld nodig. Na rust vindt Nederland de ruimtes — en dan is de kwaliteit van Simons en Gakpo doorslaggevend.</p>
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
+          <p className="text-white font-black mb-1">Onze verwachting: Nederland 2 – 0 Zweden</p>
+          <p className="text-sm">Oranje wint met een gecontroleerde prestatie. Isak wordt geneutraliseerd door Van Dijk. De tweede goal valt laat, maar de punten gaan mee.</p>
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Nederland vs Zweden live kijken — zo doe je dat.</h3>
+        <p>Via <strong className="text-white">IPTVTotaal</strong> kijk je dit WK-duel live in HD op elk apparaat. Geen extra abonnement per wedstrijd. Geen gedoe. Eén pakket voor alle 104 WK-duels — inclusief halve finales en de finale.</p>
+        <p>Vanaf €4,60 per maand. Of het complete toernooi voor €78 eenmalig. Stuur een WhatsApp en je bent binnen 5 minuten live.</p>
 
         <WkCtaBlock match="Nederland vs Zweden" />
       </div>
@@ -312,24 +350,24 @@ const posts: BlogPost[] = [
   // ── WK 2026: Tunesië vs Nederland ────────────────────────────────────────
   {
     slug: 'tunesie-nederland-wk-2026',
-    publishDate: '2026-06-08',
-    date: '8 juni 2026',
-    readTime: '5 min',
+    publishDate: '2026-06-14',
+    date: '14 juni 2026',
+    readTime: '8 min',
     category: 'WK 2026',
-    title: 'Tunesië vs Nederland WK 2026: Oranje sluit groepsfase af in Kansas City',
-    excerpt: 'Op vrijdag 26 juni sluit Oranje de groepsfase af tegen Tunesië in Kansas City. Analyse, opstelling en hoe je de wedstrijd live streamt via IPTVTotaal.',
+    title: 'Tunesië vs Nederland Live Kijken WK 2026 — Groepsfase Afsluiter in Kansas City',
+    excerpt: 'Op donderdag 25 juni (middernacht NL-tijd) sluit Oranje de groepsfase af tegen Tunesië in Kansas City. Dit bepaalt of Nederland als groepswinnaar of -tweede de knock-outfase ingaat. Alles over hoe je het live kijkt.',
     image: '/tunesie-nederland-wk-2026.jpg',
     headerCard: <WkMatchHeroCard team1="Tunesië" team2="Nederland" code1="TN" code2="NL" matchDateISO="2026-06-25T22:00:00Z" kickoff="00:00 NL-tijd" venue="Kansas City Stadium, Missouri" group="Groep F" />,
     content: (
       <div className="space-y-6 text-white/70 leading-relaxed text-lg">
         <div className="flex flex-wrap gap-2 mb-2">
-          {['tunesie nederland wk 2026','oranje wk 2026 groep F','nederland wk kwalificatie','tunesie wk 2026','nederland wk 2026 live','wk 2026 groepsfase','oranje wk livestream'].map(kw => (
+          {['nederland tunesie live kijken','tunesie nederland wk 2026','nederland tunesie wk kijken','oranje tunesie livestream','nederland wk groepsfase afsluiter','nederland wk derde wedstrijd','tunesie nederland uitzending','nederland tunesie stream','oranje wk 2026 groep F','nederland wk 2026 live kijken','tunesie nederland wk 2026 kijken'].map(kw => (
             <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
           ))}
         </div>
 
         <div className="grid sm:grid-cols-3 gap-4">
-          {[{label:'Datum',value:'Vrijdag 26 juni 2026'},{label:'Aftrap',value:'00:00 (NL-tijd)'},{label:'Stadion',value:'Kansas City Stadium, Missouri'}].map(i => (
+          {[{label:'Datum',value:'Vrijdag 26 juni 2026 (00:00)'},{label:'Aftrap',value:'00:00 NL-tijd'},{label:'Stadion',value:'Kansas City Stadium, Missouri'}].map(i => (
             <div key={i.label} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
               <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-1">{i.label}</div>
               <div className="text-white font-black text-sm">{i.value}</div>
@@ -337,34 +375,57 @@ const posts: BlogPost[] = [
           ))}
         </div>
 
-        <p>De laatste groepswedstrijd voor Oranje: Tunesië vs Nederland in Kansas City. Afhankelijk van de eerdere resultaten kan dit een alles-of-niets wedstrijd zijn of juist een wedstrijd met weinig druk. Hoe dan ook — dit duel bepaalt de eindpositie in Groep F en dus de tegenstander in de achtste finale.</p>
+        <p>Middernacht in Kansas City. Oranje's laatste groepswedstrijd. Tunesië vs Nederland bepaalt wie als groepswinnaar of -tweede de knock-outfase ingaat — en dus welke tegenstander Nederland treft in de achtste finale.</p>
+        <p>Dit is de wedstrijd die de rest van het toernooi kan kleuren. Ben jij wakker?</p>
 
-        <h3 className="text-2xl font-black text-white">Analyse Tunesië</h3>
-        <p>Tunesië is Afrika's meest georganiseerde defensieve ploeg. Ze spelen in een compact <strong className="text-white">4-4-2</strong> of 5-3-2, zijn moeilijk te bespelen en gevaarlijk bij counters via snelle aanvallers.</p>
-        <ul className="list-disc list-inside space-y-1 ml-2">
-          <li><strong className="text-white">Youssef Msakni</strong> — ervaren aanvaller, gevaarlijk in ruimte achter de verdediging</li>
-          <li><strong className="text-white">Wahbi Khazri</strong> — creatief, technisch sterk, gevaarlijk bij vrije trappen</li>
-          <li><strong className="text-white">Montassar Talbi</strong> — solide verdediger, sterk in de lucht</li>
-        </ul>
-        <p><strong className="text-white">Voordelen Tunesië:</strong> Verdedigingsdiscipline, snel omschakelen, sterk als underdog in beslissende wedstrijden.</p>
-
-        <h3 className="text-2xl font-black text-white">Analyse Nederland</h3>
-        <p>Oranje is de absolute topfavoriet voor de groepszege. Met betere individuele kwaliteit op alle linies heeft Nederland alle troeven in handen. Als Koeman zijn basiself fit houdt richting de knock-outfase, wil hij deze wedstrijd zonder onnodige risico's winnen.</p>
-        <ul className="list-disc list-inside space-y-1 ml-2">
-          <li><strong className="text-white">Memphis Depay</strong> — kan ingevallen inbreng leveren, ervaren en gevaarlijk</li>
-          <li><strong className="text-white">Gakpo, Simons, Reijnders</strong> — de kern van Oranje's aanvalsspel</li>
-          <li><strong className="text-white">Van Dijk</strong> — defensieve zekerheid, onmisbaar achterin</li>
-        </ul>
-        <p><strong className="text-white">Voordelen Nederland:</strong> Superieure aanvallende kwaliteit, WK-ervaring, diepte in de selectie.</p>
-
-        <h3 className="text-2xl font-black text-white">Voorspelling</h3>
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
-          <p className="text-white font-black mb-1">Onze verwachting: Tunesië 0 – 2 Nederland</p>
-          <p className="text-sm">Oranje wint overtuigend en plaatst zich als groepswinnaar voor de achtste finales.</p>
+        <h3 className="text-2xl font-black text-white">Waar kijk je Tunesië vs Nederland live?</h3>
+        <p>Je kijkt dit duel live via <strong className="text-white">IPTVTotaal</strong>. Aftrap om 00:00 NL-tijd — laat op de avond, maar IPTVTotaal streamt gewoon door. Op je telefoon, tablet of tv. HD, zonder buffering.</p>
+        <p>ESPN en NOS uitzenden dit live. Beide inbegrepen in één abonnement.</p>
+        <div className="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-5">
+          <p className="text-white font-black mb-1">Aftrap: Donderdag 25 juni · 00:00 NL-tijd (nacht naar vrijdag)</p>
+          <p className="text-sm text-white/60">Live via IPTVTotaal — ESPN · NOS · Viaplay · 80.000+ zenders. Dag en nacht beschikbaar.</p>
         </div>
 
-        <h3 className="text-2xl font-black text-white">Tunesië vs Nederland live kijken</h3>
-        <p>Volg Oranje's laatste groepswedstrijd live via <strong className="text-white">IPTVTotaal</strong> — alle 104 WK 2026 duels, HD-kwaliteit, op elk apparaat.</p>
+        <h3 className="text-2xl font-black text-white">Wat staat er op het spel?</h3>
+        <p>Groep F bestaat uit Nederland, Japan, Zweden en Tunesië. Na de eerste twee wedstrijden (vs Japan en vs Zweden) kennen we de onderlinge stand. Maar de eindpositie hangt af van dit duel.</p>
+        <p>De groepswinnaar heeft in de achtste finales een aanmerkelijk gunstiger loting. Als Oranje als tweede eindigt, is het pad naar de finale zwaarder. Elke punt telt. Elke plek in de stand telt.</p>
+        <p>Als de stand al bepaald is, roteert Koeman. Zijn basiself spaart energie voor de knock-outfase. Als het nog open ligt, staat de sterkste elf op het veld. Beide scenario's zijn mogelijk.</p>
+
+        <h3 className="text-2xl font-black text-white">Analyse Tunesië: niet zomaar een opponent.</h3>
+        <p>Tunesië verscheen viermaal eerder op een WK. Ze spelen compact, moeilijk te bespelen en gevaarlijk als underdog. Dit is Afrika's meest georganiseerde defensieve ploeg.</p>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Youssef Msakni</strong> — ervaren aanvaller, gevaarlijk in de ruimte achter de verdediging</li>
+          <li><strong className="text-white">Wahbi Khazri</strong> — creatief, technisch sterk, gevaarlijk bij vrije trappen</li>
+          <li><strong className="text-white">Hannibal Mejbri</strong> (Manchester United) — energiek middenvelder van de nieuwe generatie</li>
+          <li><strong className="text-white">Montassar Talbi</strong> — solide verdediger, sterk in de lucht</li>
+        </ul>
+        <p>Tunesië speelt compact in een <strong className="text-white">4-4-2</strong> of 5-3-2. Ze staan diep, verdedigen hard en wachten op fouten. Als het toernooi voor hen toch mislukt, spelen ze vrij — en dat maakt een ploeg gevaarlijker, niet minder.</p>
+
+        <h3 className="text-2xl font-black text-white">Analyse Nederland: klaar voor de knock-outfase?</h3>
+        <p>Dit is Oranje's derde groepswedstrijd. De conditie is het grootste vraagteken — maar de kwaliteit is er. Op alle lijnen is Nederland beter dan Tunesië.</p>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Cody Gakpo</strong> — gevaarlijkste aanvaller van Oranje, in topvorm</li>
+          <li><strong className="text-white">Xavi Simons</strong> — sleutelspeler in het aanvalsspel, onvoorspelbaar</li>
+          <li><strong className="text-white">Tijjani Reijnders</strong> — motor op het middenveld</li>
+          <li><strong className="text-white">Memphis Depay</strong> — kan invallen en direct het verschil maken</li>
+          <li><strong className="text-white">Virgil van Dijk</strong> — defensieve leider, onmisbaar</li>
+        </ul>
+        <p>Als Koeman roteert, krijgen spelers als Donyell Malen en Joey Veerman hun kans. Zelfs een B-elftal van Nederland is te sterk voor Tunesië op papier. Maar voetbal wordt niet op papier gespeeld.</p>
+
+        <h3 className="text-2xl font-black text-white">Waarom je toch wakker moet blijven.</h3>
+        <p>Middernacht. Aftrap. Je denkt: dit wordt een makkelijke avond voor Oranje. Dat dacht iedereen ook van Japan in 2022 — voor Duitsland en Spanje. Tunesië speelt voor hun eigen overleving. Ze kunnen niets verliezen, want ze gaan toch naar huis. En dat maakt ze gevaarlijk.</p>
+        <p>Eén moment van slordigheid, één goal van Tunesië — en de druk is opeens reëel. De groepsstand kan alles veranderen. Sla geen minuut over.</p>
+
+        <h3 className="text-2xl font-black text-white">Onze voorspelling.</h3>
+        <p>Als Koeman de basis opstelt: comfortabele zege voor Nederland. Als hij roteert: aanmerkelijk spannender. In beide gevallen gaat Oranje door.</p>
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
+          <p className="text-white font-black mb-1">Onze verwachting: Tunesië 0 – 2 Nederland</p>
+          <p className="text-sm">Oranje wint en eindigt als groepswinnaar in Groep F. Tunesië vecht tot het einde, maar het kwaliteitsverschil is te groot.</p>
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Tunesië vs Nederland live kijken om middernacht.</h3>
+        <p>Geen probleem. Via <strong className="text-white">IPTVTotaal</strong> kijk je dit duel live op elk apparaat — ook om 00:00 's nachts. HD-kwaliteit, 99,9% uptime. Geen buffering op het cruciale moment.</p>
+        <p>Eén abonnement voor alle 104 WK 2026 wedstrijden — inclusief de halve finales, de finale en alle Oranje-duels. Vanaf €4,60 per maand of €78 eenmalig voor 15 maanden.</p>
 
         <WkCtaBlock match="Tunesië vs Nederland" />
       </div>
