@@ -2510,6 +2510,708 @@ const posts: BlogPost[] = [
       </div>
     ),
   },
+  // ── IPTV App voor Android ────────────────────────────────────────────────
+  {
+    slug: 'iptv-app-android',
+    publishDate: '2026-06-15',
+    date: '15 juni 2026',
+    readTime: '5 min',
+    category: 'Handleiding',
+    title: 'IPTV App voor Android: de beste keuze in 2026',
+    excerpt: 'Je hebt een Android-telefoon, tablet of tv-box — en je wil IPTV kijken. Welke app gebruik je? We vergelijken de beste opties en leggen uit hoe je direct aan de slag gaat met IPTVTotaal.',
+    image: '/iptv-app-android.jpg',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+        <div className="flex flex-wrap gap-2 mb-2">
+          {['appli iptv android','iptv app android','beste iptv app android','iptv android installeren','iptv smarters android','tivimate android','iptv app gratis android'].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
+          ))}
+        </div>
+
+        <p>Android is het meest gebruikte platform voor IPTV. Logisch — het werkt op telefoons, tablets, tv-boxen én Android TV's. En de Play Store zit vol met IPTV-apps.</p>
+        <p>Maar welke gebruik je? En welke werkt het beste met IPTVTotaal?</p>
+
+        <h3 className="text-2xl font-black text-white">De 3 beste IPTV-apps voor Android.</h3>
+
+        <div className="space-y-4">
+          <div className="flex gap-4 p-5 bg-white/5 border border-white/10 rounded-2xl">
+            <span className="text-amber-400 font-black text-xl leading-none mt-0.5">1</span>
+            <div>
+              <p className="font-black text-white">TiviMate — de standaard voor Android TV</p>
+              <p className="text-sm mt-1">TiviMate is de meest gebruikte IPTV-app op Android TV en Firestick. De interface is strak, de EPG werkt perfect en hij is stabiel. De premiumversie kost eenmalig €5 en is het waard.</p>
+              <p className="text-xs text-amber-400 mt-1.5 font-bold">Beste keuze voor: Android TV, Nvidia Shield, Firestick</p>
+            </div>
+          </div>
+          <div className="flex gap-4 p-5 bg-white/5 border border-white/10 rounded-2xl">
+            <span className="text-amber-400 font-black text-xl leading-none mt-0.5">2</span>
+            <div>
+              <p className="font-black text-white">IPTV Smarters Pro — gratis en goed</p>
+              <p className="text-sm mt-1">Gratis te downloaden uit de Play Store. Je voert je Xtream Codes in en je bent live. Minder verfijnd dan TiviMate, maar werkt prima op telefoon en tablet.</p>
+              <p className="text-xs text-amber-400 mt-1.5 font-bold">Beste keuze voor: Android telefoon, tablet, beginners</p>
+            </div>
+          </div>
+          <div className="flex gap-4 p-5 bg-white/5 border border-white/10 rounded-2xl">
+            <span className="text-amber-400 font-black text-xl leading-none mt-0.5">3</span>
+            <div>
+              <p className="font-black text-white">IPTV Dark — voor gevorderde gebruikers</p>
+              <p className="text-sm mt-1">IPTV Dark is een APK die je buiten de Play Store installeert. Meer opties dan Smarters, maar vereist iets meer technische kennis om in te stellen.</p>
+              <p className="text-xs text-amber-400 mt-1.5 font-bold">Beste keuze voor: Android telefoon, tv-box, gevorderde gebruikers</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Eerlijk gezegd: welke moet je kiezen?</h3>
+        <p>Voor Android TV of Firestick: <strong className="text-white">TiviMate</strong>. Geen discussie. De interface is de beste in zijn categorie en de EPG is nauwkeurig.</p>
+        <p>Voor je telefoon of tablet: <strong className="text-white">IPTV Smarters Pro</strong>. Gratis, direct uit de Play Store, werkt meteen met je Xtream Codes.</p>
+
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[
+            { label: 'Zenders', value: '80.000+' },
+            { label: 'Setup', value: '< 5 minuten' },
+            { label: 'Prijs IPTVTotaal', value: 'v.a. €4,60/mnd' },
+          ].map(item => (
+            <div key={item.label} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+              <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-1">{item.label}</div>
+              <div className="text-white font-black">{item.value}</div>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Hoe verbind je de app met IPTVTotaal?</h3>
+        <p>Na activering ontvang je je inloggegevens per WhatsApp — een M3U-link en Xtream Codes. Je voert ze eenmalig in de app in.</p>
+        <ol className="list-decimal list-inside space-y-2 ml-2">
+          <li>Download TiviMate of IPTV Smarters Pro uit de Play Store</li>
+          <li>Open de app en kies <em>"Afspeellijst toevoegen"</em> of <em>"Xtream Codes"</em></li>
+          <li>Voer je inloggegevens in die je per WhatsApp hebt ontvangen</li>
+          <li>Alle 80.000+ zenders laden automatisch in</li>
+        </ol>
+        <p>Klaar. Binnen 5 minuten live.</p>
+
+        <a href="/blog/iptvtotaal-app" className="group flex items-center justify-between p-5 bg-amber-500/10 border border-amber-500/20 rounded-2xl hover:border-amber-500/40 transition-colors no-underline">
+          <div>
+            <span className="text-xs font-black text-amber-400 uppercase tracking-widest block mb-1">Alle apparaten</span>
+            <span className="text-white font-bold group-hover:text-amber-400 transition-colors">IPTV installeren op elk apparaat: de complete gids →</span>
+          </div>
+        </a>
+
+        <h3 className="text-2xl font-black text-white">Veelgestelde vragen.</h3>
+        <div className="space-y-4">
+          <div>
+            <p className="font-black text-white">Wat is de beste gratis IPTV-app voor Android?</p>
+            <p>IPTV Smarters Pro is gratis te downloaden en werkt direct met een IPTVTotaal-abonnement. Je hebt geen extra betaling nodig voor de app zelf.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Werkt TiviMate op een gewone Android-telefoon?</p>
+            <p>TiviMate is geoptimaliseerd voor Android TV. Op een telefoon werkt IPTV Smarters Pro beter. Weet je niet zeker wat het beste is voor jouw situatie? Stuur ons een berichtje via WhatsApp.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Kan ik IPTV op meerdere Android-apparaten tegelijk kijken?</p>
+            <p>Ja, afhankelijk van je IPTVTotaal-pakket. Je kunt op 1 of meerdere schermen tegelijk kijken.</p>
+          </div>
+        </div>
+
+        <p>Hulp bij het instellen van de app? Stuur ons een berichtje via WhatsApp. We helpen je gratis en stap voor stap.</p>
+      </div>
+    ),
+  },
+  // ── IPTV App voor Samsung TV ─────────────────────────────────────────────
+  {
+    slug: 'iptv-app-samsung-tv',
+    publishDate: '2026-06-16',
+    date: '16 juni 2026',
+    readTime: '5 min',
+    category: 'Handleiding',
+    title: 'Welke IPTV App voor Samsung TV? Installatie in 5 stappen (2026)',
+    excerpt: 'Een Samsung Smart TV en IPTV — welke app gebruik je? We leggen uit welke opties er zijn en hoe je in 5 stappen live bent met IPTVTotaal op je Samsung.',
+    image: '/iptv-app-samsung-tv.jpg',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+        <div className="flex flex-wrap gap-2 mb-2">
+          {['welke iptv app voor samsung tv','iptv samsung smart tv','samsung tv iptv installeren','smart iptv samsung','tivimate samsung','iptv app samsung 2026','samsung iptv app'].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
+          ))}
+        </div>
+
+        <p>Je hebt een Samsung Smart TV. Je wil IPTV erop. Je zoekt welke app je moet gebruiken — en je vindt vijf verschillende antwoorden.</p>
+        <p>Dit is de juiste.</p>
+
+        <h3 className="text-2xl font-black text-white">Welke app werkt het beste op een Samsung TV?</h3>
+        <p>Samsung Smart TV draait op Tizen — een eigen besturingssysteem. Dat betekent dat niet alle IPTV-apps beschikbaar zijn. Je hebt drie solide opties:</p>
+
+        <div className="space-y-4">
+          <div className="flex gap-4 p-5 bg-white/5 border border-white/10 rounded-2xl">
+            <span className="text-amber-400 font-black text-xl leading-none mt-0.5">1</span>
+            <div>
+              <p className="font-black text-white">Smart IPTV — de bekendste keuze voor Samsung</p>
+              <p className="text-sm mt-1">Smart IPTV is direct beschikbaar via de Samsung Smart Hub. Je laadt een M3U-link in via de website van de app, en je zenders verschijnen op je tv. Stabiel en gebruiksvriendelijk.</p>
+              <p className="text-xs text-amber-400 mt-1.5 font-bold">Eenmalig €5,49 — daarna levenslang gratis</p>
+            </div>
+          </div>
+          <div className="flex gap-4 p-5 bg-white/5 border border-white/10 rounded-2xl">
+            <span className="text-amber-400 font-black text-xl leading-none mt-0.5">2</span>
+            <div>
+              <p className="font-black text-white">SS IPTV — gratis en goed</p>
+              <p className="text-sm mt-1">SS IPTV is ook beschikbaar op Samsung (en LG). Volledig gratis. Je voert je M3U-link in en je bent live. Minder mooi dan Smart IPTV, maar doet het werk.</p>
+              <p className="text-xs text-amber-400 mt-1.5 font-bold">Gratis — geen betaling vereist</p>
+            </div>
+          </div>
+          <div className="flex gap-4 p-5 bg-white/5 border border-white/10 rounded-2xl">
+            <span className="text-amber-400 font-black text-xl leading-none mt-0.5">3</span>
+            <div>
+              <p className="font-black text-white">Firestick op Samsung — de snelste oplossing</p>
+              <p className="text-sm mt-1">Geen zin in Samsung-apps? Sluit een Amazon Firestick aan op de HDMI-poort van je Samsung tv. Dan installeer je TiviMate op de Firestick — en je hebt de beste IPTV-ervaring mogelijk.</p>
+              <p className="text-xs text-amber-400 mt-1.5 font-bold">Amazon Firestick Lite: v.a. €29,99</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Stap voor stap: Smart IPTV installeren op Samsung TV.</h3>
+        <ol className="list-decimal list-inside space-y-2.5 ml-2">
+          <li>Ga naar de <strong className="text-white">Samsung Smart Hub</strong> op je tv</li>
+          <li>Zoek naar <em>Smart IPTV</em> en installeer de app</li>
+          <li>Open de app — je ziet het MAC-adres van je tv op het scherm</li>
+          <li>Ga op je telefoon of laptop naar <strong className="text-white">siptv.eu</strong> en voer het MAC-adres in</li>
+          <li>Plak je M3U-link van IPTVTotaal en klik op opslaan</li>
+        </ol>
+        <p>De app herlaadt automatisch — alle zenders staan er in. Klaar.</p>
+
+        <div className="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-5">
+          <p className="text-white font-black mb-1">Tip: M3U-link of Xtream Codes?</p>
+          <p className="text-sm text-white/60">Na activering van je IPTVTotaal-abonnement ontvang je beide per WhatsApp. Smart IPTV gebruikt de M3U-link. Xtream Codes werkt beter in SS IPTV.</p>
+        </div>
+
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[
+            { label: 'Zenders', value: '80.000+' },
+            { label: 'Installatie', value: '< 10 minuten' },
+            { label: 'Prijs', value: 'v.a. €4,60/mnd' },
+          ].map(item => (
+            <div key={item.label} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+              <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-1">{item.label}</div>
+              <div className="text-white font-black">{item.value}</div>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Welke Samsung TV's worden ondersteund?</h3>
+        <p>Smart IPTV en SS IPTV werken op de meeste Samsung Smart TV's van 2016 en nieuwer. Oudere Samsung-modellen zonder Smart Hub werken het beste met een Firestick.</p>
+        <p>Weet je niet zeker of jouw model ondersteund wordt? Stuur ons een berichtje — we checken het gratis voor je.</p>
+
+        <a href="/blog/iptv-installeren-smart-tv" className="group flex items-center justify-between p-5 bg-amber-500/10 border border-amber-500/20 rounded-2xl hover:border-amber-500/40 transition-colors no-underline">
+          <div>
+            <span className="text-xs font-black text-amber-400 uppercase tracking-widest block mb-1">Meer handleidingen</span>
+            <span className="text-white font-bold group-hover:text-amber-400 transition-colors">IPTV installeren op Smart TV: stap voor stap uitgelegd →</span>
+          </div>
+        </a>
+
+        <h3 className="text-2xl font-black text-white">Veelgestelde vragen.</h3>
+        <div className="space-y-4">
+          <div>
+            <p className="font-black text-white">Werkt TiviMate op een Samsung Smart TV?</p>
+            <p>Nee. TiviMate is gemaakt voor Android TV. Op een Samsung (Tizen) gebruik je Smart IPTV of SS IPTV. Met een Firestick via HDMI werkt TiviMate wél op je Samsung.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Hoe krijg ik mijn M3U-link?</p>
+            <p>Na activering van je IPTVTotaal-abonnement sturen we je de M3U-link per WhatsApp. Je voert hem eenmalig in via siptv.eu of in SS IPTV.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Werkt het ook op een Samsung-telefoon?</p>
+            <p>Ja. Op je Samsung-telefoon gebruik je IPTV Smarters Pro of TiviMate (Android) — beide zijn gratis te downloaden uit de Play Store.</p>
+          </div>
+        </div>
+
+        <p>Kom je er niet uit? Stuur ons een berichtje via WhatsApp. We helpen je gratis installeren — stap voor stap.</p>
+      </div>
+    ),
+  },
+  // ── Beste IPTV voor Nederland 2026 ───────────────────────────────────────
+  {
+    slug: 'beste-iptv-voor-nederland-2026',
+    publishDate: '2026-06-15',
+    date: '15 juni 2026',
+    readTime: '6 min',
+    category: 'Vergelijking',
+    title: 'Wat is de beste IPTV voor Nederland? Vergelijking 2026',
+    excerpt: 'Je wil de beste IPTV voor Nederland. Maar er zijn tientallen aanbieders. Wij vergelijken ze eerlijk — op zenders, prijs, uptime en support — zodat jij de juiste keuze maakt.',
+    image: '/beste-iptv-voor-nederland-2026.jpg',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+        <div className="flex flex-wrap gap-2 mb-2">
+          {['wat is de beste iptv voor nederland','beste iptv nederland 2026','iptv vergelijken nederland','beste iptv aanbieder 2026','iptv nederland betrouwbaar','goede iptv aanbieder nederland'].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
+          ))}
+        </div>
+
+        <p>Je zoekt de beste IPTV voor Nederland. Je vindt tientallen aanbieders. Ze beloven allemaal hetzelfde — 80.000 zenders, lage prijs, 24/7 support.</p>
+        <p>Maar de meeste leveren dat niet. Wij leggen uit wat het verschil maakt.</p>
+
+        <h3 className="text-2xl font-black text-white">Waarop vergelijk je IPTV-aanbieders?</h3>
+        <p>Er zijn vier dingen die bepalen of een IPTV-aanbieder écht goed is voor Nederland. Niet de beloftes — de prestaties.</p>
+
+        <div className="space-y-3">
+          {[
+            { title: 'Nederlandse zenders', text: 'NPO 1/2/3, RTL 4/5/7, SBS6, Veronica. Dit zijn de basics. Als een aanbieder deze zenders niet stabiel streamt, stop dan meteen.' },
+            { title: 'Sportzenders voor Nederland', text: 'ESPN heeft de Eredivisie. Ziggo Sport heeft de Champions League. Viaplay heeft Formule 1. Een goede IPTV voor Nederland heeft ze alle drie.' },
+            { title: 'Uptime', text: '99,9% uptime betekent minder dan 9 uur downtime per jaar. Aanbieders die dat niet halen, zijn simpelweg niet betrouwbaar.' },
+            { title: 'Nederlandse support', text: 'Als er iets misgaat op zondagmiddag tijdens de Eredivisie, wil je direct geholpen worden. Via WhatsApp, in het Nederlands.' },
+          ].map(item => (
+            <div key={item.title} className="p-4 bg-white/5 border border-white/10 rounded-2xl">
+              <p className="font-black text-white mb-1">{item.title}</p>
+              <p className="text-sm">{item.text}</p>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Hoe scoort IPTVTotaal op elk punt?</h3>
+
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="border-b border-white/10">
+                <th className="text-left py-3 pr-4 text-white/30 font-bold uppercase tracking-widest text-xs">Onderdeel</th>
+                <th className="text-left py-3 text-amber-400 font-black">IPTVTotaal</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-white/5">
+              {[
+                ['Nederlandse zenders', '✓ NPO, RTL, SBS6, Veronica en meer'],
+                ['Sportzenders', '✓ ESPN, Ziggo Sport, Viaplay, beIN Sports (50+)'],
+                ['Totaal zenders', '80.000+ actief'],
+                ['Uptime', '99,9% gegarandeerd'],
+                ['Support', '24/7 WhatsApp · < 5 min reactietijd'],
+                ['Prijs', 'v.a. €4,60/mnd'],
+                ['Garantie', '15 dagen geld-terug'],
+                ['Contract', 'Nee'],
+              ].map(([label, value]) => (
+                <tr key={label}>
+                  <td className="py-3 pr-4 text-white/50">{label}</td>
+                  <td className="py-3 text-white font-bold">{value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Wat maakt IPTVTotaal de beste keuze voor Nederland?</h3>
+        <p>Eerlijk gezegd: het zijn de details. Veel aanbieders hebben een grote zenderlijst. Maar een zender die 20% van de tijd uitvalt is niets waard.</p>
+        <p>Bij IPTVTotaal zijn alle 80.000+ zenders actief getest en gemonitord. De Nederlandse kanalen en sportzenders lopen op aparte, krachtigere servers. Dat is het verschil tijdens een live wedstrijd.</p>
+
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
+          <p className="text-white font-black mb-3">Ter vergelijking: traditioneel tv-pakket vs. IPTVTotaal</p>
+          <div className="space-y-2 text-sm">
+            {[
+              ['Ziggo TV-basis + ESPN + Ziggo Sport', '€45–55/mnd'],
+              ['KPN TV + losse sportpakketten', '€40–50/mnd'],
+              ['IPTVTotaal (alles inclusief)', 'v.a. €4,60/mnd'],
+            ].map(([service, price]) => (
+              <div key={service} className="flex justify-between gap-4">
+                <span className="text-white/50">{service}</span>
+                <span className={service.includes('IPTVTotaal') ? 'text-amber-400 font-black shrink-0' : 'text-white/70 shrink-0'}>{price}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Voor wie is IPTVTotaal de beste keuze?</h3>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li>Je wil Nederlandse zenders + sport in één abonnement</li>
+          <li>Je betaalt liever €4,60 dan €50 per maand voor hetzelfde</li>
+          <li>Je kijkt op meerdere apparaten: tv, telefoon, tablet</li>
+          <li>Je wil geen lange contracten of verborgen kosten</li>
+        </ul>
+        <p>Als je jezelf herkent in één van deze punten, dan is IPTVTotaal de beste IPTV voor Nederland voor jou.</p>
+
+        <a href="/blog/iptv-kopen" className="group flex items-center justify-between p-5 bg-amber-500/10 border border-amber-500/20 rounded-2xl hover:border-amber-500/40 transition-colors no-underline">
+          <div>
+            <span className="text-xs font-black text-amber-400 uppercase tracking-widest block mb-1">Direct starten</span>
+            <span className="text-white font-bold group-hover:text-amber-400 transition-colors">IPTV kopen in Nederland: zo werkt het →</span>
+          </div>
+        </a>
+
+        <h3 className="text-2xl font-black text-white">Veelgestelde vragen.</h3>
+        <div className="space-y-4">
+          <div>
+            <p className="font-black text-white">Zit de Eredivisie erin?</p>
+            <p>Ja. ESPN 1/2/3/4 en Ziggo Sport zijn allemaal inbegrepen — inclusief alle Eredivisie-wedstrijden en de KNVB Beker.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Kan ik eerst proberen voor ik betaal?</p>
+            <p>We bieden een 15-dagengarantie. Als het niet bevalt, krijg je je geld terug. Geen vragen gesteld.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Werkt het ook in het buitenland?</p>
+            <p>Ja. IPTVTotaal werkt wereldwijd, zolang je een actieve internetverbinding hebt.</p>
+          </div>
+        </div>
+
+        <p>Wil je weten of IPTVTotaal de beste IPTV is voor jouw situatie? Stuur ons een berichtje via WhatsApp. We helpen je binnen 5 minuten.</p>
+      </div>
+    ),
+  },
+  // ── Wat kost Prime Video bij Ziggo ───────────────────────────────────────
+  {
+    slug: 'prime-video-ziggo',
+    publishDate: '2026-06-16',
+    date: '16 juni 2026',
+    readTime: '4 min',
+    category: 'Vergelijking',
+    title: 'Wat kost Prime Video bij Ziggo? Kosten en een beter alternatief (2026)',
+    excerpt: 'Prime Video via Ziggo klinkt handig — alles in één rekening. Maar wat kost het precies? En is het goedkoper dan het los te nemen? We rekenen het voor.',
+    image: '/prime-video-ziggo.jpg',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+        <div className="flex flex-wrap gap-2 mb-2">
+          {['wat kost prime video bij ziggo','prime video ziggo prijs','amazon prime via ziggo','prime video abonnement ziggo','ziggo streaming kosten','ziggo prime video 2026'].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
+          ))}
+        </div>
+
+        <p>Je hebt Ziggo. Je overweegt Prime Video erbij te nemen. Je vraagt je af of het via Ziggo duurder of goedkoper uitvalt dan direct bij Amazon.</p>
+        <p>Korte vraag. Duidelijk antwoord.</p>
+
+        <h3 className="text-2xl font-black text-white">Wat kost Prime Video bij Ziggo?</h3>
+        <p>Ziggo biedt Prime Video aan als extra zender via hun platform. In 2026 betaal je bij Ziggo <strong className="text-white">€9,99 per maand</strong> voor Prime Video als losse toevoeging bovenop je bestaande Ziggo-abonnement.</p>
+        <p>Dat is hetzelfde als het losse Amazon-abonnement — maar via Ziggo kijk je het in de Ziggo-interface, niet in de eigen Prime Video-app.</p>
+
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
+          <p className="text-white font-black mb-3">Kosten vergelijking</p>
+          <div className="space-y-2 text-sm">
+            {[
+              ['Ziggo TV-basis', '€24,00/mnd'],
+              ['Prime Video via Ziggo', '+€9,99/mnd'],
+              ['Totaal Ziggo + Prime', '≈ €34,00/mnd'],
+              ['Amazon Prime Video direct', '€9,99/mnd (los)'],
+              ['IPTVTotaal (80.000+ zenders + sport)', 'v.a. €4,60/mnd'],
+            ].map(([service, price]) => (
+              <div key={service} className="flex justify-between gap-4">
+                <span className={service.includes('IPTVTotaal') ? 'text-white font-bold' : 'text-white/50'}>{service}</span>
+                <span className={service.includes('IPTVTotaal') ? 'text-amber-400 font-black shrink-0' : 'text-white/70 shrink-0'}>{price}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Is het beter om Prime Video los te nemen?</h3>
+        <p>Eerlijk gezegd: ja. Als je Prime Video wil, neem het dan direct bij Amazon. Je betaalt hetzelfde maar krijgt de volledige Prime-ervaring — inclusief Prime Music, Prime Gaming en gratis bezorging bij Amazon.</p>
+        <p>Via Ziggo krijg je alleen de films en series, zonder de extra's.</p>
+
+        <h3 className="text-2xl font-black text-white">Maar wacht — wil je ook live sport en reguliere tv?</h3>
+        <p>Als je op zoek bent naar live Nederlandse zenders, Eredivisie, Formule 1 of Champions League — dan lost Prime Video dat probleem niet op. Daar is IPTV de slimmere keuze.</p>
+        <p>Vergelijk de rekening:</p>
+
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="border-b border-white/10">
+                <th className="text-left py-3 pr-4 text-white/30 font-bold uppercase tracking-widest text-xs">Pakket</th>
+                <th className="text-left py-3 pr-4 text-white font-black">Bevat</th>
+                <th className="text-left py-3 text-amber-400 font-black">Prijs/mnd</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-white/5">
+              {[
+                ['Ziggo Compleet + Prime + Sport', 'Alles van Ziggo, Prime Video, sport', '€55–65'],
+                ['Netflix + ESPN los', 'Films, series, Eredivisie', '€20–25'],
+                ['IPTVTotaal', '80.000+ zenders, sport, films & series', 'v.a. €4,60'],
+              ].map(([pkg, content, price]) => (
+                <tr key={pkg}>
+                  <td className="py-3 pr-4 text-white/70 font-bold">{pkg}</td>
+                  <td className="py-3 pr-4 text-white/50 text-xs">{content}</td>
+                  <td className="py-3 text-amber-400 font-black">{price}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <p>Met IPTVTotaal heb je live Nederlandse tv, 50+ sportzenders én een uitgebreid VOD-aanbod — in één abonnement, voor een fractie van de prijs van Ziggo.</p>
+
+        <div className="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-5">
+          <p className="text-white font-black mb-1">Geen Ziggo-contract nodig.</p>
+          <p className="text-sm text-white/60">IPTVTotaal werkt via internet — geen tv-pakket of decoder nodig. Je hebt alleen een wifi-verbinding en een apparaat.</p>
+        </div>
+
+        <a href="/blog/iptv-vs-netflix" className="group flex items-center justify-between p-5 bg-amber-500/10 border border-amber-500/20 rounded-2xl hover:border-amber-500/40 transition-colors no-underline">
+          <div>
+            <span className="text-xs font-black text-amber-400 uppercase tracking-widest block mb-1">Vergelijking</span>
+            <span className="text-white font-bold group-hover:text-amber-400 transition-colors">IPTV vs Netflix: wat is de beste keuze voor jou? →</span>
+          </div>
+        </a>
+
+        <h3 className="text-2xl font-black text-white">Veelgestelde vragen.</h3>
+        <div className="space-y-4">
+          <div>
+            <p className="font-black text-white">Is Prime Video via Ziggo goedkoper dan direct?</p>
+            <p>Nee. Je betaalt hetzelfde — €9,99 per maand. Via Ziggo krijg je minder functies dan via de officiële Prime Video-app.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Heb ik nog een Ziggo-abonnement nodig als ik IPTV gebruik?</p>
+            <p>Nee. IPTVTotaal werkt via je bestaande internetverbinding — van welke provider dan ook. Je kunt je tv-pakket van Ziggo dan opzeggen.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Zit Netflix ook in IPTVTotaal?</p>
+            <p>IPTVTotaal biedt uitgebreide VOD-content. Netflix-content is beschermd en niet inbegrepen, maar het uitgebreide IPTVTotaal-VOD-aanbod biedt duizenden films en series.</p>
+          </div>
+        </div>
+
+        <p>Wil je stoppen met dure tv-pakketten? Stuur ons een berichtje via WhatsApp. We leggen uit wat de beste stap is voor jouw situatie.</p>
+      </div>
+    ),
+  },
+  // ── Wat is IPTV en hoe werkt het ─────────────────────────────────────────
+  {
+    slug: 'wat-is-iptv-en-hoe-werkt-het',
+    publishDate: '2026-06-17',
+    date: '17 juni 2026',
+    readTime: '5 min',
+    category: 'Advies',
+    title: 'Wat is IPTV en hoe werkt het? Complete gids voor beginners (2026)',
+    excerpt: 'Wat is IPTV en hoe werkt het precies? In deze complete gids leggen we alles uit — van de techniek tot de installatie — zodat je begrijpt wat IPTV is en of het iets voor jou is.',
+    image: '/wat-is-iptv-en-hoe-werkt-het.jpg',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+        <div className="flex flex-wrap gap-2 mb-2">
+          {['wat is iptv en hoe werkt het','iptv uitleg beginners','iptv wat is dat','iptv technologie nederland','hoe werkt iptv thuis','iptv voor beginners','iptv complete gids'].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
+          ))}
+        </div>
+
+        <p>Je hoort de term IPTV overal. Je buurman gebruikt het. Een vriend raadde het aan. Maar je begrijpt nog niet helemaal wat het is — en of het iets voor jou is.</p>
+        <p>Deze gids geeft je alle antwoorden. Geen technisch jargon. Gewoon duidelijk.</p>
+
+        <h3 className="text-2xl font-black text-white">Wat is IPTV? De eenvoudige uitleg.</h3>
+        <p>IPTV staat voor <strong className="text-white">Internet Protocol Television</strong>. Het is een manier om tv te kijken via het internet, in plaats van via een kabel of satellietschotel.</p>
+        <p>Bij traditionele tv stuurt een provider een continu signaal via een fysieke kabel naar je huis. Je ontvangt alle zenders tegelijk — of je ze kijkt of niet.</p>
+        <p>Bij IPTV vraag jij een zender op. De server stuurt dan precies díe stream naar jouw apparaat. Efficiënter. Flexibeler. Veel goedkoper.</p>
+
+        <h3 className="text-2xl font-black text-white">Hoe werkt IPTV technisch?</h3>
+        <p>Het principe is vergelijkbaar met YouTube of Netflix — alleen dan met live televisie. Zo werkt het stap voor stap:</p>
+        <ol className="list-decimal list-inside space-y-2 ml-2">
+          <li>De IPTV-aanbieder ontvangt live tv-signalen van zenders wereldwijd</li>
+          <li>Die signalen worden omgezet naar digitale streams op krachtige servers</li>
+          <li>Jij selecteert een zender in je app</li>
+          <li>De server stuurt de videostream via internet naar jouw apparaat</li>
+          <li>Je kijkt live — vaak met minder dan 2 seconden vertraging</li>
+        </ol>
+
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[
+            { label: 'Vertraging', value: '< 2 seconden' },
+            { label: 'Kwaliteit', value: 'SD · HD · 4K' },
+            { label: 'Zenders', value: '80.000+' },
+          ].map(item => (
+            <div key={item.label} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+              <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-1">{item.label}</div>
+              <div className="text-white font-black">{item.value}</div>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Wat heb je nodig om IPTV te gebruiken?</h3>
+        <p>Drie dingen. Meer niet.</p>
+        <div className="space-y-3">
+          {[
+            { num: '1', title: 'Een internetverbinding', text: 'Minimaal 15 Mbps voor HD. Vrijwel elk Nederlands internetabonnement haalt dat.' },
+            { num: '2', title: 'Een apparaat', text: 'Smart TV (Samsung, LG, Android TV), telefoon, tablet, laptop of een Firestick. Je gebruikt wat je al hebt.' },
+            { num: '3', title: 'Een IPTV-abonnement', text: 'Bij IPTVTotaal vanaf €4,60 per maand. Geen decoder nodig. Geen monteur aan de deur.' },
+          ].map(item => (
+            <div key={item.num} className="flex gap-4 p-4 bg-white/5 border border-white/10 rounded-2xl">
+              <span className="text-amber-400 font-black text-xl leading-none mt-0.5">{item.num}</span>
+              <div>
+                <p className="font-black text-white">{item.title}</p>
+                <p className="text-sm mt-0.5">{item.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Wat is het verschil met Netflix?</h3>
+        <p>Netflix is een Video on Demand-dienst: je kiest wanneer je kijkt uit een bibliotheek van films en series. Geen live tv.</p>
+        <p>IPTV biedt live televisie — en vaak ook VOD. Zo kijk je de Eredivisie live, het nieuws live, en heb je ook toegang tot films en series.</p>
+
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="border-b border-white/10">
+                <th className="text-left py-3 pr-4 text-white/30 font-bold uppercase tracking-widest text-xs">Functie</th>
+                <th className="text-left py-3 pr-4 text-white font-black">Netflix</th>
+                <th className="text-left py-3 text-amber-400 font-black">IPTV</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-white/5">
+              {[
+                ['Live tv', '✗ Niet beschikbaar', '✓ 80.000+ zenders'],
+                ['Live sport', '✗ Niet beschikbaar', '✓ Eredivisie, F1, Champions League'],
+                ['Films & series', '✓ Groot aanbod', '✓ Uitgebreid VOD'],
+                ['Prijs', '€9,99–22,99/mnd', 'v.a. €4,60/mnd'],
+              ].map(([label, netflix, iptv]) => (
+                <tr key={label}>
+                  <td className="py-3 pr-4 text-white/50">{label}</td>
+                  <td className="py-3 pr-4 text-white/70">{netflix}</td>
+                  <td className="py-3 text-white font-bold">{iptv}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Is IPTV legaal?</h3>
+        <p>De technologie zelf — tv kijken via internet — is volledig legaal. Het hangt af van de aanbieder en de inhoud die ze leveren. IPTVTotaal is een legale dienst die werkt via legale bronnen.</p>
+        <p>Twijfel je? Stuur ons een berichtje via WhatsApp. We leggen het uit.</p>
+
+        <a href="/blog/hoe-werkt-iptv" className="group flex items-center justify-between p-5 bg-amber-500/10 border border-amber-500/20 rounded-2xl hover:border-amber-500/40 transition-colors no-underline">
+          <div>
+            <span className="text-xs font-black text-amber-400 uppercase tracking-widest block mb-1">Technische uitleg</span>
+            <span className="text-white font-bold group-hover:text-amber-400 transition-colors">Hoe werkt IPTV technisch? De uitleg over M3U en streaming →</span>
+          </div>
+        </a>
+
+        <h3 className="text-2xl font-black text-white">Veelgestelde vragen.</h3>
+        <div className="space-y-4">
+          <div>
+            <p className="font-black text-white">Hoe snel kan ik starten met IPTV?</p>
+            <p>Na je bestelling bij IPTVTotaal ontvang je je inloggegevens per WhatsApp. Binnen 5 minuten ben je live. Geen wachttijd, geen installateur nodig.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Werkt IPTV ook buiten Nederland?</p>
+            <p>Ja. IPTVTotaal werkt wereldwijd. Zolang je een internetverbinding hebt, kijk je gewoon.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Wat als ik problemen heb met de stream?</p>
+            <p>Stuur ons een berichtje via WhatsApp. We reageren binnen 5 minuten — dag en nacht. Meeste problemen zijn binnen 10 minuten opgelost.</p>
+          </div>
+        </div>
+
+        <p>Klaar om te beginnen? Stuur ons een berichtje via WhatsApp. We helpen je direct verder.</p>
+      </div>
+    ),
+  },
+  // ── IPTV Abonnement Nederland ─────────────────────────────────────────────
+  {
+    slug: 'iptv-abonnement-nederland',
+    publishDate: '2026-06-17',
+    date: '17 juni 2026',
+    readTime: '5 min',
+    category: 'Advies',
+    title: 'IPTV Abonnement Nederland: prijzen, tips en de beste keuze (2026)',
+    excerpt: 'Een IPTV-abonnement nemen in Nederland — maar welk pakket kies je? We leggen de prijzen, looptijden en wat je krijgt uitgebreid uit, zodat je de slimste keuze maakt.',
+    image: '/iptv-abonnement-nederland.jpg',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+        <div className="flex flex-wrap gap-2 mb-2">
+          {['iptv abonnement nederland','iptv abonnement kopen','iptv abonnement prijs','iptv abonnement 2026','goedkoop iptv abonnement','iptv pakket nederland','iptv abonnement vergelijken'].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">{kw}</span>
+          ))}
+        </div>
+
+        <p>Je wil een IPTV-abonnement nemen. Maar welke looptijd kies je? Wat zit er precies in? En hoe voorkom je dat je voor een aanbieder kiest die na twee weken uitvalt?</p>
+        <p>We leggen het stap voor stap uit.</p>
+
+        <h3 className="text-2xl font-black text-white">Welke IPTV-abonnementen zijn er in Nederland?</h3>
+        <p>Bij IPTVTotaal zijn er vijf pakketten — van maandelijks tot 15 maanden. Hoe langer de looptijd, hoe lager de maandprijs.</p>
+
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="border-b border-white/10">
+                <th className="text-left py-3 pr-4 text-white/30 font-bold uppercase tracking-widest text-xs">Pakket</th>
+                <th className="text-left py-3 pr-4 text-white font-black">Looptijd</th>
+                <th className="text-left py-3 pr-4 text-amber-400 font-black">Totaal</th>
+                <th className="text-left py-3 text-amber-400/70 font-black">Per mnd</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-white/5">
+              {[
+                ['Starter', '1 maand', '€13,50', '€13,50'],
+                ['Standaard', '3 maanden', '€26,70', '€8,90'],
+                ['Popular', '6 maanden', '€39,00', '€6,50'],
+                ['Jaarabonnement', '12 maanden', '€55,20', '€4,60'],
+                ['VIP 15 maanden', '12 + 3 gratis', '€66,00', '€4,40'],
+              ].map(([pkg, dur, total, monthly]) => (
+                <tr key={pkg}>
+                  <td className="py-3 pr-4 text-white/70 font-bold">{pkg}</td>
+                  <td className="py-3 pr-4 text-white/50">{dur}</td>
+                  <td className="py-3 pr-4 text-white/70">{total}</td>
+                  <td className="py-3 text-amber-400 font-black">{monthly}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <p>Alle pakketten bevatten dezelfde inhoud. Je kiest alleen de looptijd — en daarmee de prijs per maand.</p>
+
+        <h3 className="text-2xl font-black text-white">Wat zit er in elk abonnement?</h3>
+        <p>Bij IPTVTotaal is alles inbegrepen — geen losse sportpakketten, geen verborgen kosten.</p>
+
+        <div className="grid sm:grid-cols-2 gap-3">
+          {[
+            '80.000+ actieve live zenders',
+            'NPO, RTL, SBS6, Veronica',
+            'ESPN, Ziggo Sport, Viaplay',
+            'beIN Sports, DAZN',
+            '50+ sportzenders',
+            'Marokkaans, Turks, Arabisch',
+            'Films & series on demand (VOD)',
+            'EPG programmagids inbegrepen',
+            '24/7 WhatsApp support',
+            'HD en 4K kwaliteit',
+            'Meerdere apparaten tegelijk',
+            '15 dagen geld-terug garantie',
+          ].map(f => (
+            <div key={f} className="flex items-center gap-2 text-sm text-white/70">
+              <svg className="w-4 h-4 text-amber-400 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>
+              {f}
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Welk abonnement is de beste keuze?</h3>
+        <p>Als je IPTV voor het eerst probeert: begin met de <strong className="text-white">Starter</strong> — €13,50 voor één maand. Combineer dat met de 15-dagengarantie en je hebt geen risico.</p>
+        <p>Ben je overtuigd en wil je de beste prijs? Kies het <strong className="text-white">VIP 15-maandenpakket</strong> — €4,40 per maand, inclusief 3 maanden gratis. Dat is de laagste maandprijs die we aanbieden.</p>
+
+        <div className="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-5">
+          <p className="text-white font-black mb-1">15 dagen geld-terug garantie.</p>
+          <p className="text-sm text-white/60">Niet tevreden binnen 15 dagen? Je krijgt je geld terug — zonder vragen. Zo kun je elk pakket risicoloos proberen.</p>
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Hoe bestel je een IPTV-abonnement bij IPTVTotaal?</h3>
+        <ol className="list-decimal list-inside space-y-2 ml-2">
+          <li>Stuur een berichtje via <strong className="text-white">WhatsApp</strong></li>
+          <li>Geef aan welk pakket je wil en op welk apparaat je kijkt</li>
+          <li>Ontvang je betaallink en betaal veilig</li>
+          <li>Ontvang je inloggegevens per WhatsApp — binnen 5 minuten</li>
+          <li>Installeer de app en geniet van 80.000+ zenders</li>
+        </ol>
+        <p>Geen registratieformulier. Geen lange wachttijden. Gewoon direct.</p>
+
+        <a href="/blog/iptv-kopen" className="group flex items-center justify-between p-5 bg-amber-500/10 border border-amber-500/20 rounded-2xl hover:border-amber-500/40 transition-colors no-underline">
+          <div>
+            <span className="text-xs font-black text-amber-400 uppercase tracking-widest block mb-1">Meer info</span>
+            <span className="text-white font-bold group-hover:text-amber-400 transition-colors">IPTV kopen in Nederland: alles wat je moet weten →</span>
+          </div>
+        </a>
+
+        <h3 className="text-2xl font-black text-white">Veelgestelde vragen.</h3>
+        <div className="space-y-4">
+          <div>
+            <p className="font-black text-white">Verlengd het abonnement automatisch?</p>
+            <p>Nee. Er is geen automatische verlenging. Je abonnement loopt gewoon af — je kiest zelf of je verlengt.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Kan ik het abonnement op meerdere apparaten gebruiken?</p>
+            <p>Ja, afhankelijk van je pakket. Je kunt op meerdere schermen tegelijk kijken — Smart TV, telefoon en tablet tegelijk.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Zijn er activatiekosten?</p>
+            <p>Nee. Je betaalt alleen de abonnementsprijs. Geen activatiekosten, geen installatiekosten, geen verborgen kosten.</p>
+          </div>
+        </div>
+
+        <p>Klaar om te beginnen? Stuur ons een berichtje via WhatsApp. We helpen je meteen verder.</p>
+      </div>
+    ),
+  },
 ];
 
 const CATEGORIES = ['Alles', 'Handleiding', 'Vergelijking', 'Advies', 'Sport', 'Techniek'];

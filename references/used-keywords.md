@@ -363,6 +363,85 @@ Track every keyword (primary + cluster) already targeted in published blog posts
 
 ---
 
+## Post N — IPTV App voor Android: de beste keuze in 2026
+**Slug:** `iptv-app-android` | **Published:** 15 juni 2026 | **Category:** Handleiding
+
+| Keyword | Source | Notes |
+|---|---|---|
+| appli iptv android | Primary target (CSV — 480/mo) | Informational |
+| iptv app android | Cluster | Android-specific |
+| beste iptv app android | Cluster | Commercial intent |
+| iptv smarters android | Cluster | App brand |
+| tivimate android | Cluster | App brand |
+| iptv android installeren | Cluster | Install intent |
+
+---
+
+## Post O — Welke IPTV App voor Samsung TV? (2026)
+**Slug:** `iptv-app-samsung-tv` | **Scheduled:** 16 juni 2026 | **Category:** Handleiding
+
+| Keyword | Source | Notes |
+|---|---|---|
+| welke iptv app voor samsung tv | Primary target (CSV — 110/mo) | Informational |
+| iptv samsung smart tv | Cluster | Device-specific |
+| samsung tv iptv installeren | Cluster | Install intent |
+| smart iptv samsung | Cluster | App brand |
+| iptv app samsung 2026 | Cluster | Year variant |
+
+---
+
+## Post P — Wat is de Beste IPTV voor Nederland? Vergelijking 2026
+**Slug:** `beste-iptv-voor-nederland-2026` | **Published:** 15 juni 2026 | **Category:** Vergelijking
+
+| Keyword | Source | Notes |
+|---|---|---|
+| wat is de beste iptv voor nederland | Primary target (CSV — 260/mo) | Informational |
+| beste iptv nederland 2026 | Cluster | Year variant |
+| iptv vergelijken nederland | Cluster | Comparison intent |
+| beste iptv aanbieder 2026 | Cluster | Commercial intent |
+| iptv nederland betrouwbaar | Cluster | Trust intent |
+
+---
+
+## Post Q — Wat kost Prime Video bij Ziggo? (2026)
+**Slug:** `prime-video-ziggo` | **Scheduled:** 16 juni 2026 | **Category:** Vergelijking
+
+| Keyword | Source | Notes |
+|---|---|---|
+| wat kost prime video bij ziggo | Primary target (CSV — 50/mo) | Informational/Navigational |
+| prime video ziggo prijs | Cluster | Price intent |
+| amazon prime via ziggo | Cluster | Navigation intent |
+| ziggo streaming kosten | Cluster | Cost intent |
+| prime video abonnement ziggo | Cluster | Subscription intent |
+
+---
+
+## Post R — Wat is IPTV en Hoe Werkt het? Complete Gids (2026)
+**Slug:** `wat-is-iptv-en-hoe-werkt-het` | **Scheduled:** 17 juni 2026 | **Category:** Advies
+
+| Keyword | Source | Notes |
+|---|---|---|
+| wat is iptv en hoe werkt het | Primary target (CSV — 40/mo) | Informational |
+| iptv uitleg beginners | Cluster | Beginner intent |
+| iptv wat is dat | Cluster | Definition intent |
+| hoe werkt iptv thuis | Cluster | How-to home intent |
+| iptv voor beginners | Cluster | Beginner audience |
+
+---
+
+## Post S — IPTV Abonnement Nederland: prijzen, tips en beste keuze (2026)
+**Slug:** `iptv-abonnement-nederland` | **Scheduled:** 17 juni 2026 | **Category:** Advies
+
+| Keyword | Source | Notes |
+|---|---|---|
+| iptv abonnement nederland | Primary target (high commercial intent) | Transactional |
+| iptv abonnement kopen | Cluster | Buy intent |
+| iptv abonnement prijs | Cluster | Price intent |
+| iptv pakket nederland | Cluster | Package intent |
+| goedkoop iptv abonnement | Cluster | Price-conscious intent |
+
+---
+
 ## Quick Reference — All Primary Keywords Used
 
 | Keyword | Post slug |
@@ -385,3 +464,9 @@ Track every keyword (primary + cluster) already targeted in published blog posts
 | nederland vs japan live kijken | nederland-japan-wk-2026 (live 14 jun) |
 | nederland vs zweden live kijken | nederland-zweden-wk-2026 (live 14 jun) |
 | nederland tunesie live kijken | tunesie-nederland-wk-2026 (live 14 jun) |
+| appli iptv android | iptv-app-android (live 15 jun) |
+| wat is de beste iptv voor nederland | beste-iptv-voor-nederland-2026 (live 15 jun) |
+| welke iptv app voor samsung tv | iptv-app-samsung-tv (scheduled 16 jun) |
+| wat kost prime video bij ziggo | prime-video-ziggo (scheduled 16 jun) |
+| wat is iptv en hoe werkt het | wat-is-iptv-en-hoe-werkt-het (scheduled 17 jun) |
+| iptv abonnement nederland | iptv-abonnement-nederland (scheduled 17 jun) |
