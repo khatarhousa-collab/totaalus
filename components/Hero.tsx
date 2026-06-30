@@ -49,6 +49,19 @@ export const Hero: React.FC = () => {
             TV kijken zoals het hoort.<br className="sm:hidden" /> Pauzeer of annuleer op elk moment.
           </p>
 
+          <a
+            href="/tv-box"
+            className="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-amber-500/40 bg-amber-500/10 hover:bg-amber-500/20 transition-all duration-300 group w-fit mx-auto sm:mx-0"
+          >
+            <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse flex-shrink-0"></span>
+            <span className="text-sm sm:text-base font-semibold text-white/90">
+              Geen smart tv? <span className="text-amber-400 font-black">Geen probleem</span> — gebruik ons abonnement met ons kastje
+            </span>
+            <svg className="w-4 h-4 text-amber-400 group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+
           <div className="flex flex-col gap-4 w-full sm:flex-row sm:w-auto sm:justify-start">
             <a
               href="#pricing"

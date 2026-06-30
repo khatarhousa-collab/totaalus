@@ -22,6 +22,7 @@ import { NederlandOezbekistanLive } from './components/NederlandOezbekistanLive'
 import { EredivisieLiveKijken } from './components/EredivisieLiveKijken';
 import { WK2026Wedstrijden } from './components/WK2026Wedstrijden';
 import { WK2026MatchDetail } from './components/WK2026MatchDetail';
+import { TvBox } from './components/TvBox';
 
 const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
@@ -93,6 +94,7 @@ const App: React.FC = () => {
         <Route path="/eredivisie-live-kijken" element={<main><EredivisieLiveKijken /></main>} />
         <Route path="/wk-2026-live-kijken" element={<main><WK2026Wedstrijden /></main>} />
         <Route path="/wk-2026-live-kijken/:matchSlug" element={<main><WK2026MatchDetail /></main>} />
+        <Route path="/tv-box" element={<main><TvBox /></main>} />
       </Routes>
 
       <Footer />

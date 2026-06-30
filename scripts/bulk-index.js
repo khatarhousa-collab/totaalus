@@ -136,24 +136,21 @@ async function submitGoogle() {
     return;
   }
 
-  let auth;
-  try {
-    const { GoogleAuth } = require('google-auth-library');
-    auth = new GoogleAuth({
-      keyFile: GOOGLE_CREDENTIALS,
-      scopes: ['https://www.googleapis.com/auth/indexing'],
-    });
-  } catch {
-    console.log(`  ${red('✗')} google-auth-library not installed. Run: npm install --save-dev google-auth-library`);
-    return;
-  }
-
   let client;
   try {
+    const { GoogleAuth } = require('google-auth-library');
+
+    const auth = new GoogleAuth({
+      scopes: ['https://www.googleapis.com/auth/indexing'],
+      ...(existsSync(GOOGLE_CREDENTIALS) ? { keyFile: GOOGLE_CREDENTIALS } : {}),
+    });
     client = await auth.getClient();
-    console.log(`  ${green('✓')} Authenticated with Google service account`);
+
+    const method = existsSync(GOOGLE_CREDENTIALS) ? 'credentials file' : 'application default credentials';
+    console.log(`  ${green('✓')} Authenticated via ${method}`);
   } catch (err) {
     console.log(`  ${red('✗')} Auth failed: ${err.message}`);
+    console.log(`  ${yellow('→')} Run: gcloud auth application-default login`);
     return;
   }
 

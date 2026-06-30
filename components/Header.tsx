@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 interface HeaderProps {
   isScrolled: boolean;
@@ -8,6 +9,8 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ isScrolled, hasBanner }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { pathname } = useLocation();
+  const forceBlack = pathname === '/tv-box';
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
@@ -20,12 +23,13 @@ export const Header: React.FC<HeaderProps> = ({ isScrolled, hasBanner }) => {
     { name: 'FAQ', href: '/#faq' },
     { name: 'Over ons', href: '/over-ons' },
     { name: 'WK 2026', href: '/wk-2026-live-kijken' },
+    { name: 'TV Box', href: '/tv-box' },
     { name: 'Blog', href: '/blog' },
   ];
 
   return (
     <>
-      <nav className={`fixed left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isMenuOpen ? 'bg-black/90 backdrop-blur-md border-b border-amber-900/30 py-4' : 'bg-transparent py-8'}`} style={{ top: hasBanner ? '40px' : '0px' }}>
+      <nav className={`fixed left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isMenuOpen || forceBlack ? 'bg-black/90 backdrop-blur-md border-b border-amber-900/30 py-4' : 'bg-transparent py-8'}`} style={{ top: hasBanner ? '40px' : '0px' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-20 flex justify-between items-center">
           <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer">
             <div className="w-8 h-8 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-sm flex items-center justify-center">
