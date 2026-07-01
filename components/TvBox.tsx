@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 const whatsappNumber = '447449708976';
 
@@ -60,8 +60,32 @@ const CheckIcon = () => (
   </svg>
 );
 
+const galleryImages = ['/box-main.png', '/box1.png', '/box2.png', '/box3.png'];
+
 export const TvBox: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [activeImage, setActiveImage] = useState(0);
+  const touchStartX = useRef<number | null>(null);
+
+  const goToImage = (i: number) => {
+    setActiveImage((i + galleryImages.length) % galleryImages.length);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const deltaX = e.changedTouches[0].clientX - touchStartX.current;
+    const SWIPE_THRESHOLD = 40;
+    if (deltaX > SWIPE_THRESHOLD) {
+      goToImage(activeImage - 1);
+    } else if (deltaX < -SWIPE_THRESHOLD) {
+      goToImage(activeImage + 1);
+    }
+    touchStartX.current = null;
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-neutral-950 to-black">
@@ -71,13 +95,49 @@ export const TvBox: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-20">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
-            {/* LEFT — single product image */}
-            <div className="rounded-[24px] overflow-hidden bg-gray-100 border border-gray-200 aspect-square">
-              <img
-                src="/box-main.png"
-                alt="Android 14 TV Box"
-                className="w-full h-full object-cover"
-              />
+            {/* LEFT — product image gallery */}
+            <div className="flex flex-col gap-4">
+              <div
+                className="relative rounded-[24px] overflow-hidden bg-gray-100 border border-gray-200 aspect-square select-none"
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
+              >
+                <img
+                  src={galleryImages[activeImage]}
+                  alt="Android 14 TV Box"
+                  className="w-full h-full object-cover"
+                  draggable={false}
+                />
+                <button
+                  onClick={() => goToImage(activeImage - 1)}
+                  aria-label="Vorige afbeelding"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-gray-800 flex items-center justify-center shadow-md transition-colors"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                    <path d="M15 18l-6-6 6-6" />
+                  </svg>
+                </button>
+                <button
+                  onClick={() => goToImage(activeImage + 1)}
+                  aria-label="Volgende afbeelding"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-gray-800 flex items-center justify-center shadow-md transition-colors"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                    <path d="M9 18l6-6-6-6" />
+                  </svg>
+                </button>
+              </div>
+              <div className="grid grid-cols-4 gap-3">
+                {galleryImages.map((img, i) => (
+                  <button
+                    key={img}
+                    onClick={() => goToImage(i)}
+                    className={`rounded-2xl overflow-hidden bg-gray-100 border-2 aspect-square transition-colors ${activeImage === i ? 'border-amber-500' : 'border-gray-200 hover:border-amber-300'}`}
+                  >
+                    <img src={img} alt={`Android 14 TV Box ${i + 1}`} className="w-full h-full object-cover" />
+                  </button>
+                ))}
+              </div>
             </div>
 
             {/* RIGHT — product info */}
