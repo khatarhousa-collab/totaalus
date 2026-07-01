@@ -35,6 +35,14 @@ const included = [
   'Gratis updates & onderhoud',
 ];
 
+const SHIPPING_DAYS = 3;
+
+const getDeliveryDate = () => {
+  const date = new Date();
+  date.setDate(date.getDate() + SHIPPING_DAYS);
+  return date.toLocaleDateString('nl-NL', { weekday: 'long', day: 'numeric', month: 'long' });
+};
+
 const faqs = [
   {
     q: 'Wat heb ik verder nodig?',
@@ -61,14 +69,6 @@ const CheckIcon = () => (
 );
 
 const galleryImages = ['/box-main.png', '/box1.png', '/box2.png', '/box3.png'];
-
-const SHIPPING_DAYS = 3;
-
-const getDeliveryDate = () => {
-  const date = new Date();
-  date.setDate(date.getDate() + SHIPPING_DAYS);
-  return date.toLocaleDateString('nl-NL', { weekday: 'long', day: 'numeric', month: 'long' });
-};
 
 export const TvBox: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
