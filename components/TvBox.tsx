@@ -46,7 +46,7 @@ const faqs = [
   },
   {
     q: 'Hoe lang duurt levering?',
-    a: 'Wij leveren doorgaans binnen 2–5 werkdagen. Na je bestelling via WhatsApp nemen wij direct contact op.',
+    a: `Wij leveren binnen ${SHIPPING_DAYS} dagen. Besteld je vandaag, dan ontvang je de box op ${getDeliveryDate()}. Na je bestelling via WhatsApp nemen wij direct contact op.`,
   },
   {
     q: 'Kan ik het abonnement later verlengen?',
@@ -61,6 +61,14 @@ const CheckIcon = () => (
 );
 
 const galleryImages = ['/box-main.png', '/box1.png', '/box2.png', '/box3.png'];
+
+const SHIPPING_DAYS = 3;
+
+const getDeliveryDate = () => {
+  const date = new Date();
+  date.setDate(date.getDate() + SHIPPING_DAYS);
+  return date.toLocaleDateString('nl-NL', { weekday: 'long', day: 'numeric', month: 'long' });
+};
 
 export const TvBox: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -165,6 +173,21 @@ export const TvBox: React.FC = () => {
               <p className="text-gray-600 font-medium leading-relaxed">
                 Ontvang een kant-en-klare 4K Android 14 TV Box met 12 maanden IPTVTotaal abonnement. Direct aansluiten en genieten van 80.000+ zenders, films en series in 4K Ultra HD met HDR10.
               </p>
+
+              <div className="flex items-center gap-3 px-5 py-4 rounded-2xl bg-amber-50 border border-amber-300">
+                <div className="w-9 h-9 rounded-full bg-gradient-to-r from-amber-500 to-yellow-600 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-black" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                    <path d="M1 3h15v13H1z" />
+                    <path d="M16 8h4l3 3v5h-7V8z" />
+                    <circle cx="5.5" cy="18.5" r="2.5" />
+                    <circle cx="18.5" cy="18.5" r="2.5" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="font-black text-gray-900 text-sm">Binnen {SHIPPING_DAYS} dagen in huis</p>
+                  <p className="text-amber-600 font-bold text-xs uppercase tracking-wide">Besteld vandaag = geleverd op {getDeliveryDate()}</p>
+                </div>
+              </div>
 
               <div className="space-y-2.5">
                 {['4K Ultra HD + HDR10', 'Android 14', '80.000+ zenders inbegrepen'].map((f) => (
