@@ -28,7 +28,7 @@ const specs = [
 const included = [
   '80.000+ zenders inclusief HD & 4K',
   '140.000+ films & series on demand',
-  '12 maanden IPTVTotaal abonnement',
+  '12 maanden IPTVTotaal abonnement cadeau',
   'IPTV app vooraf geïnstalleerd & geconfigureerd',
   '24/7 WhatsApp support',
   '99,9% server uptime garantie',
@@ -134,6 +134,9 @@ export const TvBox: React.FC = () => {
                     <path d="M9 18l6-6-6-6" />
                   </svg>
                 </button>
+                <div className="absolute top-4 right-4 px-4 py-2 rounded-full bg-gradient-to-r from-amber-500 to-yellow-600 text-black text-xs font-black uppercase tracking-widest shadow-lg text-center">
+                  12 mnd abonnement cadeau
+                </div>
               </div>
               <div className="grid grid-cols-4 gap-3">
                 {galleryImages.map((img, i) => (
@@ -159,19 +162,20 @@ export const TvBox: React.FC = () => {
                 <h1 className="text-4xl lg:text-5xl font-black tracking-tighter text-gray-900 leading-tight">
                   Android 14 TV Box
                 </h1>
-                <p className="text-lg font-bold text-amber-500 mt-1">+ 12 maanden IPTVTotaal abonnement</p>
+                <p className="text-lg font-bold text-amber-500 mt-1">+ 12 maanden IPTVTotaal abonnement <span className="bg-gradient-to-r from-amber-500 to-yellow-600 text-black px-2 py-0.5 rounded-md">cadeau</span></p>
               </div>
 
               <div className="flex items-end gap-3 border-b border-gray-200 pb-6">
+                <span className="text-2xl font-bold text-gray-400 line-through pb-1">€280</span>
                 <span className="text-6xl font-black tracking-tighter text-gray-900">€160</span>
                 <div className="pb-2 space-y-0.5">
                   <p className="text-amber-500 font-bold text-sm uppercase tracking-widest">eenmalig</p>
-                  <p className="text-gray-400 text-sm">Inclusief 12 mnd abonnement</p>
+                  <p className="text-sm"><span className="text-gray-400">12 mnd abonnement</span> <span className="bg-gradient-to-r from-amber-500 to-yellow-600 text-black px-1.5 py-0.5 rounded font-bold">cadeau</span></p>
                 </div>
               </div>
 
               <p className="text-gray-600 font-medium leading-relaxed">
-                Ontvang een kant-en-klare 4K Android 14 TV Box met 12 maanden IPTVTotaal abonnement. Direct aansluiten en genieten van 80.000+ zenders, films en series in 4K Ultra HD met HDR10.
+                Ontvang een kant-en-klare 4K Android 14 TV Box en krijg 12 maanden IPTVTotaal abonnement <span className="bg-gradient-to-r from-amber-500 to-yellow-600 text-black px-2 py-0.5 rounded-md font-bold">cadeau</span>. Direct aansluiten en genieten van 80.000+ zenders, films en series in 4K Ultra HD met HDR10.
               </p>
 
               <div className="flex items-center gap-3 px-5 py-4 rounded-2xl bg-amber-50 border border-amber-300">
