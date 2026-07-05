@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { TvBoxCheckout } from './TvBoxCheckout';
 
 const specs = [
@@ -57,11 +57,35 @@ const CheckIcon = () => (
 
 const galleryImages = ['/box-main.png', '/box1.png', '/box2.png', '/box3.png'];
 
+// Reveals an element once it scrolls into view (for the slide-in app images).
+const useReveal = <T extends HTMLElement>() => {
+  const ref = useRef<T>(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+  return { ref, visible };
+};
+
 export const TvBox: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [activeImage, setActiveImage] = useState(0);
   const [checkoutOpen, setCheckoutOpen] = useState(false);
   const touchStartX = useRef<number | null>(null);
+  const banner = useReveal<HTMLImageElement>();
+  const pitch = useReveal<HTMLImageElement>();
 
   const handleOrder = () => setCheckoutOpen(true);
 
@@ -239,6 +263,51 @@ export const TvBox: React.FC = () => {
                 <span className="text-sm font-bold text-white/85 leading-snug">{item}</span>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* MYTV3 App */}
+        <div className="mb-24">
+          <div className="text-center mb-12 space-y-6">
+            <img src="/mytv3-logo.png" alt="MYTV3" className="h-12 lg:h-16 w-auto mx-auto" />
+            <h2 className="text-4xl lg:text-5xl font-black tracking-tighter text-white">
+              Nieuwe App. Nieuwe Functies. <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500">Een Nieuwe Ervaring.</span>
+            </h2>
+          </div>
+
+          {/* Branding banner + app pitch — two separate images, each with all edges
+              faded so they blend into the page. */}
+          <div className="max-w-4xl mx-auto space-y-8">
+            <img
+              ref={banner.ref}
+              src="/mytv3-app-banner.jpg"
+              alt="MYTV3 — de beste media viewer"
+              className="block w-full h-auto"
+              loading="lazy"
+              style={{
+                WebkitMaskImage: 'radial-gradient(ellipse 90% 90% at 50% 50%, #000 70%, transparent 100%)',
+                maskImage: 'radial-gradient(ellipse 90% 90% at 50% 50%, #000 70%, transparent 100%)',
+                transition: 'transform 900ms cubic-bezier(0.16,1,0.3,1), opacity 900ms ease-out',
+                willChange: 'transform, opacity',
+                transform: banner.visible ? 'translateX(0)' : 'translateX(-160px)',
+                opacity: banner.visible ? 1 : 0,
+              }}
+            />
+            <img
+              ref={pitch.ref}
+              src="/mytv3-app-pitch.jpg"
+              alt="Nieuwe App. Nieuwe Functies. Een Nieuwe Ervaring. MYTV3 is de beste media viewer op de markt met een professionele interface en naadloze Android-integratie."
+              className="block w-full h-auto"
+              loading="lazy"
+              style={{
+                WebkitMaskImage: 'radial-gradient(ellipse 92% 92% at 50% 50%, #000 72%, transparent 100%)',
+                maskImage: 'radial-gradient(ellipse 92% 92% at 50% 50%, #000 72%, transparent 100%)',
+                transition: 'transform 900ms cubic-bezier(0.16,1,0.3,1), opacity 900ms ease-out',
+                willChange: 'transform, opacity',
+                transform: pitch.visible ? 'translateX(0)' : 'translateX(160px)',
+                opacity: pitch.visible ? 1 : 0,
+              }}
+            />
           </div>
         </div>
 
