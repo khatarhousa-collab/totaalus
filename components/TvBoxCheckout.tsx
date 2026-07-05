@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const whatsappNumber = '447449708976';
 
@@ -58,6 +58,20 @@ export const TvBoxCheckout: React.FC<Props> = ({ onClose }) => {
   const [step, setStep] = useState<'information' | 'payment'>('information');
   const [payment, setPayment] = useState('ideal');
   const orderPageId = useRef<string | null>(null);
+
+  // Lock background scroll while the checkout is open, and close on Escape.
+  useEffect(() => {
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      window.removeEventListener('keydown', onKey);
+    };
+  }, [onClose]);
 
   // Save to Notion via our serverless function. Non-blocking: never blocks checkout.
   const saveOrder = (status: string) => {
@@ -141,7 +155,7 @@ export const TvBoxCheckout: React.FC<Props> = ({ onClose }) => {
   };
 
   const inputClass = (key: keyof FormState) =>
-    `w-full px-4 h-[52px] rounded-md border bg-white text-[15px] text-gray-900 placeholder-gray-500 outline-none transition-colors focus:border-gray-900 focus:ring-1 focus:ring-gray-900 ${
+    `w-full px-4 h-[52px] rounded-md border bg-white text-base sm:text-[15px] text-gray-900 placeholder-gray-500 outline-none transition-colors focus:border-gray-900 focus:ring-1 focus:ring-gray-900 ${
       errors[key] ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : 'border-gray-300'
     }`;
 
@@ -188,7 +202,7 @@ export const TvBoxCheckout: React.FC<Props> = ({ onClose }) => {
     <div className="fixed inset-0 z-[100] bg-white overflow-y-auto">
       {/* Top bar */}
       <div className="border-b border-gray-200 bg-white sticky top-0 z-10">
-        <div className="max-w-[1000px] mx-auto px-5 lg:px-8 h-16 flex items-center justify-between">
+        <div className="max-w-[1000px] mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
           <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <div className="w-7 h-7 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-sm flex items-center justify-center">
               <div className="w-3.5 h-3.5 bg-white rotate-45" />
@@ -209,7 +223,7 @@ export const TvBoxCheckout: React.FC<Props> = ({ onClose }) => {
 
       {/* Mobile order summary toggle */}
       <div className="lg:hidden border-b border-gray-200 bg-gray-50">
-        <div className="max-w-[1000px] mx-auto px-5">
+        <div className="max-w-[1000px] mx-auto px-5 sm:px-8">
           <button
             onClick={() => setSummaryOpen((o) => !o)}
             className="w-full flex items-center justify-between py-4 text-sm text-gray-800"
@@ -229,10 +243,12 @@ export const TvBoxCheckout: React.FC<Props> = ({ onClose }) => {
         </div>
       </div>
 
+      {/* Full-bleed split: white form half + gray summary half, aligned to viewport center */}
+      <div className="w-full lg:min-h-[calc(100dvh-65px)] lg:bg-[linear-gradient(to_right,#ffffff_50%,#f9fafb_50%)]">
       <div className="max-w-[1000px] mx-auto lg:grid lg:grid-cols-2">
         {/* LEFT — form */}
-        <div className="px-5 lg:px-8 py-8 lg:py-12 lg:border-r lg:border-gray-200">
-          <div className="max-w-[480px] mx-auto lg:mx-0 lg:ml-auto lg:mr-8 space-y-8">
+        <div className="px-5 sm:px-8 py-8 lg:py-12 lg:border-r lg:border-gray-200">
+          <div className="max-w-[500px] mx-auto lg:mx-0 lg:ml-auto lg:mr-8 space-y-8">
 
             {/* Breadcrumb steps */}
             <div className="flex items-center gap-2 text-xs">
@@ -452,11 +468,12 @@ export const TvBoxCheckout: React.FC<Props> = ({ onClose }) => {
         </div>
 
         {/* RIGHT — order summary (desktop) */}
-        <div className="hidden lg:block bg-gray-50 px-8 py-12">
+        <div className="hidden lg:block px-8 py-12">
           <div className="max-w-[400px] mr-auto ml-8 sticky top-24">
             <OrderSummary />
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
