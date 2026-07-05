@@ -182,6 +182,239 @@ const WkCtaBlock: React.FC<{ match: string }> = ({ match }) => (
 );
 
 const posts: BlogPost[] = [
+  // ── Hotplayer — app-uitleg + installatie ─────────────────────────────────
+  {
+    slug: 'hotplayer',
+    publishDate: '2026-07-05',
+    date: '5 juli 2026',
+    readTime: '7 min',
+    category: 'Handleiding',
+    title: 'Hotplayer: wat is het, hoe werkt het en hoe installeer je het? (2026)',
+    excerpt: 'Hotplayer is een populaire IPTV-speler voor Smart TV, Firestick en Android. We leggen uit wat de app doet, op welke apparaten hij werkt en hoe je hem verbindt met een IPTVTotaal-abonnement — stap voor stap.',
+    image: '/hotplayer.jpg',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+
+        <div className="flex flex-wrap gap-2 mb-2">
+          {[
+            'hotplayer','hotplayer app','hotplayer iptv','hotplayer installeren',
+            'hotplayer smart tv','hotplayer samsung','hotplayer firestick','hotplayer m3u',
+          ].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">
+              {kw}
+            </span>
+          ))}
+        </div>
+
+        <p>Je zoekt een nette IPTV-speler voor je tv. Overal kom je één naam tegen: <strong className="text-white">Hotplayer</strong>.</p>
+        <p>Terecht. Het is een van de stabielste spelers voor Smart TV op dit moment. In deze gids leggen we uit wat Hotplayer precies is, wat het kost en hoe je het binnen 5 minuten aan de praat krijgt.</p>
+
+        <h3 className="text-2xl font-black text-white">Wat is Hotplayer precies?</h3>
+        <p>Hotplayer is een <strong className="text-white">IPTV-speler</strong> — geen tv-provider. De app zelf bevat geen zenders. Je laadt er een afspeellijst (M3U-link of Xtream Codes) in, en Hotplayer toont al je zenders overzichtelijk, mét programmagids.</p>
+        <p>Kort gezegd: Hotplayer is het scherm, jouw IPTV-abonnement is de inhoud. Je hebt dus een dienst als <strong className="text-white">IPTVTotaal</strong> nodig om er iets mee te kunnen kijken.</p>
+
+        <h3 className="text-2xl font-black text-white">Op welke apparaten werkt Hotplayer?</h3>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Samsung Smart TV</strong> — via de Samsung Smart Hub / App Store</li>
+          <li><strong className="text-white">LG Smart TV</strong> — via de LG Content Store</li>
+          <li><strong className="text-white">Android TV & Google TV</strong> — via de Google Play Store</li>
+          <li><strong className="text-white">Amazon Firestick / Fire TV</strong> — via de app store of Downloader</li>
+          <li><strong className="text-white">Telefoon & tablet</strong> — Android en iOS</li>
+        </ul>
+        <p>Op de meeste Smart TV's is Hotplayer meteen te vinden in de ingebouwde app-winkel. Geen extra kastje nodig.</p>
+
+        <h3 className="text-2xl font-black text-white">Wat kost Hotplayer?</h3>
+        <p>De app zelf is gratis te downloaden. Sommige versies vragen na een gratis proefperiode een kleine eenmalige activering (meestal een paar euro) om de speler blijvend te ontgrendelen. Dat betaal je alleen via de officiële portal van de app.</p>
+        <p>Let op het onderscheid: de app-activering staat los van je <strong className="text-white">IPTV-abonnement</strong>. Bij IPTVTotaal kijk je al vanaf <strong className="text-white">€4,60 per maand</strong> — met 80.000+ zenders, HD én 4K, en 15 dagen geld-teruggarantie.</p>
+
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[
+            { label: 'Zenders', value: '80.000+' },
+            { label: 'Setup', value: '< 5 minuten' },
+            { label: 'Prijs', value: 'v.a. €4,60/mnd' },
+          ].map(item => (
+            <div key={item.label} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+              <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-1">{item.label}</div>
+              <div className="text-white font-black">{item.value}</div>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Hotplayer installeren — per apparaat.</h3>
+        <p><strong className="text-white">Samsung of LG Smart TV:</strong></p>
+        <ol className="list-decimal list-inside space-y-2 ml-2">
+          <li>Open de <strong className="text-white">App Store</strong> (Samsung) of <strong className="text-white">Content Store</strong> (LG)</li>
+          <li>Zoek naar <em>Hotplayer</em></li>
+          <li>Download en installeer de app</li>
+          <li>Open de app — je ziet nu een MAC-adres of apparaatcode op het startscherm</li>
+        </ol>
+        <p><strong className="text-white">Firestick of Android TV:</strong></p>
+        <ol className="list-decimal list-inside space-y-2 ml-2">
+          <li>Ga naar de <strong className="text-white">Google Play Store</strong> of de Amazon App Store</li>
+          <li>Zoek naar <em>Hotplayer</em> en installeer</li>
+          <li>Open de app en noteer je apparaatcode</li>
+        </ol>
+        <p className="text-sm text-white/50">Tip: download de app alleen uit de officiële app-winkel of via het officiële portaal — nooit via willekeurige APK-sites.</p>
+
+        <h3 className="text-2xl font-black text-white">Hoe verbind je Hotplayer met IPTVTotaal?</h3>
+        <p>Na activering van je IPTVTotaal-abonnement ontvang je je inloggegevens per WhatsApp — een M3U-link of Xtream Codes.</p>
+        <ol className="list-decimal list-inside space-y-2 ml-2">
+          <li>Open Hotplayer en noteer het <strong className="text-white">MAC-adres</strong> op het startscherm</li>
+          <li>Ga op je telefoon of laptop naar de uploadportal van de app</li>
+          <li>Vul het MAC-adres in (precies overnemen, met dubbele punten)</li>
+          <li>Kies <em>Xtream Codes</em> of <em>M3U</em> en plak de gegevens die je van ons kreeg</li>
+          <li>Ga terug naar de app en ververs — je zenders laden automatisch in</li>
+        </ol>
+        <p>Xtream Codes werkt het stabielst bij grote zenderlijsten. Kom je er niet uit? Wij loodsen je er gratis doorheen via WhatsApp.</p>
+
+        <h3 className="text-2xl font-black text-white">Hotplayer werkt niet — de meest voorkomende oorzaken.</h3>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Geen zenders na de setup:</strong> vrijwel altijd een typefout in het MAC-adres</li>
+          <li><strong className="text-white">Blijft laden:</strong> check je internetsnelheid (minimaal 15 Mbps voor HD)</li>
+          <li><strong className="text-white">"Trial verlopen":</strong> de app-activering moet nog betaald worden via de officiële portal</li>
+          <li><strong className="text-white">App niet vindbaar:</strong> op oudere tv's kan een goedkoop Android-kastje uitkomst bieden</li>
+        </ul>
+
+        <a href="/blog/hot-player-iptv" className="group flex items-center justify-between p-5 bg-amber-500/10 border border-amber-500/20 rounded-2xl hover:border-amber-500/40 transition-colors no-underline">
+          <div>
+            <span className="text-xs font-black text-amber-400 uppercase tracking-widest block mb-1">Verder lezen</span>
+            <span className="text-white font-bold group-hover:text-amber-400 transition-colors">Hot Player IPTV instellen met je abonnement — de volledige gids →</span>
+          </div>
+        </a>
+
+        <h3 className="text-2xl font-black text-white">Veelgestelde vragen.</h3>
+        <div className="space-y-4">
+          <div>
+            <p className="font-black text-white">Is Hotplayer gratis?</p>
+            <p>De app is gratis te downloaden. Soms vraagt hij na een proefperiode een kleine eenmalige activering. Voor de zenders heb je altijd een apart IPTV-abonnement nodig, zoals IPTVTotaal vanaf €4,60 per maand.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Werkt Hotplayer met mijn IPTVTotaal-abonnement?</p>
+            <p>Ja. Hotplayer ondersteunt zowel M3U-links als Xtream Codes — beide krijg je na activering per WhatsApp toegestuurd.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Hoeveel internet heb ik nodig?</p>
+            <p>Minimaal 15 Mbps voor HD en 25 Mbps voor 4K. De meeste Nederlandse abonnementen halen dat ruimschoots. Twijfel je? Check het via fast.com.</p>
+          </div>
+        </div>
+
+        <p>Hulp bij de installatie van Hotplayer? Stuur ons een berichtje via WhatsApp — we helpen je stap voor stap, gratis, 24/7.</p>
+      </div>
+    ),
+  },
+  // ── Hot Player IPTV — instellen met abonnement ───────────────────────────
+  {
+    slug: 'hot-player-iptv',
+    publishDate: '2026-07-05',
+    date: '5 juli 2026',
+    readTime: '8 min',
+    category: 'Handleiding',
+    title: 'Hot Player IPTV instellen (2026): koppelen met je abonnement in 7 stappen',
+    excerpt: 'Hot Player IPTV is een van de meest gebruikte spelers voor Smart TV en Firestick. In deze complete gids lees je hoe je Hot Player koppelt aan een IPTVTotaal-abonnement — met MAC-adres, M3U en Xtream Codes.',
+    image: '/hot-player-iptv.jpg',
+    content: (
+      <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+
+        <div className="flex flex-wrap gap-2 mb-2">
+          {[
+            'hot player iptv','hot player','hot player iptv instellen','hot player iptv installeren',
+            'hot player iptv m3u','hot player iptv xtream codes','hot player iptv samsung','hot player iptv firestick',
+          ].map(kw => (
+            <span key={kw} className="text-xs px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400/70 font-medium">
+              {kw}
+            </span>
+          ))}
+        </div>
+
+        <p>Je hebt <strong className="text-white">Hot Player IPTV</strong> geïnstalleerd. Nu wil je er zenders in krijgen. Deze gids neemt je in 7 stappen mee van leeg scherm naar 80.000+ live zenders.</p>
+        <p>Geen technische kennis nodig. Als je een MAC-adres kunt overtypen, kun je dit.</p>
+
+        <h3 className="text-2xl font-black text-white">Wat is Hot Player IPTV?</h3>
+        <p>Hot Player IPTV is een <strong className="text-white">IPTV-speler</strong> die je op je Smart TV, Firestick of Android-apparaat zet. De app organiseert je zenders, films en series in een strak menu met programmagids (EPG).</p>
+        <p>Belangrijk: Hot Player levert zelf geen zenders. Je koppelt de app aan een IPTV-dienst zoals <strong className="text-white">IPTVTotaal</strong>. Dat is de bron van alle inhoud.</p>
+
+        <h3 className="text-2xl font-black text-white">Wat heb je nodig voordat je begint?</h3>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li>De <strong className="text-white">Hot Player IPTV</strong>-app, geïnstalleerd op je apparaat</li>
+          <li>Het <strong className="text-white">MAC-adres</strong> dat de app op het startscherm toont</li>
+          <li>Een actief <strong className="text-white">IPTVTotaal-abonnement</strong> (M3U of Xtream Codes)</li>
+          <li>Een tweede scherm — telefoon of laptop — voor de uploadportal</li>
+          <li>Minimaal 15 Mbps internet voor HD, 25 Mbps voor 4K</li>
+        </ul>
+
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[
+            { label: 'Zenders', value: '80.000+' },
+            { label: 'Uptime', value: '99,9%' },
+            { label: 'Geld-terug', value: '15 dagen' },
+          ].map(item => (
+            <div key={item.label} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+              <div className="text-xs text-white/30 uppercase tracking-widest font-bold mb-1">{item.label}</div>
+              <div className="text-white font-black">{item.value}</div>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-2xl font-black text-white">Hot Player IPTV instellen in 7 stappen.</h3>
+        <ol className="list-decimal list-inside space-y-2 ml-2">
+          <li>Open Hot Player IPTV en <strong className="text-white">noteer het MAC-adres</strong> op het startscherm (bijv. 1A:2B:3C:4D:5E:6F)</li>
+          <li>Ga op je telefoon of laptop naar de <strong className="text-white">uploadportal</strong> van de app</li>
+          <li>Voer het MAC-adres exact in — inclusief de dubbele punten</li>
+          <li>Kies je verbindingstype: <strong className="text-white">Xtream Codes</strong> (aanbevolen) of <strong className="text-white">M3U-link</strong></li>
+          <li>Vul de gegevens in die je van IPTVTotaal per WhatsApp ontving</li>
+          <li>Sla op en ga terug naar de app op je tv</li>
+          <li>Ververs de app — na 10 tot 60 seconden staan al je zenders erin</li>
+        </ol>
+
+        <h3 className="text-2xl font-black text-white">Xtream Codes of M3U — wat kies je?</h3>
+        <p><strong className="text-white">Xtream Codes (aanbevolen):</strong> je vult een serveradres, gebruikersnaam en wachtwoord in. Dit is het stabielst bij grote zenderlijsten en houdt je programmagids netjes bijgewerkt.</p>
+        <p><strong className="text-white">M3U-link:</strong> één enkele URL die je plakt. Simpeler, maar bij 80.000+ zenders iets minder soepel dan Xtream Codes.</p>
+        <p>Van IPTVTotaal krijg je altijd allebei toegestuurd, zodat je kunt kiezen wat het beste werkt op jouw apparaat.</p>
+
+        <h3 className="text-2xl font-black text-white">Hot Player IPTV werkt niet? Deze 5 dingen los je zelf op.</h3>
+        <ul className="list-disc list-inside space-y-1 ml-2">
+          <li><strong className="text-white">Geen zenders na de setup:</strong> een typefout in het MAC-adres — verreweg de meest voorkomende fout</li>
+          <li><strong className="text-white">Oneindig laden:</strong> te trage verbinding of verkeerde serverpoort — check je snelheid op fast.com</li>
+          <li><strong className="text-white">Verlopen proefperiode:</strong> de app-activering moet betaald worden via de officiële portal</li>
+          <li><strong className="text-white">Verkeerde inloggegevens:</strong> controleer of je Xtream-gebruikersnaam exact klopt (hoofdlettergevoelig)</li>
+          <li><strong className="text-white">Buffering bij live sport:</strong> gebruik waar mogelijk een ethernetkabel in plaats van wifi</li>
+        </ul>
+
+        <h3 className="text-2xl font-black text-white">Is Hot Player IPTV de beste keuze?</h3>
+        <p>Voor Smart TV-eigenaren die geen extra kastje willen: absoluut. Hot Player is snel geïnstalleerd, oogt netjes en is stabiel. Op Firestick en Android TV is <strong className="text-white">TiviMate</strong> een sterk alternatief met meer instelmogelijkheden.</p>
+        <p>De speler maakt uiteindelijk weinig uit voor de beeldkwaliteit — die komt van je abonnement. Met de 99,9% uptime van IPTVTotaal kijk je zonder onderbrekingen, welke speler je ook gebruikt.</p>
+
+        <a href="/blog/hotplayer" className="group flex items-center justify-between p-5 bg-amber-500/10 border border-amber-500/20 rounded-2xl hover:border-amber-500/40 transition-colors no-underline">
+          <div>
+            <span className="text-xs font-black text-amber-400 uppercase tracking-widest block mb-1">Ook handig</span>
+            <span className="text-white font-bold group-hover:text-amber-400 transition-colors">Hotplayer: wat is het en hoe installeer je het per apparaat? →</span>
+          </div>
+        </a>
+
+        <h3 className="text-2xl font-black text-white">Veelgestelde vragen.</h3>
+        <div className="space-y-4">
+          <div>
+            <p className="font-black text-white">Wat is het verschil tussen Hot Player en Hotplayer?</p>
+            <p>Niets wezenlijks — het is dezelfde soort IPTV-speler, alleen anders geschreven. Beide koppel je op dezelfde manier aan je IPTVTotaal-abonnement.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Kan ik Hot Player IPTV gebruiken met IPTVTotaal?</p>
+            <p>Ja. Hot Player werkt met zowel M3U als Xtream Codes. Na activering ontvang je beide gegevens per WhatsApp.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Waar vind ik mijn MAC-adres?</p>
+            <p>Dat staat op het startscherm van Hot Player zodra je de app opent. Je hebt het nodig om je afspeellijst te koppelen via de portal.</p>
+          </div>
+          <div>
+            <p className="font-black text-white">Werkt Hot Player op meerdere apparaten tegelijk?</p>
+            <p>De app wel, maar het aantal gelijktijdige schermen hangt af van je IPTVTotaal-pakket. Wil je op tv én telefoon tegelijk kijken? Dat regelen we voor je.</p>
+          </div>
+        </div>
+
+        <p>Kom je er niet uit met de instelling van Hot Player IPTV? Stuur ons een berichtje via WhatsApp — we koppelen alles gratis voor je en je bent binnen 5 minuten live.</p>
+      </div>
+    ),
+  },
   // ── WK 2026: Nederland vs Japan ──────────────────────────────────────────
   {
     slug: 'nederland-japan-wk-2026',
