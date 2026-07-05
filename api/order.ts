@@ -101,13 +101,12 @@ export default async function handler(req: any, res: any) {
 
     // Notify the owner with an @mention comment when an order is confirmed.
     // Best-effort: never fails the request if the comment can't be posted.
-    let notify: any = 'skipped';
     if (data.status === 'Order placed' && resultPageId) {
       const notifyUserId = process.env.NOTION_NOTIFY_USER_ID || '416df3c2-86b0-40a1-85d8-6038e902c39b';
       const priceLabel = typeof data.price === 'number' ? ` · €${data.price}` : '';
       const summary = `${name} · ${data.product || 'Bestelling'}${priceLabel}`;
       try {
-        const cRes = await fetch(`${NOTION_API}/comments`, {
+        await fetch(`${NOTION_API}/comments`, {
           method: 'POST',
           headers,
           body: JSON.stringify({
@@ -119,13 +118,12 @@ export default async function handler(req: any, res: any) {
             ],
           }),
         });
-        notify = { status: cRes.status, body: await cRes.json().catch(() => null) };
-      } catch (e: any) {
-        notify = { error: e?.message || 'comment failed' };
+      } catch {
+        /* notification is best-effort */
       }
     }
 
-    res.status(200).json({ pageId: resultPageId, notify });
+    res.status(200).json({ pageId: resultPageId });
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Unknown error' });
   }
