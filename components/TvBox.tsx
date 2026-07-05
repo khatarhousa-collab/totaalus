@@ -1,18 +1,5 @@
 import React, { useRef, useState } from 'react';
-
-const whatsappNumber = '447449708976';
-
-const trackConversion = () => {
-  if (typeof (window as any).gtag !== 'undefined') {
-    (window as any).gtag('event', 'conversion', { 'send_to': 'AW-18174158750/7VouCIXTmLccEJ7PjtpD' });
-  }
-};
-
-const handleOrder = () => {
-  trackConversion();
-  const msg = 'Hallo, ik wil graag de Android TV Box bestellen (inclusief IPTVTotaal abonnement) voor €160.';
-  window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`, '_blank');
-};
+import { TvBoxCheckout } from './TvBoxCheckout';
 
 const specs = [
   { label: 'Besturingssysteem', value: 'Android 14' },
@@ -73,7 +60,10 @@ const galleryImages = ['/box-main.png', '/box1.png', '/box2.png', '/box3.png'];
 export const TvBox: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [activeImage, setActiveImage] = useState(0);
+  const [checkoutOpen, setCheckoutOpen] = useState(false);
   const touchStartX = useRef<number | null>(null);
+
+  const handleOrder = () => setCheckoutOpen(true);
 
   const goToImage = (i: number) => {
     setActiveImage((i + galleryImages.length) % galleryImages.length);
@@ -209,7 +199,7 @@ export const TvBox: React.FC = () => {
                   onClick={handleOrder}
                   className="flex-1 py-5 rounded-2xl bg-gradient-to-r from-amber-500 to-yellow-600 text-black font-black text-lg hover:opacity-90 active:scale-95 transition-all shadow-lg shadow-amber-200"
                 >
-                  Bestel via WhatsApp
+                  Bestel nu
                 </button>
                 <a
                   href="/#pricing"
@@ -327,6 +317,8 @@ export const TvBox: React.FC = () => {
 
       </div>
     </div>
+
+      {checkoutOpen && <TvBoxCheckout onClose={() => setCheckoutOpen(false)} />}
     </div>
   );
 };
