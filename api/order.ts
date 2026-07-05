@@ -22,6 +22,28 @@ type OrderData = {
 
 const richText = (content: string) => ({ rich_text: [{ text: { content: content || '' } }] });
 
+// Vercel injects the visitor's IP + geolocation as request headers (no external
+// lookup needed). City is URL-encoded (e.g. "New%20York").
+function extractGeo(req: any) {
+  const h = req.headers || {};
+  const get = (k: string) => {
+    const v = h[k];
+    return Array.isArray(v) ? v[0] : v;
+  };
+  const forwarded = (get('x-forwarded-for') || '').split(',')[0].trim();
+  const ip = forwarded || get('x-real-ip') || '';
+  const decode = (v?: string) => {
+    if (!v) return '';
+    try { return decodeURIComponent(v); } catch { return v; }
+  };
+  return {
+    ip,
+    country: get('x-vercel-ip-country') || '',
+    region: get('x-vercel-ip-country-region') || '',
+    city: decode(get('x-vercel-ip-city')),
+  };
+}
+
 // The checkout UI is in Dutch; map its values to the English Notion select options.
 const COUNTRY_MAP: Record<string, string> = {
   Nederland: 'Netherlands',
@@ -68,6 +90,12 @@ export default async function handler(req: any, res: any) {
   if (typeof data.price === 'number') properties['Price'] = { number: data.price };
   if (data.paymentMethod) properties['Payment method'] = { select: { name: PAYMENT_MAP[data.paymentMethod] ?? data.paymentMethod } };
   if (data.status) properties['Status'] = { select: { name: data.status } };
+
+  // Capture the customer's IP and geo-region from Vercel's edge headers.
+  const geo = extractGeo(req);
+  if (geo.ip) properties['IP address'] = richText(geo.ip);
+  const location = [geo.city, geo.region, geo.country].filter(Boolean).join(', ');
+  if (location) properties['Location'] = richText(location);
 
   const headers = {
     'Authorization': `Bearer ${token}`,
