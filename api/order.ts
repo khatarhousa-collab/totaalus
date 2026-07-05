@@ -96,7 +96,34 @@ export default async function handler(req: any, res: any) {
       res.status(502).json({ error: 'Notion error', detail: json });
       return;
     }
-    res.status(200).json({ pageId: json.id });
+
+    const resultPageId: string = json.id;
+
+    // Notify the owner with an @mention comment when an order is confirmed.
+    // Best-effort: never fails the request if the comment can't be posted.
+    if (data.status === 'Order placed' && resultPageId) {
+      const notifyUserId = process.env.NOTION_NOTIFY_USER_ID || '416df3c2-86b0-40a1-85d8-6038e902c39b';
+      const priceLabel = typeof data.price === 'number' ? ` · €${data.price}` : '';
+      const summary = `${name} · ${data.product || 'Bestelling'}${priceLabel}`;
+      try {
+        await fetch(`${NOTION_API}/comments`, {
+          method: 'POST',
+          headers,
+          body: JSON.stringify({
+            parent: { page_id: resultPageId },
+            rich_text: [
+              { type: 'text', text: { content: '🎉 Nieuwe bestelling geplaatst! ' } },
+              { type: 'mention', mention: { type: 'user', user: { id: notifyUserId } } },
+              { type: 'text', text: { content: ` — ${summary}` } },
+            ],
+          }),
+        });
+      } catch {
+        /* notification is best-effort */
+      }
+    }
+
+    res.status(200).json({ pageId: resultPageId });
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Unknown error' });
   }
