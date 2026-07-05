@@ -276,8 +276,9 @@ export const TvBox: React.FC = () => {
           </div>
 
           {/* Branding banner + app pitch — two separate images, each with all edges
-              faded so they blend into the page. */}
-          <div className="max-w-4xl mx-auto space-y-8">
+              faded so they blend into the page. Full-bleed on phone (breaks out of the
+              section's px-6 padding), contained on larger screens. */}
+          <div className="-mx-6 sm:mx-auto sm:max-w-4xl space-y-8">
             <img
               ref={banner.ref}
               src="/mytv3-app-banner.jpg"
