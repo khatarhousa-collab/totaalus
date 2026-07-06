@@ -415,7 +415,7 @@ export const TvBox: React.FC = () => {
 
           {/* Phone-only product image — full-bleed to the screen edges */}
           <img
-            src="/product-page.jpg"
+            src="/landing2.png"
             alt="Android 14 TV Box product"
             className="md:hidden w-[calc(100%+3rem)] max-w-none -mx-6 mt-8 h-auto"
             loading="lazy"
@@ -468,8 +468,8 @@ export const TvBox: React.FC = () => {
           </div>
         </div>
 
-        {/* Specs */}
-        <div className="mb-24 glass-card rounded-[32px] p-10 lg:p-16 border border-white/10">
+        {/* Specs — hidden on phone (already shown in the phone-only image) */}
+        <div className="hidden md:block mb-24 glass-card rounded-[32px] p-10 lg:p-16 border border-white/10">
           <div className="text-center mb-12 space-y-4">
             <div className="inline-block px-4 py-1.5 bg-amber-500/15 border border-amber-500/30 rounded-full text-xs font-bold uppercase tracking-widest text-amber-400">
               Specificaties
