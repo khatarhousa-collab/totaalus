@@ -412,6 +412,14 @@ export const TvBox: React.FC = () => {
               </div>
             ))}
           </div>
+
+          {/* Phone-only product image — full-bleed to the screen edges */}
+          <img
+            src="/product-page.jpg"
+            alt="Android 14 TV Box product"
+            className="md:hidden w-[calc(100%+3rem)] max-w-none -mx-6 mt-8 h-auto"
+            loading="lazy"
+          />
         </div>
 
         {/* MYTV3 App */}
