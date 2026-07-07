@@ -101,6 +101,11 @@ const testimonials = [
     location: 'Utrecht',
     text: 'Twijfelde eerst, maar de support via WhatsApp is echt 24/7. Vraag gesteld om 23u, binnen 5 minuten antwoord.',
   },
+  {
+    name: 'I.S.',
+    location: 'Breda',
+    text: 'Levering: snelle levering. A14 TV Box: ik ben er nog steeds mee bezig, aan het testen. Abonnement: op het eerste gezicht ziet dat er goed uit. Klantenservice: zeer behulpzaam.',
+  },
 ];
 
 const galleryImages = ['/box-main.png', '/box1.png', '/box2.png', '/box3.png'];
