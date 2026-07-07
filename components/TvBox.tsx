@@ -105,6 +105,7 @@ const testimonials = [
     name: 'I.S.',
     location: 'Breda',
     text: 'Levering: snelle levering. A14 TV Box: ik ben er nog steeds mee bezig, aan het testen. Abonnement: op het eerste gezicht ziet dat er goed uit. Klantenservice: zeer behulpzaam.',
+    image: '/review-is.jpg',
   },
 ];
 
@@ -517,6 +518,14 @@ export const TvBox: React.FC = () => {
                   {[0, 1, 2, 3, 4].map((i) => <StarIcon key={i} className="w-4 h-4" />)}
                 </div>
                 <p className="text-sm text-white/85 font-medium leading-relaxed flex-1">&ldquo;{t.text}&rdquo;</p>
+                {t.image && (
+                  <img
+                    src={t.image}
+                    alt={`Review van ${t.name}`}
+                    loading="lazy"
+                    className="w-full rounded-xl border border-white/10 object-cover"
+                  />
+                )}
                 <div className="flex items-center gap-3 pt-1 border-t border-white/10">
                   <div className="w-9 h-9 rounded-full bg-gradient-to-r from-amber-500 to-yellow-600 flex items-center justify-center flex-shrink-0 text-black font-black text-sm">
                     {t.name.charAt(0)}
