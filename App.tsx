@@ -35,6 +35,19 @@ const ScrollToTop: React.FC = () => {
 const HomePage: React.FC = () => {
   const { pathname } = useLocation();
 
+  // /iptvtotaal serves the same page as / for ad landing traffic; point both at / so
+  // Google does not index them as duplicates.
+  useEffect(() => {
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', 'https://www.iptvtotaal.digital/');
+    return () => canonical.remove();
+  }, []);
+
   useEffect(() => {
     const observerOptions = { threshold: 0.1 };
     const observer = new IntersectionObserver((entries) => {
@@ -82,6 +95,7 @@ const App: React.FC = () => {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/iptvtotaal" element={<HomePage />} />
         <Route path="/blog" element={<main><Blog /></main>} />
         <Route path="/blog/:slug" element={<main><Blog /></main>} />
         <Route path="/kanalen" element={<main><Channels /></main>} />
