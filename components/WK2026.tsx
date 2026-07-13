@@ -1,12 +1,6 @@
 
 import React, { useEffect } from 'react';
 
-const trackWhatsAppConversion = () => {
-  if (typeof (window as any).gtag !== 'undefined') {
-    (window as any).gtag('event', 'conversion', { 'send_to': 'AW-18174158750/7VouCIXTmLccEJ7PjtpD' });
-  }
-};
-
 const whatsappLink = "https://api.whatsapp.com/send/?phone=447449708976&text&type=phone_number&app_absent=0";
 
 const StatPill: React.FC<{ value: string; label: string }> = ({ value, label }) => (
@@ -88,7 +82,6 @@ export const WK2026: React.FC = () => {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={trackWhatsAppConversion}
             className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black rounded-full hover:scale-[1.02] transition-transform shadow-xl shadow-amber-500/25 text-lg"
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -136,7 +129,6 @@ export const WK2026: React.FC = () => {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={trackWhatsAppConversion}
               className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black rounded-full hover:scale-[1.02] transition-transform shadow-lg shadow-amber-500/20"
             >
               Start vandaag nog
@@ -244,7 +236,6 @@ export const WK2026: React.FC = () => {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={trackWhatsAppConversion}
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black rounded-full hover:scale-[1.02] transition-transform shadow-xl shadow-amber-500/25"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -410,7 +401,6 @@ export const WK2026: React.FC = () => {
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={trackWhatsAppConversion}
                   className="flex items-center justify-center gap-3 w-full py-5 rounded-2xl bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-amber-500/30"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -441,7 +431,6 @@ export const WK2026: React.FC = () => {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={trackWhatsAppConversion}
               className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black rounded-full hover:scale-[1.02] transition-transform shadow-xl shadow-amber-500/20 text-lg"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

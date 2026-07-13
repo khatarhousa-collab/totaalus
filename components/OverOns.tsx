@@ -1,12 +1,6 @@
 
 import React, { useEffect } from 'react';
 
-const trackWhatsAppConversion = () => {
-  if (typeof (window as any).gtag !== 'undefined') {
-    (window as any).gtag('event', 'conversion', { 'send_to': 'AW-18174158750/7VouCIXTmLccEJ7PjtpD' });
-  }
-};
-
 const StatCard: React.FC<{ number: string; label: string }> = ({ number, label }) => (
   <div className="p-8 bg-amber-500/10 border border-amber-500/20 rounded-3xl text-center hover:bg-amber-500/20 transition-colors">
     <div className="text-5xl font-black text-amber-400 tracking-tighter mb-2">{number}</div>
@@ -178,7 +172,6 @@ export const OverOns: React.FC = () => {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={trackWhatsAppConversion}
               className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black text-lg rounded-full hover:scale-[1.02] transition-transform shadow-2xl shadow-amber-500/20"
             >
               WhatsApp Ons Nu

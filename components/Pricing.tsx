@@ -56,12 +56,6 @@ export const Pricing: React.FC = () => {
   const currentPlan = PERIOD_PLANS.find(p => p.id === selectedPeriod) || PERIOD_PLANS[0];
   const currentDevicePricing = currentPlan.devicePricing.find(dp => dp.devices === selectedDevices) || currentPlan.devicePricing[0];
 
-  const trackWhatsAppConversion = () => {
-    if (typeof (window as any).gtag !== 'undefined') {
-      (window as any).gtag('event', 'conversion', { 'send_to': 'AW-18174158750/7VouCIXTmLccEJ7PjtpD' });
-    }
-  };
-
   const getWhatsAppUrl = (tier: 'basis' | 'premium') => {
     const price = tier === 'basis' ? currentDevicePricing.basisPrice : currentDevicePricing.premiumPrice;
     const tierName = tier === 'basis' ? 'Basis' : 'Premium VIP';
@@ -245,7 +239,6 @@ export const Pricing: React.FC = () => {
                 href={getWhatsAppUrl('premium')}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={trackWhatsAppConversion}
                 className="w-full py-5 text-lg font-black rounded-2xl transition-all block text-center bg-gradient-to-r from-amber-500 to-yellow-600 text-black hover:from-amber-600 hover:to-yellow-700 active:scale-95"
                 style={{ boxShadow: '0 0 30px rgba(245,158,11,0.3)' }}
               >
@@ -317,7 +310,6 @@ export const Pricing: React.FC = () => {
                 href={getWhatsAppUrl('basis')}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={trackWhatsAppConversion}
                 className="w-full py-5 text-lg font-black rounded-2xl transition-all shadow-xl block text-center bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600 active:scale-95"
               >
                 Bestel Nu

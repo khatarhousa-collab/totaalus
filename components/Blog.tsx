@@ -2,12 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-const trackWhatsAppConversion = () => {
-  if (typeof (window as any).gtag !== 'undefined') {
-    (window as any).gtag('event', 'conversion', { 'send_to': 'AW-18174158750/7VouCIXTmLccEJ7PjtpD' });
-  }
-};
-
 interface BlogPost {
   slug: string;
   publishDate?: string;
@@ -3529,7 +3523,6 @@ const BlogDetail: React.FC<{ post: BlogPost }> = ({ post }) => {
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={trackWhatsAppConversion}
           className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black rounded-full hover:scale-[1.02] transition-transform shadow-xl shadow-amber-500/20"
         >
           WhatsApp Ons Nu

@@ -2,12 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 
 const whatsappNumber = '447449708976';
 
-const trackConversion = () => {
-  if (typeof (window as any).gtag !== 'undefined') {
-    (window as any).gtag('event', 'conversion', { 'send_to': 'AW-18174158750/7VouCIXTmLccEJ7PjtpD' });
-  }
-};
-
 const PRODUCT = {
   name: 'Android 14 TV Box',
   subtitle: '+ 12 maanden IPTVTotaal abonnement cadeau',
@@ -138,7 +132,6 @@ export const TvBoxCheckout: React.FC<Props> = ({ onClose }) => {
   };
 
   const handlePlaceOrder = () => {
-    trackConversion();
     saveOrder('Order placed');
     const method = paymentMethods.find((m) => m.id === payment)?.label ?? '';
     const msg =
