@@ -293,7 +293,7 @@ export const TvBox: React.FC = () => {
 
               <div className="flex items-end gap-3 border-b border-gray-200 pb-6">
                 <span className="text-2xl font-bold text-gray-400 line-through pb-1">€280</span>
-                <span className="text-6xl font-black tracking-tighter text-gray-900">€160</span>
+                <span className="text-6xl font-black tracking-tighter text-gray-900">€180</span>
                 <div className="pb-2 space-y-0.5">
                   <p className="text-amber-500 font-bold text-sm uppercase tracking-widest">eenmalig</p>
                   <p className="text-sm"><span className="text-gray-400">12 mnd abonnement</span> <span className="bg-gradient-to-r from-amber-500 to-yellow-600 text-black px-1.5 py-0.5 rounded font-bold">cadeau</span></p>
@@ -678,7 +678,7 @@ export const TvBox: React.FC = () => {
             className="px-10 py-5 rounded-2xl bg-gradient-to-r from-amber-500 to-yellow-600 text-black font-black text-xl hover:opacity-90 active:scale-95 transition-all"
             style={{ boxShadow: '0 0 40px rgba(245,158,11,0.4)' }}
           >
-            Bestel Nu — €160
+            Bestel Nu — €180
           </button>
           <p className="text-white/30 text-sm">Geen verborgen kosten</p>
         </div>
@@ -697,7 +697,7 @@ export const TvBox: React.FC = () => {
           <div className="flex-shrink-0">
             <div className="flex items-baseline gap-1.5">
               <span className="text-xs text-gray-400 line-through">€280</span>
-              <span className="text-xl font-black text-gray-900">€160</span>
+              <span className="text-xl font-black text-gray-900">€180</span>
             </div>
             <p className="text-[10px] text-amber-600 font-bold uppercase tracking-wide leading-none">12 mnd cadeau</p>
           </div>

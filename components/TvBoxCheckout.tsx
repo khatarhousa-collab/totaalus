@@ -11,7 +11,7 @@ const trackConversion = () => {
 const PRODUCT = {
   name: 'Android 14 TV Box',
   subtitle: '+ 12 maanden IPTVTotaal abonnement cadeau',
-  price: 160,
+  price: 180,
   image: '/box-main.png',
 };
 
