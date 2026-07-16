@@ -108,6 +108,18 @@ const testimonials = [
     text: 'Levering: snelle levering. A14 TV Box: ik ben er nog steeds mee bezig, aan het testen. Abonnement: op het eerste gezicht ziet dat er goed uit. Klantenservice: zeer behulpzaam.',
     image: '/review-is.jpg',
   },
+  {
+    name: 'Tom B.',
+    location: 'Eindhoven',
+    text: 'Vandaag binnengekomen, netjes verpakt en snel geleverd! 📦 Amiko A14 er meteen aangesloten, werkt perfect. Top service 👍🔥',
+    image: '/review-box-delivered.jpg',
+  },
+  {
+    name: 'Youssef E.',
+    location: 'Den Haag',
+    text: 'De service is heel goed, word goed en snel geholpen. 👌',
+    image: '/review-mytv-screen.jpg',
+  },
 ];
 
 const galleryImages = ['/box-main.png', '/box1.png', '/box2.png', '/box3.png'];
