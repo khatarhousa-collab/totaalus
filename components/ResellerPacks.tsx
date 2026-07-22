@@ -1,4 +1,5 @@
 import React from 'react';
+import { trackWhatsAppConversion } from './analytics';
 
 interface ResellerPack {
   credits: number;
@@ -41,6 +42,7 @@ export const ResellerPacks: React.FC = () => {
 
   const handleSubscribe = (credits: number) => {
     const message = `Hallo, ik wil graag het ${credits} CREDITS reseller pakket bestellen.`;
+    trackWhatsAppConversion();
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
   };
 
@@ -176,6 +178,7 @@ export const ResellerPacks: React.FC = () => {
           </p>
           <a
             href={`https://wa.me/${whatsappNumber}`}
+            onClick={trackWhatsAppConversion}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-green-500 text-white rounded-full font-bold text-lg hover:bg-green-600 transition-all shadow-lg"
