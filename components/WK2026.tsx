@@ -1,6 +1,5 @@
 
 import React, { useEffect } from 'react';
-import { trackWhatsAppConversion } from './analytics';
 
 const whatsappLink = "https://api.whatsapp.com/send/?phone=447449708976&text&type=phone_number&app_absent=0";
 
@@ -32,7 +31,7 @@ export const WK2026: React.FC = () => {
       canonical.setAttribute('rel', 'canonical');
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute('href', 'https://www.iptvtotaal.digital/wereldkampioenschap-voetbal-2026');
+    canonical.setAttribute('href', `${window.location.origin}/wereldkampioenschap-voetbal-2026`);
     return () => {
       document.title = 'IPTVTotaal';
       if (metaDesc) metaDesc.setAttribute('content', '');
@@ -81,7 +80,6 @@ export const WK2026: React.FC = () => {
 
           <a
             href={whatsappLink}
-            onClick={trackWhatsAppConversion}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black rounded-full hover:scale-[1.02] transition-transform shadow-xl shadow-amber-500/25 text-lg"
@@ -129,7 +127,6 @@ export const WK2026: React.FC = () => {
             </ul>
             <a
               href={whatsappLink}
-              onClick={trackWhatsAppConversion}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black rounded-full hover:scale-[1.02] transition-transform shadow-lg shadow-amber-500/20"
@@ -237,7 +234,6 @@ export const WK2026: React.FC = () => {
           <div className="text-center">
             <a
               href={whatsappLink}
-              onClick={trackWhatsAppConversion}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black rounded-full hover:scale-[1.02] transition-transform shadow-xl shadow-amber-500/25"
@@ -403,7 +399,6 @@ export const WK2026: React.FC = () => {
                 {/* CTA */}
                 <a
                   href={whatsappLink}
-                  onClick={trackWhatsAppConversion}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 w-full py-5 rounded-2xl bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-amber-500/30"
@@ -434,7 +429,6 @@ export const WK2026: React.FC = () => {
             </p>
             <a
               href={whatsappLink}
-              onClick={trackWhatsAppConversion}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black rounded-full hover:scale-[1.02] transition-transform shadow-xl shadow-amber-500/20 text-lg"

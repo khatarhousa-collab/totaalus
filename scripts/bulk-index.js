@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Bulk URL Indexing Tool — iptvtotaal.digital
+ * Bulk URL Indexing Tool — iptvtotaal.watch
  *
  * Submits all site URLs to:
  *   1. IndexNow  → Bing, Yandex, IndexNow.org (instant, no auth needed)
@@ -24,7 +24,7 @@ import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 
 // ── Config ────────────────────────────────────────────────────────────────────
-const SITE = 'https://www.iptvtotaal.digital';
+const SITE = 'https://www.iptvtotaal.watch';
 const INDEXNOW_KEY = '625a9bdce8cfb01d327e2dbe51b54dd3';
 const GOOGLE_CREDENTIALS = './scripts/google-credentials.json';
 

@@ -44,7 +44,7 @@ const HomePage: React.FC = () => {
       canonical.setAttribute('rel', 'canonical');
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute('href', 'https://www.iptvtotaal.digital/');
+    canonical.setAttribute('href', `${window.location.origin}/`);
     return () => canonical.remove();
   }, []);
 

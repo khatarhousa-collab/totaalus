@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { trackWhatsAppConversion } from './analytics';
 
 export const Footer: React.FC = () => {
   const whatsappLink = "https://api.whatsapp.com/send/?phone=447449708976&text&type=phone_number&app_absent=0";
@@ -26,13 +25,12 @@ export const Footer: React.FC = () => {
             <div className="space-y-8">
               <div className="p-6 bg-black/50 rounded-3xl border border-amber-900/20">
                 <p className="text-sm font-medium leading-relaxed text-white/80">
-                  IPTVTotaal helpt duizenden klanten met premium IPTV. Voor snelle service, WhatsApp ons voor een reactie binnen 5 minuten, bel <a href="tel:+447449708976" className="text-amber-400 font-bold hover:underline">+44 7449 708976</a> of mail <a href="mailto:info@iptvtotaal.digital" className="text-amber-400 font-bold hover:underline">info@iptvtotaal.digital</a>.
+                  IPTVTotaal helpt duizenden klanten met premium IPTV. Voor snelle service, WhatsApp ons voor een reactie binnen 5 minuten, bel <a href="tel:+447449708976" className="text-amber-400 font-bold hover:underline">+44 7449 708976</a> of mail <a href="mailto:info@iptvtotaal.watch" className="text-amber-400 font-bold hover:underline">info@iptvtotaal.watch</a>.
                 </p>
               </div>
 
               <a
                 href={whatsappLink}
-                onClick={trackWhatsAppConversion}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-8 bg-gradient-to-r from-amber-500 to-yellow-600 text-black rounded-[32px] font-black text-2xl hover:scale-[1.02] transition-transform block text-center shadow-lg shadow-amber-500/20"
@@ -56,7 +54,7 @@ export const Footer: React.FC = () => {
             <a href="/wereldkampioenschap-voetbal-2026" className="hover:opacity-100 transition-opacity text-amber-400">WK 2026</a>
             <a href="/algemene-voorwaarden" className="hover:opacity-100 transition-opacity">Algemene voorwaarden</a>
             <a href="/privacybeleid" className="hover:opacity-100 transition-opacity">Privacybeleid</a>
-            <a href="mailto:info@iptvtotaal.digital" className="hover:opacity-100 transition-opacity">info@iptvtotaal.digital</a>
+            <a href="mailto:info@iptvtotaal.watch" className="hover:opacity-100 transition-opacity">info@iptvtotaal.watch</a>
             <a href="tel:+447449708976" className="hover:opacity-100 transition-opacity">+44 7449 708976</a>
           </div>
           
