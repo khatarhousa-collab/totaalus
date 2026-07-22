@@ -1,6 +1,5 @@
 
 import React, { useEffect } from 'react';
-import { trackWhatsAppConversion } from './analytics';
 
 const whatsappLink = "https://api.whatsapp.com/send/?phone=447449708976&text&type=phone_number&app_absent=0";
 
@@ -110,7 +109,6 @@ export const NederlandOezbekistanLive: React.FC = () => {
 
           <a
             href={whatsappLink}
-            onClick={trackWhatsAppConversion}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black rounded-full hover:scale-[1.02] transition-transform shadow-xl shadow-amber-500/25 text-lg"
@@ -159,7 +157,6 @@ export const NederlandOezbekistanLive: React.FC = () => {
             </ul>
             <a
               href={whatsappLink}
-              onClick={trackWhatsAppConversion}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black rounded-full hover:scale-[1.02] transition-transform shadow-lg shadow-amber-500/20"
@@ -223,7 +220,6 @@ export const NederlandOezbekistanLive: React.FC = () => {
               </div>
               <a
                 href={`https://api.whatsapp.com/send/?phone=447449708976&text=${encodeURIComponent('Hallo, ik wil graag het Premium VIP-pakket van IPTVTotaal aanschaffen voor 12+3 maanden voor 1 apparaat (€78,00).')}&type=phone_number&app_absent=0`}
-                onClick={trackWhatsAppConversion}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black rounded-full hover:scale-[1.02] transition-transform shadow-lg shadow-amber-500/20 text-sm whitespace-nowrap"
@@ -262,7 +258,6 @@ export const NederlandOezbekistanLive: React.FC = () => {
               </ol>
               <a
                 href={whatsappLink}
-                onClick={trackWhatsAppConversion}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 mt-10 px-7 py-3.5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black rounded-full hover:scale-[1.02] transition-transform shadow-lg shadow-amber-500/20"
@@ -363,7 +358,6 @@ export const NederlandOezbekistanLive: React.FC = () => {
 
                 <a
                   href={whatsappLink}
-                  onClick={trackWhatsAppConversion}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 w-full py-5 rounded-2xl bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-amber-500/30"
@@ -430,7 +424,6 @@ export const NederlandOezbekistanLive: React.FC = () => {
             </p>
             <a
               href={whatsappLink}
-              onClick={trackWhatsAppConversion}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black rounded-full hover:scale-[1.02] transition-transform shadow-xl shadow-amber-500/20 text-lg"

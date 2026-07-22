@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { trackWhatsAppConversion } from './analytics';
 
 export const Footer: React.FC = () => {
   const whatsappLink = "https://api.whatsapp.com/send/?phone=447449708976&text&type=phone_number&app_absent=0";
@@ -32,7 +31,6 @@ export const Footer: React.FC = () => {
 
               <a
                 href={whatsappLink}
-                onClick={trackWhatsAppConversion}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-8 bg-gradient-to-r from-amber-500 to-yellow-600 text-black rounded-[32px] font-black text-2xl hover:scale-[1.02] transition-transform block text-center shadow-lg shadow-amber-500/20"
