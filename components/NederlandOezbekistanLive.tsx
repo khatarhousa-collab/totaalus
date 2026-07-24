@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { trackWhatsAppConversion } from './analytics';
 
-const whatsappLink = "https://api.whatsapp.com/send/?phone=447449708976&text&type=phone_number&app_absent=0";
+const whatsappLink = "https://api.whatsapp.com/send/?phone=447414662070&text&type=phone_number&app_absent=0";
 
 const StatPill: React.FC<{ value: string; label: string }> = ({ value, label }) => (
   <div className="text-center">
@@ -222,7 +222,7 @@ export const NederlandOezbekistanLive: React.FC = () => {
                 </div>
               </div>
               <a
-                href={`https://api.whatsapp.com/send/?phone=447449708976&text=${encodeURIComponent('Hallo, ik wil graag het Premium VIP-pakket van IPTVTotaal aanschaffen voor 12+3 maanden voor 1 apparaat (€78,00).')}&type=phone_number&app_absent=0`}
+                href={`https://api.whatsapp.com/send/?phone=447414662070&text=${encodeURIComponent('Hallo, ik wil graag het Premium VIP-pakket van IPTVTotaal aanschaffen voor 12+3 maanden voor 1 apparaat (€78,00).')}&type=phone_number&app_absent=0`}
                 onClick={trackWhatsAppConversion}
                 target="_blank"
                 rel="noopener noreferrer"

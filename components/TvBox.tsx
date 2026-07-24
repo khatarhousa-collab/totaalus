@@ -124,7 +124,7 @@ const testimonials = [
 
 const galleryImages = ['/box-main.png', '/box1.png', '/box2.png', '/box3.png'];
 
-const WHATSAPP_URL = 'https://wa.me/447449708976';
+const WHATSAPP_URL = 'https://wa.me/447414662070';
 
 // FAQ rich-results markup — lets Google show the questions directly in search.
 const faqJsonLd = {

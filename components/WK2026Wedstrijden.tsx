@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const WA = "https://api.whatsapp.com/send/?phone=447449708976&text&type=phone_number&app_absent=0";
+export const WA = "https://api.whatsapp.com/send/?phone=447414662070&text&type=phone_number&app_absent=0";
 
 // ── Flags ────────────────────────────────────────────────────────────────────
 export const FLAG_SVGS: Record<string, React.ReactNode> = {
