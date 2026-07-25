@@ -19,7 +19,7 @@ const ValueCard: React.FC<{ icon: React.ReactNode; title: string; description: s
 );
 
 export const OverOns: React.FC = () => {
-  const whatsappLink = "https://api.whatsapp.com/send/?phone=447414662070&text&type=phone_number&app_absent=0";
+  const whatsappLink = "https://api.whatsapp.com/send/?phone=447449708976&text&type=phone_number&app_absent=0";
 
   useEffect(() => {
     const prevTitle = document.title;
@@ -197,7 +197,7 @@ export const OverOns: React.FC = () => {
           <div className="hidden md:block w-px bg-white/10"></div>
           <div>
             <div className="text-xs font-bold uppercase tracking-widest text-white/30 mb-2">Telefoon</div>
-            <a href="tel:+447414662070" className="text-amber-400 font-bold hover:underline">+44 7414 662070</a>
+            <a href="tel:+447449708976" className="text-amber-400 font-bold hover:underline">+44 7449 708976</a>
           </div>
           <div className="hidden md:block w-px bg-white/10"></div>
           <div>

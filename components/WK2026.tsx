@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
 
-const whatsappLink = "https://api.whatsapp.com/send/?phone=447414662070&text&type=phone_number&app_absent=0";
+const whatsappLink = "https://api.whatsapp.com/send/?phone=447449708976&text&type=phone_number&app_absent=0";
 
 const StatPill: React.FC<{ value: string; label: string }> = ({ value, label }) => (
   <div className="text-center">
