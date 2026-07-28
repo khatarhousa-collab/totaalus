@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { trackWhatsAppConversion } from './analytics';
 
 export const Privacybeleid: React.FC = () => {
   return (
@@ -141,7 +140,7 @@ export const Privacybeleid: React.FC = () => {
               <p><strong>IPTVTotaal</strong></p>
               <p>E-mail: <a href="mailto:info@iptvtotaal.us" className="text-amber-500 font-bold hover:underline">info@iptvtotaal.us</a></p>
               <p>Telefoon: <a href="tel:+447449708976" className="text-amber-500 font-bold hover:underline">+44 7449 708976</a></p>
-              <p>WhatsApp: <a href="https://api.whatsapp.com/send/?phone=447449708976&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" onClick={trackWhatsAppConversion} className="text-amber-500 font-bold hover:underline">+44 7449 708976</a></p>
+              <p>WhatsApp: <a href="https://api.whatsapp.com/send/?phone=447449708976&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="text-amber-500 font-bold hover:underline">+44 7449 708976</a></p>
             </div>
           </section>
         </div>
