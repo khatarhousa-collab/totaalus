@@ -7,17 +7,17 @@ const whatsappVipLink = `https://api.whatsapp.com/send/?phone=447449708976&text=
 
 const StatPill: React.FC<{ value: string; label: string }> = ({ value, label }) => (
   <div className="text-center">
-    <div className="text-4xl lg:text-5xl font-black text-amber-400 tracking-tighter">{value}</div>
-    <div className="text-sm text-white/50 font-medium mt-1">{label}</div>
+    <div className="text-4xl lg:text-5xl font-black text-amber-600 tracking-tighter">{value}</div>
+    <div className="text-sm text-stone-900/60 font-medium mt-1">{label}</div>
   </div>
 );
 
 const CheckItem: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <li className="flex items-start gap-3">
-    <svg className="w-5 h-5 text-amber-400 mt-0.5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+    <svg className="w-5 h-5 text-amber-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
     </svg>
-    <span className="text-white/70">{children}</span>
+    <span className="text-stone-900/70">{children}</span>
   </li>
 );
 
@@ -75,7 +75,7 @@ export const EredivisieLiveKijken: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen text-stone-900">
 
       {/* Hero */}
       <div className="relative pt-32 pb-20 overflow-hidden">
@@ -85,10 +85,10 @@ export const EredivisieLiveKijken: React.FC = () => {
             alt="Eredivisie live kijken via IPTV zonder tv-abonnement"
             className="w-full h-full object-cover opacity-20"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black" />
+          <div className="absolute inset-0 bg-black/65" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-20 text-white">
           <a href="/" className="inline-flex items-center gap-2 text-sm font-bold text-white/40 hover:text-amber-400 transition-colors mb-12">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -96,7 +96,7 @@ export const EredivisieLiveKijken: React.FC = () => {
             Terug naar home
           </a>
 
-          <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-amber-500/10 border border-amber-500/30 mb-8">
+          <div className="badge-brutal !text-sm mb-8">
             <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></div>
             <span className="text-sm font-bold text-amber-400 uppercase tracking-widest">Live · Eredivisie 2024/2025</span>
           </div>
@@ -118,7 +118,7 @@ export const EredivisieLiveKijken: React.FC = () => {
             onClick={trackWhatsAppConversion}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black rounded-full hover:scale-[1.02] transition-transform shadow-xl shadow-amber-500/25 text-lg"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-amber-500 text-black font-black rounded-full btn-brutal shadow-xl shadow-amber-500/25 text-lg"
           >
             <WhatsAppIcon />
             Stel je abonnement in via WhatsApp
@@ -129,7 +129,7 @@ export const EredivisieLiveKijken: React.FC = () => {
       </div>
 
       {/* Stats bar */}
-      <div className="border-y border-white/10 bg-white/[0.02]">
+      <div className="border-y border-stone-900/10 bg-stone-900/[0.02]">
         <div className="max-w-7xl mx-auto px-6 lg:px-20 py-12 grid grid-cols-2 lg:grid-cols-4 gap-10">
           <StatPill value="80K+" label="live zenders" />
           <StatPill value="99,9%" label="uptime garantie" />
@@ -151,17 +151,17 @@ export const EredivisieLiveKijken: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-20 py-20">
         <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
           <div>
-            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/30 mb-8">
-              <span className="text-sm font-bold text-orange-400 uppercase tracking-widest">⚽ Eredivisie via IPTV</span>
+            <div className="badge-brutal !text-sm mb-8">
+              <span className="text-sm font-bold text-orange-500 uppercase tracking-widest">⚽ Eredivisie via IPTV</span>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-black tracking-tighter text-white mb-6 leading-tight">
+            <h2 className="text-4xl lg:text-5xl font-black tracking-tighter text-stone-900 mb-6 leading-tight">
               Eredivisie kijken<br />
-              <span className="text-amber-400">zonder tv-abonnement.</span>
+              <span className="text-amber-600">zonder tv-abonnement.</span>
             </h2>
-            <p className="text-white/60 text-lg mb-4">
+            <p className="text-stone-900/70 text-lg mb-4">
               Geen duur tv-pakket nodig. Via IPTVTotaal stream je alle Eredivisie-wedstrijden live op ESPN en Ziggo Sport — op je Smart TV, telefoon of laptop.
             </p>
-            <p className="text-white/60 text-lg mb-8">
+            <p className="text-stone-900/70 text-lg mb-8">
               Eén abonnement. Alle wedstrijden. De hele competitie van speelronde 1 tot de kampioenswedstrijd.
             </p>
             <ul className="space-y-3 mb-10">
@@ -176,7 +176,7 @@ export const EredivisieLiveKijken: React.FC = () => {
             onClick={trackWhatsAppConversion}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black rounded-full hover:scale-[1.02] transition-transform shadow-lg shadow-amber-500/20"
+              className="inline-flex items-center gap-2 px-7 py-3.5 bg-amber-500 text-black font-black rounded-full btn-brutal shadow-lg shadow-amber-500/20"
             >
               Start vandaag nog
             </a>
@@ -188,19 +188,19 @@ export const EredivisieLiveKijken: React.FC = () => {
               className="w-full rounded-3xl object-cover"
               style={{ maxHeight: 480 }}
             />
-            <p className="text-xs text-white/20 mt-2">Foto: Pexels</p>
+            <p className="text-xs text-stone-900/40 mt-2">Foto: Pexels</p>
           </div>
         </div>
       </div>
 
       {/* Channels */}
-      <div className="border-t border-white/10">
+      <div className="border-t border-stone-900/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-20 py-20">
           <div className="max-w-2xl mb-12">
-            <h2 className="text-4xl lg:text-5xl font-black tracking-tighter text-white mb-4">
+            <h2 className="text-4xl lg:text-5xl font-black tracking-tighter text-stone-900 mb-4">
               Op welke zender kijk je de Eredivisie?
             </h2>
-            <p className="text-white/50 text-lg">
+            <p className="text-stone-900/60 text-lg">
               Met IPTVTotaal heb je alle sportzenders in één abonnement.
             </p>
           </div>
@@ -214,25 +214,25 @@ export const EredivisieLiveKijken: React.FC = () => {
               { name: 'beIN Sports', desc: 'Internationaal voetbal en sport in meerdere talen als aanvulling op de Eredivisie.' },
               { name: '+50 sportzenders', desc: 'Sky Sports, Eurosport, DAZN, Canal+ en tientallen meer — allemaal inbegrepen.' },
             ].map(ch => (
-              <div key={ch.name} className="p-6 bg-neutral-900 border border-white/10 rounded-2xl hover:border-amber-500/30 transition-colors">
-                <h3 className="text-lg font-black text-white mb-2">{ch.name}</h3>
-                <p className="text-white/50 text-sm leading-relaxed">{ch.desc}</p>
+              <div key={ch.name} className="p-6 glass-card card-brutal-hover rounded-2xl hover:border-amber-500/60 transition-all">
+                <h3 className="text-lg font-black text-stone-900 mb-2">{ch.name}</h3>
+                <p className="text-stone-900/60 text-sm leading-relaxed">{ch.desc}</p>
               </div>
             ))}
           </div>
 
           {/* All-in-one callout */}
-          <div className="rounded-3xl p-px bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 shadow-xl shadow-amber-500/20">
-            <div className="rounded-[23px] bg-gradient-to-r from-amber-500/10 to-yellow-500/5 px-8 py-7 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="rounded-3xl p-px bg-amber-500 shadow-xl shadow-amber-500/20">
+            <div className="rounded-[23px] bg-amber-50 px-8 py-7 flex flex-col sm:flex-row items-center justify-between gap-6">
               <div className="flex items-center gap-5">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-400 to-yellow-500 flex items-center justify-center shrink-0 shadow-lg shadow-amber-500/30">
+                <div className="w-12 h-12 rounded-2xl bg-amber-500 flex items-center justify-center shrink-0 shadow-lg shadow-amber-500/30">
                   <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
                 <div>
-                  <p className="text-lg font-black text-white tracking-tight">Alle zenders. Één abonnement.</p>
-                  <p className="text-sm text-black mt-0.5">ESPN, Ziggo Sport, Viaplay én 80.000+ andere zenders — allemaal inbegrepen bij IPTVTotaal. Geen losse abonnementen, geen extra kosten.</p>
+                  <p className="text-lg font-black text-stone-900 tracking-tight">Alle zenders. Één abonnement.</p>
+                  <p className="text-sm text-stone-900/70 mt-0.5">ESPN, Ziggo Sport, Viaplay én 80.000+ andere zenders — allemaal inbegrepen bij IPTVTotaal. Geen losse abonnementen, geen extra kosten.</p>
                 </div>
               </div>
               <a
@@ -240,7 +240,7 @@ export const EredivisieLiveKijken: React.FC = () => {
                 onClick={trackWhatsAppConversion}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black rounded-full hover:scale-[1.02] transition-transform shadow-lg shadow-amber-500/20 text-sm whitespace-nowrap"
+                className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-amber-500 text-black font-black rounded-full btn-brutal shadow-lg shadow-amber-500/20 text-sm whitespace-nowrap"
               >
                 <WhatsAppIcon />
                 Bestel nu
@@ -251,14 +251,14 @@ export const EredivisieLiveKijken: React.FC = () => {
       </div>
 
       {/* How to watch */}
-      <div className="border-t border-white/10 bg-white/[0.02]">
+      <div className="border-t border-stone-900/10 bg-stone-900/[0.02]">
         <div className="max-w-7xl mx-auto px-6 lg:px-20 py-20">
           <div className="max-w-2xl">
             <div>
-              <h2 className="text-4xl lg:text-5xl font-black tracking-tighter text-white mb-4">
+              <h2 className="text-4xl lg:text-5xl font-black tracking-tighter text-stone-900 mb-4">
                 Zo kijk je de Eredivisie via IPTV.
               </h2>
-              <p className="text-white/50 text-lg mb-10">Drie stappen. Duurt 5 minuten.</p>
+              <p className="text-stone-900/60 text-lg mb-10">Drie stappen. Duurt 5 minuten.</p>
               <ol className="space-y-8">
                 {[
                   { n: '01', title: 'Stuur ons een WhatsApp', desc: 'Vertel welk apparaat je hebt. Wij sturen je binnen 5 minuten de inloggegevens toe.' },
@@ -266,10 +266,10 @@ export const EredivisieLiveKijken: React.FC = () => {
                   { n: '03', title: 'Voer je gegevens in en kijk', desc: 'Plak je M3U-link of Xtream Codes in de app. Alle zenders laden direct — inclusief ESPN voor de Eredivisie.' },
                 ].map(step => (
                   <li key={step.n} className="flex gap-6">
-                    <span className="text-4xl font-black text-amber-400/30 leading-none shrink-0">{step.n}</span>
+                    <span className="text-4xl font-black text-amber-500/40 leading-none shrink-0">{step.n}</span>
                     <div>
-                      <h3 className="text-lg font-black text-white mb-1">{step.title}</h3>
-                      <p className="text-white/50 leading-relaxed">{step.desc}</p>
+                      <h3 className="text-lg font-black text-stone-900 mb-1">{step.title}</h3>
+                      <p className="text-stone-900/60 leading-relaxed">{step.desc}</p>
                     </div>
                   </li>
                 ))}
@@ -279,7 +279,7 @@ export const EredivisieLiveKijken: React.FC = () => {
             onClick={trackWhatsAppConversion}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 mt-10 px-7 py-3.5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black rounded-full hover:scale-[1.02] transition-transform shadow-lg shadow-amber-500/20"
+                className="inline-flex items-center gap-3 mt-10 px-7 py-3.5 bg-amber-500 text-black font-black rounded-full btn-brutal shadow-lg shadow-amber-500/20"
               >
                 <WhatsAppIcon />
                 Direct starten via WhatsApp
@@ -290,9 +290,9 @@ export const EredivisieLiveKijken: React.FC = () => {
       </div>
 
       {/* Why IPTVTotaal */}
-      <div className="border-t border-white/10">
+      <div className="border-t border-stone-900/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-20 py-20">
-          <h2 className="text-4xl lg:text-5xl font-black tracking-tighter text-white mb-12 max-w-2xl">
+          <h2 className="text-4xl lg:text-5xl font-black tracking-tighter text-stone-900 mb-12 max-w-2xl">
             Waarom IPTVTotaal voor de Eredivisie?
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -302,9 +302,9 @@ export const EredivisieLiveKijken: React.FC = () => {
               { title: 'Vanaf €4,60/maand', desc: 'Geen losse ESPN-abonnementen of tv-pakketten. Één lage prijs voor de hele competitie.' },
               { title: '15 dagen geld-terug', desc: 'Bevalt het niet? Geen vragen gesteld, geld terug. Zo simpel is het.' },
             ].map(item => (
-              <div key={item.title} className="p-7 bg-neutral-900 border border-amber-900/20 rounded-3xl hover:border-amber-500/30 transition-colors">
-                <h3 className="text-xl font-black text-amber-400 mb-3">{item.title}</h3>
-                <p className="text-white/50 leading-relaxed text-sm">{item.desc}</p>
+              <div key={item.title} className="p-7 glass-card card-brutal-hover rounded-3xl hover:border-amber-500/50 transition-all">
+                <h3 className="text-xl font-black text-amber-600 mb-3">{item.title}</h3>
+                <p className="text-stone-900/60 leading-relaxed text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -312,21 +312,21 @@ export const EredivisieLiveKijken: React.FC = () => {
       </div>
 
       {/* 12+3 VIP Pack */}
-      <div className="border-t border-white/10 bg-white/[0.01]">
+      <div className="border-t border-stone-900/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-20 py-20">
           <div className="text-center mb-12">
-            <h2 className="text-4xl lg:text-5xl font-black tracking-tighter text-white mb-3">
+            <h2 className="text-4xl lg:text-5xl font-black tracking-tighter text-stone-900 mb-3">
               Het beste pakket voor de Eredivisie.
             </h2>
-            <p className="text-white/50 text-lg">De hele competitie live. Plus alles wat er verder nog speelt.</p>
+            <p className="text-stone-900/60 text-lg">De hele competitie live. Plus alles wat er verder nog speelt.</p>
           </div>
 
           <div className="max-w-2xl mx-auto">
-            <div className="relative rounded-[40px] p-px bg-gradient-to-br from-amber-400 via-yellow-500 to-amber-600 shadow-2xl shadow-amber-500/30">
+            <div className="relative rounded-[40px] p-px bg-amber-500 shadow-2xl shadow-amber-500/30">
               <div className="rounded-[39px] bg-neutral-950 p-10 lg:p-12">
 
                 <div className="flex items-center justify-between mb-8">
-                  <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-amber-400 to-yellow-500 text-black text-xs font-black uppercase tracking-widest">
+                  <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500 text-black text-xs font-black uppercase tracking-widest">
                     ★ Premium VIP
                   </div>
                   <span className="text-xs font-bold text-amber-400/60 uppercase tracking-widest">Beste Deal · 12 + 3 Maanden Gratis</span>
@@ -334,7 +334,7 @@ export const EredivisieLiveKijken: React.FC = () => {
 
                 <div className="mb-8">
                   <div className="flex items-end gap-2 mb-1">
-                    <span className="text-6xl lg:text-7xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500">
+                    <span className="text-6xl lg:text-7xl font-black tracking-tighter text-transparent bg-clip-text bg-amber-500">
                       €78,00
                     </span>
                     <span className="text-white/40 font-bold mb-3">eenmalig</span>
@@ -371,7 +371,7 @@ export const EredivisieLiveKijken: React.FC = () => {
                 onClick={trackWhatsAppConversion}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 w-full py-5 rounded-2xl bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-amber-500/30"
+                  className="flex items-center justify-center gap-3 w-full py-5 rounded-2xl bg-amber-500 text-black font-black text-lg btn-brutal shadow-xl shadow-amber-500/30"
                 >
                   <WhatsAppIcon />
                   Bestel via WhatsApp — €78,00
@@ -385,17 +385,17 @@ export const EredivisieLiveKijken: React.FC = () => {
       </div>
 
       {/* FAQ */}
-      <div className="border-t border-white/10">
+      <div className="border-t border-stone-900/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-20 py-20">
-          <h2 className="text-4xl lg:text-5xl font-black tracking-tighter text-white mb-12">
+          <h2 className="text-4xl lg:text-5xl font-black tracking-tighter text-stone-900 mb-12">
             Veelgestelde vragen over<br />
-            <span className="text-amber-400">Eredivisie live kijken via IPTV.</span>
+            <span className="text-amber-600">Eredivisie live kijken via IPTV.</span>
           </h2>
           <div className="max-w-3xl space-y-6">
             {faqItems.map((item, i) => (
-              <div key={i} className="p-6 bg-neutral-900 border border-white/10 rounded-2xl">
-                <h3 className="text-lg font-black text-white mb-3">{item.q}</h3>
-                <p className="text-white/55 leading-relaxed text-sm">{item.a}</p>
+              <div key={i} className="p-6 glass-card rounded-2xl">
+                <h3 className="text-lg font-black text-stone-900 mb-3">{item.q}</h3>
+                <p className="text-stone-900/60 leading-relaxed text-sm">{item.a}</p>
               </div>
             ))}
           </div>
@@ -403,34 +403,34 @@ export const EredivisieLiveKijken: React.FC = () => {
       </div>
 
       {/* SEO text block */}
-      <div className="border-t border-white/10 bg-white/[0.01]">
+      <div className="border-t border-stone-900/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-20 py-16">
           <div className="max-w-3xl">
-            <h2 className="text-3xl font-black tracking-tighter text-white mb-6">
+            <h2 className="text-3xl font-black tracking-tighter text-stone-900 mb-6">
               Eredivisie kijken zonder tv-abonnement via IPTV
             </h2>
-            <p className="text-white/50 leading-relaxed mb-4">
-              Wil je de <strong className="text-white/80">Eredivisie live kijken zonder tv-abonnement</strong>? Via IPTVTotaal heb je direct toegang tot ESPN en Ziggo Sport — de twee zenders waarop alle Eredivisie-wedstrijden worden uitgezonden. Geen duur kabelpakket, geen aparte ESPN-abonnement. Gewoon één abonnement voor alles.
+            <p className="text-stone-900/60 leading-relaxed mb-4">
+              Wil je de <strong className="text-stone-900/90">Eredivisie live kijken zonder tv-abonnement</strong>? Via IPTVTotaal heb je direct toegang tot ESPN en Ziggo Sport — de twee zenders waarop alle Eredivisie-wedstrijden worden uitgezonden. Geen duur kabelpakket, geen aparte ESPN-abonnement. Gewoon één abonnement voor alles.
             </p>
-            <p className="text-white/50 leading-relaxed mb-4">
-              Met het <strong className="text-white/80">12+3 maanden VIP-pakket</strong> betaal je €78,00 eenmalig voor 15 maanden onbeperkt streamen. Dat is effectief €5,20 per maand — inclusief 80.000+ kanalen, 200.000+ films en series, Enterprise Anti-Freeze technologie en een persoonlijke VIP Manager die je altijd helpt.
+            <p className="text-stone-900/60 leading-relaxed mb-4">
+              Met het <strong className="text-stone-900/90">12+3 maanden VIP-pakket</strong> betaal je €78,00 eenmalig voor 15 maanden onbeperkt streamen. Dat is effectief €5,20 per maand — inclusief 80.000+ kanalen, 200.000+ films en series, Enterprise Anti-Freeze technologie en een persoonlijke VIP Manager die je altijd helpt.
             </p>
-            <p className="text-white/50 leading-relaxed">
-              <strong className="text-white/80">Eredivisie kijken via IPTV</strong> instellen duurt minder dan 5 minuten. Stuur een WhatsApp, ontvang je inloggegevens en kijk op elk apparaat — Smart TV, iPhone, Android, Fire Stick of laptop. Niet tevreden? 15 dagen geld-terug garantie, geen vragen.
+            <p className="text-stone-900/60 leading-relaxed">
+              <strong className="text-stone-900/90">Eredivisie kijken via IPTV</strong> instellen duurt minder dan 5 minuten. Stuur een WhatsApp, ontvang je inloggegevens en kijk op elk apparaat — Smart TV, iPhone, Android, Fire Stick of laptop. Niet tevreden? 15 dagen geld-terug garantie, geen vragen.
             </p>
           </div>
         </div>
       </div>
 
       {/* Final CTA */}
-      <div className="border-t border-white/10">
+      <div className="border-t border-stone-900/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-20 py-20">
-          <div className="bg-gradient-to-br from-amber-500/10 to-yellow-600/5 border border-amber-500/20 rounded-[40px] p-10 lg:p-16 text-center">
-            <h2 className="text-4xl lg:text-6xl font-black tracking-tighter text-white mb-4">
+          <div className="bg-amber-500/8 border-[3px] border-amber-500/30 shadow-[8px_8px_0_0_rgba(245,158,11,0.2)] rounded-[40px] p-10 lg:p-16 text-center">
+            <h2 className="text-4xl lg:text-6xl font-black tracking-tighter text-stone-900 mb-4">
               Eredivisie. Elke speelronde.<br />
-              <span className="text-amber-400">Live via IPTV.</span>
+              <span className="text-amber-600">Live via IPTV.</span>
             </h2>
-            <p className="text-white/50 text-xl mb-10 max-w-lg mx-auto">
+            <p className="text-stone-900/60 text-xl mb-10 max-w-lg mx-auto">
               Stel je abonnement vandaag in. Je bent binnen 5 minuten klaar.
             </p>
             <a
@@ -438,12 +438,12 @@ export const EredivisieLiveKijken: React.FC = () => {
             onClick={trackWhatsAppConversion}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black rounded-full hover:scale-[1.02] transition-transform shadow-xl shadow-amber-500/20 text-lg"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-amber-500 text-black font-black rounded-full btn-brutal text-lg"
             >
               <WhatsAppIcon />
               WhatsApp Ons Nu
             </a>
-            <p className="mt-4 text-white/30 text-sm">15 dagen geld-terug garantie · Geen verborgen kosten · Vanaf €4,60/maand</p>
+            <p className="mt-4 text-stone-900/50 text-sm">15 dagen geld-terug garantie · Geen verborgen kosten · Vanaf €4,60/maand</p>
           </div>
         </div>
       </div>

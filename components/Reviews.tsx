@@ -20,7 +20,7 @@ const MarqueeRow: React.FC<{ images: number[]; reverse?: boolean }> = ({ images,
         {doubled.map((num, i) => (
           <div
             key={i}
-            className="w-64 flex-shrink-0 rounded-2xl overflow-hidden shadow-xl border border-white/10"
+            className="w-64 flex-shrink-0 rounded-2xl overflow-hidden shadow-[5px_5px_0_0_rgba(245,158,11,0.25)] border-2 border-amber-500/30"
           >
             <img
               src={`/assets/reviews/ready/${num}.png`}
@@ -50,10 +50,10 @@ export const Reviews: React.FC = () => {
       `}</style>
 
       <div className="text-center mb-16 space-y-4 px-6">
-        <div className="inline-block px-4 py-1.5 bg-amber-500/15 border border-amber-500/30 rounded-full text-xs font-bold uppercase tracking-widest text-amber-400">
-          23000+ tevreden klanten
+        <div className="badge-brutal">
+          23.000+ tevreden klanten
         </div>
-        <h2 className="text-4xl lg:text-5xl font-black tracking-tighter text-white">
+        <h2 className="text-4xl lg:text-5xl font-black tracking-tighter text-stone-900">
           #1 IPTV in Nederland volgens onze klanten
         </h2>
       </div>

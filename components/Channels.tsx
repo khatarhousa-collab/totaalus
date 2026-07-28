@@ -2413,7 +2413,7 @@ export const Channels: React.FC = () => {
       <div className="max-w-6xl mx-auto">
         <a
           href="/"
-          className="inline-flex items-center gap-2 text-sm font-bold text-white/60 hover:text-white transition-colors mb-12"
+          className="inline-flex items-center gap-2 text-sm font-bold text-stone-900/60 hover:text-stone-900 transition-colors mb-12"
         >
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -2422,11 +2422,11 @@ export const Channels: React.FC = () => {
         </a>
 
         <div className="text-center mb-12">
-          <h1 className="text-4xl lg:text-6xl font-black tracking-tighter text-white mb-4">
+          <h1 className="text-4xl lg:text-6xl font-black tracking-tighter text-stone-900 mb-4">
             Kanalen Lijst
           </h1>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            Bekijk ons uitgebreide aanbod van <span className="font-bold text-white">65.000+</span> kanalen uit meer dan 70 landen.
+          <p className="text-lg text-stone-900/70 max-w-2xl mx-auto">
+            Bekijk ons uitgebreide aanbod van <span className="font-bold text-stone-900">65.000+</span> kanalen uit meer dan 70 landen.
             Hieronder vind je een selectie van onze populairste kanalen.
           </p>
         </div>
@@ -2443,13 +2443,13 @@ export const Channels: React.FC = () => {
                 placeholder="Zoek kanalen..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-black/40 border border-amber-900/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all text-white placeholder-white/40"
+                className="w-full pl-12 pr-4 py-3 bg-white border-2 border-stone-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all text-stone-900 placeholder-stone-400"
               />
             </div>
             <select
               value={selectedCategory || ''}
               onChange={(e) => setSelectedCategory(e.target.value || null)}
-              className="px-4 py-3 bg-black/40 border border-amber-900/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all cursor-pointer min-w-[200px] text-white"
+              className="px-4 py-3 bg-white border-2 border-stone-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all cursor-pointer min-w-[200px] text-stone-900"
             >
               <option value="">Alle categorieën ({CHANNEL_CATEGORIES.length})</option>
               <optgroup label="📺 Categorieën">
@@ -2498,10 +2498,10 @@ export const Channels: React.FC = () => {
                   <button
                     key={cat.name}
                     onClick={() => setSelectedCategory(selectedCategory === cat.name ? null : cat.name)}
-                    className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
+                    className={`px-4 py-2 rounded-full text-sm font-semibold transition-all border-2 ${
                       selectedCategory === cat.name
-                        ? 'bg-gradient-to-r from-amber-500 to-yellow-600 text-black'
-                        : 'bg-amber-500/10 border border-amber-500/25 text-amber-400 hover:bg-amber-500/20'
+                        ? 'bg-amber-500 text-black border-black shadow-[3px_3px_0_0_#F59E0B]'
+                        : 'bg-amber-500/10 border-amber-500/25 text-amber-400 hover:bg-amber-500/20'
                     }`}
                   >
                     {cat.icon} {cat.name}
@@ -2516,19 +2516,19 @@ export const Channels: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           <div className="glass-card rounded-xl p-4 text-center">
             <div className="text-3xl font-black text-amber-400">65.000+</div>
-            <div className="text-sm text-white/50 font-medium">Kanalen</div>
+            <div className="text-sm text-stone-900/50 font-medium">Kanalen</div>
           </div>
           <div className="glass-card rounded-xl p-4 text-center">
             <div className="text-3xl font-black text-amber-400">70+</div>
-            <div className="text-sm text-white/50 font-medium">Landen</div>
+            <div className="text-sm text-stone-900/50 font-medium">Landen</div>
           </div>
           <div className="glass-card rounded-xl p-4 text-center">
             <div className="text-3xl font-black text-amber-400">4K</div>
-            <div className="text-sm text-white/50 font-medium">Ultra HD</div>
+            <div className="text-sm text-stone-900/50 font-medium">Ultra HD</div>
           </div>
           <div className="glass-card rounded-xl p-4 text-center">
             <div className="text-3xl font-black text-amber-400">99.9%</div>
-            <div className="text-sm text-white/50 font-medium">Uptime</div>
+            <div className="text-sm text-stone-900/50 font-medium">Uptime</div>
           </div>
         </div>
 
@@ -2546,16 +2546,16 @@ export const Channels: React.FC = () => {
                   className="w-full p-4 lg:p-6 flex items-center gap-2 sm:gap-3 hover:bg-amber-500/10 transition-colors text-left"
                 >
                   <span className="text-2xl sm:text-3xl flex-shrink-0">{category.icon}</span>
-                  <h2 className="text-base sm:text-xl lg:text-2xl font-extrabold text-white tracking-tight truncate">
+                  <h2 className="text-base sm:text-xl lg:text-2xl font-extrabold text-stone-900 tracking-tight truncate">
                     {category.name}
                   </h2>
                   <span className="ml-auto flex items-center gap-1 sm:gap-3 flex-shrink-0">
-                    <span className="bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs sm:text-sm font-bold px-2 sm:px-3 py-1 rounded-full whitespace-nowrap">
+                    <span className="bg-amber-500/15 border-2 border-amber-500/30 text-amber-700 text-xs sm:text-sm font-bold px-2 sm:px-3 py-1 rounded-full whitespace-nowrap">
                       {channelsToShow.length}
                       <span className="hidden sm:inline"> kanalen</span>
                     </span>
                     <svg
-                      className={`w-5 h-5 sm:w-6 sm:h-6 text-white/40 transition-transform duration-300 flex-shrink-0 ${isExpanded ? 'rotate-180' : ''}`}
+                      className={`w-5 h-5 sm:w-6 sm:h-6 text-stone-900/40 transition-transform duration-300 flex-shrink-0 ${isExpanded ? 'rotate-180' : ''}`}
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -2571,10 +2571,10 @@ export const Channels: React.FC = () => {
                       {channelsToShow.map((channel, idx) => (
                         <div
                           key={idx}
-                          className="flex items-center gap-2 px-3 py-2 bg-white/5 rounded-lg hover:bg-amber-500/10 transition-colors border border-white/5"
+                          className="flex items-center gap-2 px-3 py-2 bg-stone-900/[0.03] rounded-lg hover:bg-amber-500/10 transition-colors border border-stone-900/5"
                         >
                           <div className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0"></div>
-                          <span className="text-sm font-medium text-white/80 truncate">{channel}</span>
+                          <span className="text-sm font-medium text-stone-900/80 truncate">{channel}</span>
                         </div>
                       ))}
                     </div>
@@ -2602,7 +2602,7 @@ export const Channels: React.FC = () => {
                 document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
               }, 300);
             }}
-            className="inline-flex items-center gap-2 bg-white text-black font-bold px-8 py-4 rounded-full hover:bg-gray-100 transition-colors"
+            className="btn-brutal inline-flex items-center gap-2 bg-white text-black font-bold px-8 py-4 rounded-full hover:bg-gray-100"
           >
             Bekijk Pakketten
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">

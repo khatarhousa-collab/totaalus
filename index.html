@@ -20,41 +20,115 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Gasoek+One&display=swap" rel="stylesheet">
     <style>
       html {
         scroll-behavior: smooth;
       }
       body {
-        font-family: 'Figtree', sans-serif;
-        color: #000;
+        font-family: 'Geist', sans-serif;
+        color: #1a1310;
         overflow-x: hidden;
-        /* Replicating the vibe of the provided background image with a CSS mesh gradient */
-        background-color: #080808;
-        background-image:
-          radial-gradient(at 0% 0%, hsla(43,80%,45%,0.4) 0, transparent 50%),
-          radial-gradient(at 50% 0%, hsla(36,70%,30%,0.3) 0, transparent 50%),
-          radial-gradient(at 100% 0%, hsla(30,60%,25%,0.3) 0, transparent 50%),
-          radial-gradient(at 0% 50%, hsla(45,90%,50%,0.15) 0, transparent 50%),
-          radial-gradient(at 100% 50%, hsla(38,80%,35%,0.2) 0, transparent 50%),
-          radial-gradient(at 0% 100%, hsla(30,50%,20%,0.3) 0, transparent 50%),
-          radial-gradient(at 50% 100%, hsla(43,70%,40%,0.2) 0, transparent 50%),
-          radial-gradient(at 100% 100%, hsla(45,80%,45%,0.3) 0, transparent 50%);
-        background-attachment: fixed;
-        background-size: cover;
+        background-color: #faf6ed;
       }
-      .glass-card {
-        background: rgba(20, 18, 12, 0.75);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border: 1px solid rgba(212, 175, 55, 0.15);
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Gasoek One', 'Geist', sans-serif;
+        font-weight: 400 !important;
+        letter-spacing: normal !important;
+      }
+      .font-logo {
+        font-family: 'Gasoek One', 'Geist', sans-serif;
+        letter-spacing: normal;
+      }
+
+      /* --- Brutalist card system (hard offset shadow, no blur) --- */
+      /* .glass-card = light card (the default). .glass-card-dark stays a deliberate dark accent panel. */
+      .glass-card, .card-brutal {
+        background: #fffcf5;
+        border: 3px solid rgba(26,19,16,0.85);
+        border-radius: 24px;
+        box-shadow: 7px 7px 0 0 rgba(245,158,11, 0.55);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
       }
       .glass-card-dark {
-        background: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border: 1px solid rgba(212, 175, 55, 0.15);
+        background: #14100a;
+        border: 3px solid rgba(245,158,11, 0.4);
+        border-radius: 24px;
+        box-shadow: 7px 7px 0 0 rgba(245,158,11, 0.3);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        color: #fff;
       }
+      /* badge-brutal is dark-text-on-light by default; restore light text when nested in a dark accent panel */
+      .glass-card-dark .badge-brutal {
+        border-color: rgba(245,158,11, 0.6);
+        background: rgba(245,158,11, 0.12);
+        color: #E9C766;
+      }
+      .card-brutal-hover:hover {
+        transform: translate(-3px, -3px);
+        box-shadow: 10px 10px 0 0 rgba(245,158,11, 0.7);
+      }
+
+      /* --- Brutalist pill badge (Creem-style "eyebrow" label) --- */
+      .badge-brutal {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.4rem 1rem;
+        border-radius: 999px;
+        border: 2px solid rgba(180,120,10,0.5);
+        background: rgba(245,158,11, 0.12);
+        color: #8a5a09;
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        white-space: nowrap;
+      }
+
+      /* --- Brutalist button: solid border + hard offset shadow that "presses in" on hover --- */
+      .btn-brutal {
+        position: relative;
+        border: 3px solid #000;
+        border-radius: 16px;
+        box-shadow: 6px 6px 0 0 #F59E0B;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+      }
+      .btn-brutal:hover {
+        transform: translate(3px, 3px);
+        box-shadow: 3px 3px 0 0 #F59E0B;
+      }
+      .btn-brutal:active {
+        transform: translate(6px, 6px);
+        box-shadow: 0 0 0 0 #F59E0B;
+      }
+      .btn-brutal-outline {
+        position: relative;
+        border: 3px solid rgba(245,158,11, 0.7);
+        border-radius: 16px;
+        box-shadow: 6px 6px 0 0 rgba(245,158,11, 0.5);
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+      }
+      .btn-brutal-outline:hover {
+        transform: translate(3px, 3px);
+        box-shadow: 3px 3px 0 0 rgba(245,158,11, 0.5);
+      }
+
+      /* --- Wavy section divider, Creem-style --- */
+      .wave-divider {
+        display: block;
+        width: 100%;
+        height: 60px;
+        line-height: 0;
+      }
+      .wave-divider svg {
+        width: 100%;
+        height: 100%;
+      }
+
       .text-italics {
         font-style: italic;
         font-weight: 300;
@@ -87,7 +161,7 @@
         top: 0;
         bottom: 0;
         width: 1px;
-        background-color: rgba(255,255,255,0.1);
+        background-color: rgba(26,19,16,0.08);
         z-index: -1;
       }
       .grid-line-left { left: 5%; }

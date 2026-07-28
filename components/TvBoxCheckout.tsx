@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { trackWhatsAppConversion } from './analytics';
+import { Logo } from './Logo';
 
 const whatsappNumber = '447449708976';
 
@@ -198,12 +199,7 @@ export const TvBoxCheckout: React.FC<Props> = ({ onClose }) => {
       {/* Top bar */}
       <div className="border-b border-gray-200 bg-white sticky top-0 z-10">
         <div className="max-w-[1000px] mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
-          <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <div className="w-7 h-7 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-sm flex items-center justify-center">
-              <div className="w-3.5 h-3.5 bg-white rotate-45" />
-            </div>
-            <span className="text-xl font-black tracking-tighter text-gray-900">IPTVTotaal</span>
-          </a>
+          <Logo size="sm" />
           <button
             onClick={onClose}
             aria-label="Sluiten"
@@ -239,7 +235,7 @@ export const TvBoxCheckout: React.FC<Props> = ({ onClose }) => {
       </div>
 
       {/* Full-bleed split: white form half + gray summary half, aligned to viewport center */}
-      <div className="w-full lg:min-h-[calc(100dvh-65px)] lg:bg-[linear-gradient(to_right,#ffffff_50%,#f9fafb_50%)]">
+      <div className="w-full lg:min-h-[calc(100dvh-65px)] bg-white">
       <div className="max-w-[1000px] mx-auto lg:grid lg:grid-cols-2">
         {/* LEFT — form */}
         <div className="px-5 sm:px-8 py-8 lg:py-12 lg:border-r lg:border-gray-200">

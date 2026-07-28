@@ -71,10 +71,10 @@ export const Pricing: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 space-y-6">
-          <div className="inline-block px-4 py-1.5 bg-amber-500/15 border border-amber-500/30 rounded-full text-xs font-bold uppercase tracking-widest text-amber-400">
+          <div className="badge-brutal">
             PRIJZEN
           </div>
-          <h2 className="text-5xl lg:text-7xl font-black tracking-tighter text-white">
+          <h2 className="text-5xl lg:text-7xl font-black tracking-tighter text-stone-900">
             Eén abonnement, <span className="italic">eindeloze</span> mogelijkheden
           </h2>
         </div>
@@ -84,7 +84,7 @@ export const Pricing: React.FC = () => {
           <div className="glass-card rounded-3xl p-8 text-center shadow-2xl border-2 border-amber-500/50">
             <div className="flex items-center justify-center gap-2 mb-4">
               <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></div>
-              <p className="text-sm font-black uppercase tracking-widest text-white">
+              <p className="text-sm font-black uppercase tracking-widest text-stone-900">
                 Beperkte aanbieding eindigt om middernacht
               </p>
             </div>
@@ -97,16 +97,16 @@ export const Pricing: React.FC = () => {
                 <React.Fragment key={item.label}>
                   {i > 0 && (
                     <div className="flex items-center pb-8">
-                      <span className="text-3xl lg:text-4xl font-black text-white">:</span>
+                      <span className="text-3xl lg:text-4xl font-black text-stone-900">:</span>
                     </div>
                   )}
                   <div className="flex flex-col items-center">
-                    <div className="bg-black backdrop-blur-sm rounded-2xl px-6 py-4 min-w-[100px] shadow-xl">
+                    <div className="bg-black rounded-2xl px-6 py-4 min-w-[100px] border-2 border-amber-500/40 shadow-[4px_4px_0_0_rgba(245,158,11,0.3)]">
                       <span className="text-4xl lg:text-5xl font-black text-white tabular-nums">
                         {String(item.value).padStart(2, '0')}
                       </span>
                     </div>
-                    <span className="text-xs font-bold uppercase tracking-widest text-white mt-3">{item.label}</span>
+                    <span className="text-xs font-bold uppercase tracking-widest text-stone-900 mt-3">{item.label}</span>
                   </div>
                 </React.Fragment>
               ))}
@@ -124,9 +124,9 @@ export const Pricing: React.FC = () => {
                 className={`relative flex-1 flex flex-col items-center justify-center gap-0.5 px-4 py-4 rounded-2xl font-bold text-sm transition-all duration-300 ${
                   selectedPeriod === plan.id
                     ? plan.isBestDeal
-                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/40'
+                      ? 'bg-purple-600 text-white shadow-lg shadow-purple-500/40'
                       : 'bg-purple-600 text-white shadow-lg shadow-purple-500/30'
-                    : 'text-white/70 hover:text-white hover:bg-white/10'
+                    : 'text-stone-900/60 hover:text-stone-900 hover:bg-stone-900/5'
                 }`}
               >
                 {plan.isBestDeal && (
@@ -137,7 +137,7 @@ export const Pricing: React.FC = () => {
                 <span>{plan.label}</span>
                 {plan.subtitle && (
                   <span className={`text-[10px] font-bold uppercase tracking-wider ${
-                    selectedPeriod === plan.id ? 'text-yellow-300' : 'text-amber-400/70'
+                    selectedPeriod === plan.id ? 'text-yellow-300' : 'text-amber-600/80'
                   }`}>
                     {plan.subtitle}
                   </span>
@@ -156,8 +156,8 @@ export const Pricing: React.FC = () => {
                 onClick={() => setSelectedDevices(devices)}
                 className={`flex items-center justify-center gap-2 px-6 py-4 rounded-2xl font-bold text-sm transition-all duration-300 ${
                   selectedDevices === devices
-                    ? 'bg-gradient-to-r from-amber-500 to-yellow-600 text-black shadow-lg shadow-amber-500/20'
-                    : 'text-white/70 hover:text-white hover:bg-white/10'
+                    ? 'bg-amber-500 text-black shadow-lg shadow-amber-500/20'
+                    : 'text-stone-900/60 hover:text-stone-900 hover:bg-stone-900/5'
                 }`}
               >
                 <DeviceIcon />
@@ -170,21 +170,19 @@ export const Pricing: React.FC = () => {
         {/* Pricing Cards */}
         <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Premium VIP Card */}
-          <div className={`relative rounded-[32px] overflow-hidden flex flex-col group hover:scale-[1.02] transition-all duration-500 ${
+          <div className={`relative rounded-[32px] overflow-hidden flex flex-col group hover:-translate-y-1 transition-all duration-500 border-[3px] ${
             isBestDeal
-              ? 'ring-2 ring-amber-500/60 shadow-[0_0_60px_rgba(168,85,247,0.4)]'
-              : 'ring-1 ring-purple-500/30 shadow-[0_0_40px_rgba(168,85,247,0.25)]'
+              ? 'border-amber-500/70 shadow-[9px_9px_0_0_rgba(245,158,11,0.35)]'
+              : 'border-purple-500/40 shadow-[7px_7px_0_0_rgba(168,85,247,0.25)]'
           }`}
             style={{
-              background: isBestDeal
-                ? 'linear-gradient(135deg, rgba(88,28,135,0.6) 0%, rgba(0,0,0,0.95) 40%, rgba(59,7,100,0.5) 100%)'
-                : 'linear-gradient(135deg, rgba(17,24,39,0.95) 0%, rgba(0,0,0,0.98) 50%, rgba(59,7,100,0.3) 100%)',
+              background: isBestDeal ? '#170a24' : '#0a0a0f',
             }}
           >
             {/* Beste Deal Banner */}
             {isBestDeal && (
               <div className="flex justify-center pt-4">
-                <div className="bg-gradient-to-r from-amber-400 to-yellow-500 text-black px-6 py-1.5 rounded-full text-xs font-black uppercase tracking-widest shadow-lg">
+                <div className="bg-amber-500 text-black px-6 py-1.5 rounded-full text-xs font-black uppercase tracking-widest border-2 border-black shadow-[3px_3px_0_0_rgba(0,0,0,0.5)] shadow-lg">
                   Beste Deal
                 </div>
               </div>
@@ -192,7 +190,7 @@ export const Pricing: React.FC = () => {
 
             {/* Premium Badge */}
             <div className={`absolute ${isBestDeal ? 'top-14' : 'top-6'} left-6`}>
-              <div className="bg-gradient-to-r from-amber-500 to-yellow-600 text-black px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider flex items-center gap-1.5">
+              <div className="bg-amber-500 text-black px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider border-2 border-black shadow-[3px_3px_0_0_rgba(0,0,0,0.5)] flex items-center gap-1.5">
                 <StarIcon />
                 Premium VIP
                 <span className="w-1.5 h-1.5 bg-yellow-300 rounded-full animate-pulse"></span>
@@ -209,9 +207,7 @@ export const Pricing: React.FC = () => {
 
               <div className="mb-10">
                 <div className="flex items-baseline gap-1">
-                  <span className="text-6xl font-black tracking-tighter leading-none transition-all duration-300"
-                    style={{ background: 'linear-gradient(135deg, #f59e0b, #eab308, #f59e0b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
-                  >
+                  <span className="text-6xl font-black tracking-tighter leading-none text-amber-500 transition-all duration-300">
                     {currentDevicePricing.premiumPrice}
                   </span>
                 </div>
@@ -225,7 +221,7 @@ export const Pricing: React.FC = () => {
                 <div className="text-xs font-black uppercase tracking-widest mb-6 text-amber-500/50">Wat is inbegrepen</div>
                 {PREMIUM_FEATURES.map((feature, i) => (
                   <div key={i} className="flex items-center gap-3 text-sm font-bold text-white/90">
-                    <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 bg-gradient-to-r from-amber-500 to-yellow-600">
+                    <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 bg-amber-500">
                       <svg className="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
@@ -239,8 +235,7 @@ export const Pricing: React.FC = () => {
                 href={getWhatsAppUrl('premium')}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-5 text-lg font-black rounded-2xl transition-all block text-center bg-gradient-to-r from-amber-500 to-yellow-600 text-black hover:from-amber-600 hover:to-yellow-700 active:scale-95"
-                style={{ boxShadow: '0 0 30px rgba(245,158,11,0.3)' }}
+                className="btn-brutal w-full py-5 text-lg font-black block text-center bg-amber-500 text-black hover:bg-amber-700"
               >
                 Word VIP Nu
               </a>
@@ -248,18 +243,14 @@ export const Pricing: React.FC = () => {
           </div>
 
           {/* Basis Card */}
-          <div className={`relative rounded-[32px] overflow-hidden shadow-2xl flex flex-col group hover:scale-[1.02] transition-all duration-500 ${
-            isBestDeal ? 'ring-2 ring-purple-500/50' : ''
+          <div className={`relative rounded-[32px] overflow-hidden flex flex-col group hover:-translate-y-1 transition-all duration-500 border-[3px] border-blue-500/50 shadow-[7px_7px_0_0_rgba(59,130,246,0.25)] bg-white ${
+            isBestDeal ? 'border-purple-500/50' : ''
           }`}
-            style={{
-              background: 'linear-gradient(135deg, rgba(59,130,246,0.15) 0%, rgba(6,182,212,0.10) 50%, rgba(59,130,246,0.05) 100%)',
-              border: '1px solid rgba(59,130,246,0.25)',
-            }}
           >
             {/* Beste Deal Banner */}
             {isBestDeal && (
               <div className="flex justify-center pt-4">
-                <div className="bg-gradient-to-r from-amber-400 to-yellow-500 text-black px-6 py-1.5 rounded-full text-xs font-black uppercase tracking-widest shadow-lg">
+                <div className="bg-amber-500 text-black px-6 py-1.5 rounded-full text-xs font-black uppercase tracking-widest border-2 border-black shadow-[3px_3px_0_0_rgba(0,0,0,0.5)] shadow-lg">
                   Beste Deal
                 </div>
               </div>
@@ -267,36 +258,36 @@ export const Pricing: React.FC = () => {
 
             {/* Badge */}
             <div className={`absolute ${isBestDeal ? 'top-14' : 'top-6'} left-6`}>
-              <div className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider flex items-center gap-1.5">
+              <div className="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider border-2 border-black shadow-[3px_3px_0_0_rgba(0,0,0,0.5)] flex items-center gap-1.5">
                 Basis
               </div>
             </div>
 
             <div className={`p-10 flex-1 flex flex-col ${isBestDeal ? 'pt-20' : 'pt-16'}`}>
               <div className="mb-8">
-                <p className="text-lg lg:text-xl font-black uppercase tracking-widest mb-2 text-blue-400/80">
+                <p className="text-lg lg:text-xl font-black uppercase tracking-widest mb-2 text-blue-600/80">
                   {currentPlan.label}
                 </p>
-                <h3 className="text-2xl lg:text-3xl font-black tracking-tighter text-white">Basis Pakket</h3>
+                <h3 className="text-2xl lg:text-3xl font-black tracking-tighter text-stone-900">Basis Pakket</h3>
               </div>
 
               <div className="mb-10">
                 <div className="flex items-baseline gap-1">
-                  <span className="text-6xl font-black tracking-tighter leading-none text-blue-400 transition-all duration-300">
+                  <span className="text-6xl font-black tracking-tighter leading-none text-blue-600 transition-all duration-300">
                     {currentDevicePricing.basisPrice}
                   </span>
                 </div>
-                <div className="text-sm mt-2 font-medium flex items-center gap-2 text-blue-300/60">
+                <div className="text-sm mt-2 font-medium flex items-center gap-2 text-blue-600/60">
                   <DeviceIcon />
                   {selectedDevices} {selectedDevices === 1 ? 'apparaat' : 'apparaten'} inbegrepen
                 </div>
               </div>
 
               <div className="space-y-3 mb-10 flex-1">
-                <div className="text-xs font-black uppercase tracking-widest mb-6 text-blue-400/50">Wat is inbegrepen</div>
+                <div className="text-xs font-black uppercase tracking-widest mb-6 text-blue-600/50">Wat is inbegrepen</div>
                 {BASIS_FEATURES.map((feature, i) => (
-                  <div key={i} className="flex items-center gap-3 text-sm font-bold text-white/90">
-                    <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 bg-gradient-to-r from-blue-500 to-cyan-500">
+                  <div key={i} className="flex items-center gap-3 text-sm font-bold text-stone-900/80">
+                    <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 bg-blue-500">
                       <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
@@ -310,7 +301,7 @@ export const Pricing: React.FC = () => {
                 href={getWhatsAppUrl('basis')}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-5 text-lg font-black rounded-2xl transition-all shadow-xl block text-center bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600 active:scale-95"
+                className="btn-brutal w-full py-5 text-lg font-black block text-center bg-blue-500 text-white hover:bg-blue-600"
               >
                 Bestel Nu
               </a>
@@ -320,13 +311,13 @@ export const Pricing: React.FC = () => {
 
         {/* Bottom info */}
         <div className="mt-16 text-center space-y-4">
-          <p className="text-xl font-black text-white">Pauzeer of annuleer op elk moment</p>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-12 text-sm font-bold text-white/60 uppercase tracking-widest">
+          <p className="text-xl font-black text-stone-900">Pauzeer of annuleer op elk moment</p>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-12 text-sm font-bold text-stone-900/60 uppercase tracking-widest">
             <span className="flex items-center gap-2">
-              <SmallPauseIcon /> Pauzeer op elk moment
+              <SmallPauseIcon /> Flexibel opzegbaar
             </span>
             <span className="flex items-center gap-2">
-              <SmallCheckIcon /> Probeer het 15 dagen
+              <SmallCheckIcon /> 15 dagen geld-terug garantie
             </span>
           </div>
         </div>

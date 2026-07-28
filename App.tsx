@@ -16,12 +16,8 @@ import { Channels } from './components/Channels';
 import { ResellerPacks } from './components/ResellerPacks';
 import { AnnouncementBanner } from './components/AnnouncementBanner';
 import { OverOns } from './components/OverOns';
-import { Blog } from './components/Blog';
-import { WK2026 } from './components/WK2026';
 import { NederlandOezbekistanLive } from './components/NederlandOezbekistanLive';
 import { EredivisieLiveKijken } from './components/EredivisieLiveKijken';
-import { WK2026Wedstrijden } from './components/WK2026Wedstrijden';
-import { WK2026MatchDetail } from './components/WK2026MatchDetail';
 import { TvBox } from './components/TvBox';
 
 const ScrollToTop: React.FC = () => {
@@ -96,18 +92,13 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/iptvtotaal" element={<HomePage />} />
-        <Route path="/blog" element={<main><Blog /></main>} />
-        <Route path="/blog/:slug" element={<main><Blog /></main>} />
         <Route path="/kanalen" element={<main><Channels /></main>} />
         <Route path="/reseller" element={<main><ResellerPacks /></main>} />
         <Route path="/over-ons" element={<main><OverOns /></main>} />
         <Route path="/algemene-voorwaarden" element={<main><AlgemeneVoorwaarden /></main>} />
         <Route path="/privacybeleid" element={<main><Privacybeleid /></main>} />
-        <Route path="/wereldkampioenschap-voetbal-2026" element={<main><WK2026 /></main>} />
         <Route path="/nederland-oezbekistan-live" element={<main><NederlandOezbekistanLive /></main>} />
         <Route path="/eredivisie-live-kijken" element={<main><EredivisieLiveKijken /></main>} />
-        <Route path="/wk-2026-live-kijken" element={<main><WK2026Wedstrijden /></main>} />
-        <Route path="/wk-2026-live-kijken/:matchSlug" element={<main><WK2026MatchDetail /></main>} />
         <Route path="/tv-box" element={<main><TvBox /></main>} />
       </Routes>
 

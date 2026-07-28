@@ -4,13 +4,13 @@ import { SERVICES, TOP_FILMS, CHANNEL_LOGOS, TOP_TVSHOWS_NL, TOP_TVSHOWS_INTL } 
 
 const MoviePoster: React.FC<{ title: string; posterUrl: string }> = ({ title, posterUrl }) => (
   <div className="flex-shrink-0 group cursor-pointer">
-    <div className="w-[180px] lg:w-[220px] aspect-[2/3] bg-white/10 rounded-3xl overflow-hidden shadow-2xl group-hover:shadow-amber-500/30 transition-all duration-500 transform group-hover:-translate-y-2 relative border border-white/20">
+    <div className="w-[180px] lg:w-[220px] aspect-[2/3] bg-stone-900/5 rounded-3xl overflow-hidden shadow-lg group-hover:shadow-amber-500/30 transition-all duration-500 transform group-hover:-translate-y-2 relative border border-stone-900/10">
       <img 
         src={posterUrl} 
         alt={title} 
         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
         <span className="text-white font-black text-sm leading-tight">{title}</span>
       </div>
     </div>
@@ -19,7 +19,7 @@ const MoviePoster: React.FC<{ title: string; posterUrl: string }> = ({ title, po
 
 const ChannelLogo: React.FC<{ name: string; logo: string }> = ({ name, logo }) => (
   <div
-    className="flex-shrink-0 px-6 py-4 rounded-2xl flex items-center justify-center h-20 min-w-[160px] opacity-80 hover:opacity-100 transition-all duration-500 shadow-lg hover:shadow-xl group overflow-hidden border border-white/20 hover:border-white/40 bg-white/60"
+    className="flex-shrink-0 px-6 py-4 rounded-2xl flex items-center justify-center h-20 min-w-[160px] opacity-90 hover:opacity-100 transition-all duration-500 shadow-md hover:shadow-lg group overflow-hidden border border-stone-900/10 hover:border-amber-500/40 bg-white"
   >
     <img
       src={logo}
@@ -44,9 +44,9 @@ const SPORTS = [
 
 const SportCard: React.FC<{ name: string; subtitle: string; icon: string; image: string }> = ({ name, subtitle, icon, image }) => (
   <div className="flex-shrink-0 group cursor-pointer">
-    <div className="w-[160px] h-[284px] lg:w-[225px] lg:h-[400px] rounded-3xl overflow-hidden shadow-2xl group-hover:shadow-amber-500/20 transition-all duration-500 transform group-hover:-translate-y-2 border border-white/20 relative">
+    <div className="w-[160px] h-[284px] lg:w-[225px] lg:h-[400px] rounded-3xl overflow-hidden shadow-lg group-hover:shadow-amber-500/20 transition-all duration-500 transform group-hover:-translate-y-2 border border-stone-900/10 relative">
       <img src={image} alt={name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+      <div className="absolute inset-0 bg-black/50" />
       <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
         <span className="text-2xl lg:text-3xl">{icon}</span>
         <div className="text-white font-black text-sm lg:text-base tracking-tight leading-tight mt-1">{name}</div>
@@ -63,8 +63,8 @@ export const FilmsAndShows: React.FC = () => {
         {/* Channel Marquee */}
         <div className="space-y-6 mb-20">
            <div className="px-2 text-center lg:text-left">
-              <div className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Live TV</div>
-              <h3 className="text-2xl lg:text-3xl font-black tracking-tighter text-white">Al je favoriete zenders</h3>
+              <div className="badge-brutal mb-2">Live TV</div>
+              <h3 className="text-2xl lg:text-3xl font-black tracking-tighter text-stone-900">Al je favoriete zenders</h3>
            </div>
            <div className="marquee-container -mx-6 overflow-hidden">
              <div className="marquee-content py-4" style={{ animationDuration: '40s', animationDirection: 'reverse' }}>
@@ -83,8 +83,8 @@ export const FilmsAndShows: React.FC = () => {
         {/* Sports Marquee Section */}
         <div className="space-y-8 mb-20">
           <div className="text-center px-2">
-            <div className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Van Eredivisie tot Formule 1</div>
-            <h3 className="text-2xl lg:text-3xl font-black tracking-tighter text-white">Alle Sporten Live in 4K</h3>
+            <div className="badge-brutal mb-2">Van Eredivisie tot Formule 1</div>
+            <h3 className="text-2xl lg:text-3xl font-black tracking-tighter text-stone-900">Alle Sporten Live in 4K</h3>
           </div>
 
           <div className="marquee-container -mx-6 overflow-hidden">
@@ -105,10 +105,10 @@ export const FilmsAndShows: React.FC = () => {
         <div className="space-y-8 mb-20">
           <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end px-2 text-center lg:text-left">
             <div>
-              <div className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Nu Trending</div>
-              <h3 className="text-2xl lg:text-3xl font-black tracking-tighter text-white">Top Films in Nederland</h3>
+              <div className="badge-brutal mb-2">Nu Trending</div>
+              <h3 className="text-2xl lg:text-3xl font-black tracking-tighter text-stone-900">Top Films in Nederland</h3>
             </div>
-            <div className="hidden md:block text-sm font-bold text-white/50 uppercase tracking-widest mt-4 lg:mt-0">
+            <div className="hidden md:block text-sm font-bold text-stone-900/50 uppercase tracking-widest mt-4 lg:mt-0">
               Direct beschikbaar in 4K
             </div>
           </div>
@@ -131,10 +131,10 @@ export const FilmsAndShows: React.FC = () => {
         <div className="space-y-8 mb-20">
           <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end px-2 text-center lg:text-left">
             <div>
-              <div className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Nederlandse Series</div>
-              <h3 className="text-2xl lg:text-3xl font-black tracking-tighter text-white">Top TV Shows in Nederland</h3>
+              <div className="badge-brutal mb-2">Nederlandse Series</div>
+              <h3 className="text-2xl lg:text-3xl font-black tracking-tighter text-stone-900">Top TV Shows in Nederland</h3>
             </div>
-            <div className="hidden md:block text-sm font-bold text-white/50 uppercase tracking-widest mt-4 lg:mt-0">
+            <div className="hidden md:block text-sm font-bold text-stone-900/50 uppercase tracking-widest mt-4 lg:mt-0">
               Exclusieve content
             </div>
           </div>
@@ -157,10 +157,10 @@ export const FilmsAndShows: React.FC = () => {
         <div className="space-y-8">
           <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end px-2 text-center lg:text-left">
             <div>
-              <div className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Internationaal Trending</div>
-              <h3 className="text-2xl lg:text-3xl font-black tracking-tighter text-white">Top Internationale Series</h3>
+              <div className="badge-brutal mb-2">Internationaal Trending</div>
+              <h3 className="text-2xl lg:text-3xl font-black tracking-tighter text-stone-900">Top Internationale Series</h3>
             </div>
-            <div className="hidden md:block text-sm font-bold text-white/50 uppercase tracking-widest mt-4 lg:mt-0">
+            <div className="hidden md:block text-sm font-bold text-stone-900/50 uppercase tracking-widest mt-4 lg:mt-0">
               Wereldwijd populair
             </div>
           </div>

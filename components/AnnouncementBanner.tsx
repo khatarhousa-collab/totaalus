@@ -7,7 +7,7 @@ interface AnnouncementBannerProps {
 
 export const AnnouncementBanner: React.FC<AnnouncementBannerProps> = ({ onClose }) => {
   return (
-    <div className="fixed top-0 left-0 right-0 z-[60] bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-500 text-black py-2.5 px-4">
+    <div className="fixed top-0 left-0 right-0 z-[60] bg-amber-500 text-black py-2.5 px-4 border-b-[3px] border-black">
       <div className="max-w-7xl mx-auto flex items-center justify-center gap-3 text-sm font-bold">
         <span className="inline-flex items-center gap-2">
           <span className="hidden sm:inline">🎉</span>

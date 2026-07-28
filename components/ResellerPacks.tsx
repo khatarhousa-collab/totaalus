@@ -47,20 +47,18 @@ export const ResellerPacks: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-neutral-950 to-black pt-32 pb-20">
+    <div className="min-h-screen pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-20">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-black tracking-tighter mb-6 text-white">
+          <h1 className="text-5xl md:text-6xl font-black tracking-tighter mb-6 text-stone-900">
             Start Vandaag Uw Eigen Bedrijf
           </h1>
-          <p className="text-xl text-white/60 max-w-2xl mx-auto">
+          <p className="text-xl text-stone-900/70 max-w-2xl mx-auto">
             Word een IPTV reseller met onze complete reseller pakketten
           </p>
-          <div className="inline-block mt-6 px-6 py-3 bg-amber-500/10 border border-amber-500/30 rounded-full">
-            <p className="text-lg font-semibold text-amber-400">
-              1 CREDIT = 1 MAAND
-            </p>
+          <div className="inline-block mt-6 badge-brutal !text-lg !px-6 !py-3">
+            1 CREDIT = 1 MAAND
           </div>
         </div>
 
@@ -69,15 +67,15 @@ export const ResellerPacks: React.FC = () => {
           {resellerPacks.map((pack) => (
             <div
               key={pack.credits}
-              className={`relative rounded-3xl p-8 transition-all duration-300 hover:scale-105 ${
+              className={`relative rounded-3xl p-8 transition-all duration-300 hover:-translate-y-1 border-[3px] ${
                 pack.popular
-                  ? 'bg-gradient-to-br from-amber-900/40 to-neutral-900 text-white shadow-2xl border-2 border-amber-500/30'
-                  : 'bg-neutral-900/80 border-2 border-amber-900/20 shadow-lg text-white'
+                  ? 'bg-neutral-900 text-white shadow-[8px_8px_0_0_rgba(245,158,11,0.35)] border-amber-500/60'
+                  : 'bg-neutral-900/80 border-amber-900/30 shadow-[8px_8px_0_0_rgba(245,158,11,0.15)] text-white'
               }`}
             >
               {pack.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-amber-400 to-yellow-500 text-black px-6 py-2 rounded-full text-sm font-bold shadow-lg shadow-amber-500/30">
+                  <span className="bg-amber-500 text-black px-6 py-2 rounded-full text-sm font-bold border-2 border-black shadow-[3px_3px_0_0_rgba(0,0,0,0.5)]">
                     BESTE WAARDE
                   </span>
                 </div>
@@ -100,10 +98,10 @@ export const ResellerPacks: React.FC = () => {
 
               <button
                 onClick={() => handleSubscribe(pack.credits)}
-                className={`w-full py-4 rounded-full font-bold text-lg transition-all mb-6 ${
+                className={`btn-brutal w-full py-4 font-bold text-lg mb-6 ${
                   pack.popular
-                    ? 'bg-gradient-to-r from-amber-400 to-yellow-500 text-black hover:from-amber-500 hover:to-yellow-600'
-                    : 'bg-white/10 text-white border border-amber-900/30 hover:bg-white/15'
+                    ? 'bg-amber-500 text-black hover:bg-amber-600'
+                    : 'bg-white/10 text-white hover:bg-white/15'
                 }`}
               >
                 Abonneer Nu
@@ -138,11 +136,11 @@ export const ResellerPacks: React.FC = () => {
         </div>
 
         {/* Benefits Section */}
-        <div className="bg-gradient-to-br from-amber-900/20 to-neutral-900 rounded-3xl p-12 text-center border border-amber-900/20">
+        <div className="bg-neutral-900 rounded-3xl p-12 text-center border-[3px] border-amber-500/30 shadow-[8px_8px_0_0_rgba(245,158,11,0.15)]">
           <h2 className="text-3xl font-black mb-6 text-white">Waarom Reseller Worden?</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div>
-              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-2xl flex items-center justify-center transform rotate-3 shadow-lg">
+              <div className="w-16 h-16 mx-auto mb-4 bg-amber-500 rounded-2xl flex items-center justify-center transform rotate-3 shadow-lg border-2 border-black">
                 <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
@@ -151,7 +149,7 @@ export const ResellerPacks: React.FC = () => {
               <p className="text-white/60">Stel uw eigen prijzen in en maximaliseer uw inkomsten</p>
             </div>
             <div>
-              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-amber-500 to-amber-700 rounded-2xl flex items-center justify-center transform -rotate-3 shadow-lg">
+              <div className="w-16 h-16 mx-auto mb-4 bg-amber-600 rounded-2xl flex items-center justify-center transform -rotate-3 shadow-lg border-2 border-black">
                 <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
                 </svg>
@@ -160,7 +158,7 @@ export const ResellerPacks: React.FC = () => {
               <p className="text-white/60">Beheer alles vanuit uw reseller paneel</p>
             </div>
             <div>
-              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-2xl flex items-center justify-center transform rotate-2 shadow-lg">
+              <div className="w-16 h-16 mx-auto mb-4 bg-amber-500 rounded-2xl flex items-center justify-center transform rotate-2 shadow-lg border-2 border-black">
                 <svg className="w-10 h-10 text-black" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M18.6 6.62c-1.44 0-2.8.56-3.77 1.53L12 10.66 10.48 12h.01L7.8 14.39c-.64.64-1.49.99-2.4.99-1.87 0-3.39-1.51-3.39-3.38S3.53 8.62 5.4 8.62c.91 0 1.76.35 2.44 1.03l1.13 1 1.51-1.34L9.22 8.2C8.2 7.18 6.84 6.62 5.4 6.62 2.42 6.62 0 9.04 0 12s2.42 5.38 5.4 5.38c1.44 0 2.8-.56 3.77-1.53l2.83-2.5.01.01L13.52 12h-.01l2.69-2.39c.64-.64 1.49-.99 2.4-.99 1.87 0 3.39 1.51 3.39 3.38s-1.52 3.38-3.39 3.38c-.9 0-1.76-.35-2.44-1.03l-1.14-1.01-1.51 1.34 1.27 1.12c1.02 1.01 2.37 1.57 3.82 1.57 2.98 0 5.4-2.41 5.4-5.38s-2.42-5.37-5.4-5.37z"/>
                 </svg>
@@ -173,7 +171,7 @@ export const ResellerPacks: React.FC = () => {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <p className="text-white/60 mb-6">
+          <p className="text-stone-900/70 mb-6">
             Vragen over onze reseller pakketten?
           </p>
           <a
@@ -181,7 +179,7 @@ export const ResellerPacks: React.FC = () => {
             onClick={trackWhatsAppConversion}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-green-500 text-white rounded-full font-bold text-lg hover:bg-green-600 transition-all shadow-lg"
+            className="btn-brutal inline-flex items-center gap-2 px-8 py-4 bg-green-500 text-white font-bold text-lg hover:bg-green-600"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>

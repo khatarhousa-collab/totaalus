@@ -1,20 +1,21 @@
 
 import React, { useEffect } from 'react';
+import { trackWhatsAppConversion } from './analytics';
 
 const StatCard: React.FC<{ number: string; label: string }> = ({ number, label }) => (
-  <div className="p-8 bg-amber-500/10 border border-amber-500/20 rounded-3xl text-center hover:bg-amber-500/20 transition-colors">
-    <div className="text-5xl font-black text-amber-400 tracking-tighter mb-2">{number}</div>
-    <div className="text-sm font-bold text-white/60 uppercase tracking-widest">{label}</div>
+  <div className="p-8 bg-amber-500/10 border-[3px] border-amber-500/40 rounded-3xl text-center hover:bg-amber-500/20 shadow-[6px_6px_0_0_rgba(245,158,11,0.2)] transition-colors">
+    <div className="text-5xl font-black text-amber-600 tracking-tighter mb-2">{number}</div>
+    <div className="text-sm font-bold text-stone-900/60 uppercase tracking-widest">{label}</div>
   </div>
 );
 
 const ValueCard: React.FC<{ icon: React.ReactNode; title: string; description: string }> = ({ icon, title, description }) => (
-  <div className="p-8 bg-neutral-900 border border-amber-900/20 rounded-3xl hover:border-amber-500/40 transition-colors">
-    <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-amber-500/20">
+  <div className="p-8 glass-card card-brutal-hover rounded-3xl hover:border-amber-500/60 transition-all">
+    <div className="w-12 h-12 bg-amber-500 rounded-2xl border-2 border-black flex items-center justify-center mb-6">
       {icon}
     </div>
-    <h3 className="text-xl font-black tracking-tight text-white mb-3">{title}</h3>
-    <p className="text-white/60 leading-relaxed">{description}</p>
+    <h3 className="text-xl font-black tracking-tight text-stone-900 mb-3">{title}</h3>
+    <p className="text-stone-900/60 leading-relaxed">{description}</p>
   </div>
 );
 
@@ -34,13 +35,13 @@ export const OverOns: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-white pt-32 pb-20">
+    <div className="min-h-screen text-stone-900 pt-32 pb-20">
 
       {/* Back link */}
       <div className="max-w-7xl mx-auto px-6 lg:px-20">
         <a
           href="/"
-          className="inline-flex items-center gap-2 text-sm font-bold text-white/40 hover:text-amber-400 transition-colors mb-16"
+          className="inline-flex items-center gap-2 text-sm font-bold text-stone-900/50 hover:text-amber-600 transition-colors mb-16"
         >
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -52,16 +53,16 @@ export const OverOns: React.FC = () => {
       {/* Hero */}
       <div className="max-w-7xl mx-auto px-6 lg:px-20">
         <div className="max-w-4xl">
-          <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-amber-500/10 border border-amber-500/30 mb-8">
+          <div className="badge-brutal mb-8 !text-sm">
             <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></div>
-            <span className="text-sm font-bold text-amber-400 uppercase tracking-widest">Over IPTVTotaal</span>
+            Over IPTVTotaal
           </div>
           <h1 className="text-6xl lg:text-8xl font-black tracking-tighter leading-[0.95] mb-8">
             Nederland's <br />
-            <span className="text-amber-400">meest betrouwbare</span><br />
+            <span className="text-amber-600">meest betrouwbare</span><br />
             IPTV-aanbieder
           </h1>
-          <p className="text-xl text-white/60 leading-relaxed max-w-2xl">
+          <p className="text-xl text-stone-900/70 leading-relaxed max-w-2xl">
             IPTVTotaal werd opgericht vanuit één simpele gedachte: televisie moet betaalbaar, betrouwbaar en voor iedereen toegankelijk zijn. Vandaag de dag vertrouwen duizenden Nederlandse huishoudens op ons voor hun dagelijkse TV-beleving.
           </p>
         </div>
@@ -84,7 +85,7 @@ export const OverOns: React.FC = () => {
             <h2 className="text-4xl lg:text-6xl font-black tracking-tighter mb-8">
               Ons verhaal
             </h2>
-            <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+            <div className="space-y-6 text-stone-900/70 leading-relaxed text-lg">
               <p>
                 IPTVTotaal is een Nederlands IPTV-merk dat zich volledig richt op kwaliteit en klanttevredenheid. Wij bieden een complete televisie-ervaring via het internet — snel, stabiel en betaalbaar.
               </p>
@@ -97,7 +98,7 @@ export const OverOns: React.FC = () => {
             </div>
           </div>
           <div className="relative">
-            <div className="bg-gradient-to-br from-neutral-900 to-neutral-950 border border-amber-900/30 rounded-[40px] p-10 space-y-6">
+            <div className="bg-neutral-950 border-[3px] border-amber-500/40 shadow-[8px_8px_0_0_rgba(245,158,11,0.2)] rounded-[40px] p-10 space-y-6">
               {[
                 { year: '2020', text: 'IPTVTotaal opgericht in Nederland' },
                 { year: '2021', text: 'Eerste 1.000 klanten bereikt' },
@@ -106,7 +107,7 @@ export const OverOns: React.FC = () => {
                 { year: '2025', text: 'Uitbreiding naar 80.000+ zenders' },
               ].map((item) => (
                 <div key={item.year} className="flex items-start gap-6">
-                  <div className="w-16 h-8 bg-amber-500/10 border border-amber-500/30 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-16 h-8 bg-amber-500/10 border-2 border-amber-500/40 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-xs font-black text-amber-400">{item.year}</span>
                   </div>
                   <p className="text-white/70 font-medium pt-0.5">{item.text}</p>
@@ -122,7 +123,7 @@ export const OverOns: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-20 mt-32">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-6xl font-black tracking-tighter mb-4">Waarom IPTVTotaal?</h2>
-          <p className="text-white/50 text-lg max-w-xl mx-auto">Wij onderscheiden ons door kwaliteit, eerlijkheid en snelle service.</p>
+          <p className="text-stone-900/60 text-lg max-w-xl mx-auto">Wij onderscheiden ons door kwaliteit, eerlijkheid en snelle service.</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <ValueCard
@@ -160,11 +161,11 @@ export const OverOns: React.FC = () => {
 
       {/* CTA */}
       <div className="max-w-7xl mx-auto px-6 lg:px-20 mt-32">
-        <div className="bg-gradient-to-br from-amber-500/10 to-yellow-600/5 border border-amber-500/20 rounded-[48px] p-12 lg:p-20 text-center">
+        <div className="bg-amber-500/8 border-[3px] border-amber-500/30 shadow-[10px_10px_0_0_rgba(245,158,11,0.2)] rounded-[48px] p-12 lg:p-20 text-center">
           <h2 className="text-4xl lg:text-6xl font-black tracking-tighter mb-6">
             Klaar om te beginnen?
           </h2>
-          <p className="text-white/60 text-xl mb-10 max-w-xl mx-auto">
+          <p className="text-stone-900/70 text-xl mb-10 max-w-xl mx-auto">
             Neem contact op via WhatsApp en je bent binnen 5 minuten aan het kijken.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -173,13 +174,13 @@ export const OverOns: React.FC = () => {
               onClick={trackWhatsAppConversion}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black text-lg rounded-full hover:scale-[1.02] transition-transform shadow-2xl shadow-amber-500/20"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-amber-500 text-black font-black text-lg rounded-full btn-brutal"
             >
               WhatsApp Ons Nu
             </a>
             <a
               href="#pricing"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white/5 border border-white/20 text-white font-black text-lg rounded-full hover:bg-white/10 transition-colors"
+              className="btn-brutal-outline inline-flex items-center justify-center gap-3 px-10 py-5 bg-stone-900/5 text-stone-900 font-black text-lg rounded-full hover:bg-stone-900/10 transition-colors"
             >
               Bekijk prijzen
             </a>
@@ -191,18 +192,18 @@ export const OverOns: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-20 mt-20">
         <div className="flex flex-col md:flex-row justify-center gap-8 text-center">
           <div>
-            <div className="text-xs font-bold uppercase tracking-widest text-white/30 mb-2">E-mail</div>
-            <a href="mailto:info@iptvtotaal.watch" className="text-amber-400 font-bold hover:underline">info@iptvtotaal.watch</a>
+            <div className="text-xs font-bold uppercase tracking-widest text-stone-900/40 mb-2">E-mail</div>
+            <a href="mailto:info@iptvtotaal.watch" className="text-amber-600 font-bold hover:underline">info@iptvtotaal.watch</a>
           </div>
-          <div className="hidden md:block w-px bg-white/10"></div>
+          <div className="hidden md:block w-px bg-stone-900/10"></div>
           <div>
-            <div className="text-xs font-bold uppercase tracking-widest text-white/30 mb-2">Telefoon</div>
-            <a href="tel:+447449708976" className="text-amber-400 font-bold hover:underline">+44 7449 708976</a>
+            <div className="text-xs font-bold uppercase tracking-widest text-stone-900/40 mb-2">Telefoon</div>
+            <a href="tel:+447449708976" className="text-amber-600 font-bold hover:underline">+44 7449 708976</a>
           </div>
-          <div className="hidden md:block w-px bg-white/10"></div>
+          <div className="hidden md:block w-px bg-stone-900/10"></div>
           <div>
-            <div className="text-xs font-bold uppercase tracking-widest text-white/30 mb-2">Gevestigd in</div>
-            <span className="text-white font-bold">Nederland</span>
+            <div className="text-xs font-bold uppercase tracking-widest text-stone-900/40 mb-2">Gevestigd in</div>
+            <span className="text-stone-900 font-bold">Nederland</span>
           </div>
         </div>
       </div>

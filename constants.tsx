@@ -15,8 +15,8 @@ export const FAQS: FAQItem[] = [
     answer: "Ja, het gebruik van IPTV-diensten is legaal in Nederland. IPTVTotaal is een legitieme IPTV-aanbieder met premium infrastructuur en 24/7 support."
   },
   {
-    question: "Zijn er beperkingen op aanvragen?",
-    answer: "Nee! Met je abonnement krijg je onbeperkte toegang tot alle 65.000+ kanalen en 175.000+ films & series. Stream zoveel je wilt."
+    question: "Is er een limiet op wat ik kan bekijken?",
+    answer: "Nee! Met je abonnement krijg je onbeperkte toegang tot alle 65.000+ kanalen en 200.000+ films & series. Stream zoveel je wilt."
   },
   {
     question: "Hoe werkt de pauze-functie?",
@@ -31,7 +31,7 @@ export const FAQS: FAQItem[] = [
     answer: "IPTVTotaal werkt op vrijwel alle apparaten: Smart TV's (Samsung, LG, Sony), Fire Stick, Apple TV, Android/iOS telefoons en tablets, PC/Mac, Android TV boxes, en meer."
   },
   {
-    question: "Buffer de stream?",
+    question: "Buffert de stream?",
     answer: "Nee! We gebruiken premium servers met 99.9% uptime garantie. Geen buffering, geen lag, geen onderbrekingen. Prime kwaliteit, altijd."
   },
   {
@@ -43,22 +43,22 @@ export const FAQS: FAQItem[] = [
 export const BASIS_FEATURES: string[] = [
   "SD/HD/FULL HD Kwaliteit",
   "+50.000 Kanalen + Netflix",
-  "RTL, NPO, ZIGGO, SBS, ESPN, Viaplay",
+  "RTL, NPO, Ziggo, SBS, ESPN, Viaplay",
   "+140.000 Films & Series",
   "Wekelijkse Updates",
   "24/7 Support NL & BE",
   "100% Anoniem",
-  "AntiFreeze Technologie",
+  "Anti-Freeze Technologie",
   "Alle Apparaten",
   "VPN Inbegrepen",
   "Exclusieve NL & BE Content",
-  "Netflix, Amazon, HBO, Apple TV, Hulu"
+  "Amazon, HBO, Apple TV, Hulu"
 ];
 
 export const PREMIUM_FEATURES: string[] = [
-  "SD/HD/FULL HD/4K/8K/HDR-VR",
+  "SD/HD/FULL HD/4K/8K/HDR/VR",
   "+80.000 Kanalen + Netflix",
-  "RTL, NPO, ZIGGO, SBS, ESPN, Viaplay, VTM",
+  "RTL, NPO, Ziggo, SBS, ESPN, Viaplay, VTM",
   "+200.000 Films & Series",
   "Dagelijkse Updates",
   "Alle Sport PPV Events",
@@ -68,7 +68,7 @@ export const PREMIUM_FEATURES: string[] = [
   "Alle Apparaten",
   "VPN Inbegrepen",
   "Exclusieve VIP Content",
-  "Videoland, Netflix, Amazon, HBO, Apple TV, Hulu"
+  "Videoland, Amazon, HBO, Apple TV, Hulu"
 ];
 
 export const SUBSCRIPTION_TIERS: SubscriptionTier[] = [
@@ -127,21 +127,20 @@ export const CHANNEL_LOGOS = [
 ];
 
 export const TOP_FILMS = [
-  { title: "Gladiator II", posterUrl: "/assets/posters/gladiator-2.jpg" },
-  { title: "Wicked", posterUrl: "/assets/posters/wicked.jpg" },
-  { title: "Moana 2", posterUrl: "/assets/posters/moana-2.jpg" },
-  { title: "Red One", posterUrl: "/assets/posters/red-one.jpg" },
-  { title: "Dune: Part Two", posterUrl: "/assets/posters/dune-2.jpg" },
-  { title: "Deadpool & Wolverine", posterUrl: "/assets/posters/deadpool-wolverine.jpg" },
-  { title: "The Substance", posterUrl: "/assets/posters/the-substance.jpg" },
-  { title: "Inside Out 2", posterUrl: "/assets/posters/inside-out-2.jpg" },
-  { title: "Joker: Folie à Deux", posterUrl: "/assets/posters/joker-folie-a-deux.jpg" },
-  { title: "Beetlejuice Beetlejuice", posterUrl: "/assets/posters/beetlejuice-2.jpg" },
-  { title: "Alien: Romulus", posterUrl: "/assets/posters/alien-romulus.jpg" },
-  { title: "Despicable Me 4", posterUrl: "/assets/posters/despicable-me-4.jpg" },
-  { title: "Conclave", posterUrl: "/assets/posters/conclave.jpg" },
-  { title: "Heretic", posterUrl: "/assets/posters/heretic.jpg" },
-  { title: "F1", posterUrl: "/assets/posters/f1.jpg" }
+  { title: "The Odyssey", posterUrl: "/assets/posters/the-odyssey.jpg" },
+  { title: "Vaiana", posterUrl: "/assets/posters/vaiana.jpg" },
+  { title: "Minions & Monsters", posterUrl: "/assets/posters/minions-monsters.jpg" },
+  { title: "Toy Story 5", posterUrl: "/assets/posters/toy-story-5.jpg" },
+  { title: "The Invite", posterUrl: "/assets/posters/the-invite.jpg" },
+  { title: "Michael", posterUrl: "/assets/posters/michael.jpg" },
+  { title: "Jackass: Best and Last", posterUrl: "/assets/posters/jackass-best-and-last.jpg" },
+  { title: "Jurassic Park", posterUrl: "/assets/posters/jurassic-park.jpg" },
+  { title: "The Departed", posterUrl: "/assets/posters/the-departed.jpg" },
+  { title: "Evil Dead Burn", posterUrl: "/assets/posters/evil-dead-burn.jpg" },
+  { title: "Disclosure Day", posterUrl: "/assets/posters/disclosure-day.jpg" },
+  { title: "Hokum", posterUrl: "/assets/posters/hokum.jpg" },
+  { title: "Obsession", posterUrl: "/assets/posters/obsession.jpg" },
+  { title: "Polis", posterUrl: "/assets/posters/polis.jpg" }
 ];
 
 export const TOP_TVSHOWS_NL = [
@@ -155,14 +154,24 @@ export const TOP_TVSHOWS_NL = [
 ];
 
 export const TOP_TVSHOWS_INTL = [
-  { title: "Squid Game", posterUrl: "/assets/tvshows-intl/squid-game.jpg" },
-  { title: "Wednesday", posterUrl: "/assets/tvshows-intl/wednesday.jpg" },
-  { title: "The Last of Us", posterUrl: "/assets/tvshows-intl/the-last-of-us.jpg" },
-  { title: "Stranger Things", posterUrl: "/assets/tvshows-intl/stranger-things.jpg" },
   { title: "Breaking Bad", posterUrl: "/assets/tvshows-intl/breaking-bad.jpg" },
-  { title: "House of the Dragon", posterUrl: "/assets/tvshows-intl/house-of-the-dragon.jpg" },
-  { title: "The Bear", posterUrl: "/assets/tvshows-intl/the-bear.jpg" },
-  { title: "Severance", posterUrl: "/assets/tvshows-intl/severance.jpg" },
-  { title: "Shōgun", posterUrl: "/assets/tvshows-intl/shogun.jpg" },
-  { title: "Reacher", posterUrl: "/assets/tvshows-intl/reacher.jpg" }
+  { title: "Reacher", posterUrl: "/assets/tvshows-intl/reacher.jpg" },
+  { title: "NCIS", posterUrl: "/assets/tvshows-intl/ncis.jpg" },
+  { title: "Law & Order", posterUrl: "/assets/tvshows-intl/law-order.jpg" },
+  { title: "Law & Order: SVU", posterUrl: "/assets/tvshows-intl/law-order-special-victims-unit.jpg" },
+  { title: "The Rookie", posterUrl: "/assets/tvshows-intl/the-rookie.jpg" },
+  { title: "The Good Doctor", posterUrl: "/assets/tvshows-intl/the-good-doctor.jpg" },
+  { title: "The Mentalist", posterUrl: "/assets/tvshows-intl/the-mentalist.jpg" },
+  { title: "House", posterUrl: "/assets/tvshows-intl/house.jpg" },
+  { title: "Supernatural", posterUrl: "/assets/tvshows-intl/supernatural.jpg" },
+  { title: "Shameless", posterUrl: "/assets/tvshows-intl/shameless.jpg" },
+  { title: "Rick and Morty", posterUrl: "/assets/tvshows-intl/rick-and-morty.jpg" },
+  { title: "From", posterUrl: "/assets/tvshows-intl/from.jpg" },
+  { title: "Sesame Street", posterUrl: "/assets/tvshows-intl/sesame-street.jpg" },
+  { title: "Miraculous: Ladybug & Cat Noir", posterUrl: "/assets/tvshows-intl/miraculous-tales-of-ladybug-cat-noir.jpg" },
+  { title: "Mushoku Tensei", posterUrl: "/assets/tvshows-intl/mushoku-tensei-jobless-reincarnation.jpg" },
+  { title: "Agent Kim: Reactivated", posterUrl: "/assets/tvshows-intl/agent-kim-reactivated.jpg" },
+  { title: "C.I.D.", posterUrl: "/assets/tvshows-intl/c-i-d.jpg" },
+  { title: "Raw", posterUrl: "/assets/tvshows-intl/raw.jpg" },
+  { title: "Sister-in-Law Is at Home", posterUrl: "/assets/tvshows-intl/sister-in-law-is-at-home.jpg" }
 ];

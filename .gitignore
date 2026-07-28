@@ -26,3 +26,6 @@ dist-ssr
 .env*.local
 scripts/*.json
 .env*
+
+# Manual poster staging folder (mirrored into public/assets/, not needed in repo)
+tvshows/

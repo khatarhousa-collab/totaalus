@@ -1,15 +1,16 @@
 
 import React from 'react';
 import { trackWhatsAppConversion } from './analytics';
+import { WaveDivider } from './WaveDivider';
 
 
 const TrustBadge: React.FC<{ icon: React.ReactNode; children: React.ReactNode; delay: string }> = ({ icon, children, delay }) => (
   <div
-    className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2.5 sm:py-3 bg-amber-500/10 backdrop-blur-md rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.3)] border border-amber-500/20 hover:bg-amber-500/20 hover:scale-105 hover:shadow-[0_8px_24px_rgba(212,175,55,0.15)] transition-all duration-300 animate-[popIn_0.5s_ease-out_both]"
+    className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2.5 sm:py-3 bg-amber-500/10 rounded-full shadow-[3px_3px_0_0_rgba(245,158,11,0.35)] border-2 border-amber-500/40 hover:bg-amber-500/20 hover:-translate-y-0.5 transition-all duration-300 animate-[popIn_0.5s_ease-out_both]"
     style={{ animationDelay: delay }}
   >
-    <span className="text-lg sm:text-xl text-white flex items-center">{icon}</span>
-    <span className="text-xs sm:text-sm font-semibold tracking-wide text-white whitespace-nowrap leading-none">{children}</span>
+    <span className="text-lg sm:text-xl text-stone-900 flex items-center">{icon}</span>
+    <span className="text-xs sm:text-sm font-semibold tracking-wide text-stone-900 whitespace-nowrap leading-none">{children}</span>
   </div>
 );
 
@@ -21,8 +22,8 @@ export const Hero: React.FC = () => {
       <div className="max-w-7xl mx-auto sm:px-6 grid lg:grid-cols-2 gap-16 items-center">
         <div className="flex flex-col items-center sm:items-start gap-10 sm:gap-12 w-[88%] sm:w-full mx-auto sm:mx-0">
 
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-amber-500/20 to-yellow-500/10 border border-amber-500/40 backdrop-blur-sm animate-[popIn_0.5s_ease-out_both]">
-            <div className="w-9 h-9 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-500/20">
+          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-amber-500/15 border-2 border-amber-500/50 shadow-[4px_4px_0_0_rgba(245,158,11,0.3)] animate-[popIn_0.5s_ease-out_both]">
+            <div className="w-9 h-9 bg-amber-500 rounded-xl border-2 border-black flex items-center justify-center flex-shrink-0">
               <svg className="w-5 h-5 text-black" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
                 <path d="M20 12v10H4V12"/>
                 <path d="M2 7h20v5H2z"/>
@@ -31,28 +32,28 @@ export const Hero: React.FC = () => {
                 <path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/>
               </svg>
             </div>
-            <span className="text-lg sm:text-xl font-extrabold text-white">Bestel nu en ontvang</span>
-            <span className="text-lg sm:text-xl font-black text-amber-400 uppercase tracking-wide">3 maanden gratis</span>
+            <span className="text-lg sm:text-xl font-extrabold text-stone-900">Bestel nu en ontvang</span>
+            <span className="text-lg sm:text-xl font-black text-amber-600 uppercase tracking-wide">3 maanden gratis</span>
           </div>
 
-          <h1 className="text-[clamp(3rem,13vw,6rem)] lg:text-8xl font-extrabold leading-[1.1] tracking-tighter text-white drop-shadow-sm text-center sm:text-left w-full">
-            <span className="sm:hidden">Premium IPTV<br />voor <span className="text-italics">iedereen</span></span>
-            <span className="hidden sm:inline">Premium IPTV voor <span className="text-italics">iedereen</span></span>
+          <h1 className="text-[clamp(3rem,13vw,6rem)] lg:text-8xl font-extrabold leading-[1.1] tracking-tighter text-stone-900 text-center sm:text-left w-full">
+            <span className="sm:hidden">Alles in <span className="text-italics">één</span><br />abonnement.</span>
+            <span className="hidden sm:inline">Alles in <span className="text-italics">één</span> abonnement.</span>
           </h1>
 
-          <p className="text-[clamp(1rem,3.5vw,1.25rem)] text-white/80 font-medium leading-relaxed text-center sm:text-left w-full">
+          <p className="text-[clamp(1rem,3.5vw,1.25rem)] text-stone-900/80 font-medium leading-relaxed text-center sm:text-left w-full">
             TV kijken zoals het hoort.<br className="sm:hidden" /> Pauzeer of annuleer op elk moment.
           </p>
 
           <a
             href="/tv-box"
-            className="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-amber-500/40 bg-amber-500/10 hover:bg-amber-500/20 transition-all duration-300 group w-fit mx-auto sm:mx-0"
+            className="inline-flex items-center gap-3 px-5 py-3 rounded-full border-2 border-amber-500/50 bg-amber-500/10 shadow-[4px_4px_0_0_rgba(245,158,11,0.25)] hover:bg-amber-500/20 hover:-translate-y-0.5 transition-all duration-300 group w-fit mx-auto sm:mx-0"
           >
             <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse flex-shrink-0"></span>
-            <span className="text-sm sm:text-base font-semibold text-white/90">
-              Geen smart tv? <span className="text-amber-400 font-black">Geen probleem</span> — gebruik ons abonnement met ons kastje
+            <span className="text-sm sm:text-base font-semibold text-stone-900/90">
+              Geen smart tv? <span className="text-amber-600 font-black">Geen probleem</span> — combineer je abonnement met ons kastje
             </span>
-            <svg className="w-4 h-4 text-amber-400 group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 text-amber-600 group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </a>
@@ -60,23 +61,22 @@ export const Hero: React.FC = () => {
           <div className="flex flex-col gap-4 w-full sm:flex-row sm:w-auto sm:justify-start">
             <a
               href="#pricing"
-              className="w-full sm:w-auto px-10 py-5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black text-lg font-black rounded-full hover:scale-[1.02] transition-transform shadow-2xl shadow-amber-500/20 text-center"
+              className="btn-brutal w-full sm:w-auto px-10 py-5 bg-amber-500 text-black text-lg font-black text-center"
             >
               Bekijk prijzen
             </a>
             <a
               href="#pricing"
-              className="bonus-btn group relative w-full sm:w-auto px-10 py-5 bg-gradient-to-r from-amber-500/20 to-yellow-500/10 border-2 border-amber-500/50 backdrop-blur-md text-white text-lg font-black rounded-full hover:scale-[1.03] flex items-center justify-center gap-3 transition-transform duration-300 overflow-hidden"
+              className="bonus-btn btn-brutal-outline group relative w-full sm:w-auto px-10 py-5 bg-amber-500/15 text-stone-900 text-lg font-black flex items-center justify-center gap-3 overflow-hidden"
             >
-              <span className="shimmer-bar absolute inset-0 bg-gradient-to-r from-transparent via-amber-400/20 to-transparent"></span>
-              <svg className="w-5 h-5 text-amber-400 relative" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-amber-600 relative" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
                 <path d="M20 12v10H4V12"/>
                 <path d="M2 7h20v5H2z"/>
                 <path d="M12 22V7"/>
                 <path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/>
                 <path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/>
               </svg>
-              <span className="relative">Claim mijn <span className="text-amber-400">3 maanden</span> bonus</span>
+              <span className="relative">Claim mijn <span className="text-amber-600">3 maanden</span> bonus</span>
               <svg className="bounce-arrow w-5 h-5 relative" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
             </a>
           </div>
@@ -90,14 +90,14 @@ export const Hero: React.FC = () => {
         </div>
 
         <div className="relative hidden lg:flex justify-center lg:justify-end">
-          <div className="glass-card-dark p-10 rounded-[40px] shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-700 w-full max-w-[440px] flex flex-col items-center text-center">
+          <div className="glass-card-dark p-10 rounded-[32px] transform rotate-3 hover:rotate-0 transition-transform duration-700 w-full max-w-[440px] flex flex-col items-center text-center">
             <div className="space-y-8 w-full flex flex-col items-center">
               <div className="flex justify-between items-center w-full">
                 <div className="w-12 h-12 opacity-0"></div> {/* Spacer for symmetry */}
-                <div className="hidden sm:block bg-gradient-to-r from-amber-500 to-yellow-600 px-4 py-2 rounded-full text-black text-xs font-bold uppercase tracking-widest shadow-lg shadow-amber-500/50">
+                <div className="hidden sm:block badge-brutal">
                   Start Vandaag
                 </div>
-                <div className="w-12 h-12 bg-amber-500/20 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-amber-500/20 rounded-full border-2 border-amber-500/40 flex items-center justify-center">
                   <div className="w-4 h-4 bg-amber-400 rotate-45"></div>
                 </div>
               </div>
@@ -106,9 +106,9 @@ export const Hero: React.FC = () => {
                 <h3 className="text-5xl font-black text-amber-400 leading-tight underline decoration-amber-500 decoration-4 underline-offset-8">IPTVTotaal</h3>
               </div>
               <p className="text-white/70 text-lg font-medium">Eén abonnement voor alles.</p>
-              <a 
-                href="#pricing" 
-                className="w-full py-5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-black rounded-2xl text-xl hover:from-amber-500 hover:to-yellow-600 transition-colors block text-center shadow-xl shadow-amber-500/20"
+              <a
+                href="#pricing"
+                className="btn-brutal w-full py-5 bg-amber-500 text-black font-black text-xl block text-center"
               >
                 Bekijk prijzen
               </a>
@@ -121,7 +121,7 @@ export const Hero: React.FC = () => {
               className="mt-8 border-t border-white/10 pt-6 w-full flex justify-between items-center text-white hover:opacity-80 transition-opacity"
             >
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-400 to-yellow-600"></div>
+                <div className="w-10 h-10 rounded-full bg-amber-500"></div>
                 <div className="text-left">
                   <div className="text-sm font-bold">WhatsApp Support</div>
                   <div className="text-xs text-white/50">Bereikbaar 24/7</div>
@@ -136,16 +136,17 @@ export const Hero: React.FC = () => {
         </div>
       </div>
 
-      <div className="mt-24 border-y border-white/10 py-12 backdrop-blur-sm">
+      <WaveDivider />
+      <div className="mt-6 border-y-[3px] border-amber-500/20 py-12">
         <div className="marquee-container">
           <div className="marquee-content brightness-125">
             {['Eredivisie', 'Champions League', 'Formule 1', 'NPO', 'RTL', 'SBS', 'Netflix content'].map((brand, i) => (
-              <span key={i} className="text-3xl font-black text-white/80 hover:text-white transition-colors uppercase tracking-widest px-8 cursor-default">{brand}</span>
+              <span key={i} className="text-3xl font-black text-stone-900/70 hover:text-stone-900 transition-colors uppercase tracking-widest px-8 cursor-default">{brand}</span>
             ))}
           </div>
           <div className="marquee-content brightness-125">
             {['Eredivisie', 'Champions League', 'Formule 1', 'NPO', 'RTL', 'SBS', 'Netflix content'].map((brand, i) => (
-              <span key={i} className="text-3xl font-black text-white/80 hover:text-white transition-colors uppercase tracking-widest px-8 cursor-default">{brand}</span>
+              <span key={i} className="text-3xl font-black text-stone-900/70 hover:text-stone-900 transition-colors uppercase tracking-widest px-8 cursor-default">{brand}</span>
             ))}
           </div>
         </div>

@@ -65,22 +65,22 @@ export const PaymentMethods: React.FC = () => {
   return (
     <section id="betaalmethoden" className="py-20 px-6">
       <div className="max-w-4xl mx-auto text-center">
-        <div className="inline-block px-4 py-1.5 bg-amber-500/15 border border-amber-500/30 rounded-full text-xs font-bold uppercase tracking-widest text-amber-400 mb-6">
+        <div className="badge-brutal mb-6">
           Betaalmethoden
         </div>
-        <h2 className="text-3xl lg:text-4xl font-black tracking-tighter text-white mb-12">
+        <h2 className="text-3xl lg:text-4xl font-black tracking-tighter text-stone-900 mb-12">
           Betaal zoals jij wilt
         </h2>
         <div className="grid grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-6">
           {PAYMENT_METHODS.map((method) => (
             <div
               key={method.name}
-              className="glass-card rounded-[28px] py-6 flex flex-col items-center gap-4 hover:bg-black/60 transition-all duration-500 group cursor-default aspect-square max-h-[160px]"
+              className="glass-card card-brutal-hover rounded-[28px] py-6 flex flex-col items-center gap-4 transition-all duration-500 group cursor-default aspect-square max-h-[160px]"
             >
-              <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-yellow-700 rounded-2xl flex items-center justify-center text-black group-hover:scale-110 transition-transform shadow-xl group-hover:shadow-amber-500/20 flex-shrink-0">
+              <div className="w-14 h-14 bg-amber-600 rounded-2xl border-2 border-black flex items-center justify-center text-black group-hover:scale-110 transition-transform flex-shrink-0">
                 {method.icon}
               </div>
-              <span className="text-xs font-bold tracking-tight text-center text-white/80">{method.name}</span>
+              <span className="text-xs font-bold tracking-tight text-center text-stone-900/80">{method.name}</span>
             </div>
           ))}
         </div>

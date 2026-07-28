@@ -54,12 +54,12 @@ const DevicesIcon = () => (
 );
 
 const BenefitCard: React.FC<{ title: string; desc: string; icon: React.ReactNode; className?: string }> = ({ title, desc, icon, className }) => (
-  <div className={`p-8 rounded-[40px] glass-card hover:bg-black/60 transition-all duration-500 group cursor-default ${className}`}>
-    <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-yellow-700 rounded-2xl mb-8 flex items-center justify-center text-black text-3xl group-hover:scale-110 transition-transform shadow-xl group-hover:shadow-amber-500/20">
+  <div className={`p-8 rounded-[32px] glass-card card-brutal-hover transition-all duration-500 group cursor-default ${className}`}>
+    <div className="w-16 h-16 bg-amber-600 rounded-2xl border-2 border-black mb-8 flex items-center justify-center text-black text-3xl group-hover:scale-110 transition-transform">
       {icon}
     </div>
-    <h3 className="text-2xl font-black mb-4 tracking-tighter text-white">{title}</h3>
-    <p className="text-white/60 leading-relaxed font-medium">{desc}</p>
+    <h3 className="text-2xl font-black mb-4 tracking-tighter text-stone-900">{title}</h3>
+    <p className="text-stone-900/60 leading-relaxed font-medium">{desc}</p>
   </div>
 );
 
@@ -68,14 +68,14 @@ export const Benefits: React.FC = () => {
     <section id="benefits" className="py-32 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-20 space-y-6">
-          <div className="inline-block px-4 py-1.5 bg-amber-500/15 border border-amber-500/30 rounded-full text-xs font-bold uppercase tracking-widest text-amber-400">
-            Lidmaatschap voordelen
+          <div className="badge-brutal">
+            Waarom klanten blijven
           </div>
-          <h2 className="text-5xl lg:text-7xl font-black tracking-tighter text-white">
-            Het is <span className="text-italics underline decoration-white/20 decoration-2 underline-offset-[12px]">"je gaat nooit meer terug"</span> beter
+          <h2 className="text-5xl lg:text-7xl font-black tracking-tighter text-stone-900">
+            Alle voordelen. <span className="text-italics underline decoration-amber-500/50 decoration-2 underline-offset-[12px]">Geen</span> gedoe.
           </h2>
-          <p className="text-xl text-white/80 font-medium">
-            IPTVTotaal vervangt dure Ziggo-pakketten en meerdere streamingdiensten voor één vaste prijs.
+          <p className="text-xl text-stone-900/70 font-medium">
+            Eén vaste prijs voor alles — geen dure Ziggo-pakketten, geen losse streamingdiensten meer nodig.
           </p>
         </div>
 
@@ -98,7 +98,7 @@ export const Benefits: React.FC = () => {
           <BenefitCard 
             icon={<QualityIcon />} 
             title="Prime Kwaliteit" 
-            desc="Premium 4K streamingkwaliteit, wanneer je maar wilt op al je favoriete zenders." 
+            desc="Premium 4K streamingkwaliteit op al je favoriete zenders, wanneer je maar wilt." 
           />
           <BenefitCard 
             icon={<FlexibilityIcon />} 

@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Logo } from './Logo';
 
 interface HeaderProps {
   isScrolled: boolean;
@@ -9,8 +9,6 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ isScrolled, hasBanner }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { pathname } = useLocation();
-  const forceBlack = pathname === '/tv-box';
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
@@ -22,35 +20,28 @@ export const Header: React.FC<HeaderProps> = ({ isScrolled, hasBanner }) => {
     { name: 'Reseller', href: '/reseller' },
     { name: 'FAQ', href: '/#faq' },
     { name: 'Over ons', href: '/over-ons' },
-    { name: 'WK 2026', href: '/wk-2026-live-kijken' },
     { name: 'TV Box', href: '/tv-box' },
-    { name: 'Blog', href: '/blog' },
   ];
 
   return (
     <>
-      <nav className={`fixed left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isMenuOpen || forceBlack ? 'bg-black/90 backdrop-blur-md border-b border-amber-900/30 py-4' : 'bg-transparent py-8'}`} style={{ top: hasBanner ? '40px' : '0px' }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-20 flex justify-between items-center">
-          <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer">
-            <div className="w-8 h-8 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-sm flex items-center justify-center">
-              <div className="w-4 h-4 bg-black rotate-45"></div>
-            </div>
-            <span className="text-xl font-extrabold tracking-tighter text-white">IPTVTotaal</span>
-          </a>
-          
+      <nav className="fixed left-0 right-0 z-50 px-4 pt-4" style={{ top: hasBanner ? '40px' : '0px' }}>
+        <div
+          className={`max-w-7xl mx-auto flex justify-between items-center bg-white border-[3px] border-black rounded-full shadow-[6px_6px_0_0_#F59E0B] px-6 transition-all duration-300 ${isScrolled || isMenuOpen ? 'py-2.5' : 'py-3.5'}`}
+        >
+          <Logo />
+
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8 text-sm font-semibold">
+          <div className="hidden md:flex items-center gap-7 text-sm font-semibold">
             {navLinks.map((link) => (
-              <a key={link.name} href={link.href} className="text-white hover:text-amber-400 transition-colors">{link.name}</a>
+              <a key={link.name} href={link.href} className="text-stone-900 hover:text-amber-600 transition-colors">{link.name}</a>
             ))}
-            <div className="flex items-center gap-4 ml-4">
-              <a href="/#pricing" className="px-6 py-2.5 rounded-full bg-gradient-to-r from-amber-500 to-yellow-600 text-black font-bold hover:opacity-90 transition-all block text-center">Bekijk prijzen</a>
-            </div>
+            <a href="/#pricing" className="btn-brutal !rounded-full px-6 py-2.5 bg-amber-500 text-black font-bold hover:opacity-90 block text-center">Bekijk prijzen</a>
           </div>
-          
+
           {/* Mobile Menu Toggle */}
-          <button 
-            className="md:hidden p-2 text-white focus:outline-none" 
+          <button
+            className="md:hidden p-2 text-stone-900 focus:outline-none"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
@@ -68,25 +59,25 @@ export const Header: React.FC<HeaderProps> = ({ isScrolled, hasBanner }) => {
       </nav>
 
       {/* Mobile Menu Overlay */}
-      <div 
-        className={`fixed inset-0 z-40 bg-black transition-transform duration-500 ease-in-out transform ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'} md:hidden pt-24 px-6`}
+      <div
+        className={`fixed inset-0 z-40 bg-[#faf6ed] transition-transform duration-500 ease-in-out transform ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'} md:hidden pt-24 px-6`}
       >
         <div className="flex flex-col gap-8 text-center">
           {navLinks.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href} 
+            <a
+              key={link.name}
+              href={link.href}
               onClick={closeMenu}
-              className="text-3xl font-black tracking-tighter text-white hover:text-amber-400 transition-colors"
+              className="text-3xl font-black tracking-tighter text-stone-900 hover:text-amber-600 transition-colors"
             >
               {link.name}
             </a>
           ))}
           <div className="flex flex-col gap-4 pt-8">
-            <a 
+            <a
               href="/#pricing"
               onClick={closeMenu}
-              className="w-full py-5 rounded-3xl bg-gradient-to-r from-amber-500 to-yellow-600 text-black text-xl font-bold hover:opacity-90 transition-all shadow-lg block text-center"
+              className="btn-brutal w-full py-5 rounded-3xl bg-amber-500 text-black text-xl font-bold hover:opacity-90 block text-center"
             >
               Bekijk prijzen
             </a>
