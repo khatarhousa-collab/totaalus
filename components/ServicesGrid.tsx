@@ -4,7 +4,7 @@ import { SERVICES, TOP_FILMS, CHANNEL_LOGOS, TOP_TVSHOWS_NL, TOP_TVSHOWS_INTL } 
 
 const MoviePoster: React.FC<{ title: string; posterUrl: string }> = ({ title, posterUrl }) => (
   <div className="flex-shrink-0 group cursor-pointer">
-    <div className="w-[180px] lg:w-[220px] aspect-[2/3] bg-stone-900/5 rounded-3xl overflow-hidden shadow-lg group-hover:shadow-amber-500/30 transition-all duration-500 transform group-hover:-translate-y-2 relative border border-stone-900/10">
+    <div className="w-[180px] lg:w-[220px] aspect-[2/3] bg-stone-900/5 rounded-3xl overflow-hidden shadow-lg group-hover:shadow-amber-500/30 transition-all duration-500 transform group-hover:-translate-y-2 relative border-[3px] border-black">
       <img 
         src={posterUrl} 
         alt={title} 
@@ -42,15 +42,12 @@ const SPORTS = [
   { name: 'Zwemmen', subtitle: 'WK, Olympisch', icon: '🏊', image: '/assets/sports/zwemmen.jpg' },
 ];
 
-const SportCard: React.FC<{ name: string; subtitle: string; icon: string; image: string }> = ({ name, subtitle, icon, image }) => (
+const SportCard: React.FC<{ name: string; image: string }> = ({ name, image }) => (
   <div className="flex-shrink-0 group cursor-pointer">
-    <div className="w-[160px] h-[284px] lg:w-[225px] lg:h-[400px] rounded-3xl overflow-hidden shadow-lg group-hover:shadow-amber-500/20 transition-all duration-500 transform group-hover:-translate-y-2 border border-stone-900/10 relative">
+    <div className="w-[160px] h-[284px] lg:w-[225px] lg:h-[400px] rounded-3xl overflow-hidden shadow-lg group-hover:shadow-amber-500/20 transition-all duration-500 transform group-hover:-translate-y-2 border-[3px] border-black relative">
       <img src={image} alt={name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-      <div className="absolute inset-0 bg-black/50" />
-      <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
-        <span className="text-2xl lg:text-3xl">{icon}</span>
-        <div className="text-white font-black text-sm lg:text-base tracking-tight leading-tight mt-1">{name}</div>
-        <div className="text-white/60 text-[10px] lg:text-xs font-bold uppercase tracking-wider mt-1">{subtitle}</div>
+      <div className="absolute bottom-0 left-0 right-0 bg-white border-t-[3px] border-black py-2 px-2 text-center">
+        <span className="text-stone-900 font-black text-xs lg:text-sm tracking-tight">{name}</span>
       </div>
     </div>
   </div>
@@ -90,12 +87,12 @@ export const FilmsAndShows: React.FC = () => {
           <div className="marquee-container -mx-6 overflow-hidden">
             <div className="marquee-content py-4" style={{ animationDuration: '45s' }}>
               {SPORTS.map((sport, i) => (
-                <SportCard key={i} name={sport.name} subtitle={sport.subtitle} icon={sport.icon} image={sport.image} />
+                <SportCard key={i} name={sport.name} image={sport.image} />
               ))}
             </div>
             <div className="marquee-content py-4" style={{ animationDuration: '45s' }}>
               {SPORTS.map((sport, i) => (
-                <SportCard key={`dup-${i}`} name={sport.name} subtitle={sport.subtitle} icon={sport.icon} image={sport.image} />
+                <SportCard key={`dup-${i}`} name={sport.name} image={sport.image} />
               ))}
             </div>
           </div>

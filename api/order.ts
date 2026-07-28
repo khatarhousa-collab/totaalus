@@ -164,8 +164,8 @@ export default async function handler(req: any, res: any) {
             body: JSON.stringify({
               from: 'IPTVTotaal <support@iptvtotaal.digital>',
               to: [data.email],
-              bcc: ['info@iptvtotaal.watch'],
-              reply_to: 'info@iptvtotaal.watch',
+              bcc: ['info@iptvtotaal.us'],
+              reply_to: 'info@iptvtotaal.us',
               subject: ORDER_EMAIL_SUBJECT,
               html: buildOrderEmailHtml({
                 name,
@@ -354,7 +354,7 @@ function buildOrderEmailHtml({
                 </td>
               </tr>
             </table>
-            <p style="margin:10px 0 0 0;font-size:13px;line-height:1.5;color:#666666;">Klopt er iets niet? Laat het ons weten via <a href="https://wa.me/447449708976" target="_blank" style="color:#b9902a;font-weight:700;text-decoration:none;">WhatsApp</a> of <a href="mailto:info@iptvtotaal.watch" style="color:#b9902a;font-weight:700;text-decoration:none;">e-mail</a> voordat we verzenden.</p>
+            <p style="margin:10px 0 0 0;font-size:13px;line-height:1.5;color:#666666;">Klopt er iets niet? Laat het ons weten via <a href="https://wa.me/447449708976" target="_blank" style="color:#b9902a;font-weight:700;text-decoration:none;">WhatsApp</a> of <a href="mailto:info@iptvtotaal.us" style="color:#b9902a;font-weight:700;text-decoration:none;">e-mail</a> voordat we verzenden.</p>
           </td>
         </tr>
 
@@ -427,7 +427,7 @@ function buildOrderEmailHtml({
             <table role="presentation" cellpadding="0" cellspacing="0" align="center">
               <tr>
                 <td class="stack-btn" style="border-radius:999px;background-color:#111111;">
-                  <a href="mailto:info@iptvtotaal.watch"
+                  <a href="mailto:info@iptvtotaal.us"
                      style="display:inline-block;padding:12px 26px;font-size:14px;font-weight:700;color:#ffffff;text-decoration:none;border-radius:999px;">
                     &#9993;&#65039;&nbsp; E-mail ons
                   </a>

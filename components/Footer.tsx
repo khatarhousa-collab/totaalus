@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
             <div className="space-y-8">
               <div className="p-6 bg-black/50 rounded-3xl border border-amber-900/20">
                 <p className="text-sm font-medium leading-relaxed text-white/80">
-                  IPTVTotaal helpt duizenden klanten met premium IPTV. Voor snelle service, WhatsApp ons voor een reactie binnen 5 minuten of mail <a href="mailto:info@iptvtotaal.watch" className="text-amber-400 font-bold hover:underline">info@iptvtotaal.watch</a>.
+                  IPTVTotaal helpt duizenden klanten met premium IPTV. Voor snelle service, WhatsApp ons voor een reactie binnen 5 minuten of mail <a href="mailto:info@iptvtotaal.us" className="text-amber-400 font-bold hover:underline">info@iptvtotaal.us</a>.
                 </p>
               </div>
 
@@ -51,7 +51,7 @@ export const Footer: React.FC = () => {
             <a href="/over-ons" className="hover:opacity-100 transition-opacity">Over ons</a>
             <a href="/algemene-voorwaarden" className="hover:opacity-100 transition-opacity">Algemene voorwaarden</a>
             <a href="/privacybeleid" className="hover:opacity-100 transition-opacity">Privacybeleid</a>
-            <a href="mailto:info@iptvtotaal.watch" className="hover:opacity-100 transition-opacity">info@iptvtotaal.watch</a>
+            <a href="mailto:info@iptvtotaal.us" className="hover:opacity-100 transition-opacity">info@iptvtotaal.us</a>
           </div>
           
           <div className="text-sm opacity-40">

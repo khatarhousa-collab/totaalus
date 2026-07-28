@@ -150,7 +150,27 @@ export const TOP_TVSHOWS_NL = [
   { title: "Vandaag Inside", posterUrl: "/assets/tvshows/vandaag-inside.jpg" },
   { title: "Winter Vol Liefde", posterUrl: "/assets/tvshows/winter-vol-liefde.jpg" },
   { title: "Pandora", posterUrl: "/assets/tvshows/pandora.jpg" },
-  { title: "Sprekend Nederland", posterUrl: "/assets/tvshows/sprekend-nederland.jpg" }
+  { title: "Sprekend Nederland", posterUrl: "/assets/tvshows/sprekend-nederland.jpg" },
+  { title: "B&B Vol Liefde", posterUrl: "/assets/tvshows/b-b-vol-liefde.jpg" },
+  { title: "Ons Kent Ons", posterUrl: "/assets/tvshows/ons-kent-ons.jpg" },
+  { title: "Los Het Op", posterUrl: "/assets/tvshows/los-het-op.jpg" },
+  { title: "Nederland Met Vakantie", posterUrl: "/assets/tvshows/nederland-met-vakantie.jpg" },
+  { title: "Helden van Hier: Op Interventie", posterUrl: "/assets/tvshows/helden-van-hier-op-interventie.jpg" },
+  { title: "Ik Weet er Alles Van", posterUrl: "/assets/tvshows/ik-weet-er-alles-van.jpg" },
+  { title: "Met Vier in Bed", posterUrl: "/assets/tvshows/met-vier-in-bed.jpg" },
+  { title: "Vera", posterUrl: "/assets/tvshows/vera.jpg" },
+  { title: "Endeavour", posterUrl: "/assets/tvshows/endeavour.jpg" },
+  { title: "FBI", posterUrl: "/assets/tvshows/fbi.jpg" },
+  { title: "Matlock", posterUrl: "/assets/tvshows/matlock.jpg" },
+  { title: "Ambulance UK", posterUrl: "/assets/tvshows/ambulance-uk.jpg" },
+  { title: "Kitchen Nightmares", posterUrl: "/assets/tvshows/kitchen-nightmares.jpg" },
+  { title: "Undercover Boss USA", posterUrl: "/assets/tvshows/undercover-boss-usa.jpg" },
+  { title: "America's Got Talent", posterUrl: "/assets/tvshows/america-s-got-talent.jpg" },
+  { title: "Lego Masters Australië", posterUrl: "/assets/tvshows/lego-masters-australie.jpg" },
+  { title: "Duck Dynasty: The Revival", posterUrl: "/assets/tvshows/duck-dynasty-the-revival.jpg" },
+  { title: "Beauty and the Billionaire", posterUrl: "/assets/tvshows/beauty-and-the-billionaire.jpg" },
+  { title: "The Bold: Classics Special", posterUrl: "/assets/tvshows/the-bold-classics-special.jpg" },
+  { title: "My Boyfriend, My Rapist: The Secret Footage", posterUrl: "/assets/tvshows/my-boyfriend-my-rapist-the-secret-footage.jpg" }
 ];
 
 export const TOP_TVSHOWS_INTL = [

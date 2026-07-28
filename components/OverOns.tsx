@@ -193,7 +193,7 @@ export const OverOns: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-center gap-8 text-center">
           <div>
             <div className="text-xs font-bold uppercase tracking-widest text-stone-900/40 mb-2">E-mail</div>
-            <a href="mailto:info@iptvtotaal.watch" className="text-amber-600 font-bold hover:underline">info@iptvtotaal.watch</a>
+            <a href="mailto:info@iptvtotaal.us" className="text-amber-600 font-bold hover:underline">info@iptvtotaal.us</a>
           </div>
           <div className="hidden md:block w-px bg-stone-900/10"></div>
           <div>
