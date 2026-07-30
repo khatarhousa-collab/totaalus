@@ -14,7 +14,7 @@ const TrustBadge: React.FC<{ icon: React.ReactNode; children: React.ReactNode; d
 );
 
 export const Hero: React.FC = () => {
-  const whatsappLink = "https://api.whatsapp.com/send/?phone=447449708976&text&type=phone_number&app_absent=0";
+  const whatsappLink = "https://api.whatsapp.com/send/?phone=447414662070&text&type=phone_number&app_absent=0";
 
   return (
     <section className="pt-40 pb-6 overflow-hidden">

@@ -3,7 +3,7 @@ import React from 'react';
 import { Logo } from './Logo';
 
 export const Footer: React.FC = () => {
-  const whatsappLink = "https://api.whatsapp.com/send/?phone=447449708976&text&type=phone_number&app_absent=0";
+  const whatsappLink = "https://api.whatsapp.com/send/?phone=447414662070&text&type=phone_number&app_absent=0";
 
   return (
     <footer className="bg-black text-white py-32 px-6 border-t border-amber-900/30">

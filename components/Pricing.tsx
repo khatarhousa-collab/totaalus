@@ -61,7 +61,7 @@ export const Pricing: React.FC = () => {
     const tierName = tier === 'basis' ? 'Basis' : 'Premium VIP';
     const deviceText = selectedDevices === 1 ? '1 apparaat' : `${selectedDevices} apparaten`;
     const message = `Hallo, ik wil graag het ${tierName}-pakket van IPTVTotaal aanschaffen voor ${currentPlan.label} voor ${deviceText} (${price}).`;
-    return `https://api.whatsapp.com/send/?phone=447449708976&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`;
+    return `https://api.whatsapp.com/send/?phone=447414662070&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`;
   };
 
   const isBestDeal = currentPlan.isBestDeal;

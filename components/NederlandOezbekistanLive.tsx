@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
 
-const whatsappLink = "https://api.whatsapp.com/send/?phone=447449708976&text&type=phone_number&app_absent=0";
+const whatsappLink = "https://api.whatsapp.com/send/?phone=447414662070&text&type=phone_number&app_absent=0";
 
 const StatPill: React.FC<{ value: string; label: string }> = ({ value, label }) => (
   <div className="text-center">
@@ -219,7 +219,7 @@ export const NederlandOezbekistanLive: React.FC = () => {
                 </div>
               </div>
               <a
-                href={`https://api.whatsapp.com/send/?phone=447449708976&text=${encodeURIComponent('Hallo, ik wil graag het Premium VIP-pakket van IPTVTotaal aanschaffen voor 12+3 maanden voor 1 apparaat (€78,00).')}&type=phone_number&app_absent=0`}
+                href={`https://api.whatsapp.com/send/?phone=447414662070&text=${encodeURIComponent('Hallo, ik wil graag het Premium VIP-pakket van IPTVTotaal aanschaffen voor 12+3 maanden voor 1 apparaat (€78,00).')}&type=phone_number&app_absent=0`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-amber-500 text-black font-black rounded-full btn-brutal shadow-lg shadow-amber-500/20 text-sm whitespace-nowrap"
