@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Benefits } from './components/Benefits';
@@ -100,6 +100,11 @@ const App: React.FC = () => {
         <Route path="/nederland-oezbekistan-live" element={<main><NederlandOezbekistanLive /></main>} />
         <Route path="/eredivisie-live-kijken" element={<main><EredivisieLiveKijken /></main>} />
         <Route path="/tv-box" element={<main><TvBox /></main>} />
+        {/* Common misspellings of /tv-box — these were landing on an empty page. */}
+        <Route path="/tvbox" element={<Navigate to="/tv-box" replace />} />
+        <Route path="/tv_box" element={<Navigate to="/tv-box" replace />} />
+        {/* Anything unmatched previously rendered a blank page between header and footer. */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
 
       <Footer />
