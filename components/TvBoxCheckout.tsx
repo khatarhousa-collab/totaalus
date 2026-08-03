@@ -137,7 +137,7 @@ export const TvBoxCheckout: React.FC<Props> = ({ onClose }) => {
     saveOrder('Order placed');
     const method = paymentMethods.find((m) => m.id === payment)?.label ?? '';
     const msg =
-      `Hallo, ik wil graag de ${PRODUCT.name} bestellen (incl. 12 maanden IPTVTotaal abonnement) voor ${formatEuro(PRODUCT.price)}.\n\n` +
+      `Hallo, ik wil graag de ${PRODUCT.name} bestellen (incl. 12 maanden IPTVTotaal (us) abonnement) voor ${formatEuro(PRODUCT.price)}.\n\n` +
       `*Mijn gegevens:*\n` +
       `Naam: ${form.firstName} ${form.lastName}\n` +
       `E-mail: ${form.email}\n` +
