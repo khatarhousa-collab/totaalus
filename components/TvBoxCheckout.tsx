@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { trackWhatsAppConversion } from './analytics';
 import { Logo } from './Logo';
 
 const whatsappNumber = '447414662070';
@@ -6,7 +7,7 @@ const whatsappNumber = '447414662070';
 const PRODUCT = {
   name: 'Android 14 TV Box',
   subtitle: '+ 12 maanden IPTVTotaal abonnement cadeau',
-  price: 180,
+  price: 200,
   image: '/box-main.png',
 };
 
@@ -145,6 +146,7 @@ export const TvBoxCheckout: React.FC<Props> = ({ onClose }) => {
       `Postcode: ${form.postcode} ${form.city}\n` +
       `Land: ${form.country}\n` +
       `Betaalmethode: ${method}`;
+    trackWhatsAppConversion();
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`, '_blank');
   };
 

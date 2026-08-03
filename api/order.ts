@@ -302,7 +302,7 @@ function buildOrderEmailHtml({
               Bedankt voor je bestelling! Om je bestelling af te ronden, maak je het bedrag over via
               een directe bankoverschrijving (SEPA Instant) met onderstaande gegevens. &#128230; Zodra je betaling binnen is,
               pakken we je bestelling <strong>dezelfde dag</strong> nog in. Je ontvangt je TV Box
-              <strong>binnen 3 dagen</strong> netjes thuisbezorgd.
+              <strong>binnen 1 dag</strong> netjes thuisbezorgd.
             </p>
           </td>
         </tr>
@@ -325,9 +325,9 @@ function buildOrderEmailHtml({
                   <p style="margin:0 0 10px 0;font-size:20px;font-weight:800;color:#ffffff;">Android 14 TV Box</p>
                   <p style="margin:0 0 18px 0;line-height:1.2;">
                     <span style="color:#8a8577;text-decoration:line-through;font-size:15px;">&euro; 280</span>
-                    &nbsp;<span style="color:#f5b301;font-size:38px;font-weight:900;letter-spacing:-1px;">&euro; 180</span>
+                    &nbsp;<span style="color:#f5b301;font-size:38px;font-weight:900;letter-spacing:-1px;">&euro; 200</span>
                     &nbsp;<span style="color:#9c9585;font-size:13px;">eenmalig</span>
-                    &nbsp;<span style="display:inline-block;background:linear-gradient(90deg,#f59e0b,#ca8a04);color:#111111;font-size:12px;font-weight:800;padding:4px 11px;border-radius:999px;vertical-align:middle;">Bespaar &euro; 100</span>
+                    &nbsp;<span style="display:inline-block;background:linear-gradient(90deg,#f59e0b,#ca8a04);color:#111111;font-size:12px;font-weight:800;padding:4px 11px;border-radius:999px;vertical-align:middle;">Bespaar &euro; 80</span>
                   </p>
                   <table role="presentation" cellpadding="0" cellspacing="0" style="font-size:14px;line-height:1.9;color:#d8d2c4;">
                     <tr><td style="color:#f5b301;padding-right:8px;">&#10003;</td><td>4K Ultra HD + HDR10</td></tr>
@@ -382,7 +382,7 @@ function buildOrderEmailHtml({
                         <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px dashed #e3cf9a;">
                           <tr>
                             <td style="padding-top:12px;color:#777;font-size:14px;width:120px;">Bedrag</td>
-                            <td style="padding-top:12px;font-size:28px;font-weight:900;color:#111;letter-spacing:-0.5px;">&euro; 180,00</td>
+                            <td style="padding-top:12px;font-size:28px;font-weight:900;color:#111;letter-spacing:-0.5px;">&euro; 200,00</td>
                           </tr>
                         </table>
                       </td>

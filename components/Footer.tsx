@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { trackWhatsAppConversion } from './analytics';
 import { Logo } from './Logo';
 
 export const Footer: React.FC = () => {
@@ -32,6 +33,7 @@ export const Footer: React.FC = () => {
 
               <a
                 href={whatsappLink}
+                onClick={trackWhatsAppConversion}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-8 bg-amber-500 text-black rounded-[32px] font-black text-2xl btn-brutal block text-center shadow-lg shadow-amber-500/20"

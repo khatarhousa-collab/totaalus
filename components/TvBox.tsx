@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { TvBoxCheckout } from './TvBoxCheckout';
+import { trackWhatsAppConversion } from './analytics';
 
 const specs = [
   { label: 'Besturingssysteem', value: 'Android 14' },
@@ -22,7 +23,8 @@ const included = [
   'Gratis updates & onderhoud',
 ];
 
-const SHIPPING_DAYS = 3;
+const SHIPPING_DAYS = 1;
+const SHIPPING_DAYS_LABEL = `${SHIPPING_DAYS} ${SHIPPING_DAYS === 1 ? 'dag' : 'dagen'}`;
 
 const getDeliveryDate = () => {
   const date = new Date();
@@ -61,7 +63,7 @@ const faqs = [
   },
   {
     q: 'Hoe lang duurt levering?',
-    a: `Wij leveren binnen ${SHIPPING_DAYS} dagen. Besteld je vandaag, dan ontvang je de box op ${getDeliveryDate()}. Na je bestelling via WhatsApp nemen wij direct contact op.`,
+    a: `Wij leveren binnen ${SHIPPING_DAYS_LABEL}. Besteld je vandaag, dan ontvang je de box op ${getDeliveryDate()}. Na je bestelling via WhatsApp nemen wij direct contact op.`,
   },
   {
     q: 'Kan ik het abonnement later verlengen?',
@@ -191,6 +193,7 @@ export const TvBox: React.FC = () => {
     e.preventDefault();
     const intro = 'Hallo, ik heb een vraag over de Android 14 TV Box';
     const msg = question.trim() ? `${intro}:\n\n${question.trim()}` : `${intro}.`;
+    trackWhatsAppConversion();
     window.open(`${WHATSAPP_URL}?text=${encodeURIComponent(msg)}`, '_blank');
   };
 
@@ -203,6 +206,7 @@ export const TvBox: React.FC = () => {
       `Beoordeling: ${stars} (${reviewRating}/5)\n` +
       (reviewName.trim() ? `Naam: ${reviewName.trim()}\n` : '') +
       `Review: ${reviewText.trim()}`;
+    trackWhatsAppConversion();
     window.open(`${WHATSAPP_URL}?text=${encodeURIComponent(msg)}`, '_blank');
   };
 
@@ -305,7 +309,7 @@ export const TvBox: React.FC = () => {
 
               <div className="flex items-end gap-3 border-b border-gray-200 pb-6">
                 <span className="text-2xl font-bold text-gray-400 line-through pb-1">€280</span>
-                <span className="text-6xl font-black tracking-tighter text-gray-900">€180</span>
+                <span className="text-6xl font-black tracking-tighter text-gray-900">€200</span>
                 <div className="pb-2 space-y-0.5">
                   <p className="text-amber-500 font-bold text-sm uppercase tracking-widest">eenmalig</p>
                   <p className="text-sm"><span className="text-gray-400">12 mnd abonnement</span> <span className="bg-amber-500 text-black px-1.5 py-0.5 rounded font-bold">cadeau</span></p>
@@ -326,7 +330,7 @@ export const TvBox: React.FC = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-black text-gray-900 text-sm">Binnen {SHIPPING_DAYS} dagen in huis</p>
+                  <p className="font-black text-gray-900 text-sm">Binnen {SHIPPING_DAYS_LABEL} in huis</p>
                   <p className="text-amber-600 font-bold text-xs uppercase tracking-wide">Besteld vandaag = geleverd op {getDeliveryDate()}</p>
                 </div>
               </div>
@@ -683,14 +687,14 @@ export const TvBox: React.FC = () => {
             Klaar om te beginnen?
           </h2>
           <p className="text-white/60 font-medium text-lg max-w-xl mx-auto">
-            Bestel vandaag nog je TV Box en geniet binnen enkele dagen van onbeperkt televisie.
+            Bestel vandaag nog je TV Box en geniet al binnen één dag van onbeperkt televisie.
           </p>
           <button
             onClick={handleOrder}
             className="btn-brutal px-10 py-5 rounded-2xl bg-amber-500 text-black font-black text-xl "
             style={{ boxShadow: '0 0 40px rgba(245,158,11,0.4)' }}
           >
-            Bestel Nu — €180
+            Bestel Nu — €200
           </button>
           <p className="text-white/30 text-sm">Geen verborgen kosten</p>
         </div>
@@ -709,7 +713,7 @@ export const TvBox: React.FC = () => {
           <div className="flex-shrink-0">
             <div className="flex items-baseline gap-1.5">
               <span className="text-xs text-gray-400 line-through">€280</span>
-              <span className="text-xl font-black text-gray-900">€180</span>
+              <span className="text-xl font-black text-gray-900">€200</span>
             </div>
             <p className="text-[10px] text-amber-600 font-bold uppercase tracking-wide leading-none">12 mnd cadeau</p>
           </div>
