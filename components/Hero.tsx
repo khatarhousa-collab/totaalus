@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { trackWhatsAppConversion } from './analytics';
 import { WaveDivider } from './WaveDivider';
 
 
@@ -115,7 +114,6 @@ export const Hero: React.FC = () => {
             </div>
             <a
               href={whatsappLink}
-              onClick={trackWhatsAppConversion}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-8 border-t border-white/10 pt-6 w-full flex justify-between items-center text-white hover:opacity-80 transition-opacity"

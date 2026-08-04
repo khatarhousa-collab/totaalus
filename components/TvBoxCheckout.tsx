@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { trackWhatsAppConversion } from './analytics';
 import { Logo } from './Logo';
 
 const whatsappNumber = '447414662070';
@@ -146,7 +145,6 @@ export const TvBoxCheckout: React.FC<Props> = ({ onClose }) => {
       `Postcode: ${form.postcode} ${form.city}\n` +
       `Land: ${form.country}\n` +
       `Betaalmethode: ${method}`;
-    trackWhatsAppConversion();
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`, '_blank');
   };
 

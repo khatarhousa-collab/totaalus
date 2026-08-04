@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://iptvtotaal.us/sitemap.xml
+Sitemap: https://iptotaal.digital/sitemap.xml

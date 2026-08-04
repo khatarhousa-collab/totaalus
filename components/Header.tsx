@@ -14,10 +14,8 @@ export const Header: React.FC<HeaderProps> = ({ isScrolled, hasBanner }) => {
   const closeMenu = () => setIsMenuOpen(false);
 
   const navLinks = [
-    { name: 'Kanalen', href: '/kanalen' },
     { name: 'Voordelen', href: '/#benefits' },
     { name: 'Prijzen', href: '/#pricing' },
-    { name: 'Reseller', href: '/reseller' },
     { name: 'FAQ', href: '/#faq' },
     { name: 'Over ons', href: '/over-ons' },
     { name: 'TV Box', href: '/tv-box' },

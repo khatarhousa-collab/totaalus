@@ -1,6 +1,5 @@
 
 import React, { useEffect } from 'react';
-import { trackWhatsAppConversion } from './analytics';
 
 const StatCard: React.FC<{ number: string; label: string }> = ({ number, label }) => (
   <div className="p-8 bg-amber-500/10 border-[3px] border-amber-500/40 rounded-3xl text-center hover:bg-amber-500/20 shadow-[6px_6px_0_0_rgba(245,158,11,0.2)] transition-colors">
@@ -171,7 +170,6 @@ export const OverOns: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href={whatsappLink}
-              onClick={trackWhatsAppConversion}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-amber-500 text-black font-black text-lg rounded-full btn-brutal"
@@ -193,7 +191,7 @@ export const OverOns: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-center gap-8 text-center">
           <div>
             <div className="text-xs font-bold uppercase tracking-widest text-stone-900/40 mb-2">E-mail</div>
-            <a href="mailto:info@iptvtotaal.us" className="text-amber-600 font-bold hover:underline">info@iptvtotaal.us</a>
+            <a href="mailto:support@iptotaal.digital" className="text-amber-600 font-bold hover:underline">support@iptotaal.digital</a>
           </div>
           <div className="hidden md:block w-px bg-stone-900/10"></div>
           <div>

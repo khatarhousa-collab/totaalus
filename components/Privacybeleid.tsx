@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { trackWhatsAppConversion } from './analytics';
 
 export const Privacybeleid: React.FC = () => {
   return (
@@ -139,9 +138,9 @@ export const Privacybeleid: React.FC = () => {
             <p>Voor vragen over dit Privacybeleid of over de verwerking van uw persoonsgegevens kunt u contact met ons opnemen:</p>
             <div className="mt-4 p-6 bg-gray-50 rounded-2xl border border-gray-100 space-y-2">
               <p><strong>IPTVTotaal</strong></p>
-              <p>E-mail: <a href="mailto:info@iptvtotaal.us" className="text-amber-500 font-bold hover:underline">info@iptvtotaal.us</a></p>
+              <p>E-mail: <a href="mailto:support@iptotaal.digital" className="text-amber-500 font-bold hover:underline">support@iptotaal.digital</a></p>
               <p>Telefoon: <a href="tel:+447414662070" className="text-amber-500 font-bold hover:underline">+44 7414 662070</a></p>
-              <p>WhatsApp: <a href="https://api.whatsapp.com/send/?phone=447414662070&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" onClick={trackWhatsAppConversion} className="text-amber-500 font-bold hover:underline">+44 7414 662070</a></p>
+              <p>WhatsApp: <a href="https://api.whatsapp.com/send/?phone=447414662070&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="text-amber-500 font-bold hover:underline">+44 7414 662070</a></p>
             </div>
           </section>
         </div>

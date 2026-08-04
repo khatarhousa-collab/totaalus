@@ -12,12 +12,8 @@ import { PaymentMethods } from './components/PaymentMethods';
 import { Footer } from './components/Footer';
 import { AlgemeneVoorwaarden } from './components/AlgemeneVoorwaarden';
 import { Privacybeleid } from './components/Privacybeleid';
-import { Channels } from './components/Channels';
-import { ResellerPacks } from './components/ResellerPacks';
 import { AnnouncementBanner } from './components/AnnouncementBanner';
 import { OverOns } from './components/OverOns';
-import { NederlandOezbekistanLive } from './components/NederlandOezbekistanLive';
-import { EredivisieLiveKijken } from './components/EredivisieLiveKijken';
 import { TvBox } from './components/TvBox';
 
 const ScrollToTop: React.FC = () => {
@@ -92,17 +88,17 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/iptvtotaal" element={<HomePage />} />
-        <Route path="/kanalen" element={<main><Channels /></main>} />
-        <Route path="/reseller" element={<main><ResellerPacks /></main>} />
         <Route path="/over-ons" element={<main><OverOns /></main>} />
         <Route path="/algemene-voorwaarden" element={<main><AlgemeneVoorwaarden /></main>} />
         <Route path="/privacybeleid" element={<main><Privacybeleid /></main>} />
-        <Route path="/nederland-oezbekistan-live" element={<main><NederlandOezbekistanLive /></main>} />
-        <Route path="/eredivisie-live-kijken" element={<main><EredivisieLiveKijken /></main>} />
         <Route path="/tv-box" element={<main><TvBox /></main>} />
         {/* Common misspellings of /tv-box — these were landing on an empty page. */}
         <Route path="/tvbox" element={<Navigate to="/tv-box" replace />} />
         <Route path="/tv_box" element={<Navigate to="/tv-box" replace />} />
+        {/* Removed pages (reseller program, match-specific streaming landing pages). */}
+        <Route path="/reseller" element={<Navigate to="/" replace />} />
+        <Route path="/eredivisie-live-kijken" element={<Navigate to="/" replace />} />
+        <Route path="/nederland-oezbekistan-live" element={<Navigate to="/" replace />} />
         {/* Anything unmatched previously rendered a blank page between header and footer. */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
