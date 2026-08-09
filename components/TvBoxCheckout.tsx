@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Logo } from './Logo';
-
-const whatsappNumber = '447449708976';
+import { useWhatsAppNumber } from '../contexts/WhatsAppContext';
 
 const PRODUCT = {
   name: 'Android 14 TV Box',
@@ -47,6 +46,7 @@ const paymentMethods = [
 ];
 
 export const TvBoxCheckout: React.FC<Props> = ({ onClose }) => {
+  const whatsappNumber = useWhatsAppNumber();
   const [form, setForm] = useState<FormState>(initialForm);
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, boolean>>>({});
   const [summaryOpen, setSummaryOpen] = useState(false);

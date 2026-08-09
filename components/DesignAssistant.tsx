@@ -1,8 +1,10 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { GoogleGenAI } from "@google/genai";
+import { useWhatsAppNumber, buildWhatsAppLink } from '../contexts/WhatsAppContext';
 
 export const DesignAssistant: React.FC = () => {
+  const whatsappNumber = useWhatsAppNumber();
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<{ role: 'user' | 'assistant', content: string }[]>([]);
   const [input, setInput] = useState('');
@@ -49,7 +51,7 @@ export const DesignAssistant: React.FC = () => {
       const conversationText = [...messages, { role: 'user', content: userMessage }]
         .map(m => `${m.role === 'user' ? 'Klant' : 'Support'}: ${m.content}`)
         .join('\n');
-      const whatsappUrl = `https://api.whatsapp.com/send/?phone=447449708976&text=${encodeURIComponent(conversationText)}&type=phone_number&app_absent=0`;
+      const whatsappUrl = buildWhatsAppLink(whatsappNumber, conversationText);
       window.open(whatsappUrl, '_blank');
     } finally {
       setIsLoading(false);

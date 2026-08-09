@@ -15,6 +15,15 @@ import { Privacybeleid } from './components/Privacybeleid';
 import { AnnouncementBanner } from './components/AnnouncementBanner';
 import { OverOns } from './components/OverOns';
 import { TvBox } from './components/TvBox';
+import { useWhatsAppNumber, buildWhatsAppLink } from './contexts/WhatsAppContext';
+
+const ContactRedirect: React.FC = () => {
+  const number = useWhatsAppNumber();
+  useEffect(() => {
+    window.location.href = buildWhatsAppLink(number);
+  }, [number]);
+  return null;
+};
 
 const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
@@ -94,6 +103,7 @@ const App: React.FC = () => {
         {/* Common misspellings of /tv-box — these were landing on an empty page. */}
         <Route path="/tvbox" element={<Navigate to="/tv-box" replace />} />
         <Route path="/tv_box" element={<Navigate to="/tv-box" replace />} />
+        <Route path="/contact" element={<ContactRedirect />} />
         {/* Removed pages (reseller program, match-specific streaming landing pages). */}
         <Route path="/reseller" element={<Navigate to="/" replace />} />
         <Route path="/eredivisie-live-kijken" element={<Navigate to="/" replace />} />

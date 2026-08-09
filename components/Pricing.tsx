@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { PERIOD_PLANS, BASIS_FEATURES, PREMIUM_FEATURES } from '../constants';
+import { useWhatsAppNumber, buildWhatsAppLink } from '../contexts/WhatsAppContext';
 
 const SmallPauseIcon = () => (
   <svg viewBox="0 0 100 100" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="8" strokeLinecap="round">
@@ -30,6 +31,7 @@ const StarIcon = () => (
 );
 
 export const Pricing: React.FC = () => {
+  const whatsappNumber = useWhatsAppNumber();
   const [selectedPeriod, setSelectedPeriod] = useState('12+3');
   const [selectedDevices, setSelectedDevices] = useState(1);
   const deviceOptions = [1, 2, 3, 4];
@@ -61,7 +63,7 @@ export const Pricing: React.FC = () => {
     const tierName = tier === 'basis' ? 'Basis' : 'Premium VIP';
     const deviceText = selectedDevices === 1 ? '1 apparaat' : `${selectedDevices} apparaten`;
     const message = `Hallo, ik wil graag het ${tierName}-pakket van IPTVTotaal (us) aanschaffen voor ${currentPlan.label} voor ${deviceText} (${price}).`;
-    return `https://api.whatsapp.com/send/?phone=447449708976&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`;
+    return buildWhatsAppLink(whatsappNumber, message);
   };
 
   const isBestDeal = currentPlan.isBestDeal;

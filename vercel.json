@@ -2,13 +2,6 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
-  "redirects": [
-    {
-      "source": "/contact",
-      "destination": "https://api.whatsapp.com/send/?phone=447414662070&text&type=phone_number&app_absent=0",
-      "permanent": false
-    }
-  ],
   "rewrites": [
     { "source": "/((?!api/).*)", "destination": "/index.html" }
   ]

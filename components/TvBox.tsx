@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { TvBoxCheckout } from './TvBoxCheckout';
+import { useWhatsAppNumber, buildWaMeLink } from '../contexts/WhatsAppContext';
 
 const specs = [
   { label: 'Besturingssysteem', value: 'Android 14' },
@@ -124,8 +125,6 @@ const testimonials = [
 
 const galleryImages = ['/box-main.png', '/box1.png', '/box2.png', '/box3.png'];
 
-const WHATSAPP_URL = 'https://wa.me/447449708976';
-
 // FAQ rich-results markup — lets Google show the questions directly in search.
 const faqJsonLd = {
   '@context': 'https://schema.org',
@@ -160,6 +159,7 @@ const useReveal = <T extends HTMLElement>() => {
 };
 
 export const TvBox: React.FC = () => {
+  const WHATSAPP_URL = buildWaMeLink(useWhatsAppNumber());
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [activeImage, setActiveImage] = useState(0);
   const [checkoutOpen, setCheckoutOpen] = useState(false);

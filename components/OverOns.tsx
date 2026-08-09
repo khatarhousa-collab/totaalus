@@ -1,5 +1,6 @@
 
 import React, { useEffect } from 'react';
+import { useWhatsAppNumber, buildWhatsAppLink, buildTelLink } from '../contexts/WhatsAppContext';
 
 const StatCard: React.FC<{ number: string; label: string }> = ({ number, label }) => (
   <div className="p-8 bg-amber-500/10 border-[3px] border-amber-500/40 rounded-3xl text-center hover:bg-amber-500/20 shadow-[6px_6px_0_0_rgba(245,158,11,0.2)] transition-colors">
@@ -19,7 +20,10 @@ const ValueCard: React.FC<{ icon: React.ReactNode; title: string; description: s
 );
 
 export const OverOns: React.FC = () => {
-  const whatsappLink = "https://api.whatsapp.com/send/?phone=447449708976&text&type=phone_number&app_absent=0";
+  const whatsappNumber = useWhatsAppNumber();
+  const whatsappLink = buildWhatsAppLink(whatsappNumber);
+  const telLink = buildTelLink(whatsappNumber);
+  const telDisplay = `+${whatsappNumber}`;
 
   useEffect(() => {
     const prevTitle = document.title;
@@ -196,7 +200,7 @@ export const OverOns: React.FC = () => {
           <div className="hidden md:block w-px bg-stone-900/10"></div>
           <div>
             <div className="text-xs font-bold uppercase tracking-widest text-stone-900/40 mb-2">Telefoon</div>
-            <a href="tel:+447449708976" className="text-amber-600 font-bold hover:underline">+44 7449 708976</a>
+            <a href={telLink} className="text-amber-600 font-bold hover:underline">{telDisplay}</a>
           </div>
           <div className="hidden md:block w-px bg-stone-900/10"></div>
           <div>

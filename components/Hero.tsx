@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { WaveDivider } from './WaveDivider';
+import { useWhatsAppNumber, buildWhatsAppLink } from '../contexts/WhatsAppContext';
 
 
 const TrustBadge: React.FC<{ icon: React.ReactNode; children: React.ReactNode; delay: string }> = ({ icon, children, delay }) => (
@@ -14,7 +15,8 @@ const TrustBadge: React.FC<{ icon: React.ReactNode; children: React.ReactNode; d
 );
 
 export const Hero: React.FC = () => {
-  const whatsappLink = "https://api.whatsapp.com/send/?phone=447449708976&text&type=phone_number&app_absent=0";
+  const whatsappNumber = useWhatsAppNumber();
+  const whatsappLink = buildWhatsAppLink(whatsappNumber);
 
   return (
     <section className="pt-40 pb-6 overflow-hidden">

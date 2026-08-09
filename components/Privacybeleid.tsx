@@ -1,7 +1,12 @@
 
 import React from 'react';
+import { useWhatsAppNumber, buildWhatsAppLink, buildTelLink } from '../contexts/WhatsAppContext';
 
 export const Privacybeleid: React.FC = () => {
+  const whatsappNumber = useWhatsAppNumber();
+  const whatsappLink = buildWhatsAppLink(whatsappNumber);
+  const telLink = buildTelLink(whatsappNumber);
+  const telDisplay = `+${whatsappNumber}`;
   return (
     <div className="min-h-screen bg-white pt-32 pb-20 px-6">
       <div className="max-w-4xl mx-auto">
@@ -139,8 +144,8 @@ export const Privacybeleid: React.FC = () => {
             <div className="mt-4 p-6 bg-gray-50 rounded-2xl border border-gray-100 space-y-2">
               <p><strong>IPTVTotaal</strong></p>
               <p>E-mail: <a href="mailto:support@iptotaal.digital" className="text-amber-500 font-bold hover:underline">support@iptotaal.digital</a></p>
-              <p>Telefoon: <a href="tel:+447449708976" className="text-amber-500 font-bold hover:underline">+44 7449 708976</a></p>
-              <p>WhatsApp: <a href="https://api.whatsapp.com/send/?phone=447449708976&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="text-amber-500 font-bold hover:underline">+44 7449 708976</a></p>
+              <p>Telefoon: <a href={telLink} className="text-amber-500 font-bold hover:underline">{telDisplay}</a></p>
+              <p>WhatsApp: <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-amber-500 font-bold hover:underline">{telDisplay}</a></p>
             </div>
           </section>
         </div>
