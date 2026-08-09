@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { TvBoxCheckout } from './TvBoxCheckout';
 import { useWhatsAppNumber, buildWaMeLink } from '../contexts/WhatsAppContext';
+import { trackWhatsAppConversion } from './analytics';
 
 const specs = [
   { label: 'Besturingssysteem', value: 'Android 14' },
@@ -192,6 +193,7 @@ export const TvBox: React.FC = () => {
     e.preventDefault();
     const intro = 'Hallo, ik heb een vraag over de Android 14 TV Box';
     const msg = question.trim() ? `${intro}:\n\n${question.trim()}` : `${intro}.`;
+    trackWhatsAppConversion();
     window.open(`${WHATSAPP_URL}?text=${encodeURIComponent(msg)}`, '_blank');
   };
 
@@ -204,6 +206,7 @@ export const TvBox: React.FC = () => {
       `Beoordeling: ${stars} (${reviewRating}/5)\n` +
       (reviewName.trim() ? `Naam: ${reviewName.trim()}\n` : '') +
       `Review: ${reviewText.trim()}`;
+    trackWhatsAppConversion();
     window.open(`${WHATSAPP_URL}?text=${encodeURIComponent(msg)}`, '_blank');
   };
 

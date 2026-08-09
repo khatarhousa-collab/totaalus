@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { useWhatsAppNumber, buildWhatsAppLink, buildTelLink } from '../contexts/WhatsAppContext';
+import { trackWhatsAppConversion } from './analytics';
 
 export const AlgemeneVoorwaarden: React.FC = () => {
   const whatsappNumber = useWhatsAppNumber();
@@ -152,7 +153,7 @@ export const AlgemeneVoorwaarden: React.FC = () => {
               <p><strong>IPTVTotaal</strong></p>
               <p>E-mail: <a href="mailto:support@iptotaal.digital" className="text-amber-500 font-bold hover:underline">support@iptotaal.digital</a></p>
               <p>Telefoon: <a href={telLink} className="text-amber-500 font-bold hover:underline">{telDisplay}</a></p>
-              <p>WhatsApp: <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-amber-500 font-bold hover:underline">{telDisplay}</a></p>
+              <p>WhatsApp: <a href={whatsappLink} onClick={trackWhatsAppConversion} target="_blank" rel="noopener noreferrer" className="text-amber-500 font-bold hover:underline">{telDisplay}</a></p>
             </div>
           </section>
         </div>

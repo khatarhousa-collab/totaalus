@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { PERIOD_PLANS, BASIS_FEATURES, PREMIUM_FEATURES } from '../constants';
 import { useWhatsAppNumber, buildWhatsAppLink } from '../contexts/WhatsAppContext';
+import { trackWhatsAppConversion } from './analytics';
 
 const SmallPauseIcon = () => (
   <svg viewBox="0 0 100 100" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="8" strokeLinecap="round">
@@ -235,6 +236,7 @@ export const Pricing: React.FC = () => {
 
               <a
                 href={getWhatsAppUrl('premium')}
+                onClick={trackWhatsAppConversion}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-brutal w-full py-5 text-lg font-black block text-center bg-amber-500 text-black hover:bg-amber-700"
@@ -301,6 +303,7 @@ export const Pricing: React.FC = () => {
 
               <a
                 href={getWhatsAppUrl('basis')}
+                onClick={trackWhatsAppConversion}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-brutal w-full py-5 text-lg font-black block text-center bg-blue-500 text-white hover:bg-blue-600"

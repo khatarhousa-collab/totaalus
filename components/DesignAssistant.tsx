@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { GoogleGenAI } from "@google/genai";
 import { useWhatsAppNumber, buildWhatsAppLink } from '../contexts/WhatsAppContext';
+import { trackWhatsAppConversion } from './analytics';
 
 export const DesignAssistant: React.FC = () => {
   const whatsappNumber = useWhatsAppNumber();
@@ -52,6 +53,7 @@ export const DesignAssistant: React.FC = () => {
         .map(m => `${m.role === 'user' ? 'Klant' : 'Support'}: ${m.content}`)
         .join('\n');
       const whatsappUrl = buildWhatsAppLink(whatsappNumber, conversationText);
+      trackWhatsAppConversion();
       window.open(whatsappUrl, '_blank');
     } finally {
       setIsLoading(false);

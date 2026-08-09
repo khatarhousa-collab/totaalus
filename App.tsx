@@ -4,7 +4,7 @@ import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Benefits } from './components/Benefits';
-import { ServicesGrid } from './components/ServicesGrid';
+import { ServicesGrid, FilmsAndShows } from './components/ServicesGrid';
 import { Pricing } from './components/Pricing';
 import { FAQ } from './components/FAQ';
 import { Reviews } from './components/Reviews';
@@ -16,10 +16,12 @@ import { AnnouncementBanner } from './components/AnnouncementBanner';
 import { OverOns } from './components/OverOns';
 import { TvBox } from './components/TvBox';
 import { useWhatsAppNumber, buildWhatsAppLink } from './contexts/WhatsAppContext';
+import { trackWhatsAppConversion } from './components/analytics';
 
 const ContactRedirect: React.FC = () => {
   const number = useWhatsAppNumber();
   useEffect(() => {
+    trackWhatsAppConversion();
     window.location.href = buildWhatsAppLink(number);
   }, [number]);
   return null;
@@ -64,6 +66,7 @@ const HomePage: React.FC = () => {
   return (
     <main>
       <section className="reveal"><Hero /></section>
+      <section className="reveal"><FilmsAndShows /></section>
       <section className="reveal"><Pricing /></section>
       <section className="reveal"><Benefits /></section>
       <section className="reveal"><ServicesGrid /></section>

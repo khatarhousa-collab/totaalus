@@ -2,6 +2,7 @@
 import React from 'react';
 import { Logo } from './Logo';
 import { useWhatsAppNumber, buildWhatsAppLink } from '../contexts/WhatsAppContext';
+import { trackWhatsAppConversion } from './analytics';
 
 export const Footer: React.FC = () => {
   const whatsappLink = buildWhatsAppLink(useWhatsAppNumber());
@@ -33,6 +34,7 @@ export const Footer: React.FC = () => {
 
               <a
                 href={whatsappLink}
+                onClick={trackWhatsAppConversion}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-8 bg-amber-500 text-black rounded-[32px] font-black text-2xl btn-brutal block text-center shadow-lg shadow-amber-500/20"
