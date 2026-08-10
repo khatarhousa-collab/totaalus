@@ -426,7 +426,7 @@ export const TvBox: React.FC = () => {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {included.map((item, i) => (
-              <div key={i} className="glass-card rounded-2xl p-5 flex items-start gap-3 border border-white/10 hover:border-amber-500/30 transition-colors">
+              <div key={i} className="glass-card-dark rounded-2xl p-5 flex items-start gap-3 border border-white/10 hover:border-amber-500/30 transition-colors">
                 <div className="w-6 h-6 rounded-full bg-amber-500 flex items-center justify-center flex-shrink-0 mt-0.5">
                   <CheckIcon />
                 </div>
@@ -491,7 +491,7 @@ export const TvBox: React.FC = () => {
         </div>
 
         {/* Specs — hidden on phone (already shown in the phone-only image) */}
-        <div className="hidden md:block mb-24 glass-card rounded-[32px] p-10 lg:p-16 border border-white/10">
+        <div className="hidden md:block mb-24 glass-card-dark rounded-[32px] p-10 lg:p-16 border border-white/10">
           <div className="text-center mb-12 space-y-4">
             <div className="badge-brutal">
               Specificaties
@@ -529,7 +529,7 @@ export const TvBox: React.FC = () => {
           </div>
           <div className="grid sm:grid-cols-3 gap-4">
             {testimonials.map((t) => (
-              <div key={t.name} className="glass-card rounded-2xl p-6 border border-white/10 flex flex-col gap-4">
+              <div key={t.name} className="glass-card-dark rounded-2xl p-6 border border-white/10 flex flex-col gap-4">
                 <div className="flex text-amber-400">
                   {[0, 1, 2, 3, 4].map((i) => <StarIcon key={i} className="w-4 h-4" />)}
                 </div>
@@ -556,7 +556,7 @@ export const TvBox: React.FC = () => {
           </div>
 
           {/* Leave a review — collected via WhatsApp so we can verify & publish */}
-          <div className="mt-10 glass-card rounded-2xl border border-white/10 p-6 sm:p-8 max-w-xl mx-auto space-y-5">
+          <div className="mt-10 glass-card-dark rounded-2xl border border-white/10 p-6 sm:p-8 max-w-xl mx-auto space-y-5">
             <div className="text-center space-y-1">
               <p className="font-black text-white text-lg">Deel jouw ervaring</p>
               <p className="text-white/50 font-medium text-sm">Klant bij ons? We horen graag wat je ervan vindt.</p>
@@ -620,7 +620,7 @@ export const TvBox: React.FC = () => {
             {faqs.map((faq, i) => {
               const isOpen = openFaq === i;
               return (
-                <div key={faq.q} className="glass-card rounded-2xl border border-white/10 overflow-hidden">
+                <div key={faq.q} className="glass-card-dark rounded-2xl border border-white/10 overflow-hidden">
                   <button
                     id={`faq-q-${i}`}
                     onClick={() => setOpenFaq(isOpen ? null : i)}
@@ -654,7 +654,7 @@ export const TvBox: React.FC = () => {
           </div>
 
           {/* Still-have-a-question — ask directly, opens WhatsApp prefilled */}
-          <div className="mt-10 glass-card rounded-2xl border border-white/10 p-6 sm:p-8 max-w-xl mx-auto text-center space-y-4">
+          <div className="mt-10 glass-card-dark rounded-2xl border border-white/10 p-6 sm:p-8 max-w-xl mx-auto text-center space-y-4">
             <div className="space-y-1">
               <p className="font-black text-white text-lg">Staat je vraag er niet bij?</p>
               <p className="text-white/50 font-medium text-sm">Stel ‘m hier — we appen je 24/7 persoonlijk terug.</p>
