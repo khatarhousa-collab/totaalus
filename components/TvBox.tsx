@@ -126,6 +126,16 @@ const testimonials = [
 
 const galleryImages = ['/box-main.png', '/box1.png', '/box2.png', '/box3.png'];
 
+// Real photos sent in by customers of their unboxed & installed TV Box.
+const customerPhotos = [
+  '/review-photo-box-green.jpg',
+  '/review-photo-box-specs.jpg',
+  '/review-photo-tv-homescreen.jpg',
+  '/review-photo-channel-list.jpg',
+  '/review-photo-device.jpg',
+  '/review-photo-box-label.jpg',
+];
+
 // FAQ rich-results markup — lets Google show the questions directly in search.
 const faqJsonLd = {
   '@context': 'https://schema.org',
@@ -553,6 +563,22 @@ export const TvBox: React.FC = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Real photos sent in by customers */}
+          <div className="mt-10">
+            <p className="text-center text-white/50 font-medium text-sm mb-4">Foto's van klanten</p>
+            <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
+              {customerPhotos.map((src) => (
+                <img
+                  key={src}
+                  src={src}
+                  alt="Foto van klant met de Android 14 TV Box"
+                  loading="lazy"
+                  className="w-full aspect-square rounded-xl border border-white/10 object-cover"
+                />
+              ))}
+            </div>
           </div>
 
           {/* Leave a review — collected via WhatsApp so we can verify & publish */}
